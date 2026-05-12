@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /admin.py
+Disallow: /scripts/
+
+Sitemap: https://paola-maccioni.netlify.app/sitemap.xml

@@ -1,0 +1,7 @@
+# Redirect legacy URLs to pretty SEO URLs
+/serie.html  /serie/:id/  302  id=:id
+/opera.html  /opera/:id/  302  id=:id
+
+# Trailing slash normalization
+/serie/*/   /serie/:splat/  200
+/opera/*/   /opera/:splat/  200
