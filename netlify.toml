@@ -2,6 +2,7 @@
 
 [build]
   publish = "."
+  functions = "netlify/functions"
 
 # Caching aggressivo per asset statici (immagini, css, js)
 [[headers]]

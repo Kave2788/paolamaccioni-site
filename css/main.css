@@ -611,8 +611,9 @@ a.series-tile {
 
 .work-tile-img {
   width: 100%;
-  height: clamp(220px, 26vw, 360px);
+  aspect-ratio: 4 / 5;
   overflow: hidden;
+  background: var(--bg2);
 }
 
 .work-tile-img img {
@@ -621,7 +622,7 @@ a.series-tile {
   object-fit: cover;
   display: block;
   transition: transform 0.8s ease;
-  filter: brightness(0.92);
+  filter: brightness(0.94);
 }
 
 .work-tile:hover .work-tile-img img {
@@ -673,7 +674,8 @@ a.series-tile {
 
 .opera-img-wrap {
   width: 100%;
-  height: clamp(360px, 70vh, 620px);
+  aspect-ratio: 4 / 5;
+  max-height: 78vh;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg2);
@@ -683,9 +685,12 @@ a.series-tile {
 .opera-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  transition: opacity 0.3s;
+  cursor: zoom-in;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .opera-nav {
@@ -735,8 +740,9 @@ a.series-tile {
 }
 
 .opera-thumb {
-  width: 78px;
-  height: 78px;
+  width: 72px;
+  aspect-ratio: 4 / 5;
+  height: auto;
   padding: 0;
   border: 1px solid var(--border);
   background: var(--bg2);
@@ -755,6 +761,74 @@ a.series-tile {
 .opera-thumb.active {
   opacity: 1;
   border-color: var(--platinum);
+}
+
+/* ── LIGHTBOX FULLSCREEN ── */
+.opera-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: rgba(14, 13, 12, 0.97);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  cursor: zoom-out;
+}
+.opera-lightbox.open { opacity: 1; pointer-events: auto; }
+
+.opera-lightbox img {
+  max-width: 95vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.opera-lightbox-close,
+.opera-lightbox-prev,
+.opera-lightbox-next {
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-s);
+  transition: background 0.2s, border-color 0.2s;
+}
+.opera-lightbox-close:hover,
+.opera-lightbox-prev:hover,
+.opera-lightbox-next:hover { background: rgba(0,0,0,0.85); border-color: var(--platinum); }
+
+.opera-lightbox-close { top: 1.5rem; right: 1.5rem; }
+.opera-lightbox-prev { left: 1.5rem; top: 50%; transform: translateY(-50%); }
+.opera-lightbox-next { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+
+.opera-lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-family: var(--font-ss);
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .opera-lightbox-prev, .opera-lightbox-next { width: 40px; height: 40px; font-size: 20px; }
+  .opera-lightbox-close { width: 40px; height: 40px; top: 1rem; right: 1rem; }
 }
 
 .opera-info {
@@ -957,71 +1031,168 @@ a.series-tile {
   .comm-steps-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
-/* ── CONTATTI ── */
+/* ── CONTATTI (viewport fit) ── */
+.page-section.contact-section {
+  height: 100vh;
+  min-height: 640px;
+  padding: 5rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-header .label { margin-bottom: 0.5rem; }
+.contact-header h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.75rem; }
+.contact-header .rule { margin: 0 auto; }
+
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 280px;
+  gap: 3.5rem;
   align-items: start;
 }
 
-.contact-info dt {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: var(--muted);
-  text-transform: uppercase;
-  font-family: var(--font-ss);
-  margin-bottom: 4px;
+/* Form compatto */
+.contact-form { position: relative; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.contact-info dd {
-  font-style: italic;
-  color: var(--text2);
-  margin-bottom: 1.5rem;
-}
-
-.form-group { margin-bottom: 1.5rem; }
-
+.form-group { margin-bottom: 0.9rem; }
 .form-group label {
   display: block;
   font-size: 9px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: var(--muted);
   text-transform: uppercase;
   font-family: var(--font-ss);
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
-  border: none;
-  border-bottom: 1px solid var(--border);
-  padding: 8px 0;
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.85rem;
   font-family: var(--font-s);
   font-style: italic;
-  font-size: 15px;
+  font-size: 0.9rem;
   color: var(--text);
   background: transparent;
   outline: none;
   resize: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 
+.form-group select { font-style: normal; cursor: pointer; }
+.form-group select option { background: var(--bg); color: var(--text); }
 .form-group input:focus,
-.form-group textarea:focus { border-bottom-color: var(--text); }
+.form-group textarea:focus,
+.form-group select:focus { border-color: var(--platinum); background: var(--bg2); }
+.form-group textarea { min-height: 90px; line-height: 1.6; resize: vertical; }
 
-.form-group textarea { min-height: 100px; }
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
 
-button.cta-link {
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--border);
+.form-consent {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text2);
   cursor: pointer;
+  margin: 0;
+  flex: 1;
+}
+.form-consent input { accent-color: var(--text); cursor: pointer; flex-shrink: 0; }
+.form-consent a { color: var(--text); border-bottom: 1px solid var(--border); }
+
+.form-submit {
+  background: var(--text);
+  color: var(--bg);
+  border: 1px solid var(--text);
+  padding: 0.75rem 1.5rem;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   font-family: var(--font-ss);
-  padding-bottom: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.form-submit:hover { opacity: 0.85; }
+
+.form-success {
+  font-style: italic;
+  color: #6ee7a8;
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* Sidebar contatti diretti */
+.contact-direct .label { margin-bottom: 1.25rem; }
+.contact-channels { list-style: none; padding: 0; margin: 0; }
+.contact-channels li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.contact-channels li:last-child { border-bottom: none; }
+.channel-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-family: var(--font-ss);
+}
+.contact-channels a {
+  color: var(--text);
+  font-style: italic;
+  font-size: 0.92rem;
+  transition: color 0.2s;
+}
+.contact-channels a:hover { color: var(--platinum); }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .page-section.contact-section {
+    height: auto;
+    overflow: visible;
+    padding: 5rem 1.5rem 3rem;
+  }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .form-bottom { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .form-submit { width: 100%; justify-content: center; }
 }
 
 /* ── MOBILE NAV TOGGLE ── */
@@ -1145,11 +1316,16 @@ button.cta-link {
   }
 
   /* CONTATTI mobile */
+  .page-section.contact-section { padding: 5rem 1.5rem 3rem; }
+  .contact-header { margin-bottom: 2.5rem; }
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
   }
-  .contact-grid h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .form-actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .form-submit { width: 100%; justify-content: center; }
+  .contact-quote { margin-top: 2rem; padding-top: 1.5rem; }
 
   /* TYPOGRAPHY mobile */
   h1 { font-size: clamp(2rem, 8vw, 3rem); }

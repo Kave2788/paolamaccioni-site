@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/elefante/01.jpg"><img src="/forma-organica/elefante/thumb/01.webp" alt="Memoria 1" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/elefante/01.jpg"><img src="/forma-organica/elefante/canvas/01.webp" alt="Memoria 1" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -75,7 +75,6 @@
 <div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
 
 <script src="/js/main.js"></script>
-<script src="/js/consent.js"></script>
 <script>
 // Gallery navigation client-side (arricchisce pre-rendered HTML)
 (() => {
@@ -107,6 +106,7 @@
     document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
     document.getElementById('next-img').addEventListener('click', () => show(current + 1));
     document.addEventListener('keydown', e => {
+      if (lb.classList.contains('open')) return; // gestito da lightbox
       if (e.key === 'ArrowLeft') show(current - 1);
       if (e.key === 'ArrowRight') show(current + 1);
     });
@@ -117,6 +117,50 @@
     document.getElementById('next-img').style.display = 'none';
     counter.style.display = 'none';
   }
+
+  // Lightbox: click immagine principale → zoom fullscreen
+  const lb = document.createElement('div');
+  lb.className = 'opera-lightbox';
+  lb.innerHTML = `
+    <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
+    <button class="opera-lightbox-prev" aria-label="Precedente">‹</button>
+    <button class="opera-lightbox-next" aria-label="Successiva">›</button>
+    <img alt="">
+    <div class="opera-lightbox-caption"></div>
+  `;
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.opera-lightbox-caption');
+  const operaTitle = "Memoria";
+
+  function openLb() {
+    lbImg.src = '/' + gallery[current];
+    lbImg.alt = operaTitle;
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function lbShow(i) {
+    show(i);
+    lbImg.src = '/' + gallery[current];
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+  }
+
+  mainImg.addEventListener('click', openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
+  lb.querySelector('.opera-lightbox-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft' && gallery.length > 1) lbShow(current - 1);
+    if (e.key === 'ArrowRight' && gallery.length > 1) lbShow(current + 1);
+  });
 })();
 </script>
 </body>

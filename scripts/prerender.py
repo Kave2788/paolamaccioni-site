@@ -48,11 +48,11 @@ def render_serie(serie):
         ],
     }
 
-    # Render works grid (anche server-side per SEO/no-JS users)
+    # Render works grid (canvas uniform 4:5 per look professionale omogeneo)
     works_html = "\n".join(
         f"""      <a class="work-tile" href="/opera/{w['id']}/">
         <div class="work-tile-img">
-          <img src="/{w.get('thumb') or w.get('image','')}" alt="{escape(w['title'])}" loading="lazy">
+          <img src="/{w.get('canvas') or w.get('thumb') or w.get('image','')}" alt="{escape(w['title'])}" loading="lazy">
         </div>
         <div class="work-tile-body">
           <p class="label">{escape(str(w.get('year') or ''))}</p>
@@ -166,9 +166,9 @@ def render_opera(serie, opera):
         f"<p>{escape(p.strip())}</p>" for p in opera.get('description', '').split("\n") if p.strip()
     ) or "<p>—</p>"
 
-    # Thumbs strip (server-rendered per SEO)
+    # Thumbs strip uniformi su canvas 4:5
     gallery = opera.get('gallery', [])
-    thumbs = opera.get('thumb_gallery', gallery)
+    thumbs = opera.get('canvas_gallery') or opera.get('thumb_gallery') or gallery
     thumbs_html = "".join(
         f'<button class="opera-thumb" data-i="{i}" data-src="/{g}"><img src="/{thumbs[i] if i < len(thumbs) else g}" alt="{escape(opera["title"])} {i+1}" loading="lazy"></button>'
         for i, g in enumerate(gallery)
@@ -282,6 +282,7 @@ def render_opera(serie, opera):
     document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
     document.getElementById('next-img').addEventListener('click', () => show(current + 1));
     document.addEventListener('keydown', e => {{
+      if (lb.classList.contains('open')) return; // gestito da lightbox
       if (e.key === 'ArrowLeft') show(current - 1);
       if (e.key === 'ArrowRight') show(current + 1);
     }});
@@ -292,6 +293,50 @@ def render_opera(serie, opera):
     document.getElementById('next-img').style.display = 'none';
     counter.style.display = 'none';
   }}
+
+  // Lightbox: click immagine principale → zoom fullscreen
+  const lb = document.createElement('div');
+  lb.className = 'opera-lightbox';
+  lb.innerHTML = `
+    <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
+    <button class="opera-lightbox-prev" aria-label="Precedente">‹</button>
+    <button class="opera-lightbox-next" aria-label="Successiva">›</button>
+    <img alt="">
+    <div class="opera-lightbox-caption"></div>
+  `;
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.opera-lightbox-caption');
+  const operaTitle = {json.dumps(opera['title'])};
+
+  function openLb() {{
+    lbImg.src = '/' + gallery[current];
+    lbImg.alt = operaTitle;
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }}
+  function closeLb() {{
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }}
+  function lbShow(i) {{
+    show(i);
+    lbImg.src = '/' + gallery[current];
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+  }}
+
+  mainImg.addEventListener('click', openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => {{ if (e.target === lb) closeLb(); }});
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => {{ e.stopPropagation(); lbShow(current - 1); }});
+  lb.querySelector('.opera-lightbox-next').addEventListener('click', e => {{ e.stopPropagation(); lbShow(current + 1); }});
+  document.addEventListener('keydown', e => {{
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft' && gallery.length > 1) lbShow(current - 1);
+    if (e.key === 'ArrowRight' && gallery.length > 1) lbShow(current + 1);
+  }});
 }})();
 </script>
 </body>

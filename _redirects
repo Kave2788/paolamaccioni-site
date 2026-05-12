@@ -5,3 +5,19 @@
 # Trailing slash normalization
 /serie/*/   /serie/:splat/  200
 /opera/*/   /opera/:splat/  200
+
+# 301 redirect slug Wix legacy → SEO-friendly
+/opera/progetto-senza-titolo-6e3e20/  /opera/sfera/  301
+/opera/progetto-senza-titolo-77d42e/  /opera/fazzoletto/  301
+/opera/progetto-senza-titolo-a4bc4d/  /opera/sotto-la-superficie/  301
+/opera/progetto-senza-titolo-1a5129/  /opera/il-peso-dell-ingiustizia/  301
+/opera/my-project-e17e75/  /opera/boes/  301
+/opera/progetto-senza-titolo-0f5967/  /opera/volo-d-argento/  301
+/opera/my-project-4d8295/  /opera/l-unione/  301
+/opera/my-project-528a5b/  /opera/globigerina/  301
+/opera/progetto-senza-titolo-f37006/  /opera/riccio-di-mare/  301
+/opera/progetto-senza-titolo-e6dd84/  /opera/dragone/  301
+/opera/progetto-senza-titolo/  /opera/zebra/  301
+/opera/progetto-senza-titolo-2ae9b3/  /opera/trota/  301
+/opera/progetto-senza-titolo-a6dbf4/  /opera/libellule-in-amore/  301
+/opera/farfalla-5ec760/  /opera/metamorfosi/  301

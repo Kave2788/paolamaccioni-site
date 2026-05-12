@@ -44,7 +44,24 @@
             "struttura-tensione/lombra-della-luce/thumb/13.webp",
             "struttura-tensione/lombra-della-luce/thumb/14.webp"
           ],
-          "thumb": "struttura-tensione/lombra-della-luce/thumb/01.webp"
+          "thumb": "struttura-tensione/lombra-della-luce/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lombra-della-luce/canvas/01.webp",
+            "struttura-tensione/lombra-della-luce/canvas/02.webp",
+            "struttura-tensione/lombra-della-luce/canvas/03.webp",
+            "struttura-tensione/lombra-della-luce/canvas/04.webp",
+            "struttura-tensione/lombra-della-luce/canvas/05.webp",
+            "struttura-tensione/lombra-della-luce/canvas/06.webp",
+            "struttura-tensione/lombra-della-luce/canvas/07.webp",
+            "struttura-tensione/lombra-della-luce/canvas/08.webp",
+            "struttura-tensione/lombra-della-luce/canvas/09.webp",
+            "struttura-tensione/lombra-della-luce/canvas/10.webp",
+            "struttura-tensione/lombra-della-luce/canvas/11.webp",
+            "struttura-tensione/lombra-della-luce/canvas/12.webp",
+            "struttura-tensione/lombra-della-luce/canvas/13.webp",
+            "struttura-tensione/lombra-della-luce/canvas/14.webp"
+          ],
+          "canvas": "struttura-tensione/lombra-della-luce/canvas/01.webp"
         },
         {
           "id": "lux-eterna",
@@ -68,7 +85,16 @@
             "struttura-tensione/lux-eterna/thumb/05.webp",
             "struttura-tensione/lux-eterna/thumb/06.webp"
           ],
-          "thumb": "struttura-tensione/lux-eterna/thumb/01.webp"
+          "thumb": "struttura-tensione/lux-eterna/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lux-eterna/canvas/01.webp",
+            "struttura-tensione/lux-eterna/canvas/02.webp",
+            "struttura-tensione/lux-eterna/canvas/03.webp",
+            "struttura-tensione/lux-eterna/canvas/04.webp",
+            "struttura-tensione/lux-eterna/canvas/05.webp",
+            "struttura-tensione/lux-eterna/canvas/06.webp"
+          ],
+          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp"
         },
         {
           "id": "il-rinoceronte",
@@ -86,7 +112,13 @@
             "struttura-tensione/il-rinoceronte/thumb/02.webp",
             "struttura-tensione/il-rinoceronte/thumb/03.webp"
           ],
-          "thumb": "struttura-tensione/il-rinoceronte/thumb/01.webp"
+          "thumb": "struttura-tensione/il-rinoceronte/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/il-rinoceronte/canvas/01.webp",
+            "struttura-tensione/il-rinoceronte/canvas/02.webp",
+            "struttura-tensione/il-rinoceronte/canvas/03.webp"
+          ],
+          "canvas": "struttura-tensione/il-rinoceronte/canvas/01.webp"
         },
         {
           "id": "rondini-in-gabbia",
@@ -110,7 +142,16 @@
             "struttura-tensione/rondini-in-gabbia/thumb/05.webp",
             "struttura-tensione/rondini-in-gabbia/thumb/06.webp"
           ],
-          "thumb": "struttura-tensione/rondini-in-gabbia/thumb/01.webp"
+          "thumb": "struttura-tensione/rondini-in-gabbia/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/rondini-in-gabbia/canvas/01.webp",
+            "struttura-tensione/rondini-in-gabbia/canvas/02.webp",
+            "struttura-tensione/rondini-in-gabbia/canvas/03.webp",
+            "struttura-tensione/rondini-in-gabbia/canvas/04.webp",
+            "struttura-tensione/rondini-in-gabbia/canvas/05.webp",
+            "struttura-tensione/rondini-in-gabbia/canvas/06.webp"
+          ],
+          "canvas": "struttura-tensione/rondini-in-gabbia/canvas/01.webp"
         },
         {
           "id": "equilibrio-fratturato",
@@ -132,7 +173,15 @@
             "struttura-tensione/equilibrio-fratturato/thumb/04.webp",
             "struttura-tensione/equilibrio-fratturato/thumb/05.webp"
           ],
-          "thumb": "struttura-tensione/equilibrio-fratturato/thumb/01.webp"
+          "thumb": "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
+            "struttura-tensione/equilibrio-fratturato/canvas/02.webp",
+            "struttura-tensione/equilibrio-fratturato/canvas/03.webp",
+            "struttura-tensione/equilibrio-fratturato/canvas/04.webp",
+            "struttura-tensione/equilibrio-fratturato/canvas/05.webp"
+          ],
+          "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp"
         },
         {
           "id": "fibonacci",
@@ -150,47 +199,67 @@
             "struttura-tensione/fibonacci/thumb/02.webp",
             "struttura-tensione/fibonacci/thumb/03.webp"
           ],
-          "thumb": "struttura-tensione/fibonacci/thumb/01.webp"
+          "thumb": "struttura-tensione/fibonacci/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/fibonacci/canvas/01.webp",
+            "struttura-tensione/fibonacci/canvas/02.webp",
+            "struttura-tensione/fibonacci/canvas/03.webp"
+          ],
+          "canvas": "struttura-tensione/fibonacci/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-6e3e20",
+          "id": "sfera",
           "title": "Sfera",
           "year": "",
-          "image": "struttura-tensione/progetto-senza-titolo-6e3e20/01.jpg",
+          "image": "struttura-tensione/sfera/01.jpg",
           "gallery": [
-            "struttura-tensione/progetto-senza-titolo-6e3e20/01.jpg",
-            "struttura-tensione/progetto-senza-titolo-6e3e20/02.jpg",
-            "struttura-tensione/progetto-senza-titolo-6e3e20/03.jpg",
-            "struttura-tensione/progetto-senza-titolo-6e3e20/04.jpg"
+            "struttura-tensione/sfera/01.jpg",
+            "struttura-tensione/sfera/02.jpg",
+            "struttura-tensione/sfera/03.jpg",
+            "struttura-tensione/sfera/04.jpg"
           ],
           "description": "Sfera è costruita attraverso una sequenza regolare di rilievi circolari ottenuti con la lavorazione a sbalzo su alluminio.\n\nLa ripetizione degli elementi genera una superficie modulare che, concentrandosi al centro, costruisce il volume della forma sferica. Il contrasto tra la sfera centrale e il fondo piatto rafforza la percezione della tridimensionalità.\n\nLa luce scorre sulle superfici metalliche mettendo in evidenza il ritmo della texture e la costruzione geometrica della forma.",
           "thumb_gallery": [
-            "struttura-tensione/progetto-senza-titolo-6e3e20/thumb/01.webp",
-            "struttura-tensione/progetto-senza-titolo-6e3e20/thumb/02.webp",
-            "struttura-tensione/progetto-senza-titolo-6e3e20/thumb/03.webp",
-            "struttura-tensione/progetto-senza-titolo-6e3e20/thumb/04.webp"
+            "struttura-tensione/sfera/thumb/01.webp",
+            "struttura-tensione/sfera/thumb/02.webp",
+            "struttura-tensione/sfera/thumb/03.webp",
+            "struttura-tensione/sfera/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/progetto-senza-titolo-6e3e20/thumb/01.webp"
+          "thumb": "struttura-tensione/sfera/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/sfera/canvas/01.webp",
+            "struttura-tensione/sfera/canvas/02.webp",
+            "struttura-tensione/sfera/canvas/03.webp",
+            "struttura-tensione/sfera/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/sfera/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-77d42e",
+          "id": "fazzoletto",
           "title": "Fazzoletto",
           "year": "",
-          "image": "struttura-tensione/progetto-senza-titolo-77d42e/01.jpg",
+          "image": "struttura-tensione/fazzoletto/01.jpg",
           "gallery": [
-            "struttura-tensione/progetto-senza-titolo-77d42e/01.jpg",
-            "struttura-tensione/progetto-senza-titolo-77d42e/02.png",
-            "struttura-tensione/progetto-senza-titolo-77d42e/03.png",
-            "struttura-tensione/progetto-senza-titolo-77d42e/04.png"
+            "struttura-tensione/fazzoletto/01.jpg",
+            "struttura-tensione/fazzoletto/02.png",
+            "struttura-tensione/fazzoletto/03.png",
+            "struttura-tensione/fazzoletto/04.png"
           ],
           "description": "Fazzoletto riproduce un tessuto leggero attraverso la lavorazione a sbalzo su una sottile lastra di alluminio.\n\nLa superficie metallica conserva la trama del tessuto e il movimento morbido delle pieghe, trasformando un materiale rigido in una forma che richiama la leggerezza e la flessibilità del tessuto. Al centro compare il monogramma inciso, che introduce un segno personale all’interno della composizione.\n\nL’opera gioca sul contrasto tra la durezza del metallo e l’apparente delicatezza del fazzoletto.",
           "thumb_gallery": [
-            "struttura-tensione/progetto-senza-titolo-77d42e/thumb/01.webp",
-            "struttura-tensione/progetto-senza-titolo-77d42e/thumb/02.webp",
-            "struttura-tensione/progetto-senza-titolo-77d42e/thumb/03.webp",
-            "struttura-tensione/progetto-senza-titolo-77d42e/thumb/04.webp"
+            "struttura-tensione/fazzoletto/thumb/01.webp",
+            "struttura-tensione/fazzoletto/thumb/02.webp",
+            "struttura-tensione/fazzoletto/thumb/03.webp",
+            "struttura-tensione/fazzoletto/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/progetto-senza-titolo-77d42e/thumb/01.webp"
+          "thumb": "struttura-tensione/fazzoletto/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/fazzoletto/canvas/01.webp",
+            "struttura-tensione/fazzoletto/canvas/02.webp",
+            "struttura-tensione/fazzoletto/canvas/03.webp",
+            "struttura-tensione/fazzoletto/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/fazzoletto/canvas/01.webp"
         },
         {
           "id": "specchio-nero",
@@ -206,7 +275,12 @@
             "struttura-tensione/specchio-nero/thumb/01.webp",
             "struttura-tensione/specchio-nero/thumb/02.webp"
           ],
-          "thumb": "struttura-tensione/specchio-nero/thumb/01.webp"
+          "thumb": "struttura-tensione/specchio-nero/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/specchio-nero/canvas/01.webp",
+            "struttura-tensione/specchio-nero/canvas/02.webp"
+          ],
+          "canvas": "struttura-tensione/specchio-nero/canvas/01.webp"
         },
         {
           "id": "cubi",
@@ -226,7 +300,14 @@
             "struttura-tensione/cubi/thumb/03.webp",
             "struttura-tensione/cubi/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/cubi/thumb/01.webp"
+          "thumb": "struttura-tensione/cubi/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/cubi/canvas/01.webp",
+            "struttura-tensione/cubi/canvas/02.webp",
+            "struttura-tensione/cubi/canvas/03.webp",
+            "struttura-tensione/cubi/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/cubi/canvas/01.webp"
         },
         {
           "id": "bubbles",
@@ -242,7 +323,12 @@
             "struttura-tensione/bubbles/thumb/01.webp",
             "struttura-tensione/bubbles/thumb/02.webp"
           ],
-          "thumb": "struttura-tensione/bubbles/thumb/01.webp"
+          "thumb": "struttura-tensione/bubbles/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/bubbles/canvas/01.webp",
+            "struttura-tensione/bubbles/canvas/02.webp"
+          ],
+          "canvas": "struttura-tensione/bubbles/canvas/01.webp"
         },
         {
           "id": "onde-riflesse",
@@ -260,45 +346,64 @@
             "struttura-tensione/onde-riflesse/thumb/02.webp",
             "struttura-tensione/onde-riflesse/thumb/03.webp"
           ],
-          "thumb": "struttura-tensione/onde-riflesse/thumb/01.webp"
+          "thumb": "struttura-tensione/onde-riflesse/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/onde-riflesse/canvas/01.webp",
+            "struttura-tensione/onde-riflesse/canvas/02.webp",
+            "struttura-tensione/onde-riflesse/canvas/03.webp"
+          ],
+          "canvas": "struttura-tensione/onde-riflesse/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-a4bc4d",
+          "id": "sotto-la-superficie",
           "title": "Sotto la superficie",
           "year": "",
-          "image": "struttura-tensione/progetto-senza-titolo-a4bc4d/01.jpg",
+          "image": "struttura-tensione/sotto-la-superficie/01.jpg",
           "gallery": [
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/01.jpg",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/02.jpg",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/03.jpg",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/04.jpg",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/05.jpg"
+            "struttura-tensione/sotto-la-superficie/01.jpg",
+            "struttura-tensione/sotto-la-superficie/02.jpg",
+            "struttura-tensione/sotto-la-superficie/03.jpg",
+            "struttura-tensione/sotto-la-superficie/04.jpg",
+            "struttura-tensione/sotto-la-superficie/05.jpg"
           ],
           "description": "Sotto la superficie mette in relazione l’aspetto esterno della figura con una struttura interna visibile, dove componenti, connessioni e circuiti emergono come parte integrante della composizione.\n\nIl volto, liscio e silenzioso, contrasta con la complessità meccanica che si sviluppa nella parte aperta della testa e del collo. Cavi, elementi e connessioni costruiscono una rete interna che suggerisce un livello nascosto oltre l’apparenza.\n\nL’opera riflette sul rapporto tra identità e tecnologia, mostrando ciò che normalmente rimane invisibile: la struttura interna che sostiene e alimenta la superficie.",
           "thumb_gallery": [
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/thumb/01.webp",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/thumb/02.webp",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/thumb/03.webp",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/thumb/04.webp",
-            "struttura-tensione/progetto-senza-titolo-a4bc4d/thumb/05.webp"
+            "struttura-tensione/sotto-la-superficie/thumb/01.webp",
+            "struttura-tensione/sotto-la-superficie/thumb/02.webp",
+            "struttura-tensione/sotto-la-superficie/thumb/03.webp",
+            "struttura-tensione/sotto-la-superficie/thumb/04.webp",
+            "struttura-tensione/sotto-la-superficie/thumb/05.webp"
           ],
-          "thumb": "struttura-tensione/progetto-senza-titolo-a4bc4d/thumb/01.webp"
+          "thumb": "struttura-tensione/sotto-la-superficie/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/sotto-la-superficie/canvas/01.webp",
+            "struttura-tensione/sotto-la-superficie/canvas/02.webp",
+            "struttura-tensione/sotto-la-superficie/canvas/03.webp",
+            "struttura-tensione/sotto-la-superficie/canvas/04.webp",
+            "struttura-tensione/sotto-la-superficie/canvas/05.webp"
+          ],
+          "canvas": "struttura-tensione/sotto-la-superficie/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-1a5129",
+          "id": "il-peso-dell-ingiustizia",
           "title": "Il peso dell'ingiustizia",
           "year": "",
-          "image": "struttura-tensione/progetto-senza-titolo-1a5129/01.jpg",
+          "image": "struttura-tensione/il-peso-dell-ingiustizia/01.jpg",
           "gallery": [
-            "struttura-tensione/progetto-senza-titolo-1a5129/01.jpg",
-            "struttura-tensione/progetto-senza-titolo-1a5129/02.png"
+            "struttura-tensione/il-peso-dell-ingiustizia/01.jpg",
+            "struttura-tensione/il-peso-dell-ingiustizia/02.png"
           ],
           "description": "Quest’opera racconta un mondo che rotola verso la rovina, spinto da un piccolo scarabeo stercorario: simbolo di fatica, trasformazione e resilienza. \nLa sfera che trasporta è un globo corrotto, segnato dalle colpe dell’umanità e dall’indifferenza verso il dolore altrui. \nEppure, in alto, si libera un piccolo aquilone, fragile ma ostinato, con i colori della Palestina. \nUn dettaglio sottile che si fa voce, resistenza, memoria.\nLa lastra in alluminio, lavorata completamente a mano con la tecnica dello sbalzo, è stata rifinita con resine pigmentate per esaltarne i contrasti, dare profondità cromatica e intensificare la carica espressiva dell’opera.\n Ogni solco è inciso con consapevolezza, ogni rilievo è una scelta di verità e denuncia.\nIn questo contrasto tra la durezza del metallo e la leggerezza del messaggio si racchiude il senso dell’opera: trasformare la materia in voce, e l’arte in atto civile.",
           "thumb_gallery": [
-            "struttura-tensione/progetto-senza-titolo-1a5129/thumb/01.webp",
-            "struttura-tensione/progetto-senza-titolo-1a5129/thumb/02.webp"
+            "struttura-tensione/il-peso-dell-ingiustizia/thumb/01.webp",
+            "struttura-tensione/il-peso-dell-ingiustizia/thumb/02.webp"
           ],
-          "thumb": "struttura-tensione/progetto-senza-titolo-1a5129/thumb/01.webp"
+          "thumb": "struttura-tensione/il-peso-dell-ingiustizia/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp",
+            "struttura-tensione/il-peso-dell-ingiustizia/canvas/02.webp"
+          ],
+          "canvas": "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp"
         },
         {
           "id": "checkmate",
@@ -316,7 +421,13 @@
             "struttura-tensione/checkmate/thumb/02.webp",
             "struttura-tensione/checkmate/thumb/03.webp"
           ],
-          "thumb": "struttura-tensione/checkmate/thumb/01.webp"
+          "thumb": "struttura-tensione/checkmate/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/checkmate/canvas/01.webp",
+            "struttura-tensione/checkmate/canvas/02.webp",
+            "struttura-tensione/checkmate/canvas/03.webp"
+          ],
+          "canvas": "struttura-tensione/checkmate/canvas/01.webp"
         },
         {
           "id": "senza-catene",
@@ -330,7 +441,11 @@
           "thumb_gallery": [
             "struttura-tensione/senza-catene/thumb/01.webp"
           ],
-          "thumb": "struttura-tensione/senza-catene/thumb/01.webp"
+          "thumb": "struttura-tensione/senza-catene/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/senza-catene/canvas/01.webp"
+          ],
+          "canvas": "struttura-tensione/senza-catene/canvas/01.webp"
         },
         {
           "id": "trittico",
@@ -350,7 +465,14 @@
             "struttura-tensione/trittico/thumb/03.webp",
             "struttura-tensione/trittico/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/trittico/thumb/01.webp"
+          "thumb": "struttura-tensione/trittico/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/trittico/canvas/01.webp",
+            "struttura-tensione/trittico/canvas/02.webp",
+            "struttura-tensione/trittico/canvas/03.webp",
+            "struttura-tensione/trittico/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/trittico/canvas/01.webp"
         },
         {
           "id": "lady",
@@ -370,7 +492,14 @@
             "struttura-tensione/lady/thumb/03.webp",
             "struttura-tensione/lady/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/lady/thumb/01.webp"
+          "thumb": "struttura-tensione/lady/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lady/canvas/01.webp",
+            "struttura-tensione/lady/canvas/02.webp",
+            "struttura-tensione/lady/canvas/03.webp",
+            "struttura-tensione/lady/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/lady/canvas/01.webp"
         },
         {
           "id": "pensiero",
@@ -394,31 +523,49 @@
             "struttura-tensione/pensiero/thumb/05.webp",
             "struttura-tensione/pensiero/thumb/06.webp"
           ],
-          "thumb": "struttura-tensione/pensiero/thumb/01.webp"
+          "thumb": "struttura-tensione/pensiero/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/pensiero/canvas/01.webp",
+            "struttura-tensione/pensiero/canvas/02.webp",
+            "struttura-tensione/pensiero/canvas/03.webp",
+            "struttura-tensione/pensiero/canvas/04.webp",
+            "struttura-tensione/pensiero/canvas/05.webp",
+            "struttura-tensione/pensiero/canvas/06.webp"
+          ],
+          "canvas": "struttura-tensione/pensiero/canvas/01.webp"
         },
         {
-          "id": "my-project-e17e75",
+          "id": "boes",
           "title": "Boes",
           "year": "",
-          "image": "struttura-tensione/my-project-e17e75/01.jpg",
+          "image": "struttura-tensione/boes/01.jpg",
           "gallery": [
-            "struttura-tensione/my-project-e17e75/01.jpg",
-            "struttura-tensione/my-project-e17e75/02.jpg",
-            "struttura-tensione/my-project-e17e75/03.jpg",
-            "struttura-tensione/my-project-e17e75/04.jpg",
-            "struttura-tensione/my-project-e17e75/05.jpg",
-            "struttura-tensione/my-project-e17e75/06.jpg"
+            "struttura-tensione/boes/01.jpg",
+            "struttura-tensione/boes/02.jpg",
+            "struttura-tensione/boes/03.jpg",
+            "struttura-tensione/boes/04.jpg",
+            "struttura-tensione/boes/05.jpg",
+            "struttura-tensione/boes/06.jpg"
           ],
           "description": "L’opera riprende la maschera tradizionale dei Boes, figura simbolica del carnevale sardo dei Boes e Merdules. Il volto taurino, con le lunghe corna ricurve, richiama la forza primordiale dell’animale e il legame profondo con il mondo pastorale.\n\nRealizzata in alluminio lavorato a sbalzo e cesello, la superficie metallica costruisce la forma della maschera attraverso linee incise, rilievi e aperture che definiscono lo sguardo e i tratti essenziali del volto.\n\nAttraverso il metallo, la tradizione popolare viene reinterpretata in chiave contemporanea, mantenendo intatta la potenza simbolica di questa antica figura rituale.",
           "thumb_gallery": [
-            "struttura-tensione/my-project-e17e75/thumb/01.webp",
-            "struttura-tensione/my-project-e17e75/thumb/02.webp",
-            "struttura-tensione/my-project-e17e75/thumb/03.webp",
-            "struttura-tensione/my-project-e17e75/thumb/04.webp",
-            "struttura-tensione/my-project-e17e75/thumb/05.webp",
-            "struttura-tensione/my-project-e17e75/thumb/06.webp"
+            "struttura-tensione/boes/thumb/01.webp",
+            "struttura-tensione/boes/thumb/02.webp",
+            "struttura-tensione/boes/thumb/03.webp",
+            "struttura-tensione/boes/thumb/04.webp",
+            "struttura-tensione/boes/thumb/05.webp",
+            "struttura-tensione/boes/thumb/06.webp"
           ],
-          "thumb": "struttura-tensione/my-project-e17e75/thumb/01.webp"
+          "thumb": "struttura-tensione/boes/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/boes/canvas/01.webp",
+            "struttura-tensione/boes/canvas/02.webp",
+            "struttura-tensione/boes/canvas/03.webp",
+            "struttura-tensione/boes/canvas/04.webp",
+            "struttura-tensione/boes/canvas/05.webp",
+            "struttura-tensione/boes/canvas/06.webp"
+          ],
+          "canvas": "struttura-tensione/boes/canvas/01.webp"
         },
         {
           "id": "titolomarionette-ex-voto",
@@ -440,7 +587,15 @@
             "struttura-tensione/titolomarionette-ex-voto/thumb/04.webp",
             "struttura-tensione/titolomarionette-ex-voto/thumb/05.webp"
           ],
-          "thumb": "struttura-tensione/titolomarionette-ex-voto/thumb/01.webp"
+          "thumb": "struttura-tensione/titolomarionette-ex-voto/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/titolomarionette-ex-voto/canvas/01.webp",
+            "struttura-tensione/titolomarionette-ex-voto/canvas/02.webp",
+            "struttura-tensione/titolomarionette-ex-voto/canvas/03.webp",
+            "struttura-tensione/titolomarionette-ex-voto/canvas/04.webp",
+            "struttura-tensione/titolomarionette-ex-voto/canvas/05.webp"
+          ],
+          "canvas": "struttura-tensione/titolomarionette-ex-voto/canvas/01.webp"
         },
         {
           "id": "veliero",
@@ -460,7 +615,14 @@
             "struttura-tensione/veliero/thumb/03.webp",
             "struttura-tensione/veliero/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/veliero/thumb/01.webp"
+          "thumb": "struttura-tensione/veliero/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/veliero/canvas/01.webp",
+            "struttura-tensione/veliero/canvas/02.webp",
+            "struttura-tensione/veliero/canvas/03.webp",
+            "struttura-tensione/veliero/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/veliero/canvas/01.webp"
         },
         {
           "id": "mare-in-tempesta",
@@ -480,7 +642,14 @@
             "struttura-tensione/mare-in-tempesta/thumb/03.webp",
             "struttura-tensione/mare-in-tempesta/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/mare-in-tempesta/thumb/01.webp"
+          "thumb": "struttura-tensione/mare-in-tempesta/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/mare-in-tempesta/canvas/01.webp",
+            "struttura-tensione/mare-in-tempesta/canvas/02.webp",
+            "struttura-tensione/mare-in-tempesta/canvas/03.webp",
+            "struttura-tensione/mare-in-tempesta/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/mare-in-tempesta/canvas/01.webp"
         },
         {
           "id": "oblo",
@@ -498,7 +667,13 @@
             "struttura-tensione/oblo/thumb/02.webp",
             "struttura-tensione/oblo/thumb/03.webp"
           ],
-          "thumb": "struttura-tensione/oblo/thumb/01.webp"
+          "thumb": "struttura-tensione/oblo/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/oblo/canvas/01.webp",
+            "struttura-tensione/oblo/canvas/02.webp",
+            "struttura-tensione/oblo/canvas/03.webp"
+          ],
+          "canvas": "struttura-tensione/oblo/canvas/01.webp"
         },
         {
           "id": "giappone",
@@ -518,29 +693,44 @@
             "struttura-tensione/giappone/thumb/03.webp",
             "struttura-tensione/giappone/thumb/04.webp"
           ],
-          "thumb": "struttura-tensione/giappone/thumb/01.webp"
+          "thumb": "struttura-tensione/giappone/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/giappone/canvas/01.webp",
+            "struttura-tensione/giappone/canvas/02.webp",
+            "struttura-tensione/giappone/canvas/03.webp",
+            "struttura-tensione/giappone/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/giappone/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-0f5967",
+          "id": "volo-d-argento",
           "title": "Volo d'Argento",
           "year": "",
-          "image": "struttura-tensione/progetto-senza-titolo-0f5967/01.png",
+          "image": "struttura-tensione/volo-d-argento/01.png",
           "gallery": [
-            "struttura-tensione/progetto-senza-titolo-0f5967/01.png",
-            "struttura-tensione/progetto-senza-titolo-0f5967/02.png",
-            "struttura-tensione/progetto-senza-titolo-0f5967/03.png",
-            "struttura-tensione/progetto-senza-titolo-0f5967/04.png",
-            "struttura-tensione/progetto-senza-titolo-0f5967/05.jpg"
+            "struttura-tensione/volo-d-argento/01.png",
+            "struttura-tensione/volo-d-argento/02.png",
+            "struttura-tensione/volo-d-argento/03.png",
+            "struttura-tensione/volo-d-argento/04.png",
+            "struttura-tensione/volo-d-argento/05.jpg"
           ],
           "description": "Volo d'Argento è una scultura a sbalzo su alluminio che raffigura un cavallo alato, figura mitica che in questa opera assume un tratto essenziale e contemporaneo, ma allo stesso tempo è un richiamo alla figura mitologica, reinterpretata con un tratto pulito, moderno, privo di orpelli.\nI contorni netti e le linee stilizzate danno forma a una creatura sospesa tra forza e leggerezza, tra materia e spirito.\nL’alluminio, trattato completamente a mano, riflette la luce trasformandosi a seconda dell’angolo d’osservazione.\nCon un linguaggio minimalista e senza tempo, questa creazione evoca il superamento dei limiti e la potenza silenziosa dell’immaginazione.\nIl metallo, solitamente freddo e rigido, diventa qui superficie viva, attraversata da forme che parlano di slancio, libertà e desiderio di oltrepassare i limiti.",
           "thumb_gallery": [
-            "struttura-tensione/progetto-senza-titolo-0f5967/thumb/01.webp",
-            "struttura-tensione/progetto-senza-titolo-0f5967/thumb/02.webp",
-            "struttura-tensione/progetto-senza-titolo-0f5967/thumb/03.webp",
-            "struttura-tensione/progetto-senza-titolo-0f5967/thumb/04.webp",
-            "struttura-tensione/progetto-senza-titolo-0f5967/thumb/05.webp"
+            "struttura-tensione/volo-d-argento/thumb/01.webp",
+            "struttura-tensione/volo-d-argento/thumb/02.webp",
+            "struttura-tensione/volo-d-argento/thumb/03.webp",
+            "struttura-tensione/volo-d-argento/thumb/04.webp",
+            "struttura-tensione/volo-d-argento/thumb/05.webp"
           ],
-          "thumb": "struttura-tensione/progetto-senza-titolo-0f5967/thumb/01.webp"
+          "thumb": "struttura-tensione/volo-d-argento/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/volo-d-argento/canvas/01.webp",
+            "struttura-tensione/volo-d-argento/canvas/02.webp",
+            "struttura-tensione/volo-d-argento/canvas/03.webp",
+            "struttura-tensione/volo-d-argento/canvas/04.webp",
+            "struttura-tensione/volo-d-argento/canvas/05.webp"
+          ],
+          "canvas": "struttura-tensione/volo-d-argento/canvas/01.webp"
         },
         {
           "id": "nessu-dorma",
@@ -566,23 +756,38 @@
             "struttura-tensione/nessu-dorma/thumb/06.webp",
             "struttura-tensione/nessu-dorma/thumb/07.webp"
           ],
-          "thumb": "struttura-tensione/nessu-dorma/thumb/01.webp"
+          "thumb": "struttura-tensione/nessu-dorma/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/nessu-dorma/canvas/01.webp",
+            "struttura-tensione/nessu-dorma/canvas/02.webp",
+            "struttura-tensione/nessu-dorma/canvas/03.webp",
+            "struttura-tensione/nessu-dorma/canvas/04.webp",
+            "struttura-tensione/nessu-dorma/canvas/05.webp",
+            "struttura-tensione/nessu-dorma/canvas/06.webp",
+            "struttura-tensione/nessu-dorma/canvas/07.webp"
+          ],
+          "canvas": "struttura-tensione/nessu-dorma/canvas/01.webp"
         },
         {
-          "id": "my-project-4d8295",
+          "id": "l-unione",
           "title": "L'unione",
           "year": "",
-          "image": "struttura-tensione/my-project-4d8295/01.jpg",
+          "image": "struttura-tensione/l-unione/01.jpg",
           "gallery": [
-            "struttura-tensione/my-project-4d8295/01.jpg",
-            "struttura-tensione/my-project-4d8295/02.jpg"
+            "struttura-tensione/l-unione/01.jpg",
+            "struttura-tensione/l-unione/02.jpg"
           ],
           "description": "Un banco di pesci si muove come un unico organismo, creando una composizione circolare che suggerisce movimento, equilibrio e cooperazione. Ogni elemento mantiene la propria individualità, ma è nella relazione con gli altri che prende forma l’insieme.\n\nRealizzati in alluminio lavorato a sbalzo e cesello, i pesci costruiscono un ritmo visivo che attraversa la superficie metallica, trasformando la scena in una struttura dinamica.\n\nL’opera riflette sul valore della collettività: quando le singole presenze si muovono insieme, la forza del gruppo diventa più grande della somma delle sue parti.",
           "thumb_gallery": [
-            "struttura-tensione/my-project-4d8295/thumb/01.webp",
-            "struttura-tensione/my-project-4d8295/thumb/02.webp"
+            "struttura-tensione/l-unione/thumb/01.webp",
+            "struttura-tensione/l-unione/thumb/02.webp"
           ],
-          "thumb": "struttura-tensione/my-project-4d8295/thumb/01.webp"
+          "thumb": "struttura-tensione/l-unione/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/l-unione/canvas/01.webp",
+            "struttura-tensione/l-unione/canvas/02.webp"
+          ],
+          "canvas": "struttura-tensione/l-unione/canvas/01.webp"
         }
       ]
     },
@@ -593,44 +798,58 @@
       "description": "La materia metallica si trasforma in forme organiche e presenze naturali: la superficie lavorata rivela il passaggio dalla materia alla vita.",
       "works": [
         {
-          "id": "my-project-528a5b",
+          "id": "globigerina",
           "title": "Globigerina",
           "year": "",
-          "image": "forma-organica/my-project-528a5b/01.jpg",
+          "image": "forma-organica/globigerina/01.jpg",
           "gallery": [
-            "forma-organica/my-project-528a5b/01.jpg",
-            "forma-organica/my-project-528a5b/02.jpg"
+            "forma-organica/globigerina/01.jpg",
+            "forma-organica/globigerina/02.jpg"
           ],
           "description": "L’opera si ispira alle forme microscopiche della Globigerina, un organismo marino planctonico che abita gli oceani. La struttura radiale e organica richiama l’architettura naturale di questi minuscoli esseri viventi, trasformandola in una composizione ampia e dinamica.\n\nRealizzata in alluminio lavorato a sbalzo e cesello, la superficie costruisce una trama di nervature e cavità che si sviluppano dal centro verso l’esterno, generando un movimento continuo e quasi spiraliforme.\n\nAttraverso l’ingrandimento di una forma invisibile a occhio nudo, l’opera mette in dialogo il mondo microscopico con la materia metallica, rivelando la sorprendente complessità delle strutture naturali.",
           "thumb_gallery": [
-            "forma-organica/my-project-528a5b/thumb/01.webp",
-            "forma-organica/my-project-528a5b/thumb/02.webp"
+            "forma-organica/globigerina/thumb/01.webp",
+            "forma-organica/globigerina/thumb/02.webp"
           ],
-          "thumb": "forma-organica/my-project-528a5b/thumb/01.webp"
+          "thumb": "forma-organica/globigerina/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/globigerina/canvas/01.webp",
+            "forma-organica/globigerina/canvas/02.webp"
+          ],
+          "canvas": "forma-organica/globigerina/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-f37006",
+          "id": "riccio-di-mare",
           "title": "Riccio di mare",
           "year": "",
-          "image": "forma-organica/progetto-senza-titolo-f37006/01.jpg",
+          "image": "forma-organica/riccio-di-mare/01.jpg",
           "gallery": [
-            "forma-organica/progetto-senza-titolo-f37006/01.jpg",
-            "forma-organica/progetto-senza-titolo-f37006/02.jpg",
-            "forma-organica/progetto-senza-titolo-f37006/03.jpg",
-            "forma-organica/progetto-senza-titolo-f37006/04.jpg",
-            "forma-organica/progetto-senza-titolo-f37006/05.jpg",
-            "forma-organica/progetto-senza-titolo-f37006/06.jpg"
+            "forma-organica/riccio-di-mare/01.jpg",
+            "forma-organica/riccio-di-mare/02.jpg",
+            "forma-organica/riccio-di-mare/03.jpg",
+            "forma-organica/riccio-di-mare/04.jpg",
+            "forma-organica/riccio-di-mare/05.jpg",
+            "forma-organica/riccio-di-mare/06.jpg"
           ],
           "description": "Riccio di mare rappresenta il guscio dell’animale, realizzato attraverso una lavorazione a sbalzo su alluminio.\n\nLa composizione segue una struttura radiale che si sviluppa dal centro verso il bordo del disco, riprendendo l’organizzazione naturale del guscio. La superficie è animata da una fitta trama di rilievi che ne definiscono la texture.\n\nLa luce scorre sul metallo mettendo in evidenza le variazioni della lavorazione e rafforzando il ritmo circolare della forma.",
           "thumb_gallery": [
-            "forma-organica/progetto-senza-titolo-f37006/thumb/01.webp",
-            "forma-organica/progetto-senza-titolo-f37006/thumb/02.webp",
-            "forma-organica/progetto-senza-titolo-f37006/thumb/03.webp",
-            "forma-organica/progetto-senza-titolo-f37006/thumb/04.webp",
-            "forma-organica/progetto-senza-titolo-f37006/thumb/05.webp",
-            "forma-organica/progetto-senza-titolo-f37006/thumb/06.webp"
+            "forma-organica/riccio-di-mare/thumb/01.webp",
+            "forma-organica/riccio-di-mare/thumb/02.webp",
+            "forma-organica/riccio-di-mare/thumb/03.webp",
+            "forma-organica/riccio-di-mare/thumb/04.webp",
+            "forma-organica/riccio-di-mare/thumb/05.webp",
+            "forma-organica/riccio-di-mare/thumb/06.webp"
           ],
-          "thumb": "forma-organica/progetto-senza-titolo-f37006/thumb/01.webp"
+          "thumb": "forma-organica/riccio-di-mare/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/riccio-di-mare/canvas/01.webp",
+            "forma-organica/riccio-di-mare/canvas/02.webp",
+            "forma-organica/riccio-di-mare/canvas/03.webp",
+            "forma-organica/riccio-di-mare/canvas/04.webp",
+            "forma-organica/riccio-di-mare/canvas/05.webp",
+            "forma-organica/riccio-di-mare/canvas/06.webp"
+          ],
+          "canvas": "forma-organica/riccio-di-mare/canvas/01.webp"
         },
         {
           "id": "polipo",
@@ -648,7 +867,13 @@
             "forma-organica/polipo/thumb/02.webp",
             "forma-organica/polipo/thumb/03.webp"
           ],
-          "thumb": "forma-organica/polipo/thumb/01.webp"
+          "thumb": "forma-organica/polipo/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/polipo/canvas/01.webp",
+            "forma-organica/polipo/canvas/02.webp",
+            "forma-organica/polipo/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/polipo/canvas/01.webp"
         },
         {
           "id": "armatura-primordiale",
@@ -678,7 +903,19 @@
             "forma-organica/armatura-primordiale/thumb/08.webp",
             "forma-organica/armatura-primordiale/thumb/09.webp"
           ],
-          "thumb": "forma-organica/armatura-primordiale/thumb/01.webp"
+          "thumb": "forma-organica/armatura-primordiale/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/armatura-primordiale/canvas/01.webp",
+            "forma-organica/armatura-primordiale/canvas/02.webp",
+            "forma-organica/armatura-primordiale/canvas/03.webp",
+            "forma-organica/armatura-primordiale/canvas/04.webp",
+            "forma-organica/armatura-primordiale/canvas/05.webp",
+            "forma-organica/armatura-primordiale/canvas/06.webp",
+            "forma-organica/armatura-primordiale/canvas/07.webp",
+            "forma-organica/armatura-primordiale/canvas/08.webp",
+            "forma-organica/armatura-primordiale/canvas/09.webp"
+          ],
+          "canvas": "forma-organica/armatura-primordiale/canvas/01.webp"
         },
         {
           "id": "granchio",
@@ -696,7 +933,13 @@
             "forma-organica/granchio/thumb/02.webp",
             "forma-organica/granchio/thumb/03.webp"
           ],
-          "thumb": "forma-organica/granchio/thumb/01.webp"
+          "thumb": "forma-organica/granchio/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/granchio/canvas/01.webp",
+            "forma-organica/granchio/canvas/02.webp",
+            "forma-organica/granchio/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/granchio/canvas/01.webp"
         },
         {
           "id": "pesce-palla",
@@ -710,7 +953,11 @@
           "thumb_gallery": [
             "forma-organica/pesce-palla/thumb/01.webp"
           ],
-          "thumb": "forma-organica/pesce-palla/thumb/01.webp"
+          "thumb": "forma-organica/pesce-palla/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/pesce-palla/canvas/01.webp"
+          ],
+          "canvas": "forma-organica/pesce-palla/canvas/01.webp"
         },
         {
           "id": "iguana",
@@ -732,27 +979,42 @@
             "forma-organica/iguana/thumb/04.webp",
             "forma-organica/iguana/thumb/05.webp"
           ],
-          "thumb": "forma-organica/iguana/thumb/01.webp"
+          "thumb": "forma-organica/iguana/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/iguana/canvas/01.webp",
+            "forma-organica/iguana/canvas/02.webp",
+            "forma-organica/iguana/canvas/03.webp",
+            "forma-organica/iguana/canvas/04.webp",
+            "forma-organica/iguana/canvas/05.webp"
+          ],
+          "canvas": "forma-organica/iguana/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-e6dd84",
+          "id": "dragone",
           "title": "Dragone",
           "year": "",
-          "image": "forma-organica/progetto-senza-titolo-e6dd84/01.jpg",
+          "image": "forma-organica/dragone/01.jpg",
           "gallery": [
-            "forma-organica/progetto-senza-titolo-e6dd84/01.jpg",
-            "forma-organica/progetto-senza-titolo-e6dd84/02.jpg",
-            "forma-organica/progetto-senza-titolo-e6dd84/03.jpg",
-            "forma-organica/progetto-senza-titolo-e6dd84/04.jpg"
+            "forma-organica/dragone/01.jpg",
+            "forma-organica/dragone/02.jpg",
+            "forma-organica/dragone/03.jpg",
+            "forma-organica/dragone/04.jpg"
           ],
           "description": "Realizzato attraverso sbalzo manuale su lastra sottile di alluminio, Dragone sviluppa una struttura dinamica costruita per tensione interna e controllo del rilievo.\n\nLa figura non è trattata in chiave narrativa, ma come superficie in trasformazione: la luce definisce ritmo e profondità, mentre il volume emerge dalla pressione calibrata esercitata sulla materia.\n\nL’opera indaga il rapporto tra linea organica e costruzione formale, trasformando l’immagine in una configurazione strutturale dove il movimento nasce dall’equilibrio tra spinta e resistenza della materia.",
           "thumb_gallery": [
-            "forma-organica/progetto-senza-titolo-e6dd84/thumb/01.webp",
-            "forma-organica/progetto-senza-titolo-e6dd84/thumb/02.webp",
-            "forma-organica/progetto-senza-titolo-e6dd84/thumb/03.webp",
-            "forma-organica/progetto-senza-titolo-e6dd84/thumb/04.webp"
+            "forma-organica/dragone/thumb/01.webp",
+            "forma-organica/dragone/thumb/02.webp",
+            "forma-organica/dragone/thumb/03.webp",
+            "forma-organica/dragone/thumb/04.webp"
           ],
-          "thumb": "forma-organica/progetto-senza-titolo-e6dd84/thumb/01.webp"
+          "thumb": "forma-organica/dragone/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/dragone/canvas/01.webp",
+            "forma-organica/dragone/canvas/02.webp",
+            "forma-organica/dragone/canvas/03.webp",
+            "forma-organica/dragone/canvas/04.webp"
+          ],
+          "canvas": "forma-organica/dragone/canvas/01.webp"
         },
         {
           "id": "elefante",
@@ -766,25 +1028,35 @@
           "thumb_gallery": [
             "forma-organica/elefante/thumb/01.webp"
           ],
-          "thumb": "forma-organica/elefante/thumb/01.webp"
+          "thumb": "forma-organica/elefante/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/elefante/canvas/01.webp"
+          ],
+          "canvas": "forma-organica/elefante/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo",
+          "id": "zebra",
           "title": "Zebra",
           "year": "",
-          "image": "forma-organica/progetto-senza-titolo/01.jpg",
+          "image": "forma-organica/zebra/01.jpg",
           "gallery": [
-            "forma-organica/progetto-senza-titolo/01.jpg",
-            "forma-organica/progetto-senza-titolo/02.png",
-            "forma-organica/progetto-senza-titolo/03.png"
+            "forma-organica/zebra/01.jpg",
+            "forma-organica/zebra/02.png",
+            "forma-organica/zebra/03.png"
           ],
           "description": "La figura della zebra emerge attraverso la lavorazione a sbalzo dell’alluminio, che ne costruisce il volume e definisce con precisione la struttura del corpo.\n\nLe strisce, realizzate in rame e alluminio, introducono un ritmo grafico che attraversa la superficie e rafforza la presenza dell’animale. Il contrasto tra i metalli evidenzia il disegno naturale del manto, trasformandolo in elemento visivo e compositivo.\n\nL’opera mette in dialogo osservazione naturalistica e ricerca materica, dove il metallo diventa strumento per restituire forma, ritmo e luce.",
           "thumb_gallery": [
-            "forma-organica/progetto-senza-titolo/thumb/01.webp",
-            "forma-organica/progetto-senza-titolo/thumb/02.webp",
-            "forma-organica/progetto-senza-titolo/thumb/03.webp"
+            "forma-organica/zebra/thumb/01.webp",
+            "forma-organica/zebra/thumb/02.webp",
+            "forma-organica/zebra/thumb/03.webp"
           ],
-          "thumb": "forma-organica/progetto-senza-titolo/thumb/01.webp"
+          "thumb": "forma-organica/zebra/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/zebra/canvas/01.webp",
+            "forma-organica/zebra/canvas/02.webp",
+            "forma-organica/zebra/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/zebra/canvas/01.webp"
         },
         {
           "id": "tartaruga-c8e51f",
@@ -802,7 +1074,13 @@
             "forma-organica/tartaruga-c8e51f/thumb/02.webp",
             "forma-organica/tartaruga-c8e51f/thumb/03.webp"
           ],
-          "thumb": "forma-organica/tartaruga-c8e51f/thumb/01.webp"
+          "thumb": "forma-organica/tartaruga-c8e51f/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/tartaruga-c8e51f/canvas/01.webp",
+            "forma-organica/tartaruga-c8e51f/canvas/02.webp",
+            "forma-organica/tartaruga-c8e51f/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/tartaruga-c8e51f/canvas/01.webp"
         },
         {
           "id": "aragosta",
@@ -824,7 +1102,15 @@
             "forma-organica/aragosta/thumb/04.webp",
             "forma-organica/aragosta/thumb/05.webp"
           ],
-          "thumb": "forma-organica/aragosta/thumb/01.webp"
+          "thumb": "forma-organica/aragosta/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/aragosta/canvas/01.webp",
+            "forma-organica/aragosta/canvas/02.webp",
+            "forma-organica/aragosta/canvas/03.webp",
+            "forma-organica/aragosta/canvas/04.webp",
+            "forma-organica/aragosta/canvas/05.webp"
+          ],
+          "canvas": "forma-organica/aragosta/canvas/01.webp"
         },
         {
           "id": "carpa-koi",
@@ -844,7 +1130,14 @@
             "forma-organica/carpa-koi/thumb/03.webp",
             "forma-organica/carpa-koi/thumb/04.webp"
           ],
-          "thumb": "forma-organica/carpa-koi/thumb/01.webp"
+          "thumb": "forma-organica/carpa-koi/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/carpa-koi/canvas/01.webp",
+            "forma-organica/carpa-koi/canvas/02.webp",
+            "forma-organica/carpa-koi/canvas/03.webp",
+            "forma-organica/carpa-koi/canvas/04.webp"
+          ],
+          "canvas": "forma-organica/carpa-koi/canvas/01.webp"
         },
         {
           "id": "fenicotteri",
@@ -862,33 +1155,49 @@
             "forma-organica/fenicotteri/thumb/02.webp",
             "forma-organica/fenicotteri/thumb/03.webp"
           ],
-          "thumb": "forma-organica/fenicotteri/thumb/01.webp"
+          "thumb": "forma-organica/fenicotteri/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/fenicotteri/canvas/01.webp",
+            "forma-organica/fenicotteri/canvas/02.webp",
+            "forma-organica/fenicotteri/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/fenicotteri/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-2ae9b3",
+          "id": "trota",
           "title": "Trota",
           "year": "",
-          "image": "forma-organica/progetto-senza-titolo-2ae9b3/01.jpg",
+          "image": "forma-organica/trota/01.jpg",
           "gallery": [
-            "forma-organica/progetto-senza-titolo-2ae9b3/01.jpg",
-            "forma-organica/progetto-senza-titolo-2ae9b3/02.jpg",
-            "forma-organica/progetto-senza-titolo-2ae9b3/03.jpg",
-            "forma-organica/progetto-senza-titolo-2ae9b3/04.jpg",
-            "forma-organica/progetto-senza-titolo-2ae9b3/05.jpg",
-            "forma-organica/progetto-senza-titolo-2ae9b3/06.png",
-            "forma-organica/progetto-senza-titolo-2ae9b3/07.png"
+            "forma-organica/trota/01.jpg",
+            "forma-organica/trota/02.jpg",
+            "forma-organica/trota/03.jpg",
+            "forma-organica/trota/04.jpg",
+            "forma-organica/trota/05.jpg",
+            "forma-organica/trota/06.png",
+            "forma-organica/trota/07.png"
           ],
           "description": "Trota mette in relazione la figura del pesce con una struttura reticolare che occupa la superficie dell’opera.\n\nLa rete, costruita attraverso aperture irregolari nell’alluminio, diventa il vero campo visivo: un sistema di vuoti e bordi che genera profondità e tensione. La figura della trota emerge in contrasto con questa trama, mantenendo una presenza più naturale e riconoscibile.\n\nIl dialogo tra struttura e figura crea un equilibrio instabile tra libertà e costrizione, trasformando l’immagine in una composizione costruita su ritmo, vuoto e materia.",
           "thumb_gallery": [
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/01.webp",
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/02.webp",
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/03.webp",
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/04.webp",
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/05.webp",
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/06.webp",
-            "forma-organica/progetto-senza-titolo-2ae9b3/thumb/07.webp"
+            "forma-organica/trota/thumb/01.webp",
+            "forma-organica/trota/thumb/02.webp",
+            "forma-organica/trota/thumb/03.webp",
+            "forma-organica/trota/thumb/04.webp",
+            "forma-organica/trota/thumb/05.webp",
+            "forma-organica/trota/thumb/06.webp",
+            "forma-organica/trota/thumb/07.webp"
           ],
-          "thumb": "forma-organica/progetto-senza-titolo-2ae9b3/thumb/01.webp"
+          "thumb": "forma-organica/trota/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/trota/canvas/01.webp",
+            "forma-organica/trota/canvas/02.webp",
+            "forma-organica/trota/canvas/03.webp",
+            "forma-organica/trota/canvas/04.webp",
+            "forma-organica/trota/canvas/05.webp",
+            "forma-organica/trota/canvas/06.webp",
+            "forma-organica/trota/canvas/07.webp"
+          ],
+          "canvas": "forma-organica/trota/canvas/01.webp"
         },
         {
           "id": "tucano",
@@ -906,7 +1215,13 @@
             "forma-organica/tucano/thumb/02.webp",
             "forma-organica/tucano/thumb/03.webp"
           ],
-          "thumb": "forma-organica/tucano/thumb/01.webp"
+          "thumb": "forma-organica/tucano/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/tucano/canvas/01.webp",
+            "forma-organica/tucano/canvas/02.webp",
+            "forma-organica/tucano/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/tucano/canvas/01.webp"
         },
         {
           "id": "vedova-nera",
@@ -922,21 +1237,30 @@
             "forma-organica/vedova-nera/thumb/01.webp",
             "forma-organica/vedova-nera/thumb/04.webp"
           ],
-          "thumb": "forma-organica/vedova-nera/thumb/01.webp"
+          "thumb": "forma-organica/vedova-nera/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/vedova-nera/canvas/01.webp",
+            "forma-organica/vedova-nera/canvas/04.webp"
+          ],
+          "canvas": "forma-organica/vedova-nera/canvas/01.webp"
         },
         {
-          "id": "progetto-senza-titolo-a6dbf4",
+          "id": "libellule-in-amore",
           "title": "Libellule in amore",
           "year": "",
-          "image": "forma-organica/progetto-senza-titolo-a6dbf4/01.jpg",
+          "image": "forma-organica/libellule-in-amore/01.jpg",
           "gallery": [
-            "forma-organica/progetto-senza-titolo-a6dbf4/01.jpg"
+            "forma-organica/libellule-in-amore/01.jpg"
           ],
           "description": "Libellule in amore raffigura due libellule unite nel momento dell’accoppiamento, una configurazione naturale che crea una forma circolare e continua.\n\nLe figure si sviluppano attraverso un gioco di linee sottili e superfici lavorate a sbalzo, dove le ali leggere contrastano con la struttura segmentata dei corpi. Il ramo introduce un punto di appoggio stabile, mentre la composizione rimane dinamica grazie al dialogo tra le due figure.\n\nL’opera unisce precisione naturalistica e ricerca formale, trasformando il gesto naturale delle libellule in una composizione equilibrata tra movimento, leggerezza e materia.",
           "thumb_gallery": [
-            "forma-organica/progetto-senza-titolo-a6dbf4/thumb/01.webp"
+            "forma-organica/libellule-in-amore/thumb/01.webp"
           ],
-          "thumb": "forma-organica/progetto-senza-titolo-a6dbf4/thumb/01.webp"
+          "thumb": "forma-organica/libellule-in-amore/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/libellule-in-amore/canvas/01.webp"
+          ],
+          "canvas": "forma-organica/libellule-in-amore/canvas/01.webp"
         },
         {
           "id": "rondinelle",
@@ -950,7 +1274,11 @@
           "thumb_gallery": [
             "forma-organica/rondinelle/thumb/01.webp"
           ],
-          "thumb": "forma-organica/rondinelle/thumb/01.webp"
+          "thumb": "forma-organica/rondinelle/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/rondinelle/canvas/01.webp"
+          ],
+          "canvas": "forma-organica/rondinelle/canvas/01.webp"
         },
         {
           "id": "rana",
@@ -970,25 +1298,38 @@
             "forma-organica/rana/thumb/03.webp",
             "forma-organica/rana/thumb/04.webp"
           ],
-          "thumb": "forma-organica/rana/thumb/01.webp"
+          "thumb": "forma-organica/rana/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/rana/canvas/01.webp",
+            "forma-organica/rana/canvas/02.webp",
+            "forma-organica/rana/canvas/03.webp",
+            "forma-organica/rana/canvas/04.webp"
+          ],
+          "canvas": "forma-organica/rana/canvas/01.webp"
         },
         {
-          "id": "farfalla-5ec760",
+          "id": "metamorfosi",
           "title": "Metamorfosi",
           "year": "",
-          "image": "forma-organica/farfalla-5ec760/01.jpg",
+          "image": "forma-organica/metamorfosi/01.jpg",
           "gallery": [
-            "forma-organica/farfalla-5ec760/01.jpg",
-            "forma-organica/farfalla-5ec760/02.jpg",
-            "forma-organica/farfalla-5ec760/03.jpg"
+            "forma-organica/metamorfosi/01.jpg",
+            "forma-organica/metamorfosi/02.jpg",
+            "forma-organica/metamorfosi/03.jpg"
           ],
           "description": "Attraverso la lavorazione a sbalzo dell’alluminio, la superficie metallica si trasforma in una forma alata.\nLa farfalla emerge dalla materia come un organismo costruito da trame, segni e micro-strutture che evocano tanto pattern naturali quanto gesti rituali.\n\nLa leggerezza dell’insetto si confronta con la permanenza del metallo, generando una tensione tra fragilità e durata.\nL’opera diventa così una riflessione sulla metamorfosi: il passaggio continuo tra materia e vita, tra forma e trasformazione.",
           "thumb_gallery": [
-            "forma-organica/farfalla-5ec760/thumb/01.webp",
-            "forma-organica/farfalla-5ec760/thumb/02.webp",
-            "forma-organica/farfalla-5ec760/thumb/03.webp"
+            "forma-organica/metamorfosi/thumb/01.webp",
+            "forma-organica/metamorfosi/thumb/02.webp",
+            "forma-organica/metamorfosi/thumb/03.webp"
           ],
-          "thumb": "forma-organica/farfalla-5ec760/thumb/01.webp"
+          "thumb": "forma-organica/metamorfosi/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/metamorfosi/canvas/01.webp",
+            "forma-organica/metamorfosi/canvas/02.webp",
+            "forma-organica/metamorfosi/canvas/03.webp"
+          ],
+          "canvas": "forma-organica/metamorfosi/canvas/01.webp"
         }
       ]
     }

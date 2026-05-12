@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/armatura-primordiale/01.jpg"><img src="/forma-organica/armatura-primordiale/thumb/01.webp" alt="Armatura primordiale 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/forma-organica/armatura-primordiale/02.jpg"><img src="/forma-organica/armatura-primordiale/thumb/02.webp" alt="Armatura primordiale 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/forma-organica/armatura-primordiale/03.jpg"><img src="/forma-organica/armatura-primordiale/thumb/03.webp" alt="Armatura primordiale 3" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/forma-organica/armatura-primordiale/04.jpg"><img src="/forma-organica/armatura-primordiale/thumb/04.webp" alt="Armatura primordiale 4" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/forma-organica/armatura-primordiale/05.jpg"><img src="/forma-organica/armatura-primordiale/thumb/05.webp" alt="Armatura primordiale 5" loading="lazy"></button><button class="opera-thumb" data-i="5" data-src="/forma-organica/armatura-primordiale/06.jpg"><img src="/forma-organica/armatura-primordiale/thumb/06.webp" alt="Armatura primordiale 6" loading="lazy"></button><button class="opera-thumb" data-i="6" data-src="/forma-organica/armatura-primordiale/07.jpg"><img src="/forma-organica/armatura-primordiale/thumb/07.webp" alt="Armatura primordiale 7" loading="lazy"></button><button class="opera-thumb" data-i="7" data-src="/forma-organica/armatura-primordiale/08.jpg"><img src="/forma-organica/armatura-primordiale/thumb/08.webp" alt="Armatura primordiale 8" loading="lazy"></button><button class="opera-thumb" data-i="8" data-src="/forma-organica/armatura-primordiale/09.jpg"><img src="/forma-organica/armatura-primordiale/thumb/09.webp" alt="Armatura primordiale 9" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/armatura-primordiale/01.jpg"><img src="/forma-organica/armatura-primordiale/canvas/01.webp" alt="Armatura primordiale 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/forma-organica/armatura-primordiale/02.jpg"><img src="/forma-organica/armatura-primordiale/canvas/02.webp" alt="Armatura primordiale 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/forma-organica/armatura-primordiale/03.jpg"><img src="/forma-organica/armatura-primordiale/canvas/03.webp" alt="Armatura primordiale 3" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/forma-organica/armatura-primordiale/04.jpg"><img src="/forma-organica/armatura-primordiale/canvas/04.webp" alt="Armatura primordiale 4" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/forma-organica/armatura-primordiale/05.jpg"><img src="/forma-organica/armatura-primordiale/canvas/05.webp" alt="Armatura primordiale 5" loading="lazy"></button><button class="opera-thumb" data-i="5" data-src="/forma-organica/armatura-primordiale/06.jpg"><img src="/forma-organica/armatura-primordiale/canvas/06.webp" alt="Armatura primordiale 6" loading="lazy"></button><button class="opera-thumb" data-i="6" data-src="/forma-organica/armatura-primordiale/07.jpg"><img src="/forma-organica/armatura-primordiale/canvas/07.webp" alt="Armatura primordiale 7" loading="lazy"></button><button class="opera-thumb" data-i="7" data-src="/forma-organica/armatura-primordiale/08.jpg"><img src="/forma-organica/armatura-primordiale/canvas/08.webp" alt="Armatura primordiale 8" loading="lazy"></button><button class="opera-thumb" data-i="8" data-src="/forma-organica/armatura-primordiale/09.jpg"><img src="/forma-organica/armatura-primordiale/canvas/09.webp" alt="Armatura primordiale 9" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -75,7 +75,6 @@
 <div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
 
 <script src="/js/main.js"></script>
-<script src="/js/consent.js"></script>
 <script>
 // Gallery navigation client-side (arricchisce pre-rendered HTML)
 (() => {
@@ -107,6 +106,7 @@
     document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
     document.getElementById('next-img').addEventListener('click', () => show(current + 1));
     document.addEventListener('keydown', e => {
+      if (lb.classList.contains('open')) return; // gestito da lightbox
       if (e.key === 'ArrowLeft') show(current - 1);
       if (e.key === 'ArrowRight') show(current + 1);
     });
@@ -117,6 +117,50 @@
     document.getElementById('next-img').style.display = 'none';
     counter.style.display = 'none';
   }
+
+  // Lightbox: click immagine principale → zoom fullscreen
+  const lb = document.createElement('div');
+  lb.className = 'opera-lightbox';
+  lb.innerHTML = `
+    <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
+    <button class="opera-lightbox-prev" aria-label="Precedente">‹</button>
+    <button class="opera-lightbox-next" aria-label="Successiva">›</button>
+    <img alt="">
+    <div class="opera-lightbox-caption"></div>
+  `;
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.opera-lightbox-caption');
+  const operaTitle = "Armatura primordiale";
+
+  function openLb() {
+    lbImg.src = '/' + gallery[current];
+    lbImg.alt = operaTitle;
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function lbShow(i) {
+    show(i);
+    lbImg.src = '/' + gallery[current];
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+  }
+
+  mainImg.addEventListener('click', openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
+  lb.querySelector('.opera-lightbox-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft' && gallery.length > 1) lbShow(current - 1);
+    if (e.key === 'ArrowRight' && gallery.length > 1) lbShow(current + 1);
+  });
 })();
 </script>
 </body>
