@@ -126,9 +126,10 @@ def render_serie(serie):
   </div>
 </section>
 
-<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | infopiemmeart@gmail.com | Tutti i diritti sono riservati</div>
+<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
 
 <script src="/js/main.js"></script>
+<script src="/js/consent.js"></script>
 </body>
 </html>
 """
@@ -247,7 +248,7 @@ def render_opera(serie, opera):
   </div>
 </section>
 
-<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | infopiemmeart@gmail.com | Tutti i diritti sono riservati</div>
+<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
 
 <script src="/js/main.js"></script>
 <script>

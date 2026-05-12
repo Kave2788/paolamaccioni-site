@@ -42,34 +42,7 @@
   </div>
 </section>
 
-<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | infopiemmeart@gmail.com | Tutti i diritti sono riservati</div>
-
-<script src="js/main.js"></script>
-<script>
-(async () => {
-  const params = new URLSearchParams(location.search);
-  const id = params.get('id');
-  if (!id) { location.href = 'portfolio.html'; return; }
-
-  const data = await (await fetch('data/series.json?v=1778621256')).json();
-  const serie = data.series.find(s => s.id === id);
-  if (!serie) { location.href = 'portfolio.html'; return; }
-
-  document.title = serie.name + ' – Paola Maccioni';
-  document.getElementById('serie-label').textContent = serie.year;
-  document.getElementById('serie-name').textContent = serie.name;
-  document.getElementById('serie-desc').textContent = serie.description;
-
-  const wrap = document.getElementById('serie-works');
-  wrap.innerHTML = serie.works.map(w => `
-    <a class="work-tile" href="opera.html?serie=${serie.id}&id=${w.id}">
-      <div class="work-tile-img">
-        <img src="${w.thumb || w.image}" alt="${w.title}" loading="lazy">
-      </div>
-      <div class="work-tile-body">
-        <p class="label">${w.year}</p>
-        <h3>${w.title}</h3>
-      </div>
+<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
     </a>
   `).join('');
 })();

@@ -9,6 +9,10 @@ ROOT = "/Users/andrea/Projects/Sito Paola"
 SITE_URL = "https://paola-maccioni.netlify.app"
 TODAY = date.today().isoformat()
 
+PAGES_LEGAL = [
+    ("/privacy.html", "0.3", "yearly"),
+    ("/cookie-policy.html", "0.3", "yearly"),
+]
 PAGES = [
     ("/", "1.0", "weekly"),
     ("/bio.html", "0.9", "monthly"),
@@ -22,6 +26,8 @@ def main():
 
     urls = []
     for path, priority, freq in PAGES:
+        urls.append((SITE_URL + path, TODAY, freq, priority))
+    for path, priority, freq in PAGES_LEGAL:
         urls.append((SITE_URL + path, TODAY, freq, priority))
 
     for s in d["series"]:
