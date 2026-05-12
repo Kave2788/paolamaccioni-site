@@ -1,0 +1,11 @@
+admin.py
+admin.html
+scripts/
+README.md
+.DS_Store
+.firecrawl/
+.superpowers/
+content/
+wix-backup/
+__pycache__/
+*.pyc

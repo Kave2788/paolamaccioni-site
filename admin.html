@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <title>Admin – Carica Opera</title>
+  <link rel="stylesheet" href="css/main.css?v=1778621256admin1">
+  <style>
+    body { padding-top: 5rem; }
+    .admin-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .admin-wrap h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 0.75rem;
+    }
+    .admin-wrap .rule { margin: 1.5rem 0 2.5rem; }
+    .admin-wrap p.lede {
+      font-style: italic;
+      color: var(--text2);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+    .admin-form .form-group { margin-bottom: 1.75rem; }
+    .admin-form label {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-family: var(--font-ss);
+      margin-bottom: 8px;
+    }
+    .admin-form input[type=text],
+    .admin-form input[type=number],
+    .admin-form textarea,
+    .admin-form select {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+      font-family: var(--font-s);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .admin-form input:focus,
+    .admin-form textarea:focus,
+    .admin-form select:focus { border-color: var(--platinum); }
+    .admin-form textarea { min-height: 160px; resize: vertical; }
+    .admin-form select { font-style: normal; }
+
+    .admin-form .grid2 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+    }
+    @media (max-width: 600px) {
+      .admin-form .grid2 { grid-template-columns: 1fr; }
+    }
+
+    .dropzone {
+      border: 1px dashed var(--border);
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.25s, background 0.25s;
+      color: var(--text2);
+      font-style: italic;
+    }
+    .dropzone:hover, .dropzone.over {
+      border-color: var(--platinum);
+      background: var(--bg2);
+    }
+    .dropzone input { display: none; }
+    .dropzone strong { color: var(--text); font-style: normal; display: block; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .file-list {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.6rem;
+    }
+    .file-preview {
+      aspect-ratio: 1;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+    .file-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .file-preview .rm {
+      position: absolute;
+      top: 4px; right: 4px;
+      background: rgba(14,13,12,0.85);
+      color: #fff;
+      width: 22px; height: 22px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .submit-row {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+    }
+    button.btn-primary {
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-family: var(--font-ss);
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    button.btn-primary:hover { opacity: 0.85; }
+    button.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .status {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text2);
+    }
+    .status.ok { color: #6ee7a8; }
+    .status.err { color: #ff8a8a; }
+
+    .recent {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .recent h3 {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-family: var(--font-ss);
+      margin-bottom: 1.25rem;
+    }
+    .recent ul { list-style: none; padding: 0; }
+    .recent li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-style: italic;
+      color: var(--text2);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .recent li a { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="admin.html" class="active">Admin</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="admin-wrap">
+  <p class="label">Pannello Paola</p>
+  <h1>Carica una nuova opera</h1>
+  <div class="rule"></div>
+  <p class="lede">Inserisci titolo, serie, descrizione e foto. Le immagini verranno salvate automaticamente nella cartella giusta e l'opera apparirà subito nel portfolio.</p>
+
+  <form class="admin-form" id="upload-form">
+    <div class="form-group">
+      <label for="title">Titolo dell'opera</label>
+      <input type="text" id="title" name="title" placeholder="es. Onde di luce" required>
+    </div>
+
+    <div class="form-group grid2">
+      <div>
+        <label for="serie">Serie</label>
+        <select id="serie" name="serie" required>
+          <option value="struttura-tensione">Struttura e Tensione</option>
+          <option value="forma-organica">Forma Organica e Figura</option>
+        </select>
+      </div>
+      <div>
+        <label for="year">Anno</label>
+        <input type="number" id="year" name="year" placeholder="2025" min="1990" max="2099">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descrizione</label>
+      <textarea id="description" name="description" placeholder="Racconta l'opera, la tecnica, la materia, il pensiero che la sorregge…"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Fotografie dell'opera</label>
+      <label class="dropzone" id="dropzone">
+        <strong>Trascina qui le foto o clicca</strong>
+        Formati: JPG, JPEG, PNG, WebP — la prima sarà l'immagine principale
+        <input type="file" id="images" name="images" multiple accept="image/*">
+      </label>
+      <div class="file-list" id="file-list"></div>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit" class="btn-primary" id="submit-btn">Carica opera →</button>
+      <span class="status" id="status"></span>
+    </div>
+  </form>
+
+  <div class="recent">
+    <h3>Ultime opere caricate</h3>
+    <ul id="recent-list"><li>Caricamento…</li></ul>
+  </div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const form = $('#upload-form');
+const fileInput = $('#images');
+const fileList = $('#file-list');
+const dropzone = $('#dropzone');
+const status = $('#status');
+const submitBtn = $('#submit-btn');
+let selectedFiles = [];
+
+function renderPreviews() {
+  fileList.innerHTML = selectedFiles.map((f, i) => `
+    <div class="file-preview">
+      <img src="${URL.createObjectURL(f)}" alt="">
+      <button type="button" class="rm" data-i="${i}" aria-label="Rimuovi">✕</button>
+    </div>
+  `).join('');
+  fileList.querySelectorAll('.rm').forEach(b =>
+    b.addEventListener('click', () => {
+      selectedFiles.splice(parseInt(b.dataset.i), 1);
+      renderPreviews();
+    })
+  );
+}
+
+fileInput.addEventListener('change', e => {
+  selectedFiles = selectedFiles.concat([...e.target.files]);
+  fileInput.value = '';
+  renderPreviews();
+});
+
+['dragenter','dragover'].forEach(ev =>
+  dropzone.addEventListener(ev, e => { e.preventDefault(); dropzone.classList.add('over'); })
+);
+['dragleave','drop'].forEach(ev =>
+  dropzone.addEventListener(ev, e => { e.preventDefault(); dropzone.classList.remove('over'); })
+);
+dropzone.addEventListener('drop', e => {
+  e.preventDefault();
+  selectedFiles = selectedFiles.concat([...e.dataTransfer.files].filter(f => f.type.startsWith('image/')));
+  renderPreviews();
+});
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!form.title.value.trim()) {
+    status.textContent = 'Inserisci un titolo.';
+    status.className = 'status err';
+    return;
+  }
+  submitBtn.disabled = true;
+  status.textContent = 'Caricamento in corso…';
+  status.className = 'status';
+
+  const fd = new FormData();
+  fd.append('title', form.title.value);
+  fd.append('description', form.description.value);
+  fd.append('serie', form.serie.value);
+  fd.append('year', form.year.value);
+  fd.append('mode', 'create');
+  selectedFiles.forEach(f => fd.append('images', f));
+
+  try {
+    const res = await fetch('/upload', { method: 'POST', body: fd });
+    const j = await res.json();
+    if (j.ok) {
+      status.textContent = `Caricata: ${j.uploaded} foto. `;
+      status.className = 'status ok';
+      const a = document.createElement('a');
+      a.href = j.url; a.target = '_blank'; a.textContent = 'Apri opera →';
+      a.style.color = 'inherit';
+      status.appendChild(a);
+      form.reset();
+      selectedFiles = [];
+      renderPreviews();
+      loadRecent();
+    } else {
+      status.textContent = j.error || 'Errore.';
+      status.className = 'status err';
+    }
+  } catch (err) {
+    status.textContent = 'Errore di rete.';
+    status.className = 'status err';
+  } finally {
+    submitBtn.disabled = false;
+  }
+});
+
+async function loadRecent() {
+  const d = await (await fetch('data/series.json?cb=' + Date.now())).json();
+  const all = [];
+  d.series.forEach(s =>
+    s.works.forEach(w => all.push({ ...w, serieName: s.name, serieId: s.id }))
+  );
+  // Ultime 8
+  const recent = all.slice(-8).reverse();
+  $('#recent-list').innerHTML = recent.length === 0
+    ? '<li>Nessuna opera ancora.</li>'
+    : recent.map(w => `
+        <li>
+          <span>${w.title} <em style="color:var(--muted);font-size:0.85em;">— ${w.serieName}</em></span>
+          <a href="opera.html?serie=${w.serieId}&id=${w.id}" target="_blank">apri →</a>
+        </li>`).join('');
+}
+loadRecent();
+</script>
+</body>
+</html>

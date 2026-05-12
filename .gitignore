@@ -1,0 +1,19 @@
+.DS_Store
+.netlify/
+node_modules/
+__pycache__/
+*.pyc
+.firecrawl/
+.superpowers/
+content/
+wix-backup/
+
+# HD originali — troppi MB per Git. Restano locali, deploy via Netlify CLI
+struttura-tensione/*/[0-9][0-9].jpg
+struttura-tensione/*/[0-9][0-9].jpeg
+struttura-tensione/*/[0-9][0-9].png
+struttura-tensione/*/[0-9][0-9].webp
+forma-organica/*/[0-9][0-9].jpg
+forma-organica/*/[0-9][0-9].jpeg
+forma-organica/*/[0-9][0-9].png
+forma-organica/*/[0-9][0-9].webp

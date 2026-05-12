@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="Contatti – Paola Maccioni | Arte sbalzo e opere uniche">
+  <title>Contatti – Paola Maccioni</title>
+  <link rel="stylesheet" href="css/main.css?v=1778621256">
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bio.html">Biografia</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="commissioni.html">Commissioni</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-section">
+  <div class="contact-grid container">
+    <div>
+      <h1 style="margin-bottom: 1.5rem;">Contattami</h1>
+      <div class="rule" style="margin-bottom: 2.5rem;"></div>
+      <dl class="contact-info">
+        <dt>Email</dt>
+        <dd><a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a></dd>
+        <dt>Instagram</dt>
+        <dd><a href="https://instagram.com/piemmeart_" target="_blank" rel="noopener">@piemmeart_</a></dd>
+        <dt>Telegram</dt>
+        <dd><a href="https://t.me/piemmecrafts" target="_blank" rel="noopener">@piemmecrafts</a></dd>
+      </dl>
+    </div>
+
+    <form id="contact-form" action="https://formsubmit.co/infopiemmeart@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuovo messaggio dal sito Paola Maccioni">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://www.paolamaccioni.com/contatti.html?sent=1">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="Nome" required>
+      </div>
+      <div class="form-group">
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="Cognome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="messaggio">Scrivi un messaggio</label>
+        <textarea id="messaggio" name="Messaggio" required></textarea>
+      </div>
+      <button type="submit" class="cta-link" style="background:none;border:none;border-bottom:1px solid var(--border);cursor:pointer;padding-bottom:3px;display:inline-flex;align-items:center;gap:8px;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-family:var(--font-ss);">
+        Invia <span>→</span>
+      </button>
+      <p id="form-msg" style="margin-top:1rem;font-style:italic;color:var(--text2);display:none;">Messaggio inviato! Riceverai presto una risposta.</p>
+    </form>
+  </div>
+</section>
+
+<div class="legal-bar">© 2023 PIEMME di Paola Maccioni | C.F MCCPLA80R64B354E | infopiemmeart@gmail.com | Tutti i diritti sono riservati</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Mostra conferma se ritornati da formsubmit con ?sent=1
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    document.getElementById('form-msg').style.display = 'block';
+  }
+</script>
+</body>
+</html>
