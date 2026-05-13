@@ -20,5 +20,22 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     );
   }
+
+  // Scroll reveal for gallery tiles
+  const tiles = document.querySelectorAll('.work-tile');
+  if (tiles.length) {
+    tiles.forEach((t, i) => {
+      t.style.transitionDelay = `${(i % 6) * 0.07}s`;
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    tiles.forEach(t => io.observe(t));
+  }
 });
 

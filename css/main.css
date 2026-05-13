@@ -591,7 +591,7 @@ a.series-tile {
 .serie-works {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3px;
+  gap: 10px;
 }
 
 .work-tile {
@@ -602,6 +602,14 @@ a.series-tile {
   overflow: hidden;
   aspect-ratio: 4 / 5;
   background: var(--bg2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.work-tile.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .work-tile-img {
@@ -618,12 +626,12 @@ a.series-tile {
   object-fit: cover;
   display: block;
   transition: transform 0.8s ease, filter 0.4s ease;
-  filter: brightness(0.9);
+  filter: brightness(0.88);
 }
 
 .work-tile:hover .work-tile-img img {
-  transform: scale(1.06);
-  filter: brightness(0.6);
+  transform: scale(1.05);
+  filter: brightness(0.55);
 }
 
 .work-tile-body {
@@ -631,8 +639,8 @@ a.series-tile {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 3rem 1.1rem 1.1rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 100%);
+  padding: 3.5rem 1.1rem 1.1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -649,7 +657,9 @@ a.series-tile {
   font-size: 0.82rem;
   font-weight: 400;
   color: #fff;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--font-ss);
   line-height: 1.4;
   margin: 0;
 }
