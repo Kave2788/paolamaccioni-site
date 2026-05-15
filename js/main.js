@@ -13,12 +13,26 @@ document.addEventListener('DOMContentLoaded', function () {
       const currentPath = location.pathname;
       let newPath;
 
-      if (currentPath.includes('/it/')) {
-        newPath = currentPath.replace('/it/', '/en/');
-      } else if (currentPath.includes('/en/')) {
-        newPath = currentPath.replace('/en/', '/it/');
+      // Determina lingua attuale e percorso relativo
+      let currentLang, relativePath;
+
+      if (currentPath.startsWith('/en/')) {
+        currentLang = 'en';
+        relativePath = currentPath.slice(4); // Rimuovi '/en/'
+      } else if (currentPath.startsWith('/it/')) {
+        currentLang = 'it';
+        relativePath = currentPath.slice(4); // Rimuovi '/it/'
       } else {
-        newPath = currentPath.startsWith('/') ? '/it' + currentPath : '/it/' + currentPath;
+        // Root (/ o /index.html, /bio.html, etc) è considerato italiano
+        currentLang = 'it';
+        relativePath = currentPath.replace(/^\//, ''); // Rimuovi leading '/'
+      }
+
+      // Costruisci il nuovo percorso
+      if (currentLang === 'it') {
+        newPath = '/en/' + relativePath;
+      } else {
+        newPath = '/' + (relativePath || '');
       }
 
       location.href = newPath;
