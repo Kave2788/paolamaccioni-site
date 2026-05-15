@@ -1,0 +1,53 @@
+{
+  "site": {
+    "title": "Paola Maccioni — PIEMME",
+    "description": "Contemporary aluminum artworks by Paola Maccioni. Chased aluminum sculptures.",
+    "url": "https://paolamaccioni.com",
+    "language": "it"
+  },
+  "artist": {
+    "name": "Paola Maccioni",
+    "email": "infopiemmeart@gmail.com",
+    "cf": "MCCPLA80R64B354E",
+    "business_name": "PIEMME di Paola Maccioni"
+  },
+  "analytics": {
+    "ga4_id": "G-FPHJKXEM94",
+    "enabled": true
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "linkedin": ""
+  },
+  "series": [
+    {
+      "id": "struttura-tensione",
+      "name": "Struttura e Tensione",
+      "year_range": "2022–2024",
+      "work_count": 28
+    },
+    {
+      "id": "forma-organica",
+      "name": "Forma Organica e Figura",
+      "year_range": "2021–2023",
+      "work_count": 21
+    }
+  ],
+  "pages": {
+    "languages": ["it", "en"],
+    "default_language": "it"
+  },
+  "seo": {
+    "sitemap": "/sitemap.xml",
+    "robots": "/robots.txt",
+    "lang_attribute": true,
+    "og_tags": true,
+    "structured_data": true
+  },
+  "deployment": {
+    "platform": "Netlify",
+    "build_command": "none (static site)",
+    "publish_directory": "./"
+  }
+}

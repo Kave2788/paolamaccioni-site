@@ -1,55 +1,45 @@
-# Netlify config — Paola Maccioni site
+# Netlify Configuration - Static Site
+# No build command needed
 
 [build]
-  publish = "."
-  functions = "netlify/functions"
+  command = ""
+  publish = "./"
 
-# Caching aggressivo per asset statici (immagini, css, js)
-[[headers]]
-  for = "/*.jpg"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[context.production]
+  command = ""
 
+# Cache headers for static assets
 [[headers]]
-  for = "/*.jpeg"
+  for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.webp"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"
 
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=31536000"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=31536000"
 
-# HTML no-cache per essere sempre aggiornati
 [[headers]]
-  for = "/*.html"
+  for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Cache-Control = "public, max-age=31536000"
 
-# Security headers
 [[headers]]
-  for = "/*"
+  for = "/*.jpg"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Cache-Control = "public, max-age=31536000"
 
-# Esclude file dev dal deploy
-[build.processing]
-  skip_processing = false
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

@@ -1,11 +1,40 @@
-.DS_Store
-.netlify/
+# Dependencies
 node_modules/
-__pycache__/
-*.pyc
-.firecrawl/
-.superpowers/
-content/
-wix-backup/
+package-lock.json
+yarn.lock
 
-# HD originali — troppi MB per Git. Restano locali, deploy via Netlify CLI
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build & Temp
+dist/
+build/
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Admin & Scripts
+admin.py
+scripts/
+*.pyc
+__pycache__/
+
+# Netlify
+.netlify/
+netlify.toml
+
+# Debug
+debug.log
+*.bak

@@ -2,6 +2,15 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 Disallow: /admin.py
-Disallow: /scripts/
 
-Sitemap: https://paola-maccioni.netlify.app/sitemap.xml
+Sitemap: https://paolamaccioni.com/sitemap.xml
+
+# Block scraper bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
