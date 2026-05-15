@@ -5,6 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
     if (link.getAttribute('href') === page) link.classList.add('active');
   });
 
+  // Language switcher: toggle between /it/ and /en/
+  const langLinks = document.querySelectorAll('.lang-switcher a');
+  langLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentPath = location.pathname;
+      let newPath;
+
+      if (currentPath.includes('/it/')) {
+        newPath = currentPath.replace('/it/', '/en/');
+      } else if (currentPath.includes('/en/')) {
+        newPath = currentPath.replace('/en/', '/it/');
+      } else {
+        newPath = currentPath.startsWith('/') ? '/it' + currentPath : '/it/' + currentPath;
+      }
+
+      location.href = newPath;
+    });
+  });
+
   // Mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const menu = document.querySelector('nav ul');
