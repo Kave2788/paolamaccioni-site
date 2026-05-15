@@ -202,12 +202,16 @@ http.createServer(function(req, res) {
     req.on('data', function(d){ body += d; });
     req.on('end', function() {
       try {
+        console.log('POST /set-front body:', body);
         var p = JSON.parse(body);
-        if (!SERIES.includes(p.serie)) throw new Error('Serie non valida');
+        console.log('Parsed:', p);
+        if (!SERIES.includes(p.serie)) throw new Error('Serie non valida: ' + p.serie);
         var r = setFront(p.serie, p.work, p.filename);
+        console.log('Result:', r);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(r));
       } catch(e) {
+        console.error('Error:', e.message);
         res.writeHead(400, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ ok: false, error: e.message }));
       }

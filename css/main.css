@@ -123,6 +123,35 @@ nav a {
 nav a:hover,
 nav a.active { color: rgba(255,255,255,0.9); }
 
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-family: var(--font-ss);
+  text-transform: uppercase;
+}
+
+.lang-switcher a {
+  color: rgba(255,255,255,0.35);
+  transition: color 0.2s;
+  padding: 0 0.4rem;
+}
+
+.lang-switcher a.active {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+
+.lang-switcher a:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+.lang-switcher span {
+  color: rgba(255,255,255,0.2);
+}
+
 /* ── CTA LINK ── */
 .cta-link {
   display: inline-flex;
