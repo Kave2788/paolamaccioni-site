@@ -91,7 +91,7 @@ h1{font-size:1.4rem;font-weight:400;margin-bottom:.3rem}
 <p class="sub">Cornice dorata = copertina attuale (01). Clicca un'altra foto e poi "Imposta frontale".</p>
 <div id="app">Caricamento…</div>
 <script>
-var works=[], sel={};
+var works=[], sel={}, ver=Date.now();
 
 function load(){
   fetch('/works').then(function(r){return r.json();}).then(function(d){works=d;render();});
@@ -115,7 +115,7 @@ function render(){
       var f=w.files[j], num=f.replace(/\.[^.]+$/,'');
       var isFront=num==='01', isSel=curSel===f;
       html+='<div class="pw'+(isFront?' front':'')+(isSel?' sel':'')+'" data-k="'+h(k)+'" data-f="'+h(f)+'" onclick="pick(this)">';
-      html+='<img src="/img/'+h(w.serie)+'/'+h(w.work)+'/'+h(f)+'" loading="lazy">';
+      html+='<img src="/img/'+h(w.serie)+'/'+h(w.work)+'/'+h(f)+'?v='+ver+'" loading="lazy">';
       if(isFront) html+='<span class="badge">&#x2756; fronte</span>';
       html+='<span class="num">'+h(num)+'</span>';
       html+='</div>';
@@ -158,7 +158,7 @@ function apply(btn){
     body:JSON.stringify({serie:w.serie,work:w.work,filename:filename})
   }).then(function(r){return r.json();}).then(function(j){
     if(j.ok){
-      sel[k]=null;
+      sel[k]=null; ver=Date.now();
       fetch('/works').then(function(r){return r.json();}).then(function(d){works=d;render();});
     }else{
       msgEl.textContent='Errore: '+(j.error||'?'); msgEl.className='msg err';
@@ -186,7 +186,7 @@ http.createServer(function(req, res) {
     return;
   }
   if (req.method === 'GET' && req.url.startsWith('/img/')) {
-    var rel = decodeURIComponent(req.url.slice(5));
+    var rel = decodeURIComponent(req.url.slice(5).split('?')[0]);
     var abs = path.resolve(ROOT, rel);
     if (!abs.startsWith(ROOT + path.sep) || !SERIES.some(function(s){ return rel.startsWith(s+'/'); })) {
       res.writeHead(403); return res.end();

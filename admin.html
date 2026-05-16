@@ -1,344 +1,640 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Cache-Control" content="no-store">
-  <title>Admin – Carica Opera</title>
-  <link rel="stylesheet" href="/css/main.css?v=1778621256">
-  <style>
-    body { padding-top: 5rem; }
-    .admin-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .admin-wrap h1 {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      margin-bottom: 0.75rem;
-    }
-    .admin-wrap .rule { margin: 1.5rem 0 2.5rem; }
-    .admin-wrap p.lede {
-      font-style: italic;
-      color: var(--text2);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-    .admin-form .form-group { margin-bottom: 1.75rem; }
-    .admin-form label {
-      display: block;
-      font-size: 9px;
-      letter-spacing: 3px;
-      color: var(--muted);
-      text-transform: uppercase;
-      font-family: var(--font-ss);
-      margin-bottom: 8px;
-    }
-    .admin-form input[type=text],
-    .admin-form input[type=number],
-    .admin-form textarea,
-    .admin-form select {
-      width: 100%;
-      background: transparent;
-      border: 1px solid var(--border);
-      padding: 0.85rem 1rem;
-      font-family: var(--font-s);
-      font-style: italic;
-      font-size: 0.95rem;
-      color: var(--text);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .admin-form input:focus,
-    .admin-form textarea:focus,
-    .admin-form select:focus { border-color: var(--platinum); }
-    .admin-form textarea { min-height: 160px; resize: vertical; }
-    .admin-form select { font-style: normal; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store">
+<title>Admin — Paola Maccioni</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e0d0c;--bg2:#161514;--bg3:#1c1b19;
+  --sidebar:#090807;
+  --border:#2a2825;
+  --text:#e8e0d6;--text2:#8a8078;--muted:#5a5450;
+  --gold:#c9a84c;--green:#6ee7a8;--red:#ff8a8a;
+  --font-s:Georgia,'Times New Roman',serif;
+  --font-ss:'Helvetica Neue',Arial,sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font-s);min-height:100vh}
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
 
-    .admin-form .grid2 {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 1.25rem;
-    }
-    @media (max-width: 600px) {
-      .admin-form .grid2 { grid-template-columns: 1fr; }
-    }
+/* ── sidebar ── */
+.sidebar{
+  background:var(--sidebar);border-right:1px solid var(--border);
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  display:flex;flex-direction:column;padding:2rem 1.5rem 1.5rem;
+}
+.logo{font-size:10px;letter-spacing:6px;text-transform:uppercase;font-family:var(--font-ss);color:var(--gold);margin-bottom:.2rem}
+.logo-sub{font-size:.78rem;font-style:italic;color:var(--text2);margin-bottom:3rem}
+.sidebar nav{display:flex;flex-direction:column;gap:2px}
+.sidebar nav a{
+  padding:.6rem .9rem;color:var(--text2);
+  font-family:var(--font-ss);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  cursor:pointer;border-radius:2px;
+  transition:color .15s,background .15s;user-select:none;
+}
+.sidebar nav a:hover{color:var(--text);background:var(--bg2)}
+.sidebar nav a.active{color:var(--gold);background:var(--bg2)}
+.sidebar-footer{margin-top:auto;font-size:11px;font-family:var(--font-ss);color:var(--text2);line-height:2.2}
+.sidebar-footer strong{color:var(--text);font-weight:400}
 
-    .dropzone {
-      border: 1px dashed var(--border);
-      padding: 2rem;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.25s, background 0.25s;
-      color: var(--text2);
-      font-style: italic;
-    }
-    .dropzone:hover, .dropzone.over {
-      border-color: var(--platinum);
-      background: var(--bg2);
-    }
-    .dropzone input { display: none; }
-    .dropzone strong { color: var(--text); font-style: normal; display: block; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .file-list {
-      margin-top: 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-      gap: 0.6rem;
-    }
-    .file-preview {
-      aspect-ratio: 1;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      position: relative;
-    }
-    .file-preview img { width: 100%; height: 100%; object-fit: cover; }
-    .file-preview .rm {
-      position: absolute;
-      top: 4px; right: 4px;
-      background: rgba(14,13,12,0.85);
-      color: #fff;
-      width: 22px; height: 22px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      line-height: 1;
-    }
+/* ── content ── */
+.content{padding:3rem 3.5rem 5rem;overflow-y:auto}
+.content h1{font-size:clamp(1.5rem,2.5vw,2.1rem);font-weight:400;margin-bottom:.4rem}
+.subtitle{color:var(--text2);font-style:italic;font-size:.9rem;margin-bottom:2.5rem}
+.rule{height:1px;background:var(--border);margin-bottom:2.5rem}
+.lbl{font-size:9px;letter-spacing:4px;text-transform:uppercase;font-family:var(--font-ss);color:var(--muted);margin-bottom:.3rem}
 
-    .submit-row {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      margin-top: 2.5rem;
-      padding-top: 1.75rem;
-      border-top: 1px solid var(--border);
-    }
-    button.btn-primary {
-      background: var(--text);
-      color: var(--bg);
-      border: none;
-      padding: 0.9rem 2rem;
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-family: var(--font-ss);
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-    button.btn-primary:hover { opacity: 0.85; }
-    button.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+/* ── stats ── */
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem;margin-bottom:3rem}
+.stat{background:var(--bg2);border:1px solid var(--border);padding:1.2rem 1.4rem}
+.stat .n{font-size:2rem;color:var(--gold);line-height:1;margin-bottom:.3rem}
+.stat .l{font-size:8px;letter-spacing:3px;text-transform:uppercase;font-family:var(--font-ss);color:var(--text2)}
 
-    .status {
-      font-size: 13px;
-      font-style: italic;
-      color: var(--text2);
-    }
-    .status.ok { color: #6ee7a8; }
-    .status.err { color: #ff8a8a; }
+/* ── list ── */
+.list-hd{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem}
+.serie-lbl{
+  font-size:8px;letter-spacing:4px;text-transform:uppercase;font-family:var(--font-ss);color:var(--text2);
+  padding-bottom:.6rem;border-bottom:1px solid var(--border);margin:2.5rem 0 .25rem;
+}
+.work-row{display:flex;align-items:center;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--border)}
+.work-thumb{width:52px;height:52px;object-fit:cover;border:1px solid var(--border);flex-shrink:0}
+.work-info{flex:1;min-width:0}
+.work-title{margin-bottom:.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.work-meta{font-size:.78rem;color:var(--text2);font-style:italic}
+.work-actions{display:flex;gap:.5rem;flex-shrink:0}
 
-    .recent {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-    .recent h3 {
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: var(--muted);
-      text-transform: uppercase;
-      font-family: var(--font-ss);
-      margin-bottom: 1.25rem;
-    }
-    .recent ul { list-style: none; padding: 0; }
-    .recent li {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-      font-style: italic;
-      color: var(--text2);
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .recent li a { color: var(--text); }
-  </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPHJKXEM94"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FPHJKXEM94');
-</script>
+/* ── buttons ── */
+.btn{
+  padding:.5rem 1.1rem;font-size:8px;letter-spacing:3px;text-transform:uppercase;
+  font-family:var(--font-ss);cursor:pointer;border:none;transition:opacity .2s;
+}
+.btn:hover{opacity:.8}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--text);color:var(--bg)}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text2)}
+.btn-ghost:hover{color:var(--text);border-color:var(--text);opacity:1}
+.btn-danger{background:transparent;border:1px solid #ff8a8a33;color:var(--red)}
+.btn-danger:hover{background:#ff8a8a18;border-color:var(--red);opacity:1}
+
+/* ── forms ── */
+.form-wrap{max-width:680px}
+.fg{margin-bottom:1.75rem}
+.fg label{
+  display:block;font-size:8px;letter-spacing:3px;color:var(--text2);
+  text-transform:uppercase;font-family:var(--font-ss);margin-bottom:8px;
+}
+.fg input,.fg textarea,.fg select{
+  width:100%;background:transparent;border:1px solid var(--border);
+  padding:.85rem 1rem;font-family:var(--font-s);font-style:italic;
+  font-size:.95rem;color:var(--text);outline:none;transition:border-color .2s;
+}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--gold)}
+.fg input:disabled,.fg select:disabled{opacity:.4;cursor:not-allowed;font-style:normal}
+.fg textarea{min-height:140px;resize:vertical}
+.fg select{font-style:normal}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:1.25rem}
+.form-actions{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.status{font-size:.85rem;font-style:italic;color:var(--text2)}
+.status.ok{color:var(--green)}
+.status.err{color:var(--red)}
+
+/* ── photo section ── */
+.photo-sec{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.photo-sec-hd{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:8px;letter-spacing:3px;text-transform:uppercase;font-family:var(--font-ss);
+  color:var(--text2);margin-bottom:1rem;
+}
+.photo-grid{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;min-height:30px}
+.ph{position:relative;width:110px;height:110px;cursor:pointer;flex-shrink:0}
+.ph img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  border:2px solid transparent;opacity:.6;transition:opacity .2s,border-color .2s;
+}
+.ph:hover img{opacity:1}
+.ph.primary img{border-color:var(--gold);opacity:1}
+.ph .badge{
+  position:absolute;bottom:4px;left:4px;background:var(--gold);color:#000;
+  font-size:5px;letter-spacing:1.5px;text-transform:uppercase;font-family:var(--font-ss);
+  padding:2px 5px;font-weight:700;pointer-events:none;
+}
+.ph .del{
+  position:absolute;top:4px;right:4px;background:rgba(0,0,0,.8);color:#fff;
+  border:none;width:22px;height:22px;cursor:pointer;font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .2s;
+}
+.ph:hover .del{opacity:1}
+
+/* ── dropzone ── */
+.dz{
+  border:1px dashed var(--border);padding:1.5rem 2rem;text-align:center;
+  cursor:pointer;color:var(--text2);font-style:italic;font-size:.875rem;
+  transition:border-color .2s,background .2s;display:block;
+}
+.dz:hover,.dz.over{border-color:var(--gold);background:var(--bg2)}
+.dz input{display:none}
+.dz strong{display:block;color:var(--text);font-style:normal;margin-bottom:.3rem}
+
+/* ── toast ── */
+.toast{
+  position:fixed;bottom:2rem;right:2rem;
+  background:var(--bg3);border:1px solid var(--border);
+  padding:.9rem 1.5rem;font-size:.875rem;font-style:italic;
+  z-index:999;animation:toastIn .2s ease;max-width:320px;pointer-events:none;
+}
+.toast.ok{border-color:var(--green);color:var(--green)}
+.toast.err{border-color:var(--red);color:var(--red)}
+@keyframes toastIn{from{transform:translateY(.75rem);opacity:0}to{transform:none;opacity:1}}
+
+/* ── empty states ── */
+.empty{padding:3rem;text-align:center;color:var(--text2);font-style:italic;border:1px dashed var(--border);margin:2rem 0}
+</style>
 </head>
 <body>
+<div class="app">
 
-<nav>
-  <div class="inner">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="admin.html" class="active">Admin</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class="admin-wrap">
-  <p class="label">Pannello Paola</p>
-  <h1>Carica una nuova opera</h1>
-  <div class="rule"></div>
-  <p class="lede">Inserisci titolo, serie, descrizione e foto. Le immagini verranno salvate automaticamente nella cartella giusta e l'opera apparirà subito nel portfolio.</p>
-
-  <form class="admin-form" id="upload-form">
-    <div class="form-group">
-      <label for="title">Titolo dell'opera</label>
-      <input type="text" id="title" name="title" placeholder="es. Onde di luce" required>
+  <aside class="sidebar">
+    <div class="lbl">PIEMME</div>
+    <div class="logo-sub">Paola Maccioni — Admin</div>
+    <nav>
+      <a data-v="dashboard" onclick="go('dashboard')">Dashboard</a>
+      <a data-v="works"     onclick="go('works')">Opere</a>
+      <a data-v="new"       onclick="go('new')">+ Nuova opera</a>
+    </nav>
+    <div class="sidebar-footer">
+      Opere totali<br>
+      <strong id="sb-total">—</strong>
     </div>
+  </aside>
 
-    <div class="form-group grid2">
-      <div>
-        <label for="serie">Serie</label>
-        <select id="serie" name="serie" required>
-          <option value="struttura-tensione">Struttura e Tensione</option>
-          <option value="forma-organica">Forma Organica e Figura</option>
-        </select>
-      </div>
-      <div>
-        <label for="year">Anno</label>
-        <input type="number" id="year" name="year" placeholder="2025" min="1990" max="2099">
-      </div>
-    </div>
+  <main class="content" id="content">
+    <p style="color:var(--text2);font-style:italic">Caricamento…</p>
+  </main>
 
-    <div class="form-group">
-      <label for="description">Descrizione</label>
-      <textarea id="description" name="description" placeholder="Racconta l'opera, la tecnica, la materia, il pensiero che la sorregge…"></textarea>
-    </div>
-
-    <div class="form-group">
-      <label>Fotografie dell'opera</label>
-      <label class="dropzone" id="dropzone">
-        <strong>Trascina qui le foto o clicca</strong>
-        Formati: JPG, JPEG, PNG, WebP — la prima sarà l'immagine principale
-        <input type="file" id="images" name="images" multiple accept="image/*">
-      </label>
-      <div class="file-list" id="file-list"></div>
-    </div>
-
-    <div class="submit-row">
-      <button type="submit" class="btn-primary" id="submit-btn">Carica opera →</button>
-      <span class="status" id="status"></span>
-    </div>
-  </form>
-
-  <div class="recent">
-    <h3>Ultime opere caricate</h3>
-    <ul id="recent-list"><li>Caricamento…</li></ul>
-  </div>
 </div>
-
 <script>
-const $ = (s) => document.querySelector(s);
-const form = $('#upload-form');
-const fileInput = $('#images');
-const fileList = $('#file-list');
-const dropzone = $('#dropzone');
-const status = $('#status');
-const submitBtn = $('#submit-btn');
-let selectedFiles = [];
+'use strict';
 
-function renderPreviews() {
-  fileList.innerHTML = selectedFiles.map((f, i) => `
-    <div class="file-preview">
-      <img src="${URL.createObjectURL(f)}" alt="">
-      <button type="button" class="rm" data-i="${i}" aria-label="Rimuovi">✕</button>
-    </div>
-  `).join('');
-  fileList.querySelectorAll('.rm').forEach(b =>
-    b.addEventListener('click', () => {
-      selectedFiles.splice(parseInt(b.dataset.i), 1);
-      renderPreviews();
-    })
-  );
+let appData = null;
+
+// ── utils ───────────────────────────────────────────────────────────────────
+
+const h = s => String(s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function toast(msg, type='ok') {
+  document.querySelectorAll('.toast').forEach(t => t.remove());
+  const t = document.createElement('div');
+  t.className = `toast ${type}`;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3500);
 }
 
-fileInput.addEventListener('change', e => {
-  selectedFiles = selectedFiles.concat([...e.target.files]);
-  fileInput.value = '';
-  renderPreviews();
-});
+function setStatus(id, msg, type='') {
+  const el = document.getElementById(id);
+  if (el) { el.textContent = msg; el.className = `status ${type}`; }
+}
 
-['dragenter','dragover'].forEach(ev =>
-  dropzone.addEventListener(ev, e => { e.preventDefault(); dropzone.classList.add('over'); })
-);
-['dragleave','drop'].forEach(ev =>
-  dropzone.addEventListener(ev, e => { e.preventDefault(); dropzone.classList.remove('over'); })
-);
-dropzone.addEventListener('drop', e => {
-  e.preventDefault();
-  selectedFiles = selectedFiles.concat([...e.dataTransfer.files].filter(f => f.type.startsWith('image/')));
-  renderPreviews();
-});
+async function api(path, body=null, isForm=false) {
+  const opts = body !== null
+    ? { method:'POST',
+        body: isForm ? body : JSON.stringify(body),
+        headers: isForm ? {} : {'Content-Type':'application/json'} }
+    : {};
+  const r = await fetch(path, opts);
+  return r.json();
+}
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  if (!form.title.value.trim()) {
-    status.textContent = 'Inserisci un titolo.';
-    status.className = 'status err';
+function setupDrop(dzId, inputId, onFiles) {
+  const dz  = document.getElementById(dzId);
+  const inp = document.getElementById(inputId);
+  if (!dz || !inp) return;
+  inp.addEventListener('change', e => { onFiles([...e.target.files]); inp.value=''; });
+  ['dragenter','dragover'].forEach(ev =>
+    dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('over'); }));
+  ['dragleave','drop'].forEach(ev =>
+    dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('over'); }));
+  dz.addEventListener('drop', e => {
+    e.preventDefault();
+    onFiles([...e.dataTransfer.files].filter(f => f.type.startsWith('image/')));
+  });
+}
+
+// ── navigation ───────────────────────────────────────────────────────────────
+
+async function go(view, params={}) {
+  document.querySelectorAll('nav a').forEach(a =>
+    a.classList.toggle('active', a.dataset.v === view));
+  const c = document.getElementById('content');
+  c.innerHTML = '<p style="padding:3rem 0;color:var(--text2);font-style:italic">Caricamento…</p>';
+  if      (view === 'dashboard') await renderDashboard(c);
+  else if (view === 'works')     await renderWorks(c);
+  else if (view === 'new')             renderNew(c);
+  else if (view === 'edit')      await renderEdit(c, params.s, params.w);
+}
+
+async function loadData() {
+  appData = await api('/api/data');
+  const el = document.getElementById('sb-total');
+  if (el) {
+    let t = 0;
+    appData.series.forEach(s => t += s.works.length);
+    el.textContent = t;
+  }
+  return appData;
+}
+
+// ── Dashboard ────────────────────────────────────────────────────────────────
+
+async function renderDashboard(c) {
+  const d = await loadData();
+  let total = 0;
+  d.series.forEach(s => total += s.works.length);
+
+  const recent = [];
+  d.series.forEach(s => s.works.forEach(w => recent.push({...w, sn:s.name, si:s.id})));
+
+  c.innerHTML = `
+    <div class="lbl">Gestionale</div>
+    <h1>Dashboard</h1>
+    <p class="subtitle">Panoramica del portfolio di Paola Maccioni</p>
+    <div class="rule"></div>
+    <div class="stats">
+      <div class="stat"><div class="n">${total}</div><div class="l">Opere totali</div></div>
+      ${d.series.map(s => `
+        <div class="stat" style="cursor:pointer" onclick="go('works')">
+          <div class="n">${s.works.length}</div>
+          <div class="l">${h(s.name)}</div>
+        </div>`).join('')}
+    </div>
+    <div class="lbl" style="margin-bottom:1rem">Ultime opere aggiunte</div>
+    ${recent.length === 0
+      ? '<div class="empty">Nessuna opera ancora.</div>'
+      : recent.slice(-6).reverse().map(w => `
+        <div class="work-row">
+          ${(w.thumb||w.image) ? `<img class="work-thumb" src="${h(w.thumb||w.image)}" onerror="this.style.display='none'">` : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
+          <div class="work-info">
+            <div class="work-title">${h(w.title)}</div>
+            <div class="work-meta">${h(w.year||'—')} — ${h(w.sn)}</div>
+          </div>
+          <div class="work-actions">
+            <button class="btn btn-ghost" onclick="go('edit',{s:'${h(w.si)}',w:'${h(w.id)}'})">Modifica</button>
+          </div>
+        </div>`).join('')}
+  `;
+}
+
+// ── Works list ───────────────────────────────────────────────────────────────
+
+async function renderWorks(c) {
+  const d = await loadData();
+  let html = `
+    <div class="list-hd">
+      <div>
+        <div class="lbl">Portfolio</div>
+        <h1>Opere</h1>
+        <p class="subtitle">Tutte le opere nel portfolio</p>
+      </div>
+      <button class="btn btn-primary" onclick="go('new')">+ Nuova opera</button>
+    </div>
+    <div class="rule"></div>`;
+
+  for (const s of d.series) {
+    html += `<div class="serie-lbl">${h(s.name)} — ${s.works.length} opere</div>`;
+    if (s.works.length === 0) {
+      html += '<div class="empty" style="margin:0 0 1rem">Nessuna opera in questa serie.</div>';
+    }
+    for (const w of s.works) {
+      const img = w.thumb || w.image || '';
+      const safeTitle = h(w.title).replace(/'/g, "\\'");
+      html += `
+        <div class="work-row">
+          ${img
+            ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'">`
+            : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
+          <div class="work-info">
+            <div class="work-title">${h(w.title)}</div>
+            <div class="work-meta">${h(w.year||'—')} · ${h(w.gallery?.length||0)} foto</div>
+          </div>
+          <div class="work-actions">
+            <button class="btn btn-ghost" onclick="go('edit',{s:'${h(s.id)}',w:'${h(w.id)}'})">Modifica</button>
+            <button class="btn btn-danger" onclick="askDelete('${h(s.id)}','${h(w.id)}','${safeTitle}')">Elimina</button>
+          </div>
+        </div>`;
+    }
+  }
+  c.innerHTML = html;
+}
+
+// ── New work ─────────────────────────────────────────────────────────────────
+
+function renderNew(c) {
+  let files = [], primary = 0;
+
+  c.innerHTML = `
+    <button class="btn btn-ghost" onclick="go('works')" style="margin-bottom:1.5rem">← Opere</button>
+    <div class="lbl">Portfolio</div>
+    <h1>Nuova opera</h1>
+    <p class="subtitle">Compila il form e carica le fotografie</p>
+    <div class="rule"></div>
+    <div class="form-wrap">
+      <div class="fg"><label>Titolo</label>
+        <input id="n-title" type="text" placeholder="es. Onde di luce" required>
+      </div>
+      <div class="grid2">
+        <div class="fg"><label>Serie</label>
+          <select id="n-serie">
+            ${appData.series.map(s => `<option value="${h(s.id)}">${h(s.name)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="fg"><label>Anno</label>
+          <input id="n-year" type="number" placeholder="${new Date().getFullYear()}" min="1990" max="2099">
+        </div>
+      </div>
+      <div class="fg"><label>Descrizione</label>
+        <textarea id="n-desc" placeholder="Racconta l'opera, la tecnica, la materia…"></textarea>
+      </div>
+      <div class="fg">
+        <label>Fotografie — clicca su una foto per impostarla come principale</label>
+        <label class="dz" id="n-dz">
+          <strong>Trascina le foto o clicca per selezionare</strong>
+          JPG, PNG, WebP — la prima caricata sarà la principale
+          <input type="file" id="n-files" multiple accept="image/*">
+        </label>
+        <div id="n-prev" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem"></div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" id="n-sub">Carica opera →</button>
+        <span class="status" id="n-st"></span>
+      </div>
+    </div>`;
+
+  function renderPrev() {
+    const p = document.getElementById('n-prev');
+    p.innerHTML = files.map((f, i) => `
+      <div style="position:relative;width:100px;height:100px;cursor:pointer;outline:${i===primary?'2px solid var(--gold)':'2px solid transparent'}" data-i="${i}" class="np">
+        <img src="${URL.createObjectURL(f)}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:${i===primary?1:.6}">
+        ${i===primary?'<span style="position:absolute;bottom:3px;left:3px;background:var(--gold);color:#000;font-size:5px;letter-spacing:1.5px;text-transform:uppercase;font-family:var(--font-ss);padding:2px 5px;font-weight:700">principale</span>':''}
+        <button type="button" style="position:absolute;top:3px;right:3px;background:rgba(0,0,0,.82);color:#fff;border:none;width:20px;height:20px;cursor:pointer;font-size:11px;line-height:1" class="nrm" data-i="${i}">✕</button>
+      </div>`).join('');
+    p.querySelectorAll('.np').forEach(el => el.addEventListener('click', e => {
+      if (e.target.classList.contains('nrm')) return;
+      primary = +el.dataset.i; renderPrev();
+    }));
+    p.querySelectorAll('.nrm').forEach(b => b.addEventListener('click', e => {
+      e.stopPropagation();
+      files.splice(+b.dataset.i, 1);
+      if (primary >= files.length) primary = 0;
+      renderPrev();
+    }));
+  }
+
+  setupDrop('n-dz', 'n-files', f => { files = files.concat(f); renderPrev(); });
+
+  document.getElementById('n-sub').addEventListener('click', async () => {
+    const title = document.getElementById('n-title').value.trim();
+    if (!title) { setStatus('n-st', 'Inserisci un titolo.', 'err'); return; }
+    const btn = document.getElementById('n-sub');
+    btn.disabled = true;
+    setStatus('n-st', 'Caricamento…');
+    const fd = new FormData();
+    fd.append('title',         title);
+    fd.append('description',   document.getElementById('n-desc').value);
+    fd.append('serie',         document.getElementById('n-serie').value);
+    fd.append('year',          document.getElementById('n-year').value);
+    fd.append('mode',          'create');
+    fd.append('primary_index', primary);
+    files.forEach(f => fd.append('images', f));
+    try {
+      const j = await api('/upload', fd, true);
+      if (j.ok) { toast(`"${title}" caricata con ${j.uploaded} foto.`); go('works'); }
+      else { setStatus('n-st', j.error||'Errore.', 'err'); btn.disabled = false; }
+    } catch { setStatus('n-st', 'Errore di rete.', 'err'); btn.disabled = false; }
+  });
+}
+
+// ── Edit work ────────────────────────────────────────────────────────────────
+
+async function renderEdit(c, serieId, workId) {
+  const [d, ir] = await Promise.all([
+    loadData(),
+    api(`/api/images?serie=${serieId}&work=${workId}`)
+  ]);
+  const serie = d.series.find(s => s.id === serieId);
+  const work  = serie?.works.find(w => w.id === workId);
+  if (!work) {
+    c.innerHTML = '<p style="color:var(--red);padding:3rem 0">Opera non trovata.</p>';
     return;
   }
-  submitBtn.disabled = true;
-  status.textContent = 'Caricamento in corso…';
-  status.className = 'status';
 
-  const fd = new FormData();
-  fd.append('title', form.title.value);
-  fd.append('description', form.description.value);
-  fd.append('serie', form.serie.value);
-  fd.append('year', form.year.value);
-  fd.append('mode', 'create');
-  selectedFiles.forEach(f => fd.append('images', f));
+  let images  = ir.files || [];
+  let ver     = Date.now();
+  let addFiles = [];
 
-  try {
-    const res = await fetch('/upload', { method: 'POST', body: fd });
-    const j = await res.json();
-    if (j.ok) {
-      status.textContent = `Caricata: ${j.uploaded} foto. `;
-      status.className = 'status ok';
-      const a = document.createElement('a');
-      a.href = j.url; a.target = '_blank'; a.textContent = 'Apri opera →';
-      a.style.color = 'inherit';
-      status.appendChild(a);
-      form.reset();
-      selectedFiles = [];
-      renderPreviews();
-      loadRecent();
-    } else {
-      status.textContent = j.error || 'Errore.';
-      status.className = 'status err';
+  c.innerHTML = `
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.5rem">
+      <div>
+        <button class="btn btn-ghost" onclick="go('works')" style="margin-bottom:1rem">← Opere</button>
+        <div class="lbl">Modifica opera</div>
+        <h1>${h(work.title)}</h1>
+        <p class="subtitle">${h(serie.name)}</p>
+      </div>
+      <button class="btn btn-danger" onclick="askDelete('${h(serieId)}','${h(workId)}','${h(work.title).replace(/'/g,"\\'")}')">
+        Elimina opera
+      </button>
+    </div>
+    <div class="rule"></div>
+
+    <div class="form-wrap">
+      <div class="fg"><label>Titolo</label>
+        <input id="e-title" value="${h(work.title)}">
+      </div>
+      <div class="grid2">
+        <div class="fg"><label>Serie</label>
+          <input value="${h(serie.name)}" disabled>
+        </div>
+        <div class="fg"><label>Anno</label>
+          <input id="e-year" value="${h(work.year||'')}">
+        </div>
+      </div>
+      <div class="fg"><label>Descrizione</label>
+        <textarea id="e-desc">${h(work.description||'')}</textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" id="e-save">Salva modifiche</button>
+        <span class="status" id="e-st"></span>
+      </div>
+    </div>
+
+    <div class="photo-sec">
+      <div class="photo-sec-hd">
+        <span>Fotografie — clicca per impostare come principale · X per eliminare</span>
+        <span id="ph-count">${images.length} foto</span>
+      </div>
+      <div class="photo-grid" id="ph-grid"></div>
+
+      <label class="dz" id="e-dz" style="margin-top:.5rem">
+        <strong>Aggiungi nuove foto</strong>
+        Trascina o clicca — verranno aggiunte in fondo alla galleria
+        <input type="file" id="e-files" multiple accept="image/*">
+      </label>
+      <div id="e-prev" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem"></div>
+      <div id="e-add-act" style="display:none" class="form-actions">
+        <button class="btn btn-primary" id="e-add-btn">Carica foto</button>
+        <span class="status" id="e-add-st"></span>
+      </div>
+    </div>`;
+
+  // ── photo grid ─────────────────────────────────────────────────────────────
+
+  function renderGrid() {
+    const grid = document.getElementById('ph-grid');
+    const cnt  = document.getElementById('ph-count');
+    if (cnt) cnt.textContent = `${images.length} foto`;
+    if (!grid) return;
+
+    if (images.length === 0) {
+      grid.innerHTML = '<div class="empty" style="width:100%;margin:0">Nessuna foto. Aggiungine alcune qui sotto.</div>';
+      return;
     }
-  } catch (err) {
-    status.textContent = 'Errore di rete.';
-    status.className = 'status err';
-  } finally {
-    submitBtn.disabled = false;
-  }
-});
 
-async function loadRecent() {
-  const d = await (await fetch('data/series.json?cb=' + Date.now())).json();
-  const all = [];
-  d.series.forEach(s =>
-    s.works.forEach(w => all.push({ ...w, serieName: s.name, serieId: s.id }))
-  );
-  // Ultime 8
-  const recent = all.slice(-8).reverse();
-  $('#recent-list').innerHTML = recent.length === 0
-    ? '<li>Nessuna opera ancora.</li>'
-    : recent.map(w => `
-        <li>
-          <span>${w.title} <em style="color:var(--muted);font-size:0.85em;">— ${w.serieName}</em></span>
-          <a href="opera.html?serie=${w.serieId}&id=${w.id}" target="_blank">apri →</a>
-        </li>`).join('');
+    grid.innerHTML = images.map((f, i) => `
+      <div class="ph${i===0?' primary':''}" data-f="${h(f)}">
+        <img src="/${h(serieId)}/${h(workId)}/${h(f)}?v=${ver}" loading="lazy">
+        ${i===0?'<span class="badge">principale</span>':''}
+        <button class="del" data-f="${h(f)}" title="Elimina foto">✕</button>
+      </div>`).join('');
+
+    grid.querySelectorAll('.ph').forEach(item => {
+      item.addEventListener('click', async e => {
+        if (e.target.classList.contains('del')) return;
+        const f = item.dataset.f;
+        if (f === images[0]) return;
+        item.style.opacity = '.35';
+        const j = await api('/api/set-primary', {serie_id:serieId, work_id:workId, filename:f});
+        if (j.ok) {
+          const i = images.indexOf(f);
+          images = [images[i], ...images.filter((_,x) => x !== i)];
+          ver = Date.now();
+          renderGrid();
+          toast('Foto principale aggiornata.');
+        } else {
+          item.style.opacity = '';
+          toast('Errore: '+(j.error||'?'), 'err');
+        }
+      });
+    });
+
+    grid.querySelectorAll('.del').forEach(btn => {
+      btn.addEventListener('click', async e => {
+        e.stopPropagation();
+        const f = btn.dataset.f;
+        if (!confirm(`Eliminare "${f}"?\nAzione irreversibile.`)) return;
+        btn.disabled = true;
+        const j = await api('/api/delete-image', {serie_id:serieId, work_id:workId, filename:f});
+        if (j.ok) {
+          images = images.filter(x => x !== f);
+          renderGrid();
+          toast('Foto eliminata.');
+        } else {
+          btn.disabled = false;
+          toast('Errore: '+(j.error||'?'), 'err');
+        }
+      });
+    });
+  }
+  renderGrid();
+
+  // ── save metadata ──────────────────────────────────────────────────────────
+
+  document.getElementById('e-save').addEventListener('click', async () => {
+    const btn = document.getElementById('e-save');
+    btn.disabled = true;
+    setStatus('e-st', 'Salvataggio…');
+    const j = await api('/api/update-work', {
+      serie_id:    serieId,
+      work_id:     workId,
+      title:       document.getElementById('e-title').value.trim(),
+      year:        document.getElementById('e-year').value.trim(),
+      description: document.getElementById('e-desc').value.trim(),
+    });
+    btn.disabled = false;
+    if (j.ok) {
+      setStatus('e-st', 'Salvato.', 'ok');
+      toast('Modifiche salvate.');
+      setTimeout(() => setStatus('e-st', ''), 3000);
+    } else {
+      setStatus('e-st', j.error||'Errore.', 'err');
+    }
+  });
+
+  // ── add images ─────────────────────────────────────────────────────────────
+
+  function renderAddPrev() {
+    const p = document.getElementById('e-prev');
+    const a = document.getElementById('e-add-act');
+    p.innerHTML = addFiles.map((f, i) => `
+      <div style="position:relative;width:80px;height:80px">
+        <img src="${URL.createObjectURL(f)}" style="width:100%;height:100%;object-fit:cover;border:1px solid var(--border)">
+        <button type="button" style="position:absolute;top:2px;right:2px;background:rgba(0,0,0,.82);color:#fff;border:none;width:18px;height:18px;cursor:pointer;font-size:10px;line-height:1" class="arm" data-i="${i}">✕</button>
+      </div>`).join('');
+    p.querySelectorAll('.arm').forEach(b => b.addEventListener('click', () => {
+      addFiles.splice(+b.dataset.i, 1);
+      renderAddPrev();
+    }));
+    if (a) a.style.display = addFiles.length ? 'flex' : 'none';
+  }
+
+  setupDrop('e-dz', 'e-files', f => { addFiles = addFiles.concat(f); renderAddPrev(); });
+
+  document.getElementById('e-add-btn').addEventListener('click', async () => {
+    if (!addFiles.length) return;
+    const btn = document.getElementById('e-add-btn');
+    btn.disabled = true;
+    setStatus('e-add-st', 'Caricamento…');
+    const fd = new FormData();
+    fd.append('serie_id', serieId);
+    fd.append('work_id',  workId);
+    addFiles.forEach(f => fd.append('images', f));
+    try {
+      const j = await api('/api/add-images', fd, true);
+      if (j.ok) {
+        addFiles = [];
+        renderAddPrev();
+        const ir2 = await api(`/api/images?serie=${serieId}&work=${workId}`);
+        images = ir2.files || [];
+        ver = Date.now();
+        renderGrid();
+        toast(`${j.uploaded} foto aggiunte.`);
+        setStatus('e-add-st', '');
+      } else {
+        setStatus('e-add-st', j.error||'Errore.', 'err');
+      }
+    } catch {
+      setStatus('e-add-st', 'Errore di rete.', 'err');
+    } finally {
+      btn.disabled = false;
+    }
+  });
 }
-loadRecent();
+
+// ── delete work ──────────────────────────────────────────────────────────────
+
+async function askDelete(serieId, workId, title) {
+  if (!confirm(`Eliminare "${title}"?\n\nVerranno cancellate tutte le foto dell'opera.\nQuesta azione è irreversibile.`)) return;
+  const j = await api('/api/delete-work', {serie_id:serieId, work_id:workId});
+  if (j.ok) { toast(`"${title}" eliminata.`); go('works'); }
+  else toast('Errore: '+(j.error||'?'), 'err');
+}
+
+// ── init ─────────────────────────────────────────────────────────────────────
+
+loadData().then(() => go('dashboard'));
 </script>
 </body>
 </html>

@@ -162,24 +162,21 @@
             "struttura-tensione/equilibrio-fratturato/01.jpg",
             "struttura-tensione/equilibrio-fratturato/02.jpg",
             "struttura-tensione/equilibrio-fratturato/03.jpg",
-            "struttura-tensione/equilibrio-fratturato/04.jpg",
-            "struttura-tensione/equilibrio-fratturato/05.jpg"
+            "struttura-tensione/equilibrio-fratturato/04.jpg"
           ],
           "description": "Equilibrio Fratturato esplora la tensione tra stabilità e rottura attraverso una struttura composta da forme geometriche che si intersecano e si spingono reciprocamente nello spazio della superficie metallica.\n\nLe forme triangolari, modellate a sbalzo sull’alluminio, emergono dal piano creando volumi netti e inclinati che suggeriscono un equilibrio dinamico e precario. Tra questi elementi strutturali, la superficie è attraversata da una trama fitta di incisioni realizzate a bulino, che costruiscono un tessuto di linee capace di catturare e frammentare la luce.\n\nIl contrasto tra le superfici lisce dei volumi e la densità segnica del fondo genera una tensione visiva continua, trasformando il metallo in un campo vibrante dove ordine e frattura convivono.",
           "thumb_gallery": [
             "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
             "struttura-tensione/equilibrio-fratturato/thumb/02.webp",
             "struttura-tensione/equilibrio-fratturato/thumb/03.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/04.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/05.webp"
+            "struttura-tensione/equilibrio-fratturato/thumb/04.webp"
           ],
           "thumb": "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
           "canvas_gallery": [
             "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
             "struttura-tensione/equilibrio-fratturato/canvas/02.webp",
             "struttura-tensione/equilibrio-fratturato/canvas/03.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/04.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/05.webp"
+            "struttura-tensione/equilibrio-fratturato/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp"
         },
