@@ -6,6 +6,16 @@
 /serie/*/   /serie/:splat/  200
 /opera/*/   /opera/:splat/  200
 
+# 301 redirect /it/ legacy → radice IT
+/it/  /  301
+/it/index.html  /  301
+/it/bio.html  /bio.html  301
+/it/commissioni.html  /commissioni.html  301
+/it/contatti.html  /contatti.html  301
+/it/cookie-policy.html  /cookie-policy.html  301
+/it/portfolio.html  /portfolio.html  301
+/it/privacy.html  /privacy.html  301
+
 # 301 redirect slug Wix legacy → SEO-friendly
 /opera/progetto-senza-titolo-6e3e20/  /opera/sfera/  301
 /opera/progetto-senza-titolo-77d42e/  /opera/fazzoletto/  301
