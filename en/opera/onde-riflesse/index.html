@@ -117,25 +117,7 @@
     preload(current);
   }
 
-  if (gallery.length > 1) {
-    thumbs.forEach(t => t.addEventListener('click', () => show(parseInt(t.dataset.i))));
-    document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
-    document.getElementById('next-img').addEventListener('click', () => show(current + 1));
-    document.addEventListener('keydown', e => {
-      if (lb.classList.contains('open')) return; // gestito da lightbox
-      if (e.key === 'ArrowLeft') show(current - 1);
-      if (e.key === 'ArrowRight') show(current + 1);
-    });
-    thumbs[0]?.classList.add('active');
-    preload(0);
-  } else {
-    document.getElementById('prev-img').style.display = 'none';
-    document.getElementById('next-img').style.display = 'none';
-    counter.style.display = 'none';
-  }
-
-  // Lightbox: click immagine principale → zoom fullscreen
-  const lb = document.createElement('div');
+    const lb = document.createElement('div');
   lb.className = 'opera-lightbox';
   lb.innerHTML = `
     <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
@@ -165,6 +147,26 @@
     lbImg.src = '/' + gallery[current];
     lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
   }
+
+  if (gallery.length > 1) {
+    thumbs.forEach(t => t.addEventListener('click', () => show(parseInt(t.dataset.i))));
+    document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
+    document.getElementById('next-img').addEventListener('click', () => show(current + 1));
+    document.addEventListener('keydown', e => {
+      if (lb.classList.contains('open')) return; // gestito da lightbox
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+    thumbs[0]?.classList.add('active');
+    preload(0);
+  } else {
+    document.getElementById('prev-img').style.display = 'none';
+    document.getElementById('next-img').style.display = 'none';
+    counter.style.display = 'none';
+  }
+
+  // Lightbox: click immagine principale → zoom fullscreen
+
 
   mainImg.addEventListener('click', openLb);
   lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
