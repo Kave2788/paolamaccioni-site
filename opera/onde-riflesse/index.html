@@ -2,7 +2,11 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
   <title>Onde Riflesse — Paola Maccioni</title>
   <meta name="description" content="Un movimento circolare attraversa la superficie dell’alluminio e conduce lo sguardo verso il centro, come un vortice che cattura energia e luce. Le linee incise e lavorate a sbalzo creano profondità…">
   <meta name="keywords" content="onde riflesse, paola maccioni, struttura e tensione, scultura alluminio sbalzo">
@@ -18,6 +22,8 @@
   <meta property="og:description" content="Un movimento circolare attraversa la superficie dell’alluminio e conduce lo sguardo verso il centro, come un vortice che cattura energia e luce. Le linee incise e lavorate a sbalzo creano profondità…">
   <meta property="og:url" content="https://paolamaccioni.com/opera/onde-riflesse/">
   <meta property="og:image" content="https://paolamaccioni.com/struttura-tensione/onde-riflesse/01.png">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
   <meta property="article:author" content="Paola Maccioni">
   <meta property="article:section" content="Struttura e Tensione">
 
@@ -61,7 +67,7 @@
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
-        <img id="opera-img" src="/struttura-tensione/onde-riflesse/01.png" alt="Onde Riflesse">
+        <img id="opera-img" src="/struttura-tensione/onde-riflesse/01.png" alt="Onde Riflesse" srcset="/struttura-tensione/onde-riflesse/01.png 1400w, /struttura-tensione/onde-riflesse/01.png 800w" decoding="async" fetchpriority="high">
         <button class="opera-nav prev" id="prev-img" aria-label="Precedente">‹</button>
         <button class="opera-nav next" id="next-img" aria-label="Successiva">›</button>
         <span class="opera-counter" id="opera-counter">1 / 3</span>
@@ -75,7 +81,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/onde-riflesse/01.png"><img src="/struttura-tensione/onde-riflesse/canvas/01.webp" alt="Onde Riflesse 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/onde-riflesse/02.png"><img src="/struttura-tensione/onde-riflesse/canvas/02.webp" alt="Onde Riflesse 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/onde-riflesse/03.png"><img src="/struttura-tensione/onde-riflesse/canvas/03.webp" alt="Onde Riflesse 3" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/onde-riflesse/01.png"><img src="/struttura-tensione/onde-riflesse/canvas/01.webp" alt="Onde Riflesse 1" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/onde-riflesse/02.png"><img src="/struttura-tensione/onde-riflesse/canvas/02.webp" alt="Onde Riflesse 2" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/onde-riflesse/03.png"><img src="/struttura-tensione/onde-riflesse/canvas/03.webp" alt="Onde Riflesse 3" loading="lazy" decoding="async" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -133,7 +139,7 @@
     <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
     <button class="opera-lightbox-prev" aria-label="Precedente">‹</button>
     <button class="opera-lightbox-next" aria-label="Successiva">›</button>
-    <img alt="">
+    <img alt="" decoding="async">
     <div class="opera-lightbox-caption"></div>
   `;
   document.body.appendChild(lb);

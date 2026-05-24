@@ -2,7 +2,11 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -33,7 +37,7 @@
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
-        <img id="opera-img" src="" alt="">
+        <img id="opera-img" src="" alt="" decoding="async" fetchpriority="high">
         <button class="opera-nav prev" id="prev-img" aria-label="Precedente">‹</button>
         <button class="opera-nav next" id="next-img" aria-label="Successiva">›</button>
         <span class="opera-counter" id="opera-counter"></span>
@@ -106,7 +110,7 @@
   // Render thumbs only if more than 1 image
   if (gallery.length > 1) {
     thumbsWrap.innerHTML = gallery.map((g, i) =>
-      `<button class="opera-thumb" data-i="${i}"><img src="${thumbs[i]}" alt="" loading="lazy"></button>`
+      `<button class="opera-thumb" data-i="${i}"><img src="${thumbs[i]}" alt="" loading="lazy" decoding="async" loading="lazy"></button>`
     ).join('');
     thumbsWrap.querySelectorAll('.opera-thumb').forEach(t =>
       t.addEventListener('click', () => show(parseInt(t.dataset.i)))

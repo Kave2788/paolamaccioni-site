@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
   <title>Sguardo primordiale — Paola Maccioni</title>
   <meta name="description" content="The head of a reptile emerges from the metal surface through a dense weave of scales and micro-structures modelled as an embossment.">
   <meta name="keywords" content="primordial look, paola maccioni, organic form and figure, embossed aluminium sculpture">
@@ -19,6 +23,8 @@
   <meta property="og:description" content="The head of a reptile emerges from the metal surface through a dense weave of scales and micro-structures modelled as an embossment.">
   <meta property="og:url" content="https://paolamaccioni.com/en/opera/iguana/">
   <meta property="og:image" content="https://paolamaccioni.com/forma-organica/iguana/01.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
   <meta property="article:author" content="Paola Maccioni">
   <meta property="article:section" content="Organic Form and Figure">
 
@@ -62,7 +68,7 @@
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
-        <img id="opera-img" src="/forma-organica/iguana/01.jpg" alt="Sguardo primordiale">
+        <img id="opera-img" src="/forma-organica/iguana/01.jpg" alt="Sguardo primordiale" srcset="/forma-organica/iguana/01.jpg 1400w, /forma-organica/iguana/01.jpg 800w" decoding="async" fetchpriority="high">
         <button class="opera-nav prev" id="prev-img" aria-label="Previous">‹</button>
         <button class="opera-nav next" id="next-img" aria-label="Next">›</button>
         <span class="opera-counter" id="opera-counter">1 / 5</span>
@@ -79,7 +85,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/iguana/01.jpg"><img src="/forma-organica/iguana/canvas/01.webp" alt="Sguardo primordiale 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/forma-organica/iguana/02.jpg"><img src="/forma-organica/iguana/canvas/02.webp" alt="Sguardo primordiale 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/forma-organica/iguana/03.jpg"><img src="/forma-organica/iguana/canvas/03.webp" alt="Sguardo primordiale 3" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/forma-organica/iguana/04.jpg"><img src="/forma-organica/iguana/canvas/04.webp" alt="Sguardo primordiale 4" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/forma-organica/iguana/05.jpg"><img src="/forma-organica/iguana/canvas/05.webp" alt="Sguardo primordiale 5" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/iguana/01.jpg"><img src="/forma-organica/iguana/canvas/01.webp" alt="Sguardo primordiale 1" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/forma-organica/iguana/02.jpg"><img src="/forma-organica/iguana/canvas/02.webp" alt="Sguardo primordiale 2" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/forma-organica/iguana/03.jpg"><img src="/forma-organica/iguana/canvas/03.webp" alt="Sguardo primordiale 3" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/forma-organica/iguana/04.jpg"><img src="/forma-organica/iguana/canvas/04.webp" alt="Sguardo primordiale 4" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/forma-organica/iguana/05.jpg"><img src="/forma-organica/iguana/canvas/05.webp" alt="Sguardo primordiale 5" loading="lazy" decoding="async" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -137,7 +143,7 @@
     <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
     <button class="opera-lightbox-prev" aria-label="Previous">‹</button>
     <button class="opera-lightbox-next" aria-label="Next">›</button>
-    <img alt="">
+    <img alt="" decoding="async">
     <div class="opera-lightbox-caption"></div>
   `;
   document.body.appendChild(lb);

@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
   <title>Trota — Paola Maccioni</title>
   <meta name="description" content="Trout relates the figure of the fish to a reticular structure that occupies the surface of the work.">
   <meta name="keywords" content="trout, paola maccioni, organic form and figure, embossed aluminium sculpture">
@@ -19,6 +23,8 @@
   <meta property="og:description" content="Trout relates the figure of the fish to a reticular structure that occupies the surface of the work.">
   <meta property="og:url" content="https://paolamaccioni.com/en/opera/trota/">
   <meta property="og:image" content="https://paolamaccioni.com/forma-organica/trota/01.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
   <meta property="article:author" content="Paola Maccioni">
   <meta property="article:section" content="Organic Form and Figure">
 
@@ -62,7 +68,7 @@
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
-        <img id="opera-img" src="/forma-organica/trota/01.jpg" alt="Trota">
+        <img id="opera-img" src="/forma-organica/trota/01.jpg" alt="Trota" srcset="/forma-organica/trota/01.jpg 1400w, /forma-organica/trota/01.jpg 800w" decoding="async" fetchpriority="high">
         <button class="opera-nav prev" id="prev-img" aria-label="Previous">‹</button>
         <button class="opera-nav next" id="next-img" aria-label="Next">›</button>
         <span class="opera-counter" id="opera-counter">1 / 7</span>
@@ -79,7 +85,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/trota/01.jpg"><img src="/forma-organica/trota/canvas/01.webp" alt="Trota 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/forma-organica/trota/02.jpg"><img src="/forma-organica/trota/canvas/02.webp" alt="Trota 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/forma-organica/trota/03.jpg"><img src="/forma-organica/trota/canvas/03.webp" alt="Trota 3" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/forma-organica/trota/04.jpg"><img src="/forma-organica/trota/canvas/04.webp" alt="Trota 4" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/forma-organica/trota/05.jpg"><img src="/forma-organica/trota/canvas/05.webp" alt="Trota 5" loading="lazy"></button><button class="opera-thumb" data-i="5" data-src="/forma-organica/trota/06.png"><img src="/forma-organica/trota/canvas/06.webp" alt="Trota 6" loading="lazy"></button><button class="opera-thumb" data-i="6" data-src="/forma-organica/trota/07.png"><img src="/forma-organica/trota/canvas/07.webp" alt="Trota 7" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/trota/01.jpg"><img src="/forma-organica/trota/canvas/01.webp" alt="Trota 1" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/forma-organica/trota/02.jpg"><img src="/forma-organica/trota/canvas/02.webp" alt="Trota 2" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/forma-organica/trota/03.jpg"><img src="/forma-organica/trota/canvas/03.webp" alt="Trota 3" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/forma-organica/trota/04.jpg"><img src="/forma-organica/trota/canvas/04.webp" alt="Trota 4" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/forma-organica/trota/05.jpg"><img src="/forma-organica/trota/canvas/05.webp" alt="Trota 5" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="5" data-src="/forma-organica/trota/06.png"><img src="/forma-organica/trota/canvas/06.webp" alt="Trota 6" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="6" data-src="/forma-organica/trota/07.png"><img src="/forma-organica/trota/canvas/07.webp" alt="Trota 7" loading="lazy" decoding="async" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -137,7 +143,7 @@
     <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
     <button class="opera-lightbox-prev" aria-label="Previous">‹</button>
     <button class="opera-lightbox-next" aria-label="Next">›</button>
-    <img alt="">
+    <img alt="" decoding="async">
     <div class="opera-lightbox-caption"></div>
   `;
   document.body.appendChild(lb);

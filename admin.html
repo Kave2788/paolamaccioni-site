@@ -2,7 +2,11 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
 <meta http-equiv="Cache-Control" content="no-store">
 <title>Admin — Paola Maccioni</title>
 <style>
@@ -277,7 +281,7 @@ async function renderDashboard(c) {
       ? '<div class="empty">Nessuna opera ancora.</div>'
       : recent.slice(-6).reverse().map(w => `
         <div class="work-row">
-          ${(w.thumb||w.image) ? `<img class="work-thumb" src="${h(w.thumb||w.image)}" onerror="this.style.display='none'">` : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
+          ${(w.thumb||w.image) ? `<img class="work-thumb" src="${h(w.thumb||w.image)}" onerror="this.style.display='none'" decoding="async" loading="lazy">` : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
           <div class="work-info">
             <div class="work-title">${h(w.title)}</div>
             <div class="work-meta">${h(w.year||'—')} — ${h(w.sn)}</div>
@@ -315,7 +319,7 @@ async function renderWorks(c) {
       html += `
         <div class="work-row">
           ${img
-            ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'">`
+            ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'" decoding="async" loading="lazy">`
             : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
           <div class="work-info">
             <div class="work-title">${h(w.title)}</div>
@@ -378,7 +382,7 @@ function renderNew(c) {
     const p = document.getElementById('n-prev');
     p.innerHTML = files.map((f, i) => `
       <div style="position:relative;width:100px;height:100px;cursor:pointer;outline:${i===primary?'2px solid var(--gold)':'2px solid transparent'}" data-i="${i}" class="np">
-        <img src="${URL.createObjectURL(f)}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:${i===primary?1:.6}">
+        <img src="${URL.createObjectURL(f)}" style="width:100%;height:100%;object-fit:cover;display:block;opacity:${i===primary?1:.6}" decoding="async" loading="lazy">
         ${i===primary?'<span style="position:absolute;bottom:3px;left:3px;background:var(--gold);color:#000;font-size:5px;letter-spacing:1.5px;text-transform:uppercase;font-family:var(--font-ss);padding:2px 5px;font-weight:700">principale</span>':''}
         <button type="button" style="position:absolute;top:3px;right:3px;background:rgba(0,0,0,.82);color:#fff;border:none;width:20px;height:20px;cursor:pointer;font-size:11px;line-height:1" class="nrm" data-i="${i}">✕</button>
       </div>`).join('');
@@ -505,7 +509,7 @@ async function renderEdit(c, serieId, workId) {
 
     grid.innerHTML = images.map((f, i) => `
       <div class="ph${i===0?' primary':''}" data-f="${h(f)}">
-        <img src="/${h(serieId)}/${h(workId)}/${h(f)}?v=${ver}" loading="lazy">
+        <img src="/${h(serieId)}/${h(workId)}/${h(f)}?v=${ver}" loading="lazy" decoding="async" loading="lazy">
         ${i===0?'<span class="badge">principale</span>':''}
         <button class="del" data-f="${h(f)}" title="Elimina foto">✕</button>
       </div>`).join('');
@@ -580,7 +584,7 @@ async function renderEdit(c, serieId, workId) {
     const a = document.getElementById('e-add-act');
     p.innerHTML = addFiles.map((f, i) => `
       <div style="position:relative;width:80px;height:80px">
-        <img src="${URL.createObjectURL(f)}" style="width:100%;height:100%;object-fit:cover;border:1px solid var(--border)">
+        <img src="${URL.createObjectURL(f)}" style="width:100%;height:100%;object-fit:cover;border:1px solid var(--border)" decoding="async" loading="lazy">
         <button type="button" style="position:absolute;top:2px;right:2px;background:rgba(0,0,0,.82);color:#fff;border:none;width:18px;height:18px;cursor:pointer;font-size:10px;line-height:1" class="arm" data-i="${i}">✕</button>
       </div>`).join('');
     p.querySelectorAll('.arm').forEach(b => b.addEventListener('click', () => {

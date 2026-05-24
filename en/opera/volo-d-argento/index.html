@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
   <title>Volo d&#x27;Argento — Paola Maccioni</title>
   <meta name="description" content="Volo d&#x27;Argento (Silver Flight) is an embossed sculpture on aluminium depicting a winged horse, a mythical figure that in this work takes on an essential an">
   <meta name="keywords" content="volo d&#x27;argento, paola maccioni, structure and tension, cantilever aluminium sculpture">
@@ -19,6 +23,8 @@
   <meta property="og:description" content="Volo d&#x27;Argento (Silver Flight) is an embossed sculpture on aluminium depicting a winged horse, a mythical figure that in this work takes on an essential an">
   <meta property="og:url" content="https://paolamaccioni.com/en/opera/volo-d-argento/">
   <meta property="og:image" content="https://paolamaccioni.com/struttura-tensione/volo-d-argento/01.png">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
   <meta property="article:author" content="Paola Maccioni">
   <meta property="article:section" content="Structure and Tension">
 
@@ -62,7 +68,7 @@
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
-        <img id="opera-img" src="/struttura-tensione/volo-d-argento/01.png" alt="Volo d&#x27;Argento">
+        <img id="opera-img" src="/struttura-tensione/volo-d-argento/01.png" alt="Volo d&#x27;Argento" srcset="/struttura-tensione/volo-d-argento/01.png 1400w, /struttura-tensione/volo-d-argento/01.png 800w" decoding="async" fetchpriority="high">
         <button class="opera-nav prev" id="prev-img" aria-label="Previous">‹</button>
         <button class="opera-nav next" id="next-img" aria-label="Next">›</button>
         <span class="opera-counter" id="opera-counter">1 / 5</span>
@@ -81,7 +87,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/volo-d-argento/01.png"><img src="/struttura-tensione/volo-d-argento/canvas/01.webp" alt="Volo d&#x27;Argento 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/volo-d-argento/02.png"><img src="/struttura-tensione/volo-d-argento/canvas/02.webp" alt="Volo d&#x27;Argento 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/volo-d-argento/03.png"><img src="/struttura-tensione/volo-d-argento/canvas/03.webp" alt="Volo d&#x27;Argento 3" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/struttura-tensione/volo-d-argento/04.png"><img src="/struttura-tensione/volo-d-argento/canvas/04.webp" alt="Volo d&#x27;Argento 4" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/struttura-tensione/volo-d-argento/05.jpg"><img src="/struttura-tensione/volo-d-argento/canvas/05.webp" alt="Volo d&#x27;Argento 5" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/volo-d-argento/01.png"><img src="/struttura-tensione/volo-d-argento/canvas/01.webp" alt="Volo d&#x27;Argento 1" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/volo-d-argento/02.png"><img src="/struttura-tensione/volo-d-argento/canvas/02.webp" alt="Volo d&#x27;Argento 2" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/volo-d-argento/03.png"><img src="/struttura-tensione/volo-d-argento/canvas/03.webp" alt="Volo d&#x27;Argento 3" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/struttura-tensione/volo-d-argento/04.png"><img src="/struttura-tensione/volo-d-argento/canvas/04.webp" alt="Volo d&#x27;Argento 4" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/struttura-tensione/volo-d-argento/05.jpg"><img src="/struttura-tensione/volo-d-argento/canvas/05.webp" alt="Volo d&#x27;Argento 5" loading="lazy" decoding="async" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -139,7 +145,7 @@
     <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
     <button class="opera-lightbox-prev" aria-label="Previous">‹</button>
     <button class="opera-lightbox-next" aria-label="Next">›</button>
-    <img alt="">
+    <img alt="" decoding="async">
     <div class="opera-lightbox-caption"></div>
   `;
   document.body.appendChild(lb);

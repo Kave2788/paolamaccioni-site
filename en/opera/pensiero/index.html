@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
   <title>Pensiero — Paola Maccioni</title>
   <meta name="description" content="This work represents an anatomical heart reinterpreted through the language of embossed sculpture on aluminium. The recognisable and universal form is translate">
   <meta name="keywords" content="thought, paola maccioni, structure and tension, cantilever aluminium sculpture">
@@ -19,6 +23,8 @@
   <meta property="og:description" content="This work represents an anatomical heart reinterpreted through the language of embossed sculpture on aluminium. The recognisable and universal form is translate">
   <meta property="og:url" content="https://paolamaccioni.com/en/opera/pensiero/">
   <meta property="og:image" content="https://paolamaccioni.com/struttura-tensione/pensiero/01.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
   <meta property="article:author" content="Paola Maccioni">
   <meta property="article:section" content="Structure and Tension">
 
@@ -62,7 +68,7 @@
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
-        <img id="opera-img" src="/struttura-tensione/pensiero/01.jpg" alt="Pensiero">
+        <img id="opera-img" src="/struttura-tensione/pensiero/01.jpg" alt="Pensiero" srcset="/struttura-tensione/pensiero/01.jpg 1400w, /struttura-tensione/pensiero/01.jpg 800w" decoding="async" fetchpriority="high">
         <button class="opera-nav prev" id="prev-img" aria-label="Previous">‹</button>
         <button class="opera-nav next" id="next-img" aria-label="Next">›</button>
         <span class="opera-counter" id="opera-counter">1 / 6</span>
@@ -80,7 +86,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/pensiero/01.jpg"><img src="/struttura-tensione/pensiero/canvas/01.webp" alt="Pensiero 1" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/pensiero/02.jpg"><img src="/struttura-tensione/pensiero/canvas/02.webp" alt="Pensiero 2" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/pensiero/03.jpg"><img src="/struttura-tensione/pensiero/canvas/03.webp" alt="Pensiero 3" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/struttura-tensione/pensiero/04.jpg"><img src="/struttura-tensione/pensiero/canvas/04.webp" alt="Pensiero 4" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/struttura-tensione/pensiero/05.jpeg"><img src="/struttura-tensione/pensiero/canvas/05.webp" alt="Pensiero 5" loading="lazy"></button><button class="opera-thumb" data-i="5" data-src="/struttura-tensione/pensiero/06.jpg"><img src="/struttura-tensione/pensiero/canvas/06.webp" alt="Pensiero 6" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/pensiero/01.jpg"><img src="/struttura-tensione/pensiero/canvas/01.webp" alt="Pensiero 1" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/pensiero/02.jpg"><img src="/struttura-tensione/pensiero/canvas/02.webp" alt="Pensiero 2" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/pensiero/03.jpg"><img src="/struttura-tensione/pensiero/canvas/03.webp" alt="Pensiero 3" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="3" data-src="/struttura-tensione/pensiero/04.jpg"><img src="/struttura-tensione/pensiero/canvas/04.webp" alt="Pensiero 4" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="4" data-src="/struttura-tensione/pensiero/05.jpeg"><img src="/struttura-tensione/pensiero/canvas/05.webp" alt="Pensiero 5" loading="lazy" decoding="async" loading="lazy"></button><button class="opera-thumb" data-i="5" data-src="/struttura-tensione/pensiero/06.jpg"><img src="/struttura-tensione/pensiero/canvas/06.webp" alt="Pensiero 6" loading="lazy" decoding="async" loading="lazy"></button></div>
 
   </div>
 </section>
@@ -138,7 +144,7 @@
     <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
     <button class="opera-lightbox-prev" aria-label="Previous">‹</button>
     <button class="opera-lightbox-next" aria-label="Next">›</button>
-    <img alt="">
+    <img alt="" decoding="async">
     <div class="opera-lightbox-caption"></div>
   `;
   document.body.appendChild(lb);
