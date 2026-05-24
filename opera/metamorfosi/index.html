@@ -115,7 +115,24 @@
     preload(current);
   }
 
-    // Lightbox: click immagine principale → zoom fullscreen
+  if (gallery.length > 1) {
+    thumbs.forEach(t => t.addEventListener('click', () => show(parseInt(t.dataset.i))));
+    document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
+    document.getElementById('next-img').addEventListener('click', () => show(current + 1));
+    document.addEventListener('keydown', e => {
+      if (lb.classList.contains('open')) return; // gestito da lightbox
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+    thumbs[0]?.classList.add('active');
+    preload(0);
+  } else {
+    document.getElementById('prev-img').style.display = 'none';
+    document.getElementById('next-img').style.display = 'none';
+    counter.style.display = 'none';
+  }
+
+  // Lightbox: click immagine principale → zoom fullscreen
   const lb = document.createElement('div');
   lb.className = 'opera-lightbox';
   lb.innerHTML = `
@@ -148,35 +165,6 @@
   }
 
   mainImg.addEventListener('click', openLb);
-  lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
-  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-  lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
-  lb.querySelector('.opera-lightbox-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
-  document.addEventListener('keydown', e => {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLb();
-    if (e.key === 'ArrowLeft' && gallery.length > 1) lbShow(current - 1);
-    if (e.key === 'ArrowRight' && gallery.length > 1) lbShow(current + 1);
-  });
-
-    if (gallery.length > 1) {
-    thumbs.forEach(t => t.addEventListener('click', () => show(parseInt(t.dataset.i))));
-    document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
-    document.getElementById('next-img').addEventListener('click', () => show(current + 1));
-    document.addEventListener('keydown', e => {
-      if (lb.classList.contains('open')) return; // gestito da lightbox
-      if (e.key === 'ArrowLeft') show(current - 1);
-      if (e.key === 'ArrowRight') show(current + 1);
-    });
-    thumbs[0]?.classList.add('active');
-    preload(0);
-  } else {
-    document.getElementById('prev-img').style.display = 'none';
-    document.getElementById('next-img').style.display = 'none';
-    counter.style.display = 'none';
-  }
-
-    mainImg.addEventListener('click', openLb);
   lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
   lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
   lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
