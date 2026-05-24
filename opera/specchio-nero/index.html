@@ -108,6 +108,7 @@
 
   function show(i) {
     current = (i + gallery.length) % gallery.length;
+    mainImg.removeAttribute('srcset');
     mainImg.src = '/' + gallery[current];
     mainImg.alt = "Specchio nero" + ' ' + (current+1);
     counter.textContent = (current+1) + ' / ' + gallery.length;

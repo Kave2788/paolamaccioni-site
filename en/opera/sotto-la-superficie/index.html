@@ -112,6 +112,7 @@
 
   function show(i) {
     current = (i + gallery.length) % gallery.length;
+    mainImg.removeAttribute('srcset');
     mainImg.src = '/' + gallery[current];
     mainImg.alt = "Sotto la superficie" + ' ' + (current+1);
     counter.textContent = (current+1) + ' / ' + gallery.length;

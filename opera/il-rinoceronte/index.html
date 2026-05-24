@@ -108,6 +108,7 @@
 
   function show(i) {
     current = (i + gallery.length) % gallery.length;
+    mainImg.removeAttribute('srcset');
     mainImg.src = '/' + gallery[current];
     mainImg.alt = "Il Rinoceronte \u2013 omaggio a D\u00fcrer" + ' ' + (current+1);
     counter.textContent = (current+1) + ' / ' + gallery.length;
