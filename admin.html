@@ -179,6 +179,14 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-s);min-height
       <a data-v="works"     onclick="go('works')">Opere</a>
       <a data-v="new"       onclick="go('new')">+ Nuova opera</a>
     </nav>
+
+    <button class="btn btn-primary" id="publish-btn" onclick="publish()"
+            style="width:100%;margin-top:2rem;padding:.8rem">↑ Pubblica sul sito</button>
+    <div style="font-size:10px;font-family:var(--font-ss);color:var(--text2);margin-top:.7rem;line-height:1.6">
+      Premi qui <strong style="color:var(--text)">quando hai finito</strong> di caricare le foto.<br>
+      Il sito si aggiorna in circa un minuto.
+    </div>
+
     <div class="sidebar-footer">
       Opere totali<br>
       <strong id="sb-total">—</strong>
@@ -645,6 +653,26 @@ async function askDelete(serieId, workId, title) {
   const j = await api('/api/delete-work', {serie_id:serieId, work_id:workId});
   if (j.ok) { toast(`"${title}" eliminata.`); go('works'); }
   else toast('Errore: '+(j.error||'?'), 'err');
+}
+
+// ── publish to live site ──────────────────────────────────────────────────────
+
+async function publish() {
+  const btn = document.getElementById('publish-btn');
+  if (!btn || btn.disabled) return;
+  const orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Pubblicazione…';
+  try {
+    const j = await api('/api/publish', {});
+    toast(j.message || (j.ok ? 'Fatto.' : (j.error || 'Errore.')),
+          j.ok ? 'ok' : 'err');
+  } catch {
+    toast('Errore di rete: il programma è avviato?', 'err');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = orig;
+  }
 }
 
 // ── init ─────────────────────────────────────────────────────────────────────

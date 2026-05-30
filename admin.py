@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Admin server locale — Paola Maccioni."""
 
-import json, os, re, shutil, unicodedata
+import json, os, re, shutil, subprocess, unicodedata
 import http.server, socketserver, urllib.parse, cgi, webbrowser
 from PIL import Image, ImageOps
 
@@ -139,6 +139,53 @@ def load_data():
 def save_data(d):
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, indent=2)
+
+# ── pubblicazione su GitHub → Netlify ────────────────────────────────────────
+
+def _git(*args):
+    """Esegue un comando git nella cartella del sito, catturando l'output."""
+    return subprocess.run(
+        ["git", *args], cwd=ROOT,
+        capture_output=True, text=True,
+    )
+
+def git_publish(msg="Aggiornamento dal pannello admin"):
+    """
+    Pubblica TUTTE le modifiche locali sul sito in un solo push:
+      1. controlla se c'è qualcosa da pubblicare
+      2. commit di tutto
+      3. pull (sincronizza eventuali modifiche fatte da altri)
+      4. push  → Netlify ricostruisce il sito
+    Pensata per essere chiamata UNA volta a fine sessione (un push = una build).
+    Ritorna un dict pronto per la UI.
+    """
+    st = _git("status", "--porcelain")
+    if st.returncode != 0:
+        return {"ok": False,
+                "error": "Git non disponibile su questo PC. Contatta Andrea."}
+    if not st.stdout.strip():
+        return {"ok": True, "published": False,
+                "message": "Niente da pubblicare — il sito è già aggiornato."}
+
+    if _git("add", "-A").returncode != 0:
+        return {"ok": False, "error": "Errore nel preparare le modifiche."}
+
+    _git("commit", "-m", msg)  # se non c'è nulla da committare non fa danni
+
+    pull = _git("pull", "--no-edit")
+    if pull.returncode != 0:
+        return {"ok": False,
+                "error": "Sincronizzazione fallita (possibile conflitto). "
+                         "Le foto sono salvate sul PC. Contatta Andrea."}
+
+    push = _git("push")
+    if push.returncode != 0:
+        return {"ok": False,
+                "error": "Pubblicazione fallita: controlla la connessione a "
+                         "internet e riprova. Se persiste, contatta Andrea."}
+
+    return {"ok": True, "published": True,
+            "message": "Sito aggiornato! Sarà online tra circa un minuto."}
 
 def list_main_images(serie_id, work_id):
     d = os.path.join(ROOT, serie_id, work_id)
@@ -281,6 +328,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "/api/delete-work":  self._delete_work,
             "/api/delete-image": self._delete_image,
             "/api/set-primary":  self._set_primary,
+            "/api/publish":      self._publish,
         }
         fn = dispatch.get(path)
         if fn:
@@ -448,6 +496,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._json({"ok": True})
         except Exception as e:
             return self._err(str(e), 500)
+
+    def _publish(self, p):
+        res = git_publish()
+        return self._json(res, 200 if res.get("ok") else 500)
 
     # ── response helpers ───────────────────────────────────────────────────
 
