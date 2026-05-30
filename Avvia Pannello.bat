@@ -4,15 +4,28 @@ title Pannello Paola  -  TIENI APERTA QUESTA FINESTRA
 cd /d "%~dp0"
 
 echo.
-echo   Avvio del pannello in corso...
-echo   Si aprira' da solo nel browser tra qualche secondo.
+echo   Controllo iniziale in corso, attendi qualche secondo...
+
+REM Assicura che le librerie necessarie siano installate (solo se mancano)
+py -c "import PIL, cgi" 2>nul || py -m pip install --quiet Pillow legacy-cgi
+
+cls
 echo.
-echo   NON chiudere questa finestra mentre lavori.
-echo   Quando hai finito, chiudila pure.
+echo   ====================================================
+echo      PANNELLO PAOLA
+echo   ====================================================
+echo.
+echo   Il pannello si aprira' da solo nel browser.
+echo.
+echo   - NON chiudere questa finestra mentre lavori
+echo   - Quando hai finito, chiudila pure
+echo.
+echo   Se il browser non si apre da solo, scrivi nella
+echo   barra dell'indirizzo:  localhost:8765
 echo.
 
-where py >nul 2>nul && (py admin.py) || (python admin.py)
+py admin.py
 
 echo.
-echo   Il pannello e' stato chiuso. Puoi chiudere questa finestra.
+echo   Pannello chiuso. Puoi chiudere questa finestra.
 pause >nul
