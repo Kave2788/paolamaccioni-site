@@ -389,7 +389,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "description":    desc,
         })
         save_data(data)
-        return self._json({"ok": True, "slug": slug, "uploaded": len(uploaded),
+        return self._json({"ok": True, "slug": slug, "uploaded": len(gallery),
                            "url": f"/opera/{slug}/"})
 
     def _add_images(self, form):
