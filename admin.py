@@ -332,11 +332,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._err("JSON non valido", 400)
 
         dispatch = {
-            "/api/update-work":  self._update_work,
-            "/api/delete-work":  self._delete_work,
-            "/api/delete-image": self._delete_image,
-            "/api/set-primary":  self._set_primary,
-            "/api/publish":      self._publish,
+            "/api/update-work":    self._update_work,
+            "/api/delete-work":    self._delete_work,
+            "/api/delete-image":   self._delete_image,
+            "/api/set-primary":    self._set_primary,
+            "/api/reorder-works":  self._reorder_works,
+            "/api/publish":        self._publish,
         }
         fn = dispatch.get(path)
         if fn:
@@ -504,6 +505,30 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._json({"ok": True})
         except Exception as e:
             return self._err(str(e), 500)
+
+    def _reorder_works(self, p):
+        s = p.get("serie_id", "").strip()
+        if not s or s not in VALID_SER:
+            return self._err("Serie non valida", 400)
+        order = p.get("order", [])
+        if not isinstance(order, list) or not order:
+            return self._err("Ordine non valido", 400)
+        data = load_data()
+        serie = next((x for x in data["series"] if x["id"] == s), None)
+        if not serie:
+            return self._err("Serie non trovata", 404)
+        # Valida che tutti gli ID nell'ordine esistono
+        work_ids = set(w["id"] for w in serie["works"])
+        if set(order) != work_ids:
+            return self._err("IDs opera non corrispondenti", 400)
+        # Riordina le opere
+        work_map = {w["id"]: w for w in serie["works"]}
+        serie["works"] = [work_map[wid] for wid in order]
+        # Aggiorna position
+        for i, work in enumerate(serie["works"]):
+            work["position"] = i
+        save_data(data)
+        return self._json({"ok": True})
 
     def _publish(self, p):
         res = git_publish()

@@ -156,6 +156,17 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-s);min-height
 
 /* ── empty states ── */
 .empty{padding:3rem;text-align:center;color:var(--text2);font-style:italic;border:1px dashed var(--border);margin:2rem 0}
+
+/* ── reorder mode ── */
+.work-row.draggable{cursor:grab;position:relative}
+.work-row.draggable:active{cursor:grabbing}
+.work-row.draggable.drag-over{background:var(--bg2);border-color:var(--gold)}
+.work-row.draggable.dragging{opacity:.5}
+.drag-handle{flex-shrink:0;padding:.7rem .5rem;color:var(--text2);font-size:.7rem;margin-right:.5rem;display:none}
+.work-row.draggable .drag-handle{display:block}
+.reorder-mode .work-actions{gap:1rem}
+.reorder-controls{margin-bottom:2rem;display:flex;gap:1rem;align-items:center}
+.reorder-controls.hidden{display:none}
 </style>
 
   <link rel="manifest" href="/manifest.json">
@@ -314,6 +325,9 @@ async function renderDashboard(c) {
 
 // ── Works list ───────────────────────────────────────────────────────────────
 
+let reorderMode = {};
+let dragData = null;
+
 async function renderWorks(c) {
   const d = await loadData();
   let html = `
@@ -328,7 +342,16 @@ async function renderWorks(c) {
     <div class="rule"></div>`;
 
   for (const s of d.series) {
-    html += `<div class="serie-lbl">${h(s.name)} — ${s.works.length} opere</div>`;
+    html += `
+      <div class="reorder-controls ${reorderMode[s.id] ? '' : 'hidden'}" id="rc-${h(s.id)}">
+        <button class="btn btn-ghost" onclick="saveReorder('${h(s.id)}')">✓ Salva ordine</button>
+        <button class="btn btn-ghost" onclick="cancelReorder('${h(s.id)}')">✕ Annulla</button>
+        <span style="color:var(--text2);font-size:.85rem;font-style:italic">Trascinando per riordinare le opere</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <div class="serie-lbl">${h(s.name)} — ${s.works.length} opere</div>
+        <button class="btn btn-ghost" id="btn-reorder-${h(s.id)}" style="padding:.3rem .7rem;font-size:9px" onclick="toggleReorderMode('${h(s.id)}')">✏ Riordina</button>
+      </div>`;
     if (s.works.length === 0) {
       html += '<div class="empty" style="margin:0 0 1rem">Nessuna opera in questa serie.</div>';
     }
@@ -336,7 +359,8 @@ async function renderWorks(c) {
       const img = w.thumb || w.image || '';
       const safeTitle = h(w.title).replace(/'/g, "\\'");
       html += `
-        <div class="work-row">
+        <div class="work-row ${reorderMode[s.id] ? 'draggable' : ''}" data-serie="${h(s.id)}" data-work="${h(w.id)}" draggable="${reorderMode[s.id] ? 'true' : 'false'}">
+          ${reorderMode[s.id] ? '<div class="drag-handle">⋮⋮</div>' : ''}
           ${img
             ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'" decoding="async" loading="lazy">`
             : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
@@ -352,6 +376,68 @@ async function renderWorks(c) {
     }
   }
   c.innerHTML = html;
+  setupDragDrop();
+}
+
+function toggleReorderMode(serieId) {
+  reorderMode[serieId] = !reorderMode[serieId];
+  renderWorks(document.getElementById('content'));
+}
+
+function setupDragDrop() {
+  const draggables = document.querySelectorAll('.work-row.draggable');
+  draggables.forEach(el => {
+    el.addEventListener('dragstart', e => {
+      dragData = {serie: el.dataset.serie, work: el.dataset.work};
+      el.classList.add('dragging');
+    });
+    el.addEventListener('dragend', e => {
+      el.classList.remove('dragging');
+      document.querySelectorAll('.work-row').forEach(r => r.classList.remove('drag-over'));
+    });
+    el.addEventListener('dragover', e => {
+      e.preventDefault();
+      const other = e.currentTarget;
+      if (other.dataset.serie === dragData?.serie && other !== e.target.closest('.work-row')) {
+        other.classList.add('drag-over');
+      }
+    });
+    el.addEventListener('dragleave', e => {
+      if (e.currentTarget === e.target) {
+        e.currentTarget.classList.remove('drag-over');
+      }
+    });
+    el.addEventListener('drop', e => {
+      e.preventDefault();
+      const source = document.querySelector(
+        `.work-row[data-serie="${dragData.serie}"][data-work="${dragData.work}"]`
+      );
+      const target = e.currentTarget;
+      if (source && target && source !== target && source.dataset.serie === target.dataset.serie) {
+        target.parentNode.insertBefore(source, target);
+      }
+      el.classList.remove('drag-over');
+    });
+  });
+}
+
+async function saveReorder(serieId) {
+  const rows = document.querySelectorAll(`.work-row[data-serie="${serieId}"]`);
+  const order = Array.from(rows).map(r => r.dataset.work);
+  const j = await api('/api/reorder-works', {serie_id: serieId, order});
+  if (j.ok) {
+    reorderMode[serieId] = false;
+    await loadData();
+    toast('Ordine salvato.');
+    renderWorks(document.getElementById('content'));
+  } else {
+    toast('Errore: ' + (j.error || '?'), 'err');
+  }
+}
+
+function cancelReorder(serieId) {
+  reorderMode[serieId] = false;
+  renderWorks(document.getElementById('content'));
 }
 
 // ── New work ─────────────────────────────────────────────────────────────────

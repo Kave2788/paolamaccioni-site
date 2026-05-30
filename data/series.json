@@ -61,7 +61,8 @@
             "struttura-tensione/lombra-della-luce/canvas/13.webp",
             "struttura-tensione/lombra-della-luce/canvas/14.webp"
           ],
-          "canvas": "struttura-tensione/lombra-della-luce/canvas/01.webp"
+          "canvas": "struttura-tensione/lombra-della-luce/canvas/01.webp",
+          "position": 0
         },
         {
           "id": "lux-eterna",
@@ -94,7 +95,8 @@
             "struttura-tensione/lux-eterna/canvas/05.webp",
             "struttura-tensione/lux-eterna/canvas/06.webp"
           ],
-          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp"
+          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp",
+          "position": 1
         },
         {
           "id": "il-rinoceronte",
@@ -118,7 +120,8 @@
             "struttura-tensione/il-rinoceronte/canvas/02.webp",
             "struttura-tensione/il-rinoceronte/canvas/03.webp"
           ],
-          "canvas": "struttura-tensione/il-rinoceronte/canvas/01.webp"
+          "canvas": "struttura-tensione/il-rinoceronte/canvas/01.webp",
+          "position": 2
         },
         {
           "id": "rondini-in-gabbia",
@@ -151,7 +154,8 @@
             "struttura-tensione/rondini-in-gabbia/canvas/05.webp",
             "struttura-tensione/rondini-in-gabbia/canvas/06.webp"
           ],
-          "canvas": "struttura-tensione/rondini-in-gabbia/canvas/01.webp"
+          "canvas": "struttura-tensione/rondini-in-gabbia/canvas/01.webp",
+          "position": 3
         },
         {
           "id": "equilibrio-fratturato",
@@ -178,7 +182,8 @@
             "struttura-tensione/equilibrio-fratturato/canvas/03.webp",
             "struttura-tensione/equilibrio-fratturato/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp"
+          "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
+          "position": 4
         },
         {
           "id": "fibonacci",
@@ -202,7 +207,8 @@
             "struttura-tensione/fibonacci/canvas/02.webp",
             "struttura-tensione/fibonacci/canvas/03.webp"
           ],
-          "canvas": "struttura-tensione/fibonacci/canvas/01.webp"
+          "canvas": "struttura-tensione/fibonacci/canvas/01.webp",
+          "position": 5
         },
         {
           "id": "sfera",
@@ -229,7 +235,8 @@
             "struttura-tensione/sfera/canvas/03.webp",
             "struttura-tensione/sfera/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/sfera/canvas/01.webp"
+          "canvas": "struttura-tensione/sfera/canvas/01.webp",
+          "position": 6
         },
         {
           "id": "fazzoletto",
@@ -256,7 +263,8 @@
             "struttura-tensione/fazzoletto/canvas/03.webp",
             "struttura-tensione/fazzoletto/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/fazzoletto/canvas/01.webp"
+          "canvas": "struttura-tensione/fazzoletto/canvas/01.webp",
+          "position": 7
         },
         {
           "id": "specchio-nero",
@@ -277,7 +285,8 @@
             "struttura-tensione/specchio-nero/canvas/01.webp",
             "struttura-tensione/specchio-nero/canvas/02.webp"
           ],
-          "canvas": "struttura-tensione/specchio-nero/canvas/01.webp"
+          "canvas": "struttura-tensione/specchio-nero/canvas/01.webp",
+          "position": 8
         },
         {
           "id": "cubi",
@@ -304,7 +313,8 @@
             "struttura-tensione/cubi/canvas/03.webp",
             "struttura-tensione/cubi/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/cubi/canvas/01.webp"
+          "canvas": "struttura-tensione/cubi/canvas/01.webp",
+          "position": 9
         },
         {
           "id": "bubbles",
@@ -325,7 +335,8 @@
             "struttura-tensione/bubbles/canvas/01.webp",
             "struttura-tensione/bubbles/canvas/02.webp"
           ],
-          "canvas": "struttura-tensione/bubbles/canvas/01.webp"
+          "canvas": "struttura-tensione/bubbles/canvas/01.webp",
+          "position": 10
         },
         {
           "id": "onde-riflesse",
@@ -349,7 +360,8 @@
             "struttura-tensione/onde-riflesse/canvas/02.webp",
             "struttura-tensione/onde-riflesse/canvas/03.webp"
           ],
-          "canvas": "struttura-tensione/onde-riflesse/canvas/01.webp"
+          "canvas": "struttura-tensione/onde-riflesse/canvas/01.webp",
+          "position": 11
         },
         {
           "id": "sotto-la-superficie",
@@ -379,7 +391,8 @@
             "struttura-tensione/sotto-la-superficie/canvas/04.webp",
             "struttura-tensione/sotto-la-superficie/canvas/05.webp"
           ],
-          "canvas": "struttura-tensione/sotto-la-superficie/canvas/01.webp"
+          "canvas": "struttura-tensione/sotto-la-superficie/canvas/01.webp",
+          "position": 12
         },
         {
           "id": "il-peso-dell-ingiustizia",
@@ -400,7 +413,8 @@
             "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp",
             "struttura-tensione/il-peso-dell-ingiustizia/canvas/02.webp"
           ],
-          "canvas": "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp"
+          "canvas": "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp",
+          "position": 13
         },
         {
           "id": "checkmate",
@@ -424,7 +438,8 @@
             "struttura-tensione/checkmate/canvas/02.webp",
             "struttura-tensione/checkmate/canvas/03.webp"
           ],
-          "canvas": "struttura-tensione/checkmate/canvas/01.webp"
+          "canvas": "struttura-tensione/checkmate/canvas/01.webp",
+          "position": 14
         },
         {
           "id": "senza-catene",
@@ -442,7 +457,8 @@
           "canvas_gallery": [
             "struttura-tensione/senza-catene/canvas/01.webp"
           ],
-          "canvas": "struttura-tensione/senza-catene/canvas/01.webp"
+          "canvas": "struttura-tensione/senza-catene/canvas/01.webp",
+          "position": 15
         },
         {
           "id": "trittico",
@@ -469,7 +485,8 @@
             "struttura-tensione/trittico/canvas/03.webp",
             "struttura-tensione/trittico/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/trittico/canvas/01.webp"
+          "canvas": "struttura-tensione/trittico/canvas/01.webp",
+          "position": 16
         },
         {
           "id": "lady",
@@ -496,7 +513,8 @@
             "struttura-tensione/lady/canvas/03.webp",
             "struttura-tensione/lady/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/lady/canvas/01.webp"
+          "canvas": "struttura-tensione/lady/canvas/01.webp",
+          "position": 17
         },
         {
           "id": "pensiero",
@@ -529,7 +547,8 @@
             "struttura-tensione/pensiero/canvas/05.webp",
             "struttura-tensione/pensiero/canvas/06.webp"
           ],
-          "canvas": "struttura-tensione/pensiero/canvas/01.webp"
+          "canvas": "struttura-tensione/pensiero/canvas/01.webp",
+          "position": 18
         },
         {
           "id": "boes",
@@ -562,7 +581,8 @@
             "struttura-tensione/boes/canvas/05.webp",
             "struttura-tensione/boes/canvas/06.webp"
           ],
-          "canvas": "struttura-tensione/boes/canvas/01.webp"
+          "canvas": "struttura-tensione/boes/canvas/01.webp",
+          "position": 19
         },
         {
           "id": "titolomarionette-ex-voto",
@@ -592,7 +612,8 @@
             "struttura-tensione/titolomarionette-ex-voto/canvas/04.webp",
             "struttura-tensione/titolomarionette-ex-voto/canvas/05.webp"
           ],
-          "canvas": "struttura-tensione/titolomarionette-ex-voto/canvas/01.webp"
+          "canvas": "struttura-tensione/titolomarionette-ex-voto/canvas/01.webp",
+          "position": 20
         },
         {
           "id": "veliero",
@@ -619,7 +640,8 @@
             "struttura-tensione/veliero/canvas/03.webp",
             "struttura-tensione/veliero/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/veliero/canvas/01.webp"
+          "canvas": "struttura-tensione/veliero/canvas/01.webp",
+          "position": 21
         },
         {
           "id": "mare-in-tempesta",
@@ -646,7 +668,8 @@
             "struttura-tensione/mare-in-tempesta/canvas/03.webp",
             "struttura-tensione/mare-in-tempesta/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/mare-in-tempesta/canvas/01.webp"
+          "canvas": "struttura-tensione/mare-in-tempesta/canvas/01.webp",
+          "position": 22
         },
         {
           "id": "oblo",
@@ -670,7 +693,8 @@
             "struttura-tensione/oblo/canvas/02.webp",
             "struttura-tensione/oblo/canvas/03.webp"
           ],
-          "canvas": "struttura-tensione/oblo/canvas/01.webp"
+          "canvas": "struttura-tensione/oblo/canvas/01.webp",
+          "position": 23
         },
         {
           "id": "giappone",
@@ -697,7 +721,8 @@
             "struttura-tensione/giappone/canvas/03.webp",
             "struttura-tensione/giappone/canvas/04.webp"
           ],
-          "canvas": "struttura-tensione/giappone/canvas/01.webp"
+          "canvas": "struttura-tensione/giappone/canvas/01.webp",
+          "position": 24
         },
         {
           "id": "volo-d-argento",
@@ -727,7 +752,8 @@
             "struttura-tensione/volo-d-argento/canvas/04.webp",
             "struttura-tensione/volo-d-argento/canvas/05.webp"
           ],
-          "canvas": "struttura-tensione/volo-d-argento/canvas/01.webp"
+          "canvas": "struttura-tensione/volo-d-argento/canvas/01.webp",
+          "position": 25
         },
         {
           "id": "nessu-dorma",
@@ -763,7 +789,8 @@
             "struttura-tensione/nessu-dorma/canvas/06.webp",
             "struttura-tensione/nessu-dorma/canvas/07.webp"
           ],
-          "canvas": "struttura-tensione/nessu-dorma/canvas/01.webp"
+          "canvas": "struttura-tensione/nessu-dorma/canvas/01.webp",
+          "position": 26
         },
         {
           "id": "l-unione",
@@ -784,7 +811,8 @@
             "struttura-tensione/l-unione/canvas/01.webp",
             "struttura-tensione/l-unione/canvas/02.webp"
           ],
-          "canvas": "struttura-tensione/l-unione/canvas/01.webp"
+          "canvas": "struttura-tensione/l-unione/canvas/01.webp",
+          "position": 27
         }
       ]
     },
@@ -813,7 +841,8 @@
             "forma-organica/globigerina/canvas/01.webp",
             "forma-organica/globigerina/canvas/02.webp"
           ],
-          "canvas": "forma-organica/globigerina/canvas/01.webp"
+          "canvas": "forma-organica/globigerina/canvas/01.webp",
+          "position": 0
         },
         {
           "id": "riccio-di-mare",
@@ -846,7 +875,8 @@
             "forma-organica/riccio-di-mare/canvas/05.webp",
             "forma-organica/riccio-di-mare/canvas/06.webp"
           ],
-          "canvas": "forma-organica/riccio-di-mare/canvas/01.webp"
+          "canvas": "forma-organica/riccio-di-mare/canvas/01.webp",
+          "position": 1
         },
         {
           "id": "polipo",
@@ -870,7 +900,8 @@
             "forma-organica/polipo/canvas/02.webp",
             "forma-organica/polipo/canvas/03.webp"
           ],
-          "canvas": "forma-organica/polipo/canvas/01.webp"
+          "canvas": "forma-organica/polipo/canvas/01.webp",
+          "position": 2
         },
         {
           "id": "armatura-primordiale",
@@ -912,7 +943,8 @@
             "forma-organica/armatura-primordiale/canvas/08.webp",
             "forma-organica/armatura-primordiale/canvas/09.webp"
           ],
-          "canvas": "forma-organica/armatura-primordiale/canvas/01.webp"
+          "canvas": "forma-organica/armatura-primordiale/canvas/01.webp",
+          "position": 3
         },
         {
           "id": "granchio",
@@ -936,7 +968,8 @@
             "forma-organica/granchio/canvas/02.webp",
             "forma-organica/granchio/canvas/03.webp"
           ],
-          "canvas": "forma-organica/granchio/canvas/01.webp"
+          "canvas": "forma-organica/granchio/canvas/01.webp",
+          "position": 4
         },
         {
           "id": "pesce-palla",
@@ -954,7 +987,8 @@
           "canvas_gallery": [
             "forma-organica/pesce-palla/canvas/01.webp"
           ],
-          "canvas": "forma-organica/pesce-palla/canvas/01.webp"
+          "canvas": "forma-organica/pesce-palla/canvas/01.webp",
+          "position": 5
         },
         {
           "id": "iguana",
@@ -984,7 +1018,8 @@
             "forma-organica/iguana/canvas/04.webp",
             "forma-organica/iguana/canvas/05.webp"
           ],
-          "canvas": "forma-organica/iguana/canvas/01.webp"
+          "canvas": "forma-organica/iguana/canvas/01.webp",
+          "position": 6
         },
         {
           "id": "dragone",
@@ -1011,7 +1046,8 @@
             "forma-organica/dragone/canvas/03.webp",
             "forma-organica/dragone/canvas/04.webp"
           ],
-          "canvas": "forma-organica/dragone/canvas/01.webp"
+          "canvas": "forma-organica/dragone/canvas/01.webp",
+          "position": 7
         },
         {
           "id": "elefante",
@@ -1029,7 +1065,8 @@
           "canvas_gallery": [
             "forma-organica/elefante/canvas/01.webp"
           ],
-          "canvas": "forma-organica/elefante/canvas/01.webp"
+          "canvas": "forma-organica/elefante/canvas/01.webp",
+          "position": 8
         },
         {
           "id": "zebra",
@@ -1053,7 +1090,8 @@
             "forma-organica/zebra/canvas/02.webp",
             "forma-organica/zebra/canvas/03.webp"
           ],
-          "canvas": "forma-organica/zebra/canvas/01.webp"
+          "canvas": "forma-organica/zebra/canvas/01.webp",
+          "position": 9
         },
         {
           "id": "tartaruga-c8e51f",
@@ -1077,7 +1115,8 @@
             "forma-organica/tartaruga-c8e51f/canvas/02.webp",
             "forma-organica/tartaruga-c8e51f/canvas/03.webp"
           ],
-          "canvas": "forma-organica/tartaruga-c8e51f/canvas/01.webp"
+          "canvas": "forma-organica/tartaruga-c8e51f/canvas/01.webp",
+          "position": 10
         },
         {
           "id": "aragosta",
@@ -1107,7 +1146,8 @@
             "forma-organica/aragosta/canvas/04.webp",
             "forma-organica/aragosta/canvas/05.webp"
           ],
-          "canvas": "forma-organica/aragosta/canvas/01.webp"
+          "canvas": "forma-organica/aragosta/canvas/01.webp",
+          "position": 11
         },
         {
           "id": "carpa-koi",
@@ -1134,7 +1174,8 @@
             "forma-organica/carpa-koi/canvas/03.webp",
             "forma-organica/carpa-koi/canvas/04.webp"
           ],
-          "canvas": "forma-organica/carpa-koi/canvas/01.webp"
+          "canvas": "forma-organica/carpa-koi/canvas/01.webp",
+          "position": 12
         },
         {
           "id": "fenicotteri",
@@ -1158,7 +1199,8 @@
             "forma-organica/fenicotteri/canvas/02.webp",
             "forma-organica/fenicotteri/canvas/03.webp"
           ],
-          "canvas": "forma-organica/fenicotteri/canvas/01.webp"
+          "canvas": "forma-organica/fenicotteri/canvas/01.webp",
+          "position": 13
         },
         {
           "id": "trota",
@@ -1194,7 +1236,8 @@
             "forma-organica/trota/canvas/06.webp",
             "forma-organica/trota/canvas/07.webp"
           ],
-          "canvas": "forma-organica/trota/canvas/01.webp"
+          "canvas": "forma-organica/trota/canvas/01.webp",
+          "position": 14
         },
         {
           "id": "tucano",
@@ -1218,7 +1261,8 @@
             "forma-organica/tucano/canvas/02.webp",
             "forma-organica/tucano/canvas/03.webp"
           ],
-          "canvas": "forma-organica/tucano/canvas/01.webp"
+          "canvas": "forma-organica/tucano/canvas/01.webp",
+          "position": 15
         },
         {
           "id": "vedova-nera",
@@ -1239,7 +1283,8 @@
             "forma-organica/vedova-nera/canvas/01.webp",
             "forma-organica/vedova-nera/canvas/04.webp"
           ],
-          "canvas": "forma-organica/vedova-nera/canvas/01.webp"
+          "canvas": "forma-organica/vedova-nera/canvas/01.webp",
+          "position": 16
         },
         {
           "id": "libellule-in-amore",
@@ -1257,7 +1302,8 @@
           "canvas_gallery": [
             "forma-organica/libellule-in-amore/canvas/01.webp"
           ],
-          "canvas": "forma-organica/libellule-in-amore/canvas/01.webp"
+          "canvas": "forma-organica/libellule-in-amore/canvas/01.webp",
+          "position": 17
         },
         {
           "id": "rondinelle",
@@ -1275,7 +1321,8 @@
           "canvas_gallery": [
             "forma-organica/rondinelle/canvas/01.webp"
           ],
-          "canvas": "forma-organica/rondinelle/canvas/01.webp"
+          "canvas": "forma-organica/rondinelle/canvas/01.webp",
+          "position": 18
         },
         {
           "id": "rana",
@@ -1302,7 +1349,8 @@
             "forma-organica/rana/canvas/03.webp",
             "forma-organica/rana/canvas/04.webp"
           ],
-          "canvas": "forma-organica/rana/canvas/01.webp"
+          "canvas": "forma-organica/rana/canvas/01.webp",
+          "position": 19
         },
         {
           "id": "metamorfosi",
@@ -1326,7 +1374,8 @@
             "forma-organica/metamorfosi/canvas/02.webp",
             "forma-organica/metamorfosi/canvas/03.webp"
           ],
-          "canvas": "forma-organica/metamorfosi/canvas/01.webp"
+          "canvas": "forma-organica/metamorfosi/canvas/01.webp",
+          "position": 20
         }
       ]
     }
