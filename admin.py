@@ -170,7 +170,15 @@ def git_publish(msg="Aggiornamento dal pannello admin"):
     if _git("add", "-A").returncode != 0:
         return {"ok": False, "error": "Errore nel preparare le modifiche."}
 
-    _git("commit", "-m", msg)  # se non c'è nulla da committare non fa danni
+    commit = _git("commit", "-m", msg)
+    if commit.returncode != 0:
+        err = (commit.stderr + commit.stdout).strip()
+        if any(k in err.lower() for k in
+               ("identity", "user.name", "user.email", "tell me who you are")):
+            return {"ok": False,
+                    "error": "Git non sa chi sei: nome/email non configurati. "
+                             "Vanno impostati una volta sola. Contatta Andrea."}
+        return {"ok": False, "error": "Commit fallito: " + (err[:200] or "?")}
 
     pull = _git("pull", "--no-edit")
     if pull.returncode != 0:
