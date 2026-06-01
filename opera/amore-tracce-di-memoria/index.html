@@ -1,71 +1,185 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle"></title>
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="it_IT">
-    <link rel="canonical" href="">
-    <link rel="alternate" hreflang="en" href="">
-    <link rel="stylesheet" href="../../css/main.css">
-    <script type="application/ld+json" id="schemaScript"></script>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
+  <title>"Amore" Tracce di memoria — Paola Maccioni</title>
+  <meta name="description" content="In Lux Eterna l’alluminio è lavorato come trama aperta e modulare, generando una struttura speculare fondata sull’equilibrio tra pieni e vuoti. La superficie non viene semplicemente incisa, ma…">
+  <meta name="keywords" content="lux eterna, paola maccioni, struttura e tensione, scultura alluminio sbalzo">
+  <meta name="author" content="Paola Maccioni">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://paolamaccioni.com/opera/lux-eterna/">
+  <link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lux-eterna/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Paola Maccioni — PIEMME">
+  <meta property="og:title" content="Lux Eterna — Paola Maccioni">
+  <meta property="og:description" content="In Lux Eterna l’alluminio è lavorato come trama aperta e modulare, generando una struttura speculare fondata sull’equilibrio tra pieni e vuoti. La superficie non viene semplicemente incisa, ma…">
+  <meta property="og:url" content="https://paolamaccioni.com/opera/lux-eterna/">
+  <meta property="og:image" content="https://paolamaccioni.com/struttura-tensione/lux-eterna/01.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
+  <meta property="article:author" content="Paola Maccioni">
+  <meta property="article:section" content="Struttura e Tensione">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lux Eterna — Paola Maccioni">
+  <meta name="twitter:description" content="In Lux Eterna l’alluminio è lavorato come trama aperta e modulare, generando una struttura speculare fondata sull’equilibrio tra pieni e vuoti. La superficie non viene semplicemente incisa, ma…">
+  <meta name="twitter:image" content="https://paolamaccioni.com/struttura-tensione/lux-eterna/01.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VisualArtwork", "name": ""Amore" Tracce di memoria", "description": "In Lux Eterna l’alluminio è lavorato come trama aperta e modulare, generando una struttura speculare fondata sull’equilibrio tra pieni e vuoti. La superficie non viene semplicemente incisa, ma attraversata, trasformando il piano in organismo reticolare.\n\nIl campo rosso agisce come forza di fondo, amplificando la tensione della struttura metallica e intensificando il dialogo con il nucleo centrale blu. La luce non si limita a riflettere la materia, ma la attraversa e la attiva, rendendo visibile la relazione tra ritmo, profondità e costruzione formale.", "creator": {"@type": "Person", "name": "Paola Maccioni"}, "url": "https://paolamaccioni.com/opera/lux-eterna/", "image": ["https://paolamaccioni.com/struttura-tensione/lux-eterna/01.jpg", "https://paolamaccioni.com/struttura-tensione/lux-eterna/02.jpg", "https://paolamaccioni.com/struttura-tensione/lux-eterna/03.jpg", "https://paolamaccioni.com/struttura-tensione/lux-eterna/04.jpg", "https://paolamaccioni.com/struttura-tensione/lux-eterna/05.jpg", "https://paolamaccioni.com/struttura-tensione/lux-eterna/06.jpg"], "artform": "Scultura", "artMedium": "Alluminio lavorato a sbalzo", "artworkSurface": "Lastra di alluminio", "inLanguage": "it-IT"}</script>
+  <link rel="stylesheet" href="/css/main.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPHJKXEM94"></script>
 </head>
 <body>
-    <nav id="nav"></nav>
-    <main id="content"></main>
-    <footer id="footer"></footer>
-    <script src="../../js/main.js"></script>
-    <script src="../../js/consent.js"></script>
-    <script>
-        const workId = "amore-tracce-di-memoria";
-        const seriesId = "struttura-tensione";
-    </script>
-    <script>
-        async function loadWork() {
-            const response = await fetch('../../data/series.json');
-            const data = await response.json();
-            const series = data.series.find(s => s.id === seriesId);
-            const work = series.works.find(w => w.id === workId);
-            
-            if (!work) {
-                document.getElementById('content').innerHTML = '<p>Opera non trovata</p>';
-                return;
-            }
-            
-            renderWork(work, series);
-        }
-        
-        function renderWork(work, series) {
-            const content = document.getElementById('content');
-            const title = work.title;
-            const description = work.description || '';
-            
-            content.innerHTML = `
-                <article class="work-detail">
-                    <header>
-                        <h1>${title}</h1>
-                        <p class="series-link"><a href="../${series.id}/">${series.name}</a></p>
-                    </header>
-                    <div class="gallery">
-                        ${work.canvas_gallery.map(img => 
-                            `<img src="../../${img}" alt="${title}" class="gallery-img">`
-                        ).join('')}
-                    </div>
-                    <div class="description">
-                        ${description}
-                    </div>
-                </article>
-            `;
-            
-            document.title = title;
-            document.getElementById('pageTitle').textContent = title;
-        }
-        
-        loadWork();
-    </script>
+
+<nav>
+  <div class="inner">
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/bio.html">Biografia</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/commissioni.html">Commissioni</a></li>
+      <li><a href="/contatti.html">Contatti</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <a href="/opera/lux-eterna/" class="active">IT</a>
+      <span>|</span>
+      <a href="/en/opera/lux-eterna/">EN</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-section opera-section">
+  <div class="opera-wrap container">
+
+    <a href="/serie/struttura-tensione/" class="back-link">← Struttura e Tensione</a>
+
+    <div class="opera-grid">
+      <div class="opera-img-wrap">
+        <img id="opera-img" src="/struttura-tensione/lux-eterna/01.jpg" alt=""Amore" Tracce di memoria" srcset="/struttura-tensione/lux-eterna/01.jpg 1400w, /struttura-tensione/lux-eterna/01.jpg 800w" decoding="async" fetchpriority="high">
+        <button class="opera-nav prev" id="prev-img" aria-label="Precedente">‹</button>
+        <button class="opera-nav next" id="next-img" aria-label="Successiva">›</button>
+        <span class="opera-counter" id="opera-counter">1 / 6</span>
+      </div>
+      <div class="opera-info">
+        <p class="label"></p>
+        <h1>Lux Eterna</h1>
+        <div class="rule"></div>
+        <p>In Lux Eterna l’alluminio è lavorato come trama aperta e modulare, generando una struttura speculare fondata sull’equilibrio tra pieni e vuoti. La superficie non viene semplicemente incisa, ma attraversata, trasformando il piano in organismo reticolare.</p><p>Il campo rosso agisce come forza di fondo, amplificando la tensione della struttura metallica e intensificando il dialogo con il nucleo centrale blu. La luce non si limita a riflettere la materia, ma la attraversa e la attiva, rendendo visibile la relazione tra ritmo, profondità e costruzione formale.</p>
+        <p class="label opera-serie-label">Dalla serie Struttura e Tensione</p>
+      </div>
+    </div>
+
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/amore-tracce-di-memoria/07.jpg"><img src="/struttura-tensione/amore-tracce-di-memoria/canvas/07.webp" alt=""Amore" Tracce di memoria 1" loading="lazy" decoding="async"></button><button class="opera-thumb" data-i="1" data-src="/struttura-tensione/amore-tracce-di-memoria/08.jpg"><img src="/struttura-tensione/amore-tracce-di-memoria/canvas/08.webp" alt=""Amore" Tracce di memoria 2" loading="lazy" decoding="async"></button><button class="opera-thumb" data-i="2" data-src="/struttura-tensione/amore-tracce-di-memoria/09.jpg"><img src="/struttura-tensione/amore-tracce-di-memoria/canvas/09.webp" alt=""Amore" Tracce di memoria 3" loading="lazy" decoding="async"></button><button class="opera-thumb" data-i="3" data-src="/struttura-tensione/amore-tracce-di-memoria/10.jpg"><img src="/struttura-tensione/amore-tracce-di-memoria/canvas/10.webp" alt=""Amore" Tracce di memoria 4" loading="lazy" decoding="async"></button><button class="opera-thumb" data-i="4" data-src="/struttura-tensione/amore-tracce-di-memoria/11.jpg"><img src="/struttura-tensione/amore-tracce-di-memoria/canvas/11.webp" alt=""Amore" Tracce di memoria 5" loading="lazy" decoding="async"></button><button class="opera-thumb" data-i="5" data-src="/struttura-tensione/amore-tracce-di-memoria/12.jpg"><img src="/struttura-tensione/amore-tracce-di-memoria/canvas/12.webp" alt=""Amore" Tracce di memoria 6" loading="lazy" decoding="async"></button></div>
+
+  </div>
+</section>
+
+<div class="legal-bar">© 2026 PIEMME di Paola Maccioni | C.F. MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
+
+<script src="/js/main.js"></script>
+<script>
+// Gallery navigation client-side (arricchisce pre-rendered HTML)
+(() => {
+  const gallery = ["struttura-tensione/amore-tracce-di-memoria/07.jpg", "struttura-tensione/amore-tracce-di-memoria/08.jpg", "struttura-tensione/amore-tracce-di-memoria/09.jpg", "struttura-tensione/amore-tracce-di-memoria/10.jpg", "struttura-tensione/amore-tracce-di-memoria/11.jpg", "struttura-tensione/amore-tracce-di-memoria/12.jpg"];
+  const thumbs = document.querySelectorAll('.opera-thumb');
+  const mainImg = document.getElementById('opera-img');
+  const counter = document.getElementById('opera-counter');
+  let current = 0;
+
+  function preload(i) {
+    [i-1, i+1].forEach(k => {
+      const idx = (k + gallery.length) % gallery.length;
+      const im = new Image();
+      im.src = '/' + gallery[idx];
+    });
+  }
+
+  function show(i) {
+    current = (i + gallery.length) % gallery.length;
+    mainImg.removeAttribute('srcset');
+    mainImg.src = '/' + gallery[current];
+    mainImg.alt = ""Amore" Tracce di memoria" + ' ' + (current+1);
+    counter.textContent = (current+1) + ' / ' + gallery.length;
+    thumbs.forEach((t, idx) => t.classList.toggle('active', idx === current));
+    preload(current);
+  }
+
+    const lb = document.createElement('div');
+  lb.className = 'opera-lightbox';
+  lb.innerHTML = `
+    <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
+    <button class="opera-lightbox-prev" aria-label="Precedente">‹</button>
+    <button class="opera-lightbox-next" aria-label="Successiva">›</button>
+    <img alt="" decoding="async">
+    <div class="opera-lightbox-caption"></div>
+  `;
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.opera-lightbox-caption');
+  const operaTitle = ""Amore" Tracce di memoria";
+
+  function openLb() {
+    lbImg.src = '/' + gallery[current];
+    lbImg.alt = operaTitle;
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function lbShow(i) {
+    show(i);
+    lbImg.src = '/' + gallery[current];
+    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
+  }
+
+  if (gallery.length > 1) {
+    thumbs.forEach(t => t.addEventListener('click', () => show(parseInt(t.dataset.i))));
+    document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
+    document.getElementById('next-img').addEventListener('click', () => show(current + 1));
+    document.addEventListener('keydown', e => {
+      if (lb.classList.contains('open')) return; // gestito da lightbox
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+    thumbs[0]?.classList.add('active');
+    preload(0);
+  } else {
+    document.getElementById('prev-img').style.display = 'none';
+    document.getElementById('next-img').style.display = 'none';
+    counter.style.display = 'none';
+  }
+
+  // Lightbox: click immagine principale → zoom fullscreen
+
+
+  mainImg.addEventListener('click', openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
+  lb.querySelector('.opera-lightbox-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft' && gallery.length > 1) lbShow(current - 1);
+    if (e.key === 'ArrowRight' && gallery.length > 1) lbShow(current + 1);
+  });
+})();
+</script>
 </body>
 </html>
+
