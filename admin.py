@@ -3,11 +3,14 @@
 
 import json, os, re, shutil, subprocess, unicodedata
 import http.server, socketserver, urllib.parse, cgi, webbrowser
+from html import escape
 from PIL import Image, ImageOps
 
 PORT       = 8765
 ROOT       = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH  = os.path.join(ROOT, "data/series.json")
+SITE_URL   = "https://paolamaccioni.com"   # dominio live (per canonical/og/schema)
+GA_ID      = "G-FPHJKXEM94"
 VALID_SER  = {"struttura-tensione", "forma-organica"}
 IMG_EXTS   = {".jpg", ".jpeg", ".png", ".webp"}
 CANVAS_BG  = (25, 21, 20)   # sfondo scuro identico al --bg del sito
@@ -65,65 +68,281 @@ def process_image(file_obj, opera_dir, basename):
     return mname, tname, cname
 
 # ── static page sync ────────────────────────────────────────────────────────
+#
+# Principio: il DISCO è la fonte di verità per le immagini. Dopo ogni operazione
+# si ricostruiscono le gallery dai file reali e si rigenerano da zero la pagina
+# opera (IT+EN) e la griglia della pagina serie. Niente patch fragili: una sola
+# funzione `resync()` riallinea tutto ed è impossibile lasciare il sito a metà.
 
-def regenerate_opera_page(serie_id, work_id):
-    """
-    Aggiorna le pagine statiche IT e EN dell'opera dopo ogni modifica alle immagini.
-    Riscrive: JSON-LD image[], counter 1/N, thumbnail buttons, JS gallery[].
-    """
-    images = list_main_images(serie_id, work_id)
-    n      = len(images)
+def _numkey(fn):
+    m = re.match(r"(\d+)", fn)
+    return (int(m.group(1)) if m else 9999, fn)
 
-    try:
-        data  = load_data()
-        serie = next((s for s in data["series"] if s["id"] == serie_id), None)
-        work  = next((w for w in serie["works"] if w["id"] == work_id), None) if serie else None
-        title = work["title"] if work else work_id
-    except Exception:
-        title = work_id
+def rebuild_galleries(serie_id, work):
+    """Ricostruisce gallery/thumb/canvas (+ image/thumb/canvas) dai file su disco."""
+    base = os.path.join(ROOT, serie_id, work["id"])
+    files = sorted(list_main_images(serie_id, work["id"]), key=_numkey) if os.path.isdir(base) else []
+    gallery, thumb_g, canvas_g = [], [], []
+    for f in files:
+        stem = os.path.splitext(f)[0]
+        gallery.append(f"{serie_id}/{work['id']}/{f}")
+        thumb_g.append(f"{serie_id}/{work['id']}/thumb/{stem}.webp")
+        canvas_g.append(f"{serie_id}/{work['id']}/canvas/{stem}.webp")
+    work["gallery"], work["thumb_gallery"], work["canvas_gallery"] = gallery, thumb_g, canvas_g
+    work["image"]  = gallery[0]  if gallery  else ""
+    work["thumb"]  = thumb_g[0]  if thumb_g  else ""
+    work["canvas"] = canvas_g[0] if canvas_g else ""
 
-    base_url      = f"https://paola-maccioni.netlify.app/{serie_id}/{work_id}/"
-    img_urls      = ", ".join(f'"{base_url}{img}"' for img in images)
-    gallery_items = ", ".join(f'"{serie_id}/{work_id}/{img}"' for img in images)
-    thumbs_html   = "".join(
-        f'<button class="opera-thumb" data-i="{i}" data-src="/{serie_id}/{work_id}/{img}">'
-        f'<img src="/{serie_id}/{work_id}/canvas/{os.path.splitext(img)[0]}.webp" '
-        f'alt="{title} {i+1}" loading="lazy"></button>'
-        for i, img in enumerate(images)
-    )
+def _first_paragraph(text, max_len=155):
+    if not text:
+        return ""
+    p = text.replace("\r", "").split("\n")[0].strip()
+    return (p[:max_len].rsplit(" ", 1)[0] + "…") if len(p) > max_len else p
 
-    pages = [
-        os.path.join(ROOT, "opera",      work_id, "index.html"),
-        os.path.join(ROOT, "en", "opera", work_id, "index.html"),
-    ]
-    for path in pages:
+def _desc_paragraphs(text):
+    return "".join(f"<p>{escape(p.strip())}</p>"
+                   for p in (text or "").replace("\r", "").split("\n") if p.strip())
+
+_OPERA_JS = r"""
+<script src="/js/main.js"></script>
+<script>
+(() => {
+  const gallery = __GALLERY__;
+  const thumbs = document.querySelectorAll('.opera-thumb');
+  const mainImg = document.getElementById('opera-img');
+  const counter = document.getElementById('opera-counter');
+  let current = 0;
+  function preload(i){ [i-1,i+1].forEach(k=>{const idx=(k+gallery.length)%gallery.length;const im=new Image();im.src='/'+gallery[idx];}); }
+  function show(i){ current=(i+gallery.length)%gallery.length; mainImg.removeAttribute('srcset'); mainImg.src='/'+gallery[current]; mainImg.alt=__TITLE__+' '+(current+1); counter.textContent=(current+1)+' / '+gallery.length; thumbs.forEach((t,idx)=>t.classList.toggle('active',idx===current)); preload(current); }
+  const lb=document.createElement('div'); lb.className='opera-lightbox';
+  lb.innerHTML=`<button class="opera-lightbox-close" aria-label="__CLOSE__">×</button><button class="opera-lightbox-prev" aria-label="__PREV__">‹</button><button class="opera-lightbox-next" aria-label="__NEXT__">›</button><img alt="" decoding="async"><div class="opera-lightbox-caption"></div>`;
+  document.body.appendChild(lb);
+  const lbImg=lb.querySelector('img'); const lbCap=lb.querySelector('.opera-lightbox-caption'); const operaTitle=__TITLE__;
+  function openLb(){ lbImg.src='/'+gallery[current]; lbImg.alt=operaTitle; lbCap.textContent=operaTitle+' — '+(current+1)+' / '+gallery.length; lb.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  function lbShow(i){ show(i); lbImg.src='/'+gallery[current]; lbCap.textContent=operaTitle+' — '+(current+1)+' / '+gallery.length; }
+  if(gallery.length>1){
+    thumbs.forEach(t=>t.addEventListener('click',()=>show(parseInt(t.dataset.i))));
+    document.getElementById('prev-img').addEventListener('click',()=>show(current-1));
+    document.getElementById('next-img').addEventListener('click',()=>show(current+1));
+    document.addEventListener('keydown',e=>{ if(lb.classList.contains('open'))return; if(e.key==='ArrowLeft')show(current-1); if(e.key==='ArrowRight')show(current+1); });
+    thumbs[0]?.classList.add('active'); preload(0);
+  } else { document.getElementById('prev-img').style.display='none'; document.getElementById('next-img').style.display='none'; counter.style.display='none'; }
+  mainImg.addEventListener('click',openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click',closeLb);
+  lb.addEventListener('click',e=>{ if(e.target===lb)closeLb(); });
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click',e=>{ e.stopPropagation(); lbShow(current-1); });
+  lb.querySelector('.opera-lightbox-next').addEventListener('click',e=>{ e.stopPropagation(); lbShow(current+1); });
+  document.addEventListener('keydown',e=>{ if(!lb.classList.contains('open'))return; if(e.key==='Escape')closeLb(); if(e.key==='ArrowLeft'&&gallery.length>1)lbShow(current-1); if(e.key==='ArrowRight'&&gallery.length>1)lbShow(current+1); });
+})();
+</script>"""
+
+def _opera_js(work, title, is_en):
+    js = (_OPERA_JS.replace("__GALLERY__", json.dumps(work.get("gallery", [])))
+                   .replace("__TITLE__", json.dumps(title)))
+    pairs = (("Close", "Previous", "Next") if is_en else ("Chiudi", "Precedente", "Successiva"))
+    return js.replace("__CLOSE__", pairs[0]).replace("__PREV__", pairs[1]).replace("__NEXT__", pairs[2])
+
+def render_opera_page(serie, work, lang):
+    """Genera l'HTML completo di una pagina opera (lang = 'it' | 'en')."""
+    sid, wid, title = serie["id"], work["id"], work["title"]
+    is_en = (lang == "en")
+    desc = (work.get("description_en") or work.get("description") or "") if is_en \
+           else (work.get("description") or "")
+    serie_name = serie["name"]
+    canon = f"{SITE_URL}/{'en/' if is_en else ''}opera/{wid}/"
+    other = f"{SITE_URL}/{'' if is_en else 'en/'}opera/{wid}/"
+    og_image = f"{SITE_URL}/{work.get('image','')}"
+    year = str(work.get("year") or "")
+    n = len(work.get("gallery", []))
+    if desc:
+        meta = _first_paragraph(desc)
+    elif is_en:
+        meta = f"{title} — aluminium sculpture by Paola Maccioni, {serie_name} series."
+    else:
+        meta = f"{title} — scultura in alluminio di Paola Maccioni, serie {serie_name}."
+
+    jsonld = {
+        "@context": "https://schema.org", "@type": "VisualArtwork", "name": title,
+        "description": desc, "creator": {"@type": "Person", "name": "Paola Maccioni"},
+        "url": canon, "image": [f"{SITE_URL}/{g}" for g in work.get("gallery", [])],
+        "artform": "Sculpture" if is_en else "Scultura",
+        "artMedium": "Hand-chased aluminium" if is_en else "Alluminio lavorato a sbalzo",
+        "artworkSurface": "Aluminium sheet" if is_en else "Lastra di alluminio",
+        "inLanguage": "en-GB" if is_en else "it-IT",
+    }
+    if year:
+        jsonld["dateCreated"] = year
+
+    base = "/en" if is_en else ""
+    L = (lambda it, en: en if is_en else it)
+    nav = f"""<nav>
+  <div class="inner">
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+      <li><a href="{base}/index.html">Home</a></li>
+      <li><a href="{base}/bio.html">{L('Biografia','Biography')}</a></li>
+      <li><a href="{base}/portfolio.html">Portfolio</a></li>
+      <li><a href="{base}/commissioni.html">{L('Commissioni','Commissions')}</a></li>
+      <li><a href="{base}/contatti.html">{L('Contatti','Contact')}</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <a href="/opera/{wid}/"{'' if is_en else ' class="active"'}>IT</a>
+      <span>|</span>
+      <a href="/en/opera/{wid}/"{' class="active"' if is_en else ''}>EN</a>
+    </div>
+  </div>
+</nav>"""
+    thumbs_html = "".join(
+        f'<button class="opera-thumb" data-i="{i}" data-src="/{work["gallery"][i]}">'
+        f'<img src="/{work["canvas_gallery"][i]}" alt="{escape(title)} {i+1}" loading="lazy" decoding="async"></button>'
+        for i in range(n))
+    legal = ('<div class="legal-bar">© 2026 PIEMME di Paola Maccioni | C.F. MCCPLA80R64B354E | '
+             '<a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | '
+             f'<a href="{base}/privacy.html">Privacy</a> | <a href="{base}/cookie-policy.html">Cookie</a> | '
+             f'<a href="#" data-cookie-settings>{L("Gestisci cookie","Manage cookies")}</a> | '
+             f'{L("Tutti i diritti sono riservati","All rights reserved")}</div>')
+
+    return f"""<!DOCTYPE html>
+<html lang="{'en' if is_en else 'it'}">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
+  <title>{escape(title)} — Paola Maccioni</title>
+  <meta name="description" content="{escape(meta)}">
+  <meta name="keywords" content="{escape(title.lower())}, paola maccioni, {escape(serie_name.lower())}, {L('scultura alluminio sbalzo','aluminium sculpture')}">
+  <meta name="author" content="Paola Maccioni">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{canon}">
+  <link rel="alternate" hreflang="{'it' if is_en else 'en'}" href="{other}">
+  <link rel="alternate" hreflang="{'en' if is_en else 'it'}" href="{canon}">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="{'en_GB' if is_en else 'it_IT'}">
+  <meta property="og:site_name" content="Paola Maccioni — PIEMME">
+  <meta property="og:title" content="{escape(title)} — Paola Maccioni">
+  <meta property="og:description" content="{escape(meta)}">
+  <meta property="og:url" content="{canon}">
+  <meta property="og:image" content="{og_image}">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
+  <meta property="article:author" content="Paola Maccioni">
+  <meta property="article:section" content="{escape(serie_name)}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{escape(title)} — Paola Maccioni">
+  <meta name="twitter:description" content="{escape(meta)}">
+  <meta name="twitter:image" content="{og_image}">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
+  <link rel="stylesheet" href="/css/main.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+</head>
+<body>
+
+{nav}
+
+<section class="page-section opera-section">
+  <div class="opera-wrap container">
+
+    <a href="{base}/serie/{sid}/" class="back-link">← {escape(serie_name)}</a>
+
+    <div class="opera-grid">
+      <div class="opera-img-wrap">
+        <img id="opera-img" src="/{work.get('image','')}" alt="{escape(title)}" srcset="/{work.get('image','')} 1400w, /{work.get('image','')} 800w" decoding="async" fetchpriority="high">
+        <button class="opera-nav prev" id="prev-img" aria-label="{L('Precedente','Previous')}">‹</button>
+        <button class="opera-nav next" id="next-img" aria-label="{L('Successiva','Next')}">›</button>
+        <span class="opera-counter" id="opera-counter">1 / {n}</span>
+      </div>
+      <div class="opera-info">
+        <p class="label">{escape(year)}</p>
+        <h1>{escape(title)}</h1>
+        <div class="rule"></div>
+        {_desc_paragraphs(desc)}
+        <p class="label opera-serie-label">{L('Dalla serie','From the series')} {escape(serie_name)}</p>
+      </div>
+    </div>
+
+    <div class="opera-thumbs" id="opera-thumbs">{thumbs_html}</div>
+
+  </div>
+</section>
+
+{legal}
+{_opera_js(work, title, is_en)}
+</body>
+</html>
+"""
+
+def write_opera_pages(serie, work):
+    for lang in ("it", "en"):
+        d = os.path.join(ROOT, *(("en", "opera") if lang == "en" else ("opera",)), work["id"])
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
+            f.write(render_opera_page(serie, work, lang))
+
+def _serie_tiles(serie, prefix):
+    return "\n".join(
+        f"""      <a class="work-tile" href="{prefix}/opera/{w['id']}/">
+        <div class="work-tile-img">
+          <img src="/{w.get('canvas') or w.get('thumb') or w.get('image','')}" alt="{escape(w['title'])}" loading="lazy" decoding="async">
+        </div>
+        <div class="work-tile-body">
+          <p class="label">{escape(str(w.get('year') or ''))}</p>
+          <h3>{escape(w['title'])}</h3>
+        </div>
+      </a>"""
+        for w in serie["works"])
+
+def update_serie_grid(serie):
+    """Riscrive in-place la griglia <div class="serie-works"> nelle pagine serie IT+EN."""
+    for path, prefix in [(os.path.join(ROOT, "serie", serie["id"], "index.html"), ""),
+                         (os.path.join(ROOT, "en", "serie", serie["id"], "index.html"), "/en")]:
         if not os.path.isfile(path):
             continue
-        with open(path, "r", encoding="utf-8") as f:
-            html = f.read()
+        html = open(path, encoding="utf-8").read()
+        if '<div class="serie-works">' not in html or "</section>" not in html:
+            continue
+        head, _, rest = html.partition('<div class="serie-works">')
+        _, _, tail = rest.partition("</section>")
+        new = (head + '<div class="serie-works">\n' + _serie_tiles(serie, prefix) +
+               "\n    </div>\n\n  </div>\n</section>" + tail)
+        open(path, "w", encoding="utf-8").write(new)
 
-        # counter 1 / N
-        html = re.sub(
-            r'(<span class="opera-counter"[^>]*>)1 / \d+(</span>)',
-            rf'\g<1>1 / {n}\2', html)
+def remove_opera_pages(work_id):
+    for d in (os.path.join(ROOT, "opera", work_id),
+              os.path.join(ROOT, "en", "opera", work_id)):
+        if os.path.isdir(d):
+            shutil.rmtree(d)
 
-        # JSON-LD "image": [...]
-        html = re.sub(
-            r'("image": \[)[^\]]+(\])',
-            rf'\g<1>{img_urls}\2', html)
+def resync(serie_id, work_id=None, deleted=False):
+    """Riallinea JSON↔disco e rigenera pagina opera (IT+EN) + griglia serie.
+    Da chiamare DOPO che il chiamante ha già modificato e salvato il JSON."""
+    data  = load_data()
+    serie = next((s for s in data["series"] if s["id"] == serie_id), None)
+    if not serie:
+        return
+    if work_id and not deleted:
+        work = next((w for w in serie["works"] if w["id"] == work_id), None)
+        if work:
+            rebuild_galleries(serie_id, work)
+            save_data(data)
+            write_opera_pages(serie, work)
+    elif work_id and deleted:
+        remove_opera_pages(work_id)
+    update_serie_grid(serie)
 
-        # thumbnail buttons
-        html = re.sub(
-            r'(<div class="opera-thumbs"[^>]*>)(.*?)(</div>)',
-            rf'\g<1>{thumbs_html}\3', html, flags=re.DOTALL)
-
-        # JS gallery array
-        html = re.sub(
-            r'(const gallery = \[)[^\]]+(\];)',
-            rf'\g<1>{gallery_items}\2', html)
-
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(html)
+# compat: vecchio nome usato in giro → ora riallinea tutto
+def regenerate_opera_page(serie_id, work_id):
+    resync(serie_id, work_id)
 
 # ── helpers ────────────────────────────────────────────────────────────────
 
@@ -273,7 +492,10 @@ def save_uploaded_images(form, opera_dir, serie_id, work_id, primary_idx=0):
         if re.match(r"^\d+\.(jpg|jpeg|png|webp)$", f, re.I)
         and os.path.isfile(os.path.join(opera_dir, f))
     )
-    start = len(existing) + 1
+    # Riparti dal numero più alto + 1 (non dal conteggio): evita di sovrascrivere
+    # file esistenti quando la numerazione ha dei buchi (dopo cancellazioni).
+    nums = [int(os.path.splitext(f)[0]) for f in existing]
+    start = (max(nums) + 1) if nums else 1
     gallery, thumb_gallery, canvas_gallery = [], [], []
     for i, it in enumerate(valid, start=start):
         base = f"{i:02d}"
@@ -390,6 +612,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "description":    desc,
         })
         save_data(data)
+        # Ricostruisce gallery dal disco + crea pagine opera IT/EN + aggiorna serie
+        resync(serie_id, slug)
         return self._json({"ok": True, "slug": slug, "uploaded": len(gallery),
                            "url": f"/opera/{slug}/"})
 
@@ -429,9 +653,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if not serie: return self._err("Serie non trovata", 404)
         work = next((x for x in serie["works"] if x["id"] == w), None)
         if not work:  return self._err("Opera non trovata", 404)
-        for k in ("title", "year", "description"):
+        for k in ("title", "year", "description", "description_en"):
             if k in p: work[k] = str(p[k])
         save_data(data)
+        # Rigenera pagine opera + griglia serie col nuovo titolo/anno/descrizione
+        if s in VALID_SER:
+            resync(s, w)
         return self._json({"ok": True})
 
     def _delete_work(self, p):
@@ -450,6 +677,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         d = os.path.join(ROOT, s, w)
         if os.path.isdir(d):
             shutil.rmtree(d)
+        # Rimuove le pagine opera IT/EN e aggiorna la griglia serie
+        resync(s, w, deleted=True)
         return self._json({"ok": True})
 
     def _delete_image(self, p):
@@ -528,6 +757,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         for i, work in enumerate(serie["works"]):
             work["position"] = i
         save_data(data)
+        # Riordina la griglia nella pagina serie (IT+EN)
+        resync(s)
         return self._json({"ok": True})
 
     def _publish(self, p):
