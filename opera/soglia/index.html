@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle"></title>
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <link rel="canonical" href="">
+    <link rel="alternate" hreflang="en" href="">
+    <link rel="stylesheet" href="../../css/main.css">
+    <script type="application/ld+json" id="schemaScript"></script>
+</head>
+<body>
+    <nav id="nav"></nav>
+    <main id="content"></main>
+    <footer id="footer"></footer>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/consent.js"></script>
+    <script>
+        const workId = "soglia";
+        const seriesId = "struttura-tensione";
+    </script>
+    <script>
+        async function loadWork() {
+            const response = await fetch('../../data/series.json');
+            const data = await response.json();
+            const series = data.series.find(s => s.id === seriesId);
+            const work = series.works.find(w => w.id === workId);
+            
+            if (!work) {
+                document.getElementById('content').innerHTML = '<p>Opera non trovata</p>';
+                return;
+            }
+            
+            renderWork(work, series);
+        }
+        
+        function renderWork(work, series) {
+            const content = document.getElementById('content');
+            const title = work.title;
+            const description = work.description || '';
+            
+            content.innerHTML = `
+                <article class="work-detail">
+                    <header>
+                        <h1>${title}</h1>
+                        <p class="series-link"><a href="../${series.id}/">${series.name}</a></p>
+                    </header>
+                    <div class="gallery">
+                        ${work.canvas_gallery.map(img => 
+                            `<img src="../../${img}" alt="${title}" class="gallery-img">`
+                        ).join('')}
+                    </div>
+                    <div class="description">
+                        ${description}
+                    </div>
+                </article>
+            `;
+            
+            document.title = title;
+            document.getElementById('pageTitle').textContent = title;
+        }
+        
+        loadWork();
+    </script>
+</body>
+</html>
