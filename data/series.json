@@ -854,8 +854,14 @@
           "id": "amore-tracce-di-memoria",
           "title": "\"Amore\" Tracce di memoria",
           "year": "2026",
-          "image": "struttura-tensione/amore-tracce-di-memoria/07.jpg",
+          "image": "struttura-tensione/amore-tracce-di-memoria/01.jpg",
           "gallery": [
+            "struttura-tensione/amore-tracce-di-memoria/01.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/02.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/03.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/04.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/05.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/06.jpg",
             "struttura-tensione/amore-tracce-di-memoria/07.jpg",
             "struttura-tensione/amore-tracce-di-memoria/08.jpg",
             "struttura-tensione/amore-tracce-di-memoria/09.jpg",
@@ -863,8 +869,14 @@
             "struttura-tensione/amore-tracce-di-memoria/11.jpg",
             "struttura-tensione/amore-tracce-di-memoria/12.jpg"
           ],
-          "thumb": "struttura-tensione/amore-tracce-di-memoria/thumb/07.webp",
+          "thumb": "struttura-tensione/amore-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
+            "struttura-tensione/amore-tracce-di-memoria/thumb/01.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/02.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/03.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/04.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/05.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/06.webp",
             "struttura-tensione/amore-tracce-di-memoria/thumb/07.webp",
             "struttura-tensione/amore-tracce-di-memoria/thumb/08.webp",
             "struttura-tensione/amore-tracce-di-memoria/thumb/09.webp",
@@ -872,8 +884,14 @@
             "struttura-tensione/amore-tracce-di-memoria/thumb/11.webp",
             "struttura-tensione/amore-tracce-di-memoria/thumb/12.webp"
           ],
-          "canvas": "struttura-tensione/amore-tracce-di-memoria/canvas/07.webp",
+          "canvas": "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
+            "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/02.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/03.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/04.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/05.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/06.webp",
             "struttura-tensione/amore-tracce-di-memoria/canvas/07.webp",
             "struttura-tensione/amore-tracce-di-memoria/canvas/08.webp",
             "struttura-tensione/amore-tracce-di-memoria/canvas/09.webp",
@@ -889,14 +907,26 @@
           "year": "2026",
           "image": "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
           "gallery": [
+            "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
+            "struttura-tensione/ferita-tracce-di-memoria/03.jpg",
+            "struttura-tensione/ferita-tracce-di-memoria/04.jpg",
+            "struttura-tensione/ferita-tracce-di-memoria/05.jpg",
             "struttura-tensione/ferita-tracce-di-memoria/07.jpg"
           ],
           "thumb": "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
+            "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
+            "struttura-tensione/ferita-tracce-di-memoria/thumb/03.webp",
+            "struttura-tensione/ferita-tracce-di-memoria/thumb/04.webp",
+            "struttura-tensione/ferita-tracce-di-memoria/thumb/05.webp",
             "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp"
           ],
           "canvas": "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
+            "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
+            "struttura-tensione/ferita-tracce-di-memoria/canvas/03.webp",
+            "struttura-tensione/ferita-tracce-di-memoria/canvas/04.webp",
+            "struttura-tensione/ferita-tracce-di-memoria/canvas/05.webp",
             "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp"
           ],
           "description": "La superficie non si ricompone mai del tutto.\nIl gesto del riparare non cancella la frattura, ma la trattiene visibile, trasformando la vulnerabilità in condizione permanente della forma."
@@ -907,6 +937,10 @@
           "year": "2026",
           "image": "struttura-tensione/status-tracce-di-memoria/01.jpg",
           "gallery": [
+            "struttura-tensione/status-tracce-di-memoria/01.jpg",
+            "struttura-tensione/status-tracce-di-memoria/02.jpg",
+            "struttura-tensione/status-tracce-di-memoria/03.jpg",
+            "struttura-tensione/status-tracce-di-memoria/04.jpg",
             "struttura-tensione/status-tracce-di-memoria/05.jpg",
             "struttura-tensione/status-tracce-di-memoria/06.jpg",
             "struttura-tensione/status-tracce-di-memoria/07.jpg",
@@ -914,6 +948,10 @@
           ],
           "thumb": "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
+            "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
+            "struttura-tensione/status-tracce-di-memoria/thumb/02.webp",
+            "struttura-tensione/status-tracce-di-memoria/thumb/03.webp",
+            "struttura-tensione/status-tracce-di-memoria/thumb/04.webp",
             "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
             "struttura-tensione/status-tracce-di-memoria/thumb/06.webp",
             "struttura-tensione/status-tracce-di-memoria/thumb/07.webp",
@@ -921,6 +959,10 @@
           ],
           "canvas": "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
+            "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
+            "struttura-tensione/status-tracce-di-memoria/canvas/02.webp",
+            "struttura-tensione/status-tracce-di-memoria/canvas/03.webp",
+            "struttura-tensione/status-tracce-di-memoria/canvas/04.webp",
             "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
             "struttura-tensione/status-tracce-di-memoria/canvas/06.webp",
             "struttura-tensione/status-tracce-di-memoria/canvas/07.webp",
@@ -932,24 +974,48 @@
           "id": "lavoro-tracce-di-memoria",
           "title": "\"Lavoro\" Tracce di memoria",
           "year": "2026",
-          "image": "struttura-tensione/lavoro-tracce-di-memoria/09.jpg",
+          "image": "struttura-tensione/lavoro-tracce-di-memoria/01.jpg",
           "gallery": [
+            "struttura-tensione/lavoro-tracce-di-memoria/01.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/02.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/03.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/04.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/05.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/06.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/07.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/08.jpg",
             "struttura-tensione/lavoro-tracce-di-memoria/09.jpg",
             "struttura-tensione/lavoro-tracce-di-memoria/10.jpg",
             "struttura-tensione/lavoro-tracce-di-memoria/11.jpg",
             "struttura-tensione/lavoro-tracce-di-memoria/12.jpg",
             "struttura-tensione/lavoro-tracce-di-memoria/13.jpg"
           ],
-          "thumb": "struttura-tensione/lavoro-tracce-di-memoria/thumb/09.webp",
+          "thumb": "struttura-tensione/lavoro-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/01.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/02.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/03.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/04.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/05.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/06.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/07.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/08.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/thumb/09.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/thumb/10.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/thumb/11.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/thumb/12.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/thumb/13.webp"
           ],
-          "canvas": "struttura-tensione/lavoro-tracce-di-memoria/canvas/09.webp",
+          "canvas": "struttura-tensione/lavoro-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/01.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/02.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/03.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/04.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/05.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/06.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/07.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/08.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/canvas/09.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/canvas/10.webp",
             "struttura-tensione/lavoro-tracce-di-memoria/canvas/11.webp",
@@ -962,24 +1028,39 @@
           "id": "kleenex-tracce-di-memoria",
           "title": "\"Kleenex\" Tracce di memoria",
           "year": "2026",
-          "image": "struttura-tensione/kleenex-tracce-di-memoria/06.jpg",
+          "image": "struttura-tensione/kleenex-tracce-di-memoria/01.jpg",
           "gallery": [
+            "struttura-tensione/kleenex-tracce-di-memoria/01.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/02.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/03.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/04.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/05.jpg",
             "struttura-tensione/kleenex-tracce-di-memoria/06.jpg",
             "struttura-tensione/kleenex-tracce-di-memoria/07.jpg",
             "struttura-tensione/kleenex-tracce-di-memoria/08.jpg",
             "struttura-tensione/kleenex-tracce-di-memoria/09.jpg",
             "struttura-tensione/kleenex-tracce-di-memoria/10.jpg"
           ],
-          "thumb": "struttura-tensione/kleenex-tracce-di-memoria/thumb/06.webp",
+          "thumb": "struttura-tensione/kleenex-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/01.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/02.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/03.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/04.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/05.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/thumb/06.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/thumb/07.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/thumb/08.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/thumb/09.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/thumb/10.webp"
           ],
-          "canvas": "struttura-tensione/kleenex-tracce-di-memoria/canvas/06.webp",
+          "canvas": "struttura-tensione/kleenex-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/01.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/02.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/03.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/04.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/05.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/canvas/06.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/canvas/07.webp",
             "struttura-tensione/kleenex-tracce-di-memoria/canvas/08.webp",
@@ -1013,7 +1094,7 @@
             "struttura-tensione/lombra-della-luce-variazione-i/canvas/03.webp",
             "struttura-tensione/lombra-della-luce-variazione-i/canvas/04.webp"
           ],
-          "description": "gfaghf"
+          "description": ""
         },
         {
           "id": "lombra-della-luce-variazione-ii",
@@ -1023,24 +1104,21 @@
           "gallery": [
             "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
             "struttura-tensione/lombra-della-luce-variazione-ii/03.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-ii/04.jpg",
             "struttura-tensione/lombra-della-luce-variazione-ii/04.jpg"
           ],
           "thumb": "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
           "thumb_gallery": [
             "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
             "struttura-tensione/lombra-della-luce-variazione-ii/thumb/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/04.webp",
             "struttura-tensione/lombra-della-luce-variazione-ii/thumb/04.webp"
           ],
           "canvas": "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
           "canvas_gallery": [
             "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
             "struttura-tensione/lombra-della-luce-variazione-ii/canvas/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/04.webp",
             "struttura-tensione/lombra-della-luce-variazione-ii/canvas/04.webp"
           ],
-          "description": "sdsad"
+          "description": ""
         },
         {
           "id": "lombra-della-luce-variazione-iii",
@@ -1070,7 +1148,7 @@
             "struttura-tensione/lombra-della-luce-variazione-iii/canvas/04.webp",
             "struttura-tensione/lombra-della-luce-variazione-iii/canvas/05.webp"
           ],
-          "description": "hghgh"
+          "description": ""
         },
         {
           "id": "lombra-della-luce-variazione-iv",
@@ -1100,7 +1178,7 @@
             "struttura-tensione/lombra-della-luce-variazione-iv/canvas/04.webp",
             "struttura-tensione/lombra-della-luce-variazione-iv/canvas/05.webp"
           ],
-          "description": "sdfas"
+          "description": ""
         },
         {
           "id": "frattura",
@@ -1130,7 +1208,7 @@
             "struttura-tensione/frattura/canvas/04.webp",
             "struttura-tensione/frattura/canvas/05.webp"
           ],
-          "description": "sdfsd"
+          "description": ""
         },
         {
           "id": "soglia",
@@ -1154,7 +1232,7 @@
             "struttura-tensione/soglia/canvas/02.webp",
             "struttura-tensione/soglia/canvas/03.webp"
           ],
-          "description": "sdsds"
+          "description": ""
         }
       ]
     },
