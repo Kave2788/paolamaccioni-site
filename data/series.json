@@ -297,21 +297,24 @@
             "struttura-tensione/cubi/01.jpg",
             "struttura-tensione/cubi/02.jpg",
             "struttura-tensione/cubi/03.jpg",
-            "struttura-tensione/cubi/04.jpg"
+            "struttura-tensione/cubi/04.jpg",
+            "struttura-tensione/cubi/05.jpg"
           ],
           "description": "Cubi nasce da una lavorazione a sbalzo su alluminio organizzata secondo una struttura modulare ripetuta.\n\nLa superficie è costruita attraverso pieghe e rilievi che generano un’alternanza di pieni e rientranze, creando un effetto di profondità variabile a seconda della luce. Gli inserti interrompono la continuità metallica e rafforzano la percezione del ritmo geometrico.\n\nL’opera si sviluppa come sistema ordinato, dove la ripetizione non è decorativa ma costruttiva, e la variazione luminosa diventa parte attiva della composizione.",
           "thumb_gallery": [
             "struttura-tensione/cubi/thumb/01.webp",
             "struttura-tensione/cubi/thumb/02.webp",
             "struttura-tensione/cubi/thumb/03.webp",
-            "struttura-tensione/cubi/thumb/04.webp"
+            "struttura-tensione/cubi/thumb/04.webp",
+            "struttura-tensione/cubi/thumb/05.webp"
           ],
           "thumb": "struttura-tensione/cubi/thumb/01.webp",
           "canvas_gallery": [
             "struttura-tensione/cubi/canvas/01.webp",
             "struttura-tensione/cubi/canvas/02.webp",
             "struttura-tensione/cubi/canvas/03.webp",
-            "struttura-tensione/cubi/canvas/04.webp"
+            "struttura-tensione/cubi/canvas/04.webp",
+            "struttura-tensione/cubi/canvas/05.webp"
           ],
           "canvas": "struttura-tensione/cubi/canvas/01.webp",
           "position": 9
@@ -813,6 +816,258 @@
           ],
           "canvas": "struttura-tensione/l-unione/canvas/01.webp",
           "position": 27
+        },
+        {
+          "id": "amore-tracce-di-memoria",
+          "title": "\"Amore\" Tracce di memoria",
+          "year": "2026",
+          "image": "struttura-tensione/amore-tracce-di-memoria/07.jpg",
+          "gallery": [
+            "struttura-tensione/amore-tracce-di-memoria/07.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/08.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/09.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/10.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/11.jpg",
+            "struttura-tensione/amore-tracce-di-memoria/12.jpg"
+          ],
+          "thumb": "struttura-tensione/amore-tracce-di-memoria/thumb/07.webp",
+          "thumb_gallery": [
+            "struttura-tensione/amore-tracce-di-memoria/thumb/07.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/08.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/09.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/10.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/11.webp",
+            "struttura-tensione/amore-tracce-di-memoria/thumb/12.webp"
+          ],
+          "canvas": "struttura-tensione/amore-tracce-di-memoria/canvas/07.webp",
+          "canvas_gallery": [
+            "struttura-tensione/amore-tracce-di-memoria/canvas/07.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/08.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/09.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/10.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/11.webp",
+            "struttura-tensione/amore-tracce-di-memoria/canvas/12.webp"
+          ],
+          "description": "Le iniziali incise segnano un’identità che esiste solo nel legame.\r\nL’amore non è rappresentato, ma trattenuto come traccia fragile su una superficie che conserva ciò che tende a scomparire."
+        },
+        {
+          "id": "ferita-tracce-di-memoria",
+          "title": "\"Ferita\" Tracce di memoria",
+          "year": "2026",
+          "image": "struttura-tensione/ferita-tracce-di-memoria/07.jpg",
+          "gallery": [
+            "struttura-tensione/ferita-tracce-di-memoria/07.jpg"
+          ],
+          "thumb": "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp",
+          "thumb_gallery": [
+            "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp"
+          ],
+          "canvas": "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp",
+          "canvas_gallery": [
+            "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp"
+          ],
+          "description": "La superficie non si ricompone mai del tutto.\nIl gesto del riparare non cancella la frattura, ma la trattiene visibile, trasformando la vulnerabilità in condizione permanente della forma."
+        },
+        {
+          "id": "status-tracce-di-memoria",
+          "title": "\"Status\" Tracce di memoria",
+          "year": "2026",
+          "image": "struttura-tensione/status-tracce-di-memoria/05.jpg",
+          "gallery": [
+            "struttura-tensione/status-tracce-di-memoria/05.jpg",
+            "struttura-tensione/status-tracce-di-memoria/06.jpg",
+            "struttura-tensione/status-tracce-di-memoria/07.jpg",
+            "struttura-tensione/status-tracce-di-memoria/08.jpg"
+          ],
+          "thumb": "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
+          "thumb_gallery": [
+            "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
+            "struttura-tensione/status-tracce-di-memoria/thumb/06.webp",
+            "struttura-tensione/status-tracce-di-memoria/thumb/07.webp",
+            "struttura-tensione/status-tracce-di-memoria/thumb/08.webp"
+          ],
+          "canvas": "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
+          "canvas_gallery": [
+            "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
+            "struttura-tensione/status-tracce-di-memoria/canvas/06.webp",
+            "struttura-tensione/status-tracce-di-memoria/canvas/07.webp",
+            "struttura-tensione/status-tracce-di-memoria/canvas/08.webp"
+          ],
+          "description": "Le pieghe ordinate costruiscono un’immagine di controllo e riconoscibilità.\r\nSotto l’apparenza di equilibrio emerge una tensione sottile, dove la forma sociale si rivela come costruzione instabile."
+        },
+        {
+          "id": "lavoro-tracce-di-memoria",
+          "title": "\"Lavoro\" Tracce di memoria",
+          "year": "2026",
+          "image": "struttura-tensione/lavoro-tracce-di-memoria/09.jpg",
+          "gallery": [
+            "struttura-tensione/lavoro-tracce-di-memoria/09.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/10.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/11.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/12.jpg",
+            "struttura-tensione/lavoro-tracce-di-memoria/13.jpg"
+          ],
+          "thumb": "struttura-tensione/lavoro-tracce-di-memoria/thumb/09.webp",
+          "thumb_gallery": [
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/09.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/10.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/11.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/12.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/thumb/13.webp"
+          ],
+          "canvas": "struttura-tensione/lavoro-tracce-di-memoria/canvas/09.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/09.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/10.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/11.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/12.webp",
+            "struttura-tensione/lavoro-tracce-di-memoria/canvas/13.webp"
+          ],
+          "description": "La materia porta il peso della ripetizione e dell’uso.\r\nIl lavoro si deposita come ritmo silenzioso che modella la forma e definisce, nel tempo, una struttura di resistenza."
+        },
+        {
+          "id": "kleenex-tracce-di-memoria",
+          "title": "\"Kleenex\" Tracce di memoria",
+          "year": "2026",
+          "image": "struttura-tensione/kleenex-tracce-di-memoria/06.jpg",
+          "gallery": [
+            "struttura-tensione/kleenex-tracce-di-memoria/06.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/07.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/08.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/09.jpg",
+            "struttura-tensione/kleenex-tracce-di-memoria/10.jpg"
+          ],
+          "thumb": "struttura-tensione/kleenex-tracce-di-memoria/thumb/06.webp",
+          "thumb_gallery": [
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/06.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/07.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/08.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/09.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/thumb/10.webp"
+          ],
+          "canvas": "struttura-tensione/kleenex-tracce-di-memoria/canvas/06.webp",
+          "canvas_gallery": [
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/06.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/07.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/08.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/09.webp",
+            "struttura-tensione/kleenex-tracce-di-memoria/canvas/10.webp"
+          ],
+          "description": "Un oggetto destinato alla cancellazione viene sottratto alla sua funzione effimera e reso duraturo.\r\nIl gesto più automatico del quotidiano si fissa nella materia, interrompendo la logica dello scarto e della dimenticanza."
+        },
+        {
+          "id": "lombra-della-luce-variazione-i",
+          "title": "L'ombra della luce, variazione I",
+          "year": "2026",
+          "image": "struttura-tensione/lombra-della-luce-variazione-i/01.jpg",
+          "gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-i/01.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-i/02.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-i/03.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-i/04.jpg"
+          ],
+          "thumb": "struttura-tensione/lombra-della-luce-variazione-i/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-i/thumb/01.webp",
+            "struttura-tensione/lombra-della-luce-variazione-i/thumb/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-i/thumb/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-i/thumb/04.webp"
+          ],
+          "canvas": "struttura-tensione/lombra-della-luce-variazione-i/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-i/canvas/01.webp",
+            "struttura-tensione/lombra-della-luce-variazione-i/canvas/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-i/canvas/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-i/canvas/04.webp"
+          ],
+          "description": "gfaghf"
+        },
+        {
+          "id": "lombra-della-luce-variazione-ii",
+          "title": "L'ombra della luce, variazione II",
+          "year": "2026",
+          "image": "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
+          "gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-ii/03.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-ii/04.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-ii/04.jpg"
+          ],
+          "thumb": "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
+          "thumb_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/04.webp",
+            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/04.webp"
+          ],
+          "canvas": "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/04.webp",
+            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/04.webp"
+          ],
+          "description": "sdsad"
+        },
+        {
+          "id": "lombra-della-luce-variazione-iii",
+          "title": "L'ombra della luce, variazione III",
+          "year": "2026",
+          "image": "struttura-tensione/lombra-della-luce-variazione-iii/01.jpg",
+          "gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-iii/01.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iii/02.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iii/03.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iii/04.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iii/05.jpg"
+          ],
+          "thumb": "struttura-tensione/lombra-della-luce-variazione-iii/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/01.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/04.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/05.webp"
+          ],
+          "canvas": "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/04.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/05.webp"
+          ],
+          "description": "hghgh"
+        },
+        {
+          "id": "lombra-della-luce-variazione-iv",
+          "title": "L'ombra della luce, variazione IV",
+          "year": "2026",
+          "image": "struttura-tensione/lombra-della-luce-variazione-iv/01.jpg",
+          "gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-iv/01.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iv/02.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iv/03.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iv/04.jpg",
+            "struttura-tensione/lombra-della-luce-variazione-iv/05.jpg"
+          ],
+          "thumb": "struttura-tensione/lombra-della-luce-variazione-iv/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/01.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/04.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/05.webp"
+          ],
+          "canvas": "struttura-tensione/lombra-della-luce-variazione-iv/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/01.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/02.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/03.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/04.webp",
+            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/05.webp"
+          ],
+          "description": "sdfas"
         }
       ]
     },
