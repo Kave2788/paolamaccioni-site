@@ -854,15 +854,15 @@
           "id": "ferita-tracce-di-memoria",
           "title": "\"Ferita\" Tracce di memoria",
           "year": "2026",
-          "image": "struttura-tensione/ferita-tracce-di-memoria/07.jpg",
+          "image": "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
           "gallery": [
             "struttura-tensione/ferita-tracce-di-memoria/07.jpg"
           ],
-          "thumb": "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp",
+          "thumb": "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
             "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp"
           ],
-          "canvas": "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp",
+          "canvas": "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
             "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp"
           ],
@@ -872,28 +872,28 @@
           "id": "status-tracce-di-memoria",
           "title": "\"Status\" Tracce di memoria",
           "year": "2026",
-          "image": "struttura-tensione/status-tracce-di-memoria/05.jpg",
+          "image": "struttura-tensione/status-tracce-di-memoria/01.jpg",
           "gallery": [
             "struttura-tensione/status-tracce-di-memoria/05.jpg",
             "struttura-tensione/status-tracce-di-memoria/06.jpg",
             "struttura-tensione/status-tracce-di-memoria/07.jpg",
             "struttura-tensione/status-tracce-di-memoria/08.jpg"
           ],
-          "thumb": "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
+          "thumb": "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
           "thumb_gallery": [
             "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
             "struttura-tensione/status-tracce-di-memoria/thumb/06.webp",
             "struttura-tensione/status-tracce-di-memoria/thumb/07.webp",
             "struttura-tensione/status-tracce-di-memoria/thumb/08.webp"
           ],
-          "canvas": "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
+          "canvas": "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
           "canvas_gallery": [
             "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
             "struttura-tensione/status-tracce-di-memoria/canvas/06.webp",
             "struttura-tensione/status-tracce-di-memoria/canvas/07.webp",
             "struttura-tensione/status-tracce-di-memoria/canvas/08.webp"
           ],
-          "description": "Le pieghe ordinate costruiscono un’immagine di controllo e riconoscibilità.\r\nSotto l’apparenza di equilibrio emerge una tensione sottile, dove la forma sociale si rivela come costruzione instabile."
+          "description": "Le pieghe ordinate costruiscono un’immagine di controllo e riconoscibilità.\nSotto l’apparenza di equilibrio emerge una tensione sottile, dove la forma sociale si rivela come costruzione instabile."
         },
         {
           "id": "lavoro-tracce-di-memoria",
@@ -1068,6 +1068,60 @@
             "struttura-tensione/lombra-della-luce-variazione-iv/canvas/05.webp"
           ],
           "description": "sdfas"
+        },
+        {
+          "id": "frattura",
+          "title": "Frattura",
+          "year": "2026",
+          "image": "struttura-tensione/frattura/01.jpg",
+          "gallery": [
+            "struttura-tensione/frattura/01.jpg",
+            "struttura-tensione/frattura/02.jpg",
+            "struttura-tensione/frattura/03.jpg",
+            "struttura-tensione/frattura/04.jpg",
+            "struttura-tensione/frattura/05.jpg"
+          ],
+          "thumb": "struttura-tensione/frattura/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/frattura/thumb/01.webp",
+            "struttura-tensione/frattura/thumb/02.webp",
+            "struttura-tensione/frattura/thumb/03.webp",
+            "struttura-tensione/frattura/thumb/04.webp",
+            "struttura-tensione/frattura/thumb/05.webp"
+          ],
+          "canvas": "struttura-tensione/frattura/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/frattura/canvas/01.webp",
+            "struttura-tensione/frattura/canvas/02.webp",
+            "struttura-tensione/frattura/canvas/03.webp",
+            "struttura-tensione/frattura/canvas/04.webp",
+            "struttura-tensione/frattura/canvas/05.webp"
+          ],
+          "description": "sdfsd"
+        },
+        {
+          "id": "soglia",
+          "title": "Soglia",
+          "year": "2026",
+          "image": "struttura-tensione/soglia/01.jpg",
+          "gallery": [
+            "struttura-tensione/soglia/01.jpg",
+            "struttura-tensione/soglia/02.jpg",
+            "struttura-tensione/soglia/03.jpg"
+          ],
+          "thumb": "struttura-tensione/soglia/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/soglia/thumb/01.webp",
+            "struttura-tensione/soglia/thumb/02.webp",
+            "struttura-tensione/soglia/thumb/03.webp"
+          ],
+          "canvas": "struttura-tensione/soglia/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/soglia/canvas/01.webp",
+            "struttura-tensione/soglia/canvas/02.webp",
+            "struttura-tensione/soglia/canvas/03.webp"
+          ],
+          "description": "sdsds"
         }
       ]
     },
