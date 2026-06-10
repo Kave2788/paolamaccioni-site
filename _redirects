@@ -1,3 +1,18 @@
+# Blocca i file di sviluppo dal sito pubblico (404 forzato — Netlify non supporta .netlifyignore)
+/admin.py  /404.html  404!
+/admin.html  /404.html  404!
+/scripts/*  /404.html  404!
+/translate_opera.py  /404.html  404!
+/reorder-front.js  /404.html  404!
+/change-ns.js  /404.html  404!
+/Avvia%20Pannello.bat  /404.html  404!
+/pannello-paola.ico  /404.html  404!
+/netlify/*  /404.html  404!
+/CLAUDE.md  /404.html  404!
+/GUIDA-PAOLA.md  /404.html  404!
+/STRUCTURE.md  /404.html  404!
+/README.md  /404.html  404!
+
 # Redirect legacy URLs to pretty SEO URLs
 /serie.html  /serie/:id/  302  id=:id
 /opera.html  /opera/:id/  302  id=:id
