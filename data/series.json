@@ -116,6 +116,37 @@
           "description_en": "In Lux Eterna, aluminium is worked as an open, modular weave, generating a specular structure based on the balance between solids and voids. The surface is not simply etched, but crossed, transforming the plane into a reticular organism.\nThe red field acts as an underlying force, amplifying the tension of the metal structure and intensifying the dialogue with the blue core. The light does not merely reflect the material, but passes through it and activates it, making visible the relationship between rhythm, depth and formal construction."
         },
         {
+          "id": "frattura",
+          "title": "Frattura",
+          "year": "2026",
+          "image": "struttura-tensione/frattura/01.jpg",
+          "gallery": [
+            "struttura-tensione/frattura/01.jpg",
+            "struttura-tensione/frattura/02.jpg",
+            "struttura-tensione/frattura/03.jpg",
+            "struttura-tensione/frattura/04.jpg",
+            "struttura-tensione/frattura/05.jpg"
+          ],
+          "thumb": "struttura-tensione/frattura/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/frattura/thumb/01.webp",
+            "struttura-tensione/frattura/thumb/02.webp",
+            "struttura-tensione/frattura/thumb/03.webp",
+            "struttura-tensione/frattura/thumb/04.webp",
+            "struttura-tensione/frattura/thumb/05.webp"
+          ],
+          "canvas": "struttura-tensione/frattura/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/frattura/canvas/01.webp",
+            "struttura-tensione/frattura/canvas/02.webp",
+            "struttura-tensione/frattura/canvas/03.webp",
+            "struttura-tensione/frattura/canvas/04.webp",
+            "struttura-tensione/frattura/canvas/05.webp"
+          ],
+          "description": "",
+          "position": 2
+        },
+        {
           "id": "il-rinoceronte",
           "title": "Il Rinoceronte – omaggio a Dürer",
           "year": "",
@@ -138,7 +169,7 @@
             "struttura-tensione/il-rinoceronte/canvas/03.webp"
           ],
           "canvas": "struttura-tensione/il-rinoceronte/canvas/01.webp",
-          "position": 2,
+          "position": 3,
           "description_en": "This work stems from a reinterpretation of Albrecht Dürer's famous Rhinoceros (1515), one of the most famous images in the history of Western art. The figure of the animal is taken up and translated into a three-dimensional surface through the embossing of aluminium.\nAs in the original engraving, the body of the rhinoceros appears almost as an armour composed of elements and textures that define its structure.\nA personal intervention is added to this historical image: three buffalos, African birds that live in symbiosis with large mammals, perch on the animal's back, introducing a natural element that was not present in Dürer's work."
         },
         {
@@ -173,46 +204,8 @@
             "struttura-tensione/rondini-in-gabbia/canvas/06.webp"
           ],
           "canvas": "struttura-tensione/rondini-in-gabbia/canvas/01.webp",
-          "position": 3,
-          "description_en": "Inside the cage a swallow is perched on the perch, while another is in the nest with two young. The door is open, but an ivy branch weaves between the bars and slowly seems to close the doorway.\nMade of embossed and chiselled aluminium, the work constructs an essential scene where each element takes on a symbolic value. The swallows, traditionally associated with travel and return, are here in a space suspended between protection and limit.\nThe ivy growing on the door introduces time into the scene: freedom exists, but can vanish if it is not grasped."
-        },
-        {
-          "id": "equilibrio-fratturato",
-          "title": "Equilibrio fratturato",
-          "year": "",
-          "image": "struttura-tensione/equilibrio-fratturato/01.jpg",
-          "gallery": [
-            "struttura-tensione/equilibrio-fratturato/01.jpg",
-            "struttura-tensione/equilibrio-fratturato/02.jpg",
-            "struttura-tensione/equilibrio-fratturato/03.jpg",
-            "struttura-tensione/equilibrio-fratturato/04.jpg",
-            "struttura-tensione/equilibrio-fratturato/05.jpg",
-            "struttura-tensione/equilibrio-fratturato/06.jpg",
-            "struttura-tensione/equilibrio-fratturato/07.jpg"
-          ],
-          "description": "Equilibrio Fratturato esplora la tensione tra stabilità e rottura attraverso una struttura composta da forme geometriche che si intersecano e si spingono reciprocamente nello spazio della superficie metallica.\n\nLe forme triangolari, modellate a sbalzo sull’alluminio, emergono dal piano creando volumi netti e inclinati che suggeriscono un equilibrio dinamico e precario. Tra questi elementi strutturali, la superficie è attraversata da una trama fitta di incisioni realizzate a bulino, che costruiscono un tessuto di linee capace di catturare e frammentare la luce.\n\nIl contrasto tra le superfici lisce dei volumi e la densità segnica del fondo genera una tensione visiva continua, trasformando il metallo in un campo vibrante dove ordine e frattura convivono.",
-          "thumb_gallery": [
-            "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/02.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/03.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/04.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/05.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/06.webp",
-            "struttura-tensione/equilibrio-fratturato/thumb/07.webp"
-          ],
-          "thumb": "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/02.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/03.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/04.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/05.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/06.webp",
-            "struttura-tensione/equilibrio-fratturato/canvas/07.webp"
-          ],
-          "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
           "position": 4,
-          "description_en": "Fractured Balance explores the tension between stability and rupture through a structure composed of geometric shapes that intersect and push each other through the space of the metal surface.\nThe triangular shapes, modelled cantilevered on aluminium, emerge from the plane, creating sharp, sloping volumes that suggest a dynamic and precarious balance. Between these structural elements, the surface is criss-crossed by a dense pattern of engravings made by burin, which build a fabric of lines capable of capturing and fragmenting light.\nThe contrast between the smooth surfaces of the volumes and the sign density of the background generates a continuous visual tension, transforming the metal into a vibrant field where order and fracture coexist."
+          "description_en": "Inside the cage a swallow is perched on the perch, while another is in the nest with two young. The door is open, but an ivy branch weaves between the bars and slowly seems to close the doorway.\nMade of embossed and chiselled aluminium, the work constructs an essential scene where each element takes on a symbolic value. The swallows, traditionally associated with travel and return, are here in a space suspended between protection and limit.\nThe ivy growing on the door introduces time into the scene: freedom exists, but can vanish if it is not grasped."
         },
         {
           "id": "fibonacci",
@@ -241,44 +234,6 @@
           "description_en": "This work develops from the structure of Leonardo Fibonacci's spiral, one of the most recurrent mathematical models in the forms of nature. Through the embossing of the aluminium, the surface is constructed by means of a rhythmic sequence of punctiform reliefs that expand in a spiral-like pattern.\nThe progressive arrangement of the elements generates a visual growth that recalls the natural structures governed by the Fibonacci sequence: shells, whirlpools, sunflower seeds and many other organic forms in which mathematical order and natural development coincide.\nThe golden surface amplifies the movement of the composition. The light glides along the reliefs and accentuates the dynamics of the spiral, transforming the geometric structure into an almost living, continuously expanding form.\nThe work thus investigates the relationship between mathematics, nature and matter, translating into metal one of the fundamental geometries that regulate the growth and balance of forms in the natural world."
         },
         {
-          "id": "sfera",
-          "title": "Sfera",
-          "year": "",
-          "image": "struttura-tensione/sfera/01.jpg",
-          "gallery": [
-            "struttura-tensione/sfera/01.jpg",
-            "struttura-tensione/sfera/02.jpg",
-            "struttura-tensione/sfera/03.jpg",
-            "struttura-tensione/sfera/04.jpg",
-            "struttura-tensione/sfera/05.jpg",
-            "struttura-tensione/sfera/06.jpg",
-            "struttura-tensione/sfera/07.jpg"
-          ],
-          "description": "Sfera è costruita attraverso una sequenza regolare di rilievi circolari ottenuti con la lavorazione a sbalzo su alluminio.\n\nLa ripetizione degli elementi genera una superficie modulare che, concentrandosi al centro, costruisce il volume della forma sferica. Il contrasto tra la sfera centrale e il fondo piatto rafforza la percezione della tridimensionalità.\n\nLa luce scorre sulle superfici metalliche mettendo in evidenza il ritmo della texture e la costruzione geometrica della forma.",
-          "thumb_gallery": [
-            "struttura-tensione/sfera/thumb/01.webp",
-            "struttura-tensione/sfera/thumb/02.webp",
-            "struttura-tensione/sfera/thumb/03.webp",
-            "struttura-tensione/sfera/thumb/04.webp",
-            "struttura-tensione/sfera/thumb/05.webp",
-            "struttura-tensione/sfera/thumb/06.webp",
-            "struttura-tensione/sfera/thumb/07.webp"
-          ],
-          "thumb": "struttura-tensione/sfera/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/sfera/canvas/01.webp",
-            "struttura-tensione/sfera/canvas/02.webp",
-            "struttura-tensione/sfera/canvas/03.webp",
-            "struttura-tensione/sfera/canvas/04.webp",
-            "struttura-tensione/sfera/canvas/05.webp",
-            "struttura-tensione/sfera/canvas/06.webp",
-            "struttura-tensione/sfera/canvas/07.webp"
-          ],
-          "canvas": "struttura-tensione/sfera/canvas/01.webp",
-          "position": 6,
-          "description_en": "Sfera is constructed through a regular sequence of circular reliefs obtained by embossing on aluminium.\nThe repetition of the elements generates a modular surface that, concentrating in the centre, builds up the volume of the spherical form. The contrast between the central sphere and the flat bottom reinforces the perception of three-dimensionality.\nThe light flows over the metal surfaces, highlighting the rhythm of the texture and the geometric construction of the form."
-        },
-        {
           "id": "fazzoletto",
           "title": "Fazzoletto",
           "year": "",
@@ -304,7 +259,7 @@
             "struttura-tensione/fazzoletto/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/fazzoletto/canvas/01.webp",
-          "position": 7,
+          "position": 6,
           "description_en": "Fazzoletto reproduces a light fabric by means of embossing on a thin aluminium sheet.\nThe metal surface preserves the weave of the fabric and the soft movement of the folds, transforming a rigid material into a form that recalls the lightness and flexibility of fabric. An engraved monogram appears in the centre, introducing a personal mark within the composition.\nThe work plays on the contrast between the hardness of the metal and the apparent delicacy of the handkerchief."
         },
         {
@@ -327,40 +282,8 @@
             "struttura-tensione/specchio-nero/canvas/02.webp"
           ],
           "canvas": "struttura-tensione/specchio-nero/canvas/01.webp",
-          "position": 8,
+          "position": 7,
           "description_en": "Specchio Nero (Black Mirror) is born from the encounter between the luminous surface of aluminium and a dark depth that absorbs the gaze. The metal relief, embossed on a thin slab, builds a structure that emerges from the surface and dialogues with the deep black of the background.\nThe latter, obtained through acrylic and resin, does not function as a simple colour but as a visual space that captures light and modifies its perception. The contrast between reflection and absorption creates a tension between surface and depth.\nThe work thus investigates the relationship between light and darkness, transforming metal into a field of perception where what appears and what disappears coexist in the same image."
-        },
-        {
-          "id": "cubi",
-          "title": "Cubi",
-          "year": "",
-          "image": "struttura-tensione/cubi/01.jpg",
-          "gallery": [
-            "struttura-tensione/cubi/01.jpg",
-            "struttura-tensione/cubi/02.jpg",
-            "struttura-tensione/cubi/03.jpg",
-            "struttura-tensione/cubi/04.jpg",
-            "struttura-tensione/cubi/05.jpg"
-          ],
-          "description": "Cubi nasce da una lavorazione a sbalzo su alluminio organizzata secondo una struttura modulare ripetuta.\n\nLa superficie è costruita attraverso pieghe e rilievi che generano un’alternanza di pieni e rientranze, creando un effetto di profondità variabile a seconda della luce. Gli inserti interrompono la continuità metallica e rafforzano la percezione del ritmo geometrico.\n\nL’opera si sviluppa come sistema ordinato, dove la ripetizione non è decorativa ma costruttiva, e la variazione luminosa diventa parte attiva della composizione.",
-          "thumb_gallery": [
-            "struttura-tensione/cubi/thumb/01.webp",
-            "struttura-tensione/cubi/thumb/02.webp",
-            "struttura-tensione/cubi/thumb/03.webp",
-            "struttura-tensione/cubi/thumb/04.webp",
-            "struttura-tensione/cubi/thumb/05.webp"
-          ],
-          "thumb": "struttura-tensione/cubi/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/cubi/canvas/01.webp",
-            "struttura-tensione/cubi/canvas/02.webp",
-            "struttura-tensione/cubi/canvas/03.webp",
-            "struttura-tensione/cubi/canvas/04.webp",
-            "struttura-tensione/cubi/canvas/05.webp"
-          ],
-          "canvas": "struttura-tensione/cubi/canvas/01.webp",
-          "position": 9,
-          "description_en": "Cubes originates from a cantilevered aluminium work organised according to a repeated modular structure.\nThe surface is constructed through folds and reliefs that generate an alternation of solids and recesses, creating an effect of varying depth depending on the light. The inserts interrupt the metallic continuity and reinforce the perception of geometric rhythm.\nThe work develops as an ordered system, where repetition is not decorative but constructive, and light variation becomes an active part of the composition."
         },
         {
           "id": "bubbles",
@@ -382,7 +305,7 @@
             "struttura-tensione/bubbles/canvas/02.webp"
           ],
           "canvas": "struttura-tensione/bubbles/canvas/01.webp",
-          "position": 10,
+          "position": 8,
           "description_en": "This work stems from an exploration of the relationship between matter and void.\nA golden aluminium sheet is pierced through a constellation of circular apertures of different sizes, creating a structure reminiscent of cellular shapes and natural organisms.\nThe metal surface, stretched between the different holes, generates a fragile balance between solid and open space. The irregular edges of the openings reveal the manual gesture of workmanship and transform the sheet into an organic texture that seems to expand in space.\nBehind the perforated surface emerges a second metal depth that amplifies the dialogue between light, shadow and reflection. The work is thus constructed on several perceptual levels: structure, light and void become compositional elements as much as the material itself.\nThe result is a form that oscillates between geometric abstraction and biological structure, where the aluminium loses its surface rigidity and becomes a dynamic system of spatial relationships.\nTechnique: embossing, cutting and handwork on aluminium."
         },
         {
@@ -408,7 +331,7 @@
             "struttura-tensione/onde-riflesse/canvas/03.webp"
           ],
           "canvas": "struttura-tensione/onde-riflesse/canvas/01.webp",
-          "position": 11,
+          "position": 9,
           "description_en": "A circular movement crosses the surface of the aluminium and leads the eye towards the centre, like a vortex capturing energy and light. Engraved and embossed lines create depth and rhythm, transforming the material into a continuous flow."
         },
         {
@@ -440,7 +363,7 @@
             "struttura-tensione/sotto-la-superficie/canvas/05.webp"
           ],
           "canvas": "struttura-tensione/sotto-la-superficie/canvas/01.webp",
-          "position": 12,
+          "position": 10,
           "description_en": "Beneath the surface relates the external appearance of the figure to a visible internal structure, where components, connections and circuits emerge as an integral part of the composition.\nThe face, smooth and silent, contrasts with the mechanical complexity that develops in the open part of the head and neck. Cables, elements and connections build an internal network that suggests a hidden level beyond appearance.\nThe work reflects on the relationship between identity and technology, showing what normally remains invisible: the internal structure that supports and feeds the surface."
         },
         {
@@ -463,7 +386,7 @@
             "struttura-tensione/il-peso-dell-ingiustizia/canvas/02.webp"
           ],
           "canvas": "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp",
-          "position": 13,
+          "position": 11,
           "description_en": "This work depicts a world rolling towards ruin, propelled by a small dung beetle: a symbol of toil, transformation and resilience.\nThe sphere it carries is a corrupt globe, scarred by humanity's faults and indifference to the pain of others.\nYet, high above, a small kite, fragile but stubborn, with the colours of Palestine, is released.\nA subtle detail that becomes voice, resistance, memory.\nThe aluminium sheet, completely handmade using the embossing technique, was finished with pigmented resins to enhance the contrasts, give chromatic depth and intensify the expressive charge of the work.\nEvery groove is carved with awareness, every relief is a choice of truth and denunciation.\nIn this contrast between the hardness of the metal and the lightness of the message lies the meaning of the work: transforming matter into voice, and art into a civilised act."
         },
         {
@@ -489,7 +412,7 @@
             "struttura-tensione/checkmate/canvas/03.webp"
           ],
           "canvas": "struttura-tensione/checkmate/canvas/01.webp",
-          "position": 14,
+          "position": 12,
           "description_en": "In Scacco Matto, the scene is constructed as a silent narrative suspended in time. On an aluminium game board, decorated with ornamental motifs, a few chess pieces emerge as traces of a game that has just begun or perhaps already ended.\nOn either side of the table two animals, a cat and a mouse, observe the scene from opposite positions. Their confrontation introduces a symbolic tension that recalls universal dynamics of challenge, strategy and survival. The game of chess thus becomes a metaphor for the relationship between strength and cunning, predator and prey, impulse and calculation.\nThe composition maintains a subtle balance between irony and reflection. The animal figures, made of copper anodised aluminium, dialogue with the silver surface of the table, creating a luminous contrast that amplifies the theatricality of the scene.\nThrough the language of embossed sculpture, the work transforms a moment of play into a symbolic representation of the dynamics that run through nature and human experience.\nTechnique: embossing and chiselling executed by hand on aluminium."
         },
         {
@@ -509,7 +432,7 @@
             "struttura-tensione/senza-catene/canvas/01.webp"
           ],
           "canvas": "struttura-tensione/senza-catene/canvas/01.webp",
-          "position": 15,
+          "position": 13,
           "description_en": "In Catene Spezzate the composition develops as a progressive transformation. A metal chain, a symbol of constraint and constriction, breaks off and allows a sequence of shapes to emerge that gradually transform into birds in flight.\nThe material of aluminium accompanies this transition: from a rigid and heavy element it gradually becomes a light and dynamic form. The movement of the birds suggests an openness towards space, as if the material itself were freeing itself from its initial condition.\nThe scene is built on an essential balance between solids and voids. The dark background amplifies the contrast with the metal forms and makes the gesture of liberation even more evident.\nThe work thus represents the moment when a limit is broken and transformed into possibility: a visual metamorphosis in which constraint gives way to movement, freedom and change."
         },
         {
@@ -538,7 +461,7 @@
             "struttura-tensione/trittico/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/trittico/canvas/01.webp",
-          "position": 16,
+          "position": 14,
           "description_en": "The Triptych unfolds as a sequence of three fragments that reveal a dense and layered plant landscape. Leaves, flowers and organic forms emerge from the aluminium through embossing, creating an interweaving of volumes that seem to emerge from the metal.\nThe reflective surface amplifies light and multiplies details, transforming each panel into a living space where the metal material takes on an almost natural quality. The three parts, though autonomous, dialogue with each other, constructing a continuous and immersive vision.\nThe work investigates what lies beyond the immediate gaze, suggesting the presence of a hidden world that slowly takes shape from matter."
         },
         {
@@ -567,7 +490,7 @@
             "struttura-tensione/lady/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/lady/canvas/01.webp",
-          "position": 17,
+          "position": 15,
           "description_en": "A female face emerges delicately from the surface of the aluminium, her eyes closed and her expression suspended in a dimension of stillness and contemplation. The figure is framed by a decorated archway that recalls the structure of sacred icons, creating a dialogue between iconographic tradition and contemporary sensibility.\nThe wreath of flowers enveloping the head introduces a natural and symbolic element, while the embossed work moulds the volumes lightly, allowing light to flow over the metal surface.\nThe work recalls the idea of a sacred and timeless image, where the female figure becomes a silent and contemplative presence."
         },
         {
@@ -602,7 +525,7 @@
             "struttura-tensione/pensiero/canvas/06.webp"
           ],
           "canvas": "struttura-tensione/pensiero/canvas/01.webp",
-          "position": 18,
+          "position": 16,
           "description_en": "This work represents an anatomical heart reinterpreted through the language of embossed sculpture on aluminium. The recognisable and universal form is translated into a metal surface that combines anatomical precision and material sensitivity.\nThe handwork generates slight variations on the surface, bringing out soft, pulsating volumes. Arteries and vascular branches cut through the metal like a vital network running through the structure, suggesting the invisible movement of flowing life.\nThe golden treatment amplifies the symbolic value of the organ: the heart is not only a biological element, but a place of emotions, memory and human identity. The metal material, rigid and resistant, is thus transformed into a shape that alludes to the fragility and strength of life.\nThrough the light gliding over the surface, the work renders the image of a heart suspended between scientific and emotional dimensions, where anatomy and symbol meet in a single form."
         },
         {
@@ -637,7 +560,7 @@
             "struttura-tensione/boes/canvas/06.webp"
           ],
           "canvas": "struttura-tensione/boes/canvas/01.webp",
-          "position": 19,
+          "position": 17,
           "description_en": "The work takes up the traditional mask of the Boes, a symbolic figure of the Sardinian carnival of Boes and Merdules. The taurine face, with its long curved horns, recalls the primordial strength of the animal and the deep connection with the pastoral world.\nMade of embossed and chiselled aluminium, the metal surface constructs the shape of the mask through incised lines, reliefs and openings that define the gaze and the essential features of the face.\nThrough metal, the popular tradition is reinterpreted in a contemporary key, keeping the symbolic power of this ancient ritual figure intact."
         },
         {
@@ -669,7 +592,7 @@
             "struttura-tensione/titolomarionette-ex-voto/canvas/05.webp"
           ],
           "canvas": "struttura-tensione/titolomarionette-ex-voto/canvas/01.webp",
-          "position": 20,
+          "position": 18,
           "description_en": "Two suspended figures, moved by thin wires, evoke the image of puppets and the delicate balance between control and freedom. The bodies, made of embossed and chiselled aluminium, take on an almost theatrical presence, as the protagonists of a silent scene.\nThe work recalls the language of votive offerings, where the human figure becomes a symbol of desires, fears and hopes entrusted to something greater.\nBetween irony and reflection, these puppets suggest the fragility of the human condition, suspended between personal will and invisible forces that guide our movement."
         },
         {
@@ -698,7 +621,7 @@
             "struttura-tensione/veliero/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/veliero/canvas/01.webp",
-          "position": 21,
+          "position": 19,
           "description_en": "A sailing ship advances through the waves with its sails unfurled, propelled by an invisible force.\nThe embossing of the aluminium shapes the surfaces of the sails and the bow, transforming the metal material into movement and tension.\nThe boat becomes a symbol of journey and quest, a passage between balance and challenge, between the stillness of the sea and the unknown of the horizon."
         },
         {
@@ -727,7 +650,7 @@
             "struttura-tensione/mare-in-tempesta/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/mare-in-tempesta/canvas/01.webp",
-          "position": 22,
+          "position": 20,
           "description_en": "In Mare in Tempesta, the movement of water is translated into a system of curvatures and compressions that organise the surface into a dynamic field of tension.\nThe undulations do not describe a landscape, but build a rhythmic structure based on layering and variation of relief. The vertical trajectory of the lightning bolt introduces a fracture line through the horizontal flow, interrupting its continuity and redefining the compositional balance.\nThe integration of resin and acrylic intensifies the perception of depth, transforming the surface into an active space where light and matter operate as building blocks."
         },
         {
@@ -753,7 +676,7 @@
             "struttura-tensione/oblo/canvas/03.webp"
           ],
           "canvas": "struttura-tensione/oblo/canvas/01.webp",
-          "position": 23,
+          "position": 21,
           "description_en": "Oblò constructs a marine vision enclosed within a circular frame reminiscent of a ship's porthole. The golden structure becomes a visual threshold through which the gaze opens onto a nocturnal landscape of sea, sky and moonlight.\nWithin the scene, made of cantilevered aluminium, a sailboat, a reef with a lighthouse and some suspended clouds emerge. The surface of the sea reflects the light, creating a pattern of reliefs that amplifies the movement of the water.\nThe work transforms metal into a small suspended landscape, where the reflective material builds a continuous dialogue between light, space and imagination."
         },
         {
@@ -782,7 +705,7 @@
             "struttura-tensione/giappone/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/giappone/canvas/01.webp",
-          "position": 24,
+          "position": 22,
           "description_en": "An essential landscape inspired by oriental aesthetics takes shape through the embossing of aluminium.\nMount Fuji emerges under a golden sun, while clouds and birds traverse a suspended, silent space.\nThe circular composition encloses the image as a contemplative vision, balancing nature, symbol and matter."
         },
         {
@@ -814,7 +737,7 @@
             "struttura-tensione/volo-d-argento/canvas/05.webp"
           ],
           "canvas": "struttura-tensione/volo-d-argento/canvas/01.webp",
-          "position": 25,
+          "position": 23,
           "description_en": "Volo d'Argento (Silver Flight) is an embossed sculpture on aluminium depicting a winged horse, a mythical figure that in this work takes on an essential and contemporary trait, but at the same time is a reminder of the mythological figure, reinterpreted with a clean, modern, unadorned stroke.\nThe sharp contours and stylised lines give shape to a creature suspended between strength and lightness, between matter and spirit.\nThe completely hand-treated aluminium reflects light, transforming itself depending on the viewing angle.\nWith a minimalist and timeless language, this creation evokes the overcoming of limits and the silent power of imagination.\nMetal, usually cold and rigid, here becomes a living surface, traversed by shapes that speak of momentum, freedom and the desire to go beyond limits."
         },
         {
@@ -852,7 +775,7 @@
             "struttura-tensione/nessu-dorma/canvas/07.webp"
           ],
           "canvas": "struttura-tensione/nessu-dorma/canvas/01.webp",
-          "position": 26,
+          "position": 24,
           "description_en": "The work is inspired by the famous aria 'Nessun Dorma' from Giacomo Puccini's opera Turandot. The silhouette of the violin emerges from the metal surface next to the music sheet, creating a visual dialogue between form, material and sound.\nMade of embossed and chiselled aluminium, the composition renders the elements of the instrument with precision and lightness, while the score fragment directly recalls the music that gives the work its title.\nThe image thus becomes a tribute to the evocative power of music, capable of crossing time and transforming itself into visual form."
         },
         {
@@ -875,397 +798,579 @@
             "struttura-tensione/l-unione/canvas/02.webp"
           ],
           "canvas": "struttura-tensione/l-unione/canvas/01.webp",
-          "position": 27,
+          "position": 25,
           "description_en": "A school of fish moves as a single organism, creating a circular composition that suggests movement, balance and cooperation. Each element retains its individuality, but it is in the relationship with the others that the whole takes shape.\nMade of embossed and chiselled aluminium, the fish build a visual rhythm across the metal surface, transforming the scene into a dynamic structure.\nThe work reflects on the value of collectivity: when individual presences move together, the strength of the group becomes greater than the sum of its parts."
+        }
+      ],
+      "subseries": [
+        {
+          "id": "tracce-di-memoria",
+          "name": "Tracce di memoria",
+          "year": "2026",
+          "description": "Oggetti e gesti quotidiani trattenuti nell'alluminio: ciò che di norma scompare — un'iniziale, una piega, una ferita, uno scarto — viene fissato nella materia e trasformato in memoria. Una serie di tracce, dove il segno effimero diventa forma permanente.",
+          "description_en": "Everyday objects and gestures held within the aluminium: what usually disappears — an initial, a fold, a wound, a discarded thing — is fixed in the material and turned into memory. A series of traces, where the ephemeral mark becomes a permanent form.",
+          "works": [
+            {
+              "id": "amore-tracce-di-memoria",
+              "title": "\"Amore\" Tracce di memoria",
+              "year": "2026",
+              "image": "struttura-tensione/amore-tracce-di-memoria/01.jpg",
+              "gallery": [
+                "struttura-tensione/amore-tracce-di-memoria/01.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/02.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/03.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/04.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/05.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/06.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/07.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/08.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/09.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/10.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/11.jpg",
+                "struttura-tensione/amore-tracce-di-memoria/12.jpg"
+              ],
+              "thumb": "struttura-tensione/amore-tracce-di-memoria/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/amore-tracce-di-memoria/thumb/01.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/02.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/03.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/04.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/05.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/06.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/07.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/08.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/09.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/10.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/11.webp",
+                "struttura-tensione/amore-tracce-di-memoria/thumb/12.webp"
+              ],
+              "canvas": "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/02.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/03.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/04.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/05.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/06.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/07.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/08.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/09.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/10.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/11.webp",
+                "struttura-tensione/amore-tracce-di-memoria/canvas/12.webp"
+              ],
+              "description": "Le iniziali incise segnano un’identità che esiste solo nel legame.\r\nL’amore non è rappresentato, ma trattenuto come traccia fragile su una superficie che conserva ciò che tende a scomparire.",
+              "description_en": "The engraved initials mark an identity that exists only within the bond.\nLove is not depicted but held as a fragile trace on a surface that preserves what tends to disappear.",
+              "position": 0
+            },
+            {
+              "id": "ferita-tracce-di-memoria",
+              "title": "\"Ferita\" Tracce di memoria",
+              "year": "2026",
+              "image": "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
+              "gallery": [
+                "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
+                "struttura-tensione/ferita-tracce-di-memoria/03.jpg",
+                "struttura-tensione/ferita-tracce-di-memoria/04.jpg",
+                "struttura-tensione/ferita-tracce-di-memoria/05.jpg",
+                "struttura-tensione/ferita-tracce-di-memoria/07.jpg"
+              ],
+              "thumb": "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/thumb/03.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/thumb/04.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/thumb/05.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp"
+              ],
+              "canvas": "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/canvas/03.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/canvas/04.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/canvas/05.webp",
+                "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp"
+              ],
+              "description": "La superficie non si ricompone mai del tutto.\nIl gesto del riparare non cancella la frattura, ma la trattiene visibile, trasformando la vulnerabilità in condizione permanente della forma.",
+              "description_en": "The surface never fully recomposes itself.\nThe act of mending does not erase the fracture but keeps it visible, turning vulnerability into a permanent condition of the form.",
+              "position": 1
+            },
+            {
+              "id": "status-tracce-di-memoria",
+              "title": "\"Status\" Tracce di memoria",
+              "year": "2026",
+              "image": "struttura-tensione/status-tracce-di-memoria/01.jpg",
+              "gallery": [
+                "struttura-tensione/status-tracce-di-memoria/01.jpg",
+                "struttura-tensione/status-tracce-di-memoria/02.jpg",
+                "struttura-tensione/status-tracce-di-memoria/03.jpg",
+                "struttura-tensione/status-tracce-di-memoria/04.jpg",
+                "struttura-tensione/status-tracce-di-memoria/05.jpg",
+                "struttura-tensione/status-tracce-di-memoria/06.jpg",
+                "struttura-tensione/status-tracce-di-memoria/07.jpg",
+                "struttura-tensione/status-tracce-di-memoria/08.jpg"
+              ],
+              "thumb": "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/02.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/03.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/04.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/06.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/07.webp",
+                "struttura-tensione/status-tracce-di-memoria/thumb/08.webp"
+              ],
+              "canvas": "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/02.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/03.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/04.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/06.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/07.webp",
+                "struttura-tensione/status-tracce-di-memoria/canvas/08.webp"
+              ],
+              "description": "Le pieghe ordinate costruiscono un’immagine di controllo e riconoscibilità.\nSotto l’apparenza di equilibrio emerge una tensione sottile, dove la forma sociale si rivela come costruzione instabile.",
+              "description_en": "The orderly folds construct an image of control and recognisability.\nBeneath the appearance of balance a subtle tension emerges, where the social form reveals itself as an unstable construction.",
+              "position": 2
+            },
+            {
+              "id": "lavoro-tracce-di-memoria",
+              "title": "\"Lavoro\" Tracce di memoria",
+              "year": "2026",
+              "image": "struttura-tensione/lavoro-tracce-di-memoria/01.jpg",
+              "gallery": [
+                "struttura-tensione/lavoro-tracce-di-memoria/01.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/02.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/03.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/04.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/05.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/06.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/07.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/08.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/09.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/10.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/11.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/12.jpg",
+                "struttura-tensione/lavoro-tracce-di-memoria/13.jpg"
+              ],
+              "thumb": "struttura-tensione/lavoro-tracce-di-memoria/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/01.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/02.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/03.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/04.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/05.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/06.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/07.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/08.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/09.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/10.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/11.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/12.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/thumb/13.webp"
+              ],
+              "canvas": "struttura-tensione/lavoro-tracce-di-memoria/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/01.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/02.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/03.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/04.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/05.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/06.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/07.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/08.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/09.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/10.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/11.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/12.webp",
+                "struttura-tensione/lavoro-tracce-di-memoria/canvas/13.webp"
+              ],
+              "description": "La materia porta il peso della ripetizione e dell’uso.\r\nIl lavoro si deposita come ritmo silenzioso che modella la forma e definisce, nel tempo, una struttura di resistenza.",
+              "description_en": "The material carries the weight of repetition and use.\nLabour settles like a silent rhythm that shapes the form and, over time, defines a structure of resistance.",
+              "position": 3
+            },
+            {
+              "id": "kleenex-tracce-di-memoria",
+              "title": "\"Kleenex\" Tracce di memoria",
+              "year": "2026",
+              "image": "struttura-tensione/kleenex-tracce-di-memoria/01.jpg",
+              "gallery": [
+                "struttura-tensione/kleenex-tracce-di-memoria/01.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/02.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/03.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/04.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/05.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/06.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/07.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/08.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/09.jpg",
+                "struttura-tensione/kleenex-tracce-di-memoria/10.jpg"
+              ],
+              "thumb": "struttura-tensione/kleenex-tracce-di-memoria/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/01.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/02.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/03.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/04.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/05.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/06.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/07.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/08.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/09.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/thumb/10.webp"
+              ],
+              "canvas": "struttura-tensione/kleenex-tracce-di-memoria/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/01.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/02.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/03.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/04.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/05.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/06.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/07.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/08.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/09.webp",
+                "struttura-tensione/kleenex-tracce-di-memoria/canvas/10.webp"
+              ],
+              "description": "Un oggetto destinato alla cancellazione viene sottratto alla sua funzione effimera e reso duraturo.\r\nIl gesto più automatico del quotidiano si fissa nella materia, interrompendo la logica dello scarto e della dimenticanza.",
+              "description_en": "An object destined to be discarded is removed from its ephemeral function and made enduring.\nThe most automatic gesture of everyday life becomes fixed in the material, interrupting the logic of waste and forgetting.",
+              "position": 4
+            }
+          ],
+          "position": -0.8,
+          "cover": "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp"
         },
         {
-          "id": "amore-tracce-di-memoria",
-          "title": "\"Amore\" Tracce di memoria",
-          "year": "2026",
-          "image": "struttura-tensione/amore-tracce-di-memoria/01.jpg",
-          "gallery": [
-            "struttura-tensione/amore-tracce-di-memoria/01.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/02.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/03.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/04.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/05.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/06.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/07.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/08.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/09.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/10.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/11.jpg",
-            "struttura-tensione/amore-tracce-di-memoria/12.jpg"
+          "id": "serie-ombra-della-luce",
+          "name": "Serie ombra della luce",
+          "year": "2022–2026",
+          "description": "L'ombra della luce e le sue variazioni: l'opera originale e quattro declinazioni successive che ne riprendono il gesto centrale — la faglia, il passaggio dall'ombra alla luce — esplorandolo in forme, materie e tensioni diverse.",
+          "description_en": "The Shadow of Light and its variations: the original work alongside four subsequent interpretations that take up its central gesture — the fault, the passage from shadow to light — exploring it in different forms, materials and tensions.",
+          "works": [
+            {
+              "id": "lombra-della-luce-variazione-i",
+              "title": "L'ombra della luce, variazione I",
+              "year": "2026",
+              "image": "struttura-tensione/lombra-della-luce-variazione-i/01.jpg",
+              "gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-i/01.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-i/02.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-i/03.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-i/04.jpg"
+              ],
+              "thumb": "struttura-tensione/lombra-della-luce-variazione-i/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-i/thumb/01.webp",
+                "struttura-tensione/lombra-della-luce-variazione-i/thumb/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-i/thumb/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-i/thumb/04.webp"
+              ],
+              "canvas": "struttura-tensione/lombra-della-luce-variazione-i/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-i/canvas/01.webp",
+                "struttura-tensione/lombra-della-luce-variazione-i/canvas/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-i/canvas/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-i/canvas/04.webp"
+              ],
+              "description": "",
+              "position": 0
+            },
+            {
+              "id": "lombra-della-luce-variazione-ii",
+              "title": "L'ombra della luce, variazione II",
+              "year": "2026",
+              "image": "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
+              "gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-ii/03.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-ii/04.jpg"
+              ],
+              "thumb": "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
+              "thumb_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-ii/thumb/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-ii/thumb/04.webp"
+              ],
+              "canvas": "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
+              "canvas_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-ii/canvas/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-ii/canvas/04.webp"
+              ],
+              "description": "",
+              "position": 1
+            },
+            {
+              "id": "lombra-della-luce-variazione-iii",
+              "title": "L'ombra della luce, variazione III",
+              "year": "2026",
+              "image": "struttura-tensione/lombra-della-luce-variazione-iii/01.jpg",
+              "gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-iii/01.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iii/02.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iii/03.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iii/04.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iii/05.jpg"
+              ],
+              "thumb": "struttura-tensione/lombra-della-luce-variazione-iii/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-iii/thumb/01.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/thumb/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/thumb/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/thumb/04.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/thumb/05.webp"
+              ],
+              "canvas": "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/canvas/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/canvas/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/canvas/04.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iii/canvas/05.webp"
+              ],
+              "description": "",
+              "position": 2
+            },
+            {
+              "id": "lombra-della-luce-variazione-iv",
+              "title": "L'ombra della luce, variazione IV",
+              "year": "2026",
+              "image": "struttura-tensione/lombra-della-luce-variazione-iv/01.jpg",
+              "gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-iv/01.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iv/02.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iv/03.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iv/04.jpg",
+                "struttura-tensione/lombra-della-luce-variazione-iv/05.jpg"
+              ],
+              "thumb": "struttura-tensione/lombra-della-luce-variazione-iv/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-iv/thumb/01.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/thumb/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/thumb/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/thumb/04.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/thumb/05.webp"
+              ],
+              "canvas": "struttura-tensione/lombra-della-luce-variazione-iv/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/lombra-della-luce-variazione-iv/canvas/01.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/canvas/02.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/canvas/03.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/canvas/04.webp",
+                "struttura-tensione/lombra-della-luce-variazione-iv/canvas/05.webp"
+              ],
+              "description": "",
+              "position": 3
+            },
+            {
+              "id": "lombra-della-luce",
+              "title": "L'ombra della luce",
+              "year": "",
+              "image": "struttura-tensione/lombra-della-luce/01.jpg",
+              "gallery": [
+                "struttura-tensione/lombra-della-luce/01.jpg",
+                "struttura-tensione/lombra-della-luce/02.jpeg",
+                "struttura-tensione/lombra-della-luce/03.jpg",
+                "struttura-tensione/lombra-della-luce/04.jpg",
+                "struttura-tensione/lombra-della-luce/05.jpg",
+                "struttura-tensione/lombra-della-luce/06.jpeg",
+                "struttura-tensione/lombra-della-luce/07.jpg",
+                "struttura-tensione/lombra-della-luce/08.jpeg",
+                "struttura-tensione/lombra-della-luce/09.jpg",
+                "struttura-tensione/lombra-della-luce/10.jpg",
+                "struttura-tensione/lombra-della-luce/11.jpg",
+                "struttura-tensione/lombra-della-luce/12.jpeg",
+                "struttura-tensione/lombra-della-luce/13.jpeg",
+                "struttura-tensione/lombra-della-luce/14.jpeg"
+              ],
+              "description": "L’Ombra della Luce nasce dall’idea che una frattura possa diventare un passaggio. La superficie dell’alluminio è incisa da una faglia centrale che attraversa l’opera e dalla quale emerge vapore reale, prodotto da un nebulizzatore nascosto all’interno della struttura cava.\n\nLa composizione si sviluppa tra due paesaggi: una terra arida e fessurata, lavorata a sbalzo su lastra sottile, e un cielo tenue realizzato con velature acriliche e resina. La frattura non divide questi due spazi, ma li mette in relazione, trasformando la ferita in una soglia.\n\nL’opera integra materia, luce e presenza effimera del vapore, creando un paesaggio interiore in cui ciò che appare come rottura diventa possibilità di trasformazione.\n\nIl titolo è un omaggio a Franco Battiato e alla sua visione spirituale del passaggio dall’ombra alla luce.",
+              "thumb_gallery": [
+                "struttura-tensione/lombra-della-luce/thumb/01.webp",
+                "struttura-tensione/lombra-della-luce/thumb/02.webp",
+                "struttura-tensione/lombra-della-luce/thumb/03.webp",
+                "struttura-tensione/lombra-della-luce/thumb/04.webp",
+                "struttura-tensione/lombra-della-luce/thumb/05.webp",
+                "struttura-tensione/lombra-della-luce/thumb/06.webp",
+                "struttura-tensione/lombra-della-luce/thumb/07.webp",
+                "struttura-tensione/lombra-della-luce/thumb/08.webp",
+                "struttura-tensione/lombra-della-luce/thumb/09.webp",
+                "struttura-tensione/lombra-della-luce/thumb/10.webp",
+                "struttura-tensione/lombra-della-luce/thumb/11.webp",
+                "struttura-tensione/lombra-della-luce/thumb/12.webp",
+                "struttura-tensione/lombra-della-luce/thumb/13.webp",
+                "struttura-tensione/lombra-della-luce/thumb/14.webp"
+              ],
+              "thumb": "struttura-tensione/lombra-della-luce/thumb/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/lombra-della-luce/canvas/01.webp",
+                "struttura-tensione/lombra-della-luce/canvas/02.webp",
+                "struttura-tensione/lombra-della-luce/canvas/03.webp",
+                "struttura-tensione/lombra-della-luce/canvas/04.webp",
+                "struttura-tensione/lombra-della-luce/canvas/05.webp",
+                "struttura-tensione/lombra-della-luce/canvas/06.webp",
+                "struttura-tensione/lombra-della-luce/canvas/07.webp",
+                "struttura-tensione/lombra-della-luce/canvas/08.webp",
+                "struttura-tensione/lombra-della-luce/canvas/09.webp",
+                "struttura-tensione/lombra-della-luce/canvas/10.webp",
+                "struttura-tensione/lombra-della-luce/canvas/11.webp",
+                "struttura-tensione/lombra-della-luce/canvas/12.webp",
+                "struttura-tensione/lombra-della-luce/canvas/13.webp",
+                "struttura-tensione/lombra-della-luce/canvas/14.webp"
+              ],
+              "canvas": "struttura-tensione/lombra-della-luce/canvas/01.webp",
+              "position": 4,
+              "description_en": "The Shadow of Light stems from the idea that a fracture can become a passage. The surface of the aluminium is incised by a central fault that runs through the work and from which real steam emerges, produced by a nebuliser hidden inside the hollow structure.\nThe composition develops between two landscapes: a dry, cracked earth, embossed on a thin slab, and a soft sky made of acrylic glazes and resin. The fracture does not divide these two spaces, but relates them, transforming the wound into a threshold.\nThe work integrates matter, light and the ephemeral presence of steam, creating an inner landscape in which what appears as a rupture becomes a possibility for transformation.\nThe title is a tribute to Franco Battiato and his spiritual vision of the passage from shadow to light."
+            }
           ],
-          "thumb": "struttura-tensione/amore-tracce-di-memoria/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/amore-tracce-di-memoria/thumb/01.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/02.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/03.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/04.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/05.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/06.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/07.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/08.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/09.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/10.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/11.webp",
-            "struttura-tensione/amore-tracce-di-memoria/thumb/12.webp"
-          ],
-          "canvas": "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/02.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/03.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/04.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/05.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/06.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/07.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/08.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/09.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/10.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/11.webp",
-            "struttura-tensione/amore-tracce-di-memoria/canvas/12.webp"
-          ],
-          "description": "Le iniziali incise segnano un’identità che esiste solo nel legame.\r\nL’amore non è rappresentato, ma trattenuto come traccia fragile su una superficie che conserva ciò che tende a scomparire.",
-          "description_en": "The engraved initials mark an identity that exists only within the bond.\nLove is not depicted but held as a fragile trace on a surface that preserves what tends to disappear."
+          "position": 0.1,
+          "cover": "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp"
         },
         {
-          "id": "ferita-tracce-di-memoria",
-          "title": "\"Ferita\" Tracce di memoria",
-          "year": "2026",
-          "image": "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
-          "gallery": [
-            "struttura-tensione/ferita-tracce-di-memoria/01.jpg",
-            "struttura-tensione/ferita-tracce-di-memoria/03.jpg",
-            "struttura-tensione/ferita-tracce-di-memoria/04.jpg",
-            "struttura-tensione/ferita-tracce-di-memoria/05.jpg",
-            "struttura-tensione/ferita-tracce-di-memoria/07.jpg"
+          "id": "geometria",
+          "name": "Geometria",
+          "year": "2022–2026",
+          "description": "Forme geometriche e strutture modulari nell'alluminio: cubi, sfere, equilibri e fratture si compongono come esercizi di tensione e ordine, dove la materia diventa campo di costruzione e ritmo.",
+          "description_en": "Geometric forms and modular structures in aluminium: cubes, spheres, balances and fractures compose as exercises in tension and order, where the material becomes a field of construction and rhythm.",
+          "works": [
+            {
+              "id": "cubi",
+              "title": "Cubi",
+              "year": "",
+              "image": "struttura-tensione/cubi/01.jpg",
+              "gallery": [
+                "struttura-tensione/cubi/01.jpg",
+                "struttura-tensione/cubi/02.jpg",
+                "struttura-tensione/cubi/03.jpg",
+                "struttura-tensione/cubi/04.jpg",
+                "struttura-tensione/cubi/05.jpg"
+              ],
+              "description": "Cubi nasce da una lavorazione a sbalzo su alluminio organizzata secondo una struttura modulare ripetuta.\n\nLa superficie è costruita attraverso pieghe e rilievi che generano un’alternanza di pieni e rientranze, creando un effetto di profondità variabile a seconda della luce. Gli inserti interrompono la continuità metallica e rafforzano la percezione del ritmo geometrico.\n\nL’opera si sviluppa come sistema ordinato, dove la ripetizione non è decorativa ma costruttiva, e la variazione luminosa diventa parte attiva della composizione.",
+              "thumb_gallery": [
+                "struttura-tensione/cubi/thumb/01.webp",
+                "struttura-tensione/cubi/thumb/02.webp",
+                "struttura-tensione/cubi/thumb/03.webp",
+                "struttura-tensione/cubi/thumb/04.webp",
+                "struttura-tensione/cubi/thumb/05.webp"
+              ],
+              "thumb": "struttura-tensione/cubi/thumb/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/cubi/canvas/01.webp",
+                "struttura-tensione/cubi/canvas/02.webp",
+                "struttura-tensione/cubi/canvas/03.webp",
+                "struttura-tensione/cubi/canvas/04.webp",
+                "struttura-tensione/cubi/canvas/05.webp"
+              ],
+              "canvas": "struttura-tensione/cubi/canvas/01.webp",
+              "position": 0,
+              "description_en": "Cubes originates from a cantilevered aluminium work organised according to a repeated modular structure.\nThe surface is constructed through folds and reliefs that generate an alternation of solids and recesses, creating an effect of varying depth depending on the light. The inserts interrupt the metallic continuity and reinforce the perception of geometric rhythm.\nThe work develops as an ordered system, where repetition is not decorative but constructive, and light variation becomes an active part of the composition."
+            },
+            {
+              "id": "equilibrio-fratturato",
+              "title": "Equilibrio fratturato",
+              "year": "",
+              "image": "struttura-tensione/equilibrio-fratturato/01.jpg",
+              "gallery": [
+                "struttura-tensione/equilibrio-fratturato/01.jpg",
+                "struttura-tensione/equilibrio-fratturato/02.jpg",
+                "struttura-tensione/equilibrio-fratturato/03.jpg",
+                "struttura-tensione/equilibrio-fratturato/04.jpg",
+                "struttura-tensione/equilibrio-fratturato/05.jpg",
+                "struttura-tensione/equilibrio-fratturato/06.jpg",
+                "struttura-tensione/equilibrio-fratturato/07.jpg"
+              ],
+              "description": "Equilibrio Fratturato esplora la tensione tra stabilità e rottura attraverso una struttura composta da forme geometriche che si intersecano e si spingono reciprocamente nello spazio della superficie metallica.\n\nLe forme triangolari, modellate a sbalzo sull’alluminio, emergono dal piano creando volumi netti e inclinati che suggeriscono un equilibrio dinamico e precario. Tra questi elementi strutturali, la superficie è attraversata da una trama fitta di incisioni realizzate a bulino, che costruiscono un tessuto di linee capace di catturare e frammentare la luce.\n\nIl contrasto tra le superfici lisce dei volumi e la densità segnica del fondo genera una tensione visiva continua, trasformando il metallo in un campo vibrante dove ordine e frattura convivono.",
+              "thumb_gallery": [
+                "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
+                "struttura-tensione/equilibrio-fratturato/thumb/02.webp",
+                "struttura-tensione/equilibrio-fratturato/thumb/03.webp",
+                "struttura-tensione/equilibrio-fratturato/thumb/04.webp",
+                "struttura-tensione/equilibrio-fratturato/thumb/05.webp",
+                "struttura-tensione/equilibrio-fratturato/thumb/06.webp",
+                "struttura-tensione/equilibrio-fratturato/thumb/07.webp"
+              ],
+              "thumb": "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
+                "struttura-tensione/equilibrio-fratturato/canvas/02.webp",
+                "struttura-tensione/equilibrio-fratturato/canvas/03.webp",
+                "struttura-tensione/equilibrio-fratturato/canvas/04.webp",
+                "struttura-tensione/equilibrio-fratturato/canvas/05.webp",
+                "struttura-tensione/equilibrio-fratturato/canvas/06.webp",
+                "struttura-tensione/equilibrio-fratturato/canvas/07.webp"
+              ],
+              "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
+              "position": 1,
+              "description_en": "Fractured Balance explores the tension between stability and rupture through a structure composed of geometric shapes that intersect and push each other through the space of the metal surface.\nThe triangular shapes, modelled cantilevered on aluminium, emerge from the plane, creating sharp, sloping volumes that suggest a dynamic and precarious balance. Between these structural elements, the surface is criss-crossed by a dense pattern of engravings made by burin, which build a fabric of lines capable of capturing and fragmenting light.\nThe contrast between the smooth surfaces of the volumes and the sign density of the background generates a continuous visual tension, transforming the metal into a vibrant field where order and fracture coexist."
+            },
+            {
+              "id": "sfera",
+              "title": "Sfera",
+              "year": "",
+              "image": "struttura-tensione/sfera/01.jpg",
+              "gallery": [
+                "struttura-tensione/sfera/01.jpg",
+                "struttura-tensione/sfera/02.jpg",
+                "struttura-tensione/sfera/03.jpg",
+                "struttura-tensione/sfera/04.jpg",
+                "struttura-tensione/sfera/05.jpg",
+                "struttura-tensione/sfera/06.jpg",
+                "struttura-tensione/sfera/07.jpg"
+              ],
+              "description": "Sfera è costruita attraverso una sequenza regolare di rilievi circolari ottenuti con la lavorazione a sbalzo su alluminio.\n\nLa ripetizione degli elementi genera una superficie modulare che, concentrandosi al centro, costruisce il volume della forma sferica. Il contrasto tra la sfera centrale e il fondo piatto rafforza la percezione della tridimensionalità.\n\nLa luce scorre sulle superfici metalliche mettendo in evidenza il ritmo della texture e la costruzione geometrica della forma.",
+              "thumb_gallery": [
+                "struttura-tensione/sfera/thumb/01.webp",
+                "struttura-tensione/sfera/thumb/02.webp",
+                "struttura-tensione/sfera/thumb/03.webp",
+                "struttura-tensione/sfera/thumb/04.webp",
+                "struttura-tensione/sfera/thumb/05.webp",
+                "struttura-tensione/sfera/thumb/06.webp",
+                "struttura-tensione/sfera/thumb/07.webp"
+              ],
+              "thumb": "struttura-tensione/sfera/thumb/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/sfera/canvas/01.webp",
+                "struttura-tensione/sfera/canvas/02.webp",
+                "struttura-tensione/sfera/canvas/03.webp",
+                "struttura-tensione/sfera/canvas/04.webp",
+                "struttura-tensione/sfera/canvas/05.webp",
+                "struttura-tensione/sfera/canvas/06.webp",
+                "struttura-tensione/sfera/canvas/07.webp"
+              ],
+              "canvas": "struttura-tensione/sfera/canvas/01.webp",
+              "position": 2,
+              "description_en": "Sfera is constructed through a regular sequence of circular reliefs obtained by embossing on aluminium.\nThe repetition of the elements generates a modular surface that, concentrating in the centre, builds up the volume of the spherical form. The contrast between the central sphere and the flat bottom reinforces the perception of three-dimensionality.\nThe light flows over the metal surfaces, highlighting the rhythm of the texture and the geometric construction of the form."
+            },
+            {
+              "id": "soglia",
+              "title": "Soglia",
+              "year": "2026",
+              "image": "struttura-tensione/soglia/01.jpg",
+              "gallery": [
+                "struttura-tensione/soglia/01.jpg",
+                "struttura-tensione/soglia/02.jpg",
+                "struttura-tensione/soglia/03.jpg"
+              ],
+              "thumb": "struttura-tensione/soglia/thumb/01.webp",
+              "thumb_gallery": [
+                "struttura-tensione/soglia/thumb/01.webp",
+                "struttura-tensione/soglia/thumb/02.webp",
+                "struttura-tensione/soglia/thumb/03.webp"
+              ],
+              "canvas": "struttura-tensione/soglia/canvas/01.webp",
+              "canvas_gallery": [
+                "struttura-tensione/soglia/canvas/01.webp",
+                "struttura-tensione/soglia/canvas/02.webp",
+                "struttura-tensione/soglia/canvas/03.webp"
+              ],
+              "description": "",
+              "position": 3
+            }
           ],
-          "thumb": "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/ferita-tracce-di-memoria/thumb/01.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/thumb/03.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/thumb/04.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/thumb/05.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/thumb/07.webp"
-          ],
-          "canvas": "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/ferita-tracce-di-memoria/canvas/01.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/canvas/03.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/canvas/04.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/canvas/05.webp",
-            "struttura-tensione/ferita-tracce-di-memoria/canvas/07.webp"
-          ],
-          "description": "La superficie non si ricompone mai del tutto.\nIl gesto del riparare non cancella la frattura, ma la trattiene visibile, trasformando la vulnerabilità in condizione permanente della forma.",
-          "description_en": "The surface never fully recomposes itself.\nThe act of mending does not erase the fracture but keeps it visible, turning vulnerability into a permanent condition of the form."
-        },
-        {
-          "id": "status-tracce-di-memoria",
-          "title": "\"Status\" Tracce di memoria",
-          "year": "2026",
-          "image": "struttura-tensione/status-tracce-di-memoria/01.jpg",
-          "gallery": [
-            "struttura-tensione/status-tracce-di-memoria/01.jpg",
-            "struttura-tensione/status-tracce-di-memoria/02.jpg",
-            "struttura-tensione/status-tracce-di-memoria/03.jpg",
-            "struttura-tensione/status-tracce-di-memoria/04.jpg",
-            "struttura-tensione/status-tracce-di-memoria/05.jpg",
-            "struttura-tensione/status-tracce-di-memoria/06.jpg",
-            "struttura-tensione/status-tracce-di-memoria/07.jpg",
-            "struttura-tensione/status-tracce-di-memoria/08.jpg"
-          ],
-          "thumb": "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/status-tracce-di-memoria/thumb/01.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/02.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/03.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/04.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/05.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/06.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/07.webp",
-            "struttura-tensione/status-tracce-di-memoria/thumb/08.webp"
-          ],
-          "canvas": "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/status-tracce-di-memoria/canvas/01.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/02.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/03.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/04.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/05.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/06.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/07.webp",
-            "struttura-tensione/status-tracce-di-memoria/canvas/08.webp"
-          ],
-          "description": "Le pieghe ordinate costruiscono un’immagine di controllo e riconoscibilità.\nSotto l’apparenza di equilibrio emerge una tensione sottile, dove la forma sociale si rivela come costruzione instabile.",
-          "description_en": "The orderly folds construct an image of control and recognisability.\nBeneath the appearance of balance a subtle tension emerges, where the social form reveals itself as an unstable construction."
-        },
-        {
-          "id": "lavoro-tracce-di-memoria",
-          "title": "\"Lavoro\" Tracce di memoria",
-          "year": "2026",
-          "image": "struttura-tensione/lavoro-tracce-di-memoria/01.jpg",
-          "gallery": [
-            "struttura-tensione/lavoro-tracce-di-memoria/01.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/02.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/03.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/04.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/05.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/06.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/07.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/08.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/09.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/10.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/11.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/12.jpg",
-            "struttura-tensione/lavoro-tracce-di-memoria/13.jpg"
-          ],
-          "thumb": "struttura-tensione/lavoro-tracce-di-memoria/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/01.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/02.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/03.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/04.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/05.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/06.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/07.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/08.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/09.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/10.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/11.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/12.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/thumb/13.webp"
-          ],
-          "canvas": "struttura-tensione/lavoro-tracce-di-memoria/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/01.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/02.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/03.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/04.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/05.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/06.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/07.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/08.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/09.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/10.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/11.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/12.webp",
-            "struttura-tensione/lavoro-tracce-di-memoria/canvas/13.webp"
-          ],
-          "description": "La materia porta il peso della ripetizione e dell’uso.\r\nIl lavoro si deposita come ritmo silenzioso che modella la forma e definisce, nel tempo, una struttura di resistenza.",
-          "description_en": "The material carries the weight of repetition and use.\nLabour settles like a silent rhythm that shapes the form and, over time, defines a structure of resistance."
-        },
-        {
-          "id": "kleenex-tracce-di-memoria",
-          "title": "\"Kleenex\" Tracce di memoria",
-          "year": "2026",
-          "image": "struttura-tensione/kleenex-tracce-di-memoria/01.jpg",
-          "gallery": [
-            "struttura-tensione/kleenex-tracce-di-memoria/01.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/02.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/03.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/04.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/05.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/06.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/07.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/08.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/09.jpg",
-            "struttura-tensione/kleenex-tracce-di-memoria/10.jpg"
-          ],
-          "thumb": "struttura-tensione/kleenex-tracce-di-memoria/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/01.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/02.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/03.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/04.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/05.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/06.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/07.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/08.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/09.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/thumb/10.webp"
-          ],
-          "canvas": "struttura-tensione/kleenex-tracce-di-memoria/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/01.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/02.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/03.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/04.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/05.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/06.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/07.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/08.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/09.webp",
-            "struttura-tensione/kleenex-tracce-di-memoria/canvas/10.webp"
-          ],
-          "description": "Un oggetto destinato alla cancellazione viene sottratto alla sua funzione effimera e reso duraturo.\r\nIl gesto più automatico del quotidiano si fissa nella materia, interrompendo la logica dello scarto e della dimenticanza.",
-          "description_en": "An object destined to be discarded is removed from its ephemeral function and made enduring.\nThe most automatic gesture of everyday life becomes fixed in the material, interrupting the logic of waste and forgetting."
-        },
-        {
-          "id": "lombra-della-luce-variazione-i",
-          "title": "L'ombra della luce, variazione I",
-          "year": "2026",
-          "image": "struttura-tensione/lombra-della-luce-variazione-i/01.jpg",
-          "gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-i/01.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-i/02.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-i/03.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-i/04.jpg"
-          ],
-          "thumb": "struttura-tensione/lombra-della-luce-variazione-i/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-i/thumb/01.webp",
-            "struttura-tensione/lombra-della-luce-variazione-i/thumb/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-i/thumb/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-i/thumb/04.webp"
-          ],
-          "canvas": "struttura-tensione/lombra-della-luce-variazione-i/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-i/canvas/01.webp",
-            "struttura-tensione/lombra-della-luce-variazione-i/canvas/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-i/canvas/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-i/canvas/04.webp"
-          ],
-          "description": ""
-        },
-        {
-          "id": "lombra-della-luce-variazione-ii",
-          "title": "L'ombra della luce, variazione II",
-          "year": "2026",
-          "image": "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
-          "gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-ii/02.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-ii/03.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-ii/04.jpg"
-          ],
-          "thumb": "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
-          "thumb_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-ii/thumb/04.webp"
-          ],
-          "canvas": "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-ii/canvas/04.webp"
-          ],
-          "description": ""
-        },
-        {
-          "id": "lombra-della-luce-variazione-iii",
-          "title": "L'ombra della luce, variazione III",
-          "year": "2026",
-          "image": "struttura-tensione/lombra-della-luce-variazione-iii/01.jpg",
-          "gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-iii/01.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iii/02.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iii/03.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iii/04.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iii/05.jpg"
-          ],
-          "thumb": "struttura-tensione/lombra-della-luce-variazione-iii/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/01.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/04.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/thumb/05.webp"
-          ],
-          "canvas": "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/04.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iii/canvas/05.webp"
-          ],
-          "description": ""
-        },
-        {
-          "id": "lombra-della-luce-variazione-iv",
-          "title": "L'ombra della luce, variazione IV",
-          "year": "2026",
-          "image": "struttura-tensione/lombra-della-luce-variazione-iv/01.jpg",
-          "gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-iv/01.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iv/02.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iv/03.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iv/04.jpg",
-            "struttura-tensione/lombra-della-luce-variazione-iv/05.jpg"
-          ],
-          "thumb": "struttura-tensione/lombra-della-luce-variazione-iv/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/01.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/04.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/thumb/05.webp"
-          ],
-          "canvas": "struttura-tensione/lombra-della-luce-variazione-iv/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/01.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/02.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/03.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/04.webp",
-            "struttura-tensione/lombra-della-luce-variazione-iv/canvas/05.webp"
-          ],
-          "description": ""
-        },
-        {
-          "id": "frattura",
-          "title": "Frattura",
-          "year": "2026",
-          "image": "struttura-tensione/frattura/01.jpg",
-          "gallery": [
-            "struttura-tensione/frattura/01.jpg",
-            "struttura-tensione/frattura/02.jpg",
-            "struttura-tensione/frattura/03.jpg",
-            "struttura-tensione/frattura/04.jpg",
-            "struttura-tensione/frattura/05.jpg"
-          ],
-          "thumb": "struttura-tensione/frattura/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/frattura/thumb/01.webp",
-            "struttura-tensione/frattura/thumb/02.webp",
-            "struttura-tensione/frattura/thumb/03.webp",
-            "struttura-tensione/frattura/thumb/04.webp",
-            "struttura-tensione/frattura/thumb/05.webp"
-          ],
-          "canvas": "struttura-tensione/frattura/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/frattura/canvas/01.webp",
-            "struttura-tensione/frattura/canvas/02.webp",
-            "struttura-tensione/frattura/canvas/03.webp",
-            "struttura-tensione/frattura/canvas/04.webp",
-            "struttura-tensione/frattura/canvas/05.webp"
-          ],
-          "description": ""
-        },
-        {
-          "id": "soglia",
-          "title": "Soglia",
-          "year": "2026",
-          "image": "struttura-tensione/soglia/01.jpg",
-          "gallery": [
-            "struttura-tensione/soglia/01.jpg",
-            "struttura-tensione/soglia/02.jpg",
-            "struttura-tensione/soglia/03.jpg"
-          ],
-          "thumb": "struttura-tensione/soglia/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/soglia/thumb/01.webp",
-            "struttura-tensione/soglia/thumb/02.webp",
-            "struttura-tensione/soglia/thumb/03.webp"
-          ],
-          "canvas": "struttura-tensione/soglia/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/soglia/canvas/01.webp",
-            "struttura-tensione/soglia/canvas/02.webp",
-            "struttura-tensione/soglia/canvas/03.webp"
-          ],
-          "description": ""
+          "position": -0.9,
+          "cover": "struttura-tensione/cubi/canvas/01.webp"
         }
       ]
     },

@@ -272,12 +272,24 @@ async function go(view, params={}) {
   else if (view === 'edit')      await renderEdit(c, params.s, params.w);
 }
 
+// Tutte le opere di una serie: main + sotto-serie, deduplicate per id (un'opera
+// può comparire sia in main che in una sotto-serie — es. "L'ombra della luce").
+function allSerieWorks(s) {
+  const seen = new Set();
+  const out = [];
+  for (const w of (s.works||[])) { if (!seen.has(w.id)) { seen.add(w.id); out.push(w); } }
+  for (const sub of (s.subseries||[])) {
+    for (const w of (sub.works||[])) { if (!seen.has(w.id)) { seen.add(w.id); out.push(w); } }
+  }
+  return out;
+}
+
 async function loadData() {
   appData = await api('/api/data');
   const el = document.getElementById('sb-total');
   if (el) {
     let t = 0;
-    appData.series.forEach(s => t += s.works.length);
+    appData.series.forEach(s => t += allSerieWorks(s).length);
     el.textContent = t;
   }
   return appData;
@@ -288,10 +300,10 @@ async function loadData() {
 async function renderDashboard(c) {
   const d = await loadData();
   let total = 0;
-  d.series.forEach(s => total += s.works.length);
+  d.series.forEach(s => total += allSerieWorks(s).length);
 
   const recent = [];
-  d.series.forEach(s => s.works.forEach(w => recent.push({...w, sn:s.name, si:s.id})));
+  d.series.forEach(s => allSerieWorks(s).forEach(w => recent.push({...w, sn:s.name, si:s.id})));
 
   c.innerHTML = `
     <div class="lbl">Gestionale</div>
@@ -302,7 +314,7 @@ async function renderDashboard(c) {
       <div class="stat"><div class="n">${total}</div><div class="l">Opere totali</div></div>
       ${d.series.map(s => `
         <div class="stat" style="cursor:pointer" onclick="go('works')">
-          <div class="n">${s.works.length}</div>
+          <div class="n">${allSerieWorks(s).length}</div>
           <div class="l">${h(s.name)}</div>
         </div>`).join('')}
     </div>
@@ -341,26 +353,13 @@ async function renderWorks(c) {
     </div>
     <div class="rule"></div>`;
 
-  for (const s of d.series) {
-    html += `
-      <div class="reorder-controls ${reorderMode[s.id] ? '' : 'hidden'}" id="rc-${h(s.id)}">
-        <button class="btn btn-ghost" onclick="saveReorder('${h(s.id)}')">✓ Salva ordine</button>
-        <button class="btn btn-ghost" onclick="cancelReorder('${h(s.id)}')">✕ Annulla</button>
-        <span style="color:var(--text2);font-size:.85rem;font-style:italic">Trascinando per riordinare le opere</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:baseline">
-        <div class="serie-lbl">${h(s.name)} — ${s.works.length} opere</div>
-        <button class="btn btn-ghost" id="btn-reorder-${h(s.id)}" style="padding:.3rem .7rem;font-size:9px" onclick="toggleReorderMode('${h(s.id)}')">✏ Riordina</button>
-      </div>`;
-    if (s.works.length === 0) {
-      html += '<div class="empty" style="margin:0 0 1rem">Nessuna opera in questa serie.</div>';
-    }
-    for (const w of s.works) {
-      const img = w.thumb || w.image || '';
-      const safeTitle = h(w.title).replace(/'/g, "\\'");
-      html += `
-        <div class="work-row ${reorderMode[s.id] ? 'draggable' : ''}" data-serie="${h(s.id)}" data-work="${h(w.id)}" draggable="${reorderMode[s.id] ? 'true' : 'false'}">
-          ${reorderMode[s.id] ? '<div class="drag-handle">⋮⋮</div>' : ''}
+  // Renderizza una riga opera (con o senza drag-handle a seconda della modalità riordino)
+  const renderRow = (s, w, reorderable) => {
+    const img = w.thumb || w.image || '';
+    const safeTitle = h(w.title).replace(/'/g, "\\'");
+    return `
+        <div class="work-row ${reorderable ? 'draggable' : ''}" data-serie="${h(s.id)}" data-work="${h(w.id)}" draggable="${reorderable ? 'true' : 'false'}">
+          ${reorderable ? '<div class="drag-handle">⋮⋮</div>' : ''}
           ${img
             ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'" decoding="async" loading="lazy">`
             : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
@@ -373,6 +372,46 @@ async function renderWorks(c) {
             <button class="btn btn-danger" onclick="askDelete('${h(s.id)}','${h(w.id)}','${safeTitle}')">Elimina</button>
           </div>
         </div>`;
+  };
+
+  for (const s of d.series) {
+    const total = allSerieWorks(s).length;
+    html += `
+      <div class="reorder-controls ${reorderMode[s.id] ? '' : 'hidden'}" id="rc-${h(s.id)}">
+        <button class="btn btn-ghost" onclick="saveReorder('${h(s.id)}')">✓ Salva ordine</button>
+        <button class="btn btn-ghost" onclick="cancelReorder('${h(s.id)}')">✕ Annulla</button>
+        <span style="color:var(--text2);font-size:.85rem;font-style:italic">Trascinando per riordinare le opere</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <div class="serie-lbl">${h(s.name)} — ${total} opere</div>
+        <button class="btn btn-ghost" id="btn-reorder-${h(s.id)}" style="padding:.3rem .7rem;font-size:9px" onclick="toggleReorderMode('${h(s.id)}')">✏ Riordina</button>
+      </div>`;
+    if ((s.works||[]).length === 0 && !(s.subseries||[]).length) {
+      html += '<div class="empty" style="margin:0 0 1rem">Nessuna opera in questa serie.</div>';
+    }
+    // Fondi works + sotto-serie ordinati per `position` (stesso ordine del sito)
+    const entries = [];
+    (s.works||[]).forEach((w, i) => entries.push({type:'work', pos: (w.position ?? i), w}));
+    (s.subseries||[]).forEach((sub, j) => entries.push({type:'sub', pos: (sub.position ?? (9000+j)), sub}));
+    entries.sort((a, b) => a.pos - b.pos);
+
+    // Dedup: opere nelle sotto-serie già presenti in main si saltano
+    const mainIds = new Set((s.works||[]).map(w => w.id));
+    for (const e of entries) {
+      if (e.type === 'work') {
+        html += renderRow(s, e.w, reorderMode[s.id]);
+      } else {
+        const sub = e.sub;
+        const subWorks = (sub.works||[]).filter(w => !mainIds.has(w.id));
+        // Blocco visivo netto: bordo sinistro oro + sfondo leggermente più chiaro
+        html += `
+        <div class="subseries-block" style="margin:1.8rem 0; padding:1rem 1.2rem .2rem; background:var(--bg2); border-left:3px solid var(--gold); border-radius:2px">
+          <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;font-family:var(--font-ss);color:var(--gold);margin-bottom:.8rem">
+            ↳ Sotto-serie · ${h(sub.name)} <span style="color:var(--text2);font-weight:normal">— ${sub.works.length} opere</span>
+          </div>
+          ${subWorks.map(w => renderRow(s, w, false)).join('')}
+        </div>`;
+      }
     }
   }
   c.innerHTML = html;
@@ -535,7 +574,8 @@ async function renderEdit(c, serieId, workId) {
     api(`/api/images?serie=${serieId}&work=${workId}`)
   ]);
   const serie = d.series.find(s => s.id === serieId);
-  const work  = serie?.works.find(w => w.id === workId);
+  // Cerca l'opera in main + tutte le sotto-serie (può essere duplicata)
+  const work = serie ? allSerieWorks(serie).find(w => w.id === workId) : null;
   if (!work) {
     c.innerHTML = '<p style="color:var(--red);padding:3rem 0">Opera non trovata.</p>';
     return;

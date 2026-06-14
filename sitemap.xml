@@ -379,6 +379,24 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comserie/struttura-tensione/" />
   </url>
   <url>
+    <loc>https://paolamaccioni.com/en/serie/struttura-tensione/tracce-di-memoria/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/serie/struttura-tensione/serie-ombra-della-luce/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/serie/struttura-tensione/geometria/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/geometria/" />
+  </url>
+  <url>
     <loc>https://paolamaccioni.com/opera/aragosta/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
@@ -695,5 +713,23 @@
     <lastmod>2026-05-25</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/serie-ombra-della-luce/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/geometria/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/geometria/" />
   </url>
 </urlset>

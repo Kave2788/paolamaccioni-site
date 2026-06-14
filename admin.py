@@ -289,33 +289,79 @@ def write_opera_pages(serie, work):
         with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
             f.write(render_opera_page(serie, work, lang))
 
+def _work_tile(w, prefix):
+    return (
+        f'      <a class="work-tile" href="{prefix}/opera/{w["id"]}/">\n'
+        f'        <div class="work-tile-img">\n'
+        f'          <img src="/{w.get("canvas") or w.get("thumb") or w.get("image","")}" alt="{escape(w["title"])}" loading="lazy" decoding="async">\n'
+        f'        </div>\n'
+        f'        <div class="work-tile-body">\n'
+        f'          <p class="label">{escape(str(w.get("year") or ""))}</p>\n'
+        f'          <h3>{escape(w["title"])}</h3>\n'
+        f'        </div>\n'
+        f'      </a>'
+    )
+
+def _subseries_tile(sub, serie_id, prefix):
+    cover = sub.get("cover") or (sub["works"][0].get("canvas", "") if sub.get("works") else "")
+    href = f"{prefix}/serie/{serie_id}/{sub['id']}/"
+    count = len(sub.get("works", []))
+    is_it = (prefix == "")
+    label = f"Sotto-serie · {count} opere" if is_it else f"Sub-series · {count} works"
+    name = sub.get("name", sub["id"])
+    return (
+        f'      <a class="work-tile subseries-tile" href="{href}">\n'
+        f'        <div class="work-tile-img">\n'
+        f'          <img src="/{cover}" alt="{escape(name)}" loading="lazy" decoding="async">\n'
+        f'        </div>\n'
+        f'        <div class="work-tile-body">\n'
+        f'          <p class="label">{label}</p>\n'
+        f'          <h3>{escape(name)} →</h3>\n'
+        f'        </div>\n'
+        f'      </a>'
+    )
+
+def _main_serie_tiles(serie, prefix):
+    """Griglia della pagina serie: works + tile sotto-serie, ordinati per `position`."""
+    entries = []
+    for i, w in enumerate(serie.get("works", [])):
+        entries.append((w.get("position", i), _work_tile(w, prefix)))
+    for j, sub in enumerate(_subseries(serie)):
+        entries.append((sub.get("position", 9000 + j), _subseries_tile(sub, serie["id"], prefix)))
+    entries.sort(key=lambda t: t[0])
+    return "\n".join(h for _, h in entries)
+
+def _subseries_page_tiles(sub, prefix):
+    """Griglia della pagina di una sotto-serie: solo i suoi works."""
+    return "\n".join(_work_tile(w, prefix) for w in sub.get("works", []))
+
+# alias di compatibilità
 def _serie_tiles(serie, prefix):
-    return "\n".join(
-        f"""      <a class="work-tile" href="{prefix}/opera/{w['id']}/">
-        <div class="work-tile-img">
-          <img src="/{w.get('canvas') or w.get('thumb') or w.get('image','')}" alt="{escape(w['title'])}" loading="lazy" decoding="async">
-        </div>
-        <div class="work-tile-body">
-          <p class="label">{escape(str(w.get('year') or ''))}</p>
-          <h3>{escape(w['title'])}</h3>
-        </div>
-      </a>"""
-        for w in serie["works"])
+    return _main_serie_tiles(serie, prefix)
 
 def update_serie_grid(serie):
-    """Riscrive in-place la griglia <div class="serie-works"> nelle pagine serie IT+EN."""
-    for path, prefix in [(os.path.join(ROOT, "serie", serie["id"], "index.html"), ""),
-                         (os.path.join(ROOT, "en", "serie", serie["id"], "index.html"), "/en")]:
+    """Riscrive in-place la griglia <div class="serie-works"> nelle pagine serie
+    principale IT+EN e in ogni pagina sotto-serie IT+EN."""
+    def _rewrite(path, tiles_html):
         if not os.path.isfile(path):
-            continue
+            return
         html = open(path, encoding="utf-8").read()
         if '<div class="serie-works">' not in html or "</section>" not in html:
-            continue
+            return
         head, _, rest = html.partition('<div class="serie-works">')
         _, _, tail = rest.partition("</section>")
-        new = (head + '<div class="serie-works">\n' + _serie_tiles(serie, prefix) +
+        new = (head + '<div class="serie-works">\n' + tiles_html +
                "\n    </div>\n\n  </div>\n</section>" + tail)
         open(path, "w", encoding="utf-8").write(new)
+
+    sid = serie["id"]
+    for path, prefix in [(os.path.join(ROOT, "serie", sid, "index.html"), ""),
+                         (os.path.join(ROOT, "en", "serie", sid, "index.html"), "/en")]:
+        _rewrite(path, _main_serie_tiles(serie, prefix))
+    for sub in _subseries(serie):
+        for path, prefix in [(os.path.join(ROOT, "serie", sid, sub["id"], "index.html"), ""),
+                             (os.path.join(ROOT, "en", "serie", sid, sub["id"], "index.html"), "/en")]:
+            _rewrite(path, _subseries_page_tiles(sub, prefix))
 
 def remove_opera_pages(work_id):
     for d in (os.path.join(ROOT, "opera", work_id),
@@ -324,18 +370,26 @@ def remove_opera_pages(work_id):
             shutil.rmtree(d)
 
 def resync(serie_id, work_id=None, deleted=False):
-    """Riallinea JSON↔disco e rigenera pagina opera (IT+EN) + griglia serie.
-    Da chiamare DOPO che il chiamante ha già modificato e salvato il JSON."""
+    """Riallinea JSON↔disco e rigenera pagina opera (IT+EN) + griglie serie.
+    Da chiamare DOPO che il chiamante ha già modificato e salvato il JSON.
+    Se l'opera è duplicata (main + sotto-serie), aggiorna tutte le istanze."""
     data  = load_data()
     serie = next((s for s in data["series"] if s["id"] == serie_id), None)
     if not serie:
         return
     if work_id and not deleted:
-        work = next((w for w in serie["works"] if w["id"] == work_id), None)
-        if work:
-            rebuild_galleries(serie_id, work)
+        instances = _find_all_instances(serie, work_id)
+        if instances:
+            primary = instances[0]
+            rebuild_galleries(serie_id, primary)
+            # Propaga i campi immagine/gallery alle altre istanze
+            for w in instances[1:]:
+                for k in ("image", "thumb", "canvas"):
+                    w[k] = primary.get(k, "")
+                for k in ("gallery", "thumb_gallery", "canvas_gallery"):
+                    w[k] = list(primary.get(k, []))
             save_data(data)
-            write_opera_pages(serie, work)
+            write_opera_pages(serie, primary)
     elif work_id and deleted:
         remove_opera_pages(work_id)
     update_serie_grid(serie)
@@ -358,6 +412,36 @@ def load_data():
 def save_data(d):
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, indent=2)
+
+# ── subseries-aware helpers ──────────────────────────────────────────────────
+#
+# Una serie può contenere sotto-serie (`subseries`). Un'opera può comparire sia
+# nei `works` principali che dentro una sotto-serie (duplicato voluto, p.es.
+# "L'ombra della luce" presente sia nella griglia di Struttura e Tensione sia
+# nella sotto-serie omonima). Tutte le operazioni che cercano un'opera per id
+# devono guardare ovunque; le modifiche di contenuto vanno propagate a tutte le
+# istanze.
+
+def _subseries(serie):
+    return serie.get("subseries", []) or []
+
+def _all_works(serie):
+    yield from serie.get("works", [])
+    for sub in _subseries(serie):
+        yield from sub.get("works", [])
+
+def _find_work(serie, work_id):
+    for w in _all_works(serie):
+        if w["id"] == work_id:
+            return w
+    return None
+
+def _find_all_instances(serie, work_id):
+    """Tutte le istanze di un'opera (può essere duplicata main+sub)."""
+    return [w for w in _all_works(serie) if w["id"] == work_id]
+
+def _work_exists(serie, work_id):
+    return _find_work(serie, work_id) is not None
 
 # ── pubblicazione su GitHub → Netlify ────────────────────────────────────────
 
@@ -454,23 +538,24 @@ def swap_primary(serie_id, work_id, filename):
     for sub in [work_dir, os.path.join(work_dir, "canvas"), os.path.join(work_dir, "thumb")]:
         if os.path.isdir(sub):
             swap_files(sub, "01", target_num)
-    # aggiorna i campi image/thumb/canvas nel JSON
+    # aggiorna i campi image/thumb/canvas in ogni istanza (main + sotto-serie)
     data  = load_data()
     serie = next((s for s in data["series"] if s["id"] == serie_id), None)
     if not serie:
         return
-    work = next((w for w in serie["works"] if w["id"] == work_id), None)
-    if not work:
+    instances = _find_all_instances(serie, work_id)
+    if not instances:
         return
-    for folder, key in [
-        (work_dir,                            "image"),
-        (os.path.join(work_dir, "thumb"),     "thumb"),
-        (os.path.join(work_dir, "canvas"),    "canvas"),
-    ]:
-        f = find_file(folder, "01")
-        if f:
-            rel = os.path.relpath(os.path.join(folder, f), ROOT).replace(os.sep, "/")
-            work[key] = rel
+    for work in instances:
+        for folder, key in [
+            (work_dir,                            "image"),
+            (os.path.join(work_dir, "thumb"),     "thumb"),
+            (os.path.join(work_dir, "canvas"),    "canvas"),
+        ]:
+            f = find_file(folder, "01")
+            if f:
+                rel = os.path.relpath(os.path.join(folder, f), ROOT).replace(os.sep, "/")
+                work[key] = rel
     save_data(data)
 
 def save_uploaded_images(form, opera_dir, serie_id, work_id, primary_idx=0):
@@ -597,7 +682,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         data  = load_data()
         serie = next(s for s in data["series"] if s["id"] == serie_id)
-        if any(w["id"] == slug for w in serie["works"]):
+        if _work_exists(serie, slug):
             return self._err(f"Opera '{slug}' esiste già", 400)
 
         gallery, thumb_g, canvas_g = save_uploaded_images(form, opera_dir, serie_id, slug, pix)
@@ -629,13 +714,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         data  = load_data()
         serie = next((x for x in data["series"] if x["id"] == s), None)
         if serie:
-            work = next((x for x in serie["works"] if x["id"] == w), None)
-            if work:
+            instances = _find_all_instances(serie, w)
+            for work in instances:
                 work.setdefault("gallery",        []).extend(gallery)
                 work.setdefault("thumb_gallery",  []).extend(thumb_g)
                 work.setdefault("canvas_gallery", []).extend(canvas_g)
                 if not work.get("thumb")   and thumb_g:   work["thumb"]   = thumb_g[0]
                 if not work.get("canvas")  and canvas_g:  work["canvas"]  = canvas_g[0]
+            if instances:
                 save_data(data)
         try: regenerate_opera_page(s, w)
         except Exception: pass
@@ -651,10 +737,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         data  = load_data()
         serie = next((x for x in data["series"] if x["id"] == s), None)
         if not serie: return self._err("Serie non trovata", 404)
-        work = next((x for x in serie["works"] if x["id"] == w), None)
-        if not work:  return self._err("Opera non trovata", 404)
+        instances = _find_all_instances(serie, w)
+        if not instances: return self._err("Opera non trovata", 404)
         for k in ("title", "year", "description", "description_en"):
-            if k in p: work[k] = str(p[k])
+            if k in p:
+                for work in instances:
+                    work[k] = str(p[k])
         save_data(data)
         # Rigenera pagine opera + griglia serie col nuovo titolo/anno/descrizione
         if s in VALID_SER:
@@ -669,9 +757,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         data  = load_data()
         serie = next((x for x in data["series"] if x["id"] == s), None)
         if not serie: return self._err("Serie non trovata", 404)
-        before = len(serie["works"])
-        serie["works"] = [x for x in serie["works"] if x["id"] != w]
-        if len(serie["works"]) == before:
+        before_main = len(serie.get("works", []))
+        serie["works"] = [x for x in serie.get("works", []) if x["id"] != w]
+        removed_sub = 0
+        for sub in _subseries(serie):
+            before = len(sub.get("works", []))
+            sub["works"] = [x for x in sub.get("works", []) if x["id"] != w]
+            removed_sub += before - len(sub["works"])
+        if len(serie["works"]) == before_main and removed_sub == 0:
             return self._err("Opera non trovata", 404)
         save_data(data)
         d = os.path.join(ROOT, s, w)
@@ -699,12 +792,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             sub_dir = os.path.join(work_dir, sub)
             f = find_file(sub_dir, base)
             if f: os.remove(os.path.join(sub_dir, f))
-        # aggiorna JSON
+        # aggiorna JSON su tutte le istanze (main + sotto-serie)
         data  = load_data()
         serie = next((x for x in data["series"] if x["id"] == s), None)
         if serie:
-            work = next((x for x in serie["works"] if x["id"] == w), None)
-            if work:
+            instances = _find_all_instances(serie, w)
+            for work in instances:
                 full = f"{s}/{w}/{fn}"
                 work["gallery"]        = [g for g in work.get("gallery",        []) if g != full]
                 work["thumb_gallery"]  = [g for g in work.get("thumb_gallery",  []) if os.path.splitext(os.path.basename(g))[0] != base]
@@ -712,10 +805,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 if work.get("image", "").endswith(f"/{fn}"):
                     imgs = list_main_images(s, w)
                     work["image"] = f"{s}/{w}/{imgs[0]}" if imgs else ""
-                for key, sub in [("thumb", "thumb"), ("canvas", "canvas")]:
+                for key, _sub in [("thumb", "thumb"), ("canvas", "canvas")]:
                     if os.path.splitext(os.path.basename(work.get(key, "")))[0] == base:
                         gk = f"{key}_gallery"
                         work[key] = work[gk][0] if work.get(gk) else ""
+            if instances:
                 save_data(data)
         try: regenerate_opera_page(s, w)
         except Exception: pass
