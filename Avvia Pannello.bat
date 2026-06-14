@@ -9,6 +9,9 @@ echo   Controllo iniziale in corso, attendi qualche secondo...
 REM Assicura che le librerie necessarie siano installate (solo se mancano)
 py -c "import PIL, cgi" 2>nul || py -m pip install --quiet Pillow legacy-cgi
 
+REM Scarica eventuali aggiornamenti del sito (silenzioso se non c'è connessione)
+git pull --quiet 2>nul
+
 cls
 echo.
 echo   ====================================================
