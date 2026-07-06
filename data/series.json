@@ -1041,7 +1041,7 @@
             }
           ],
           "position": -0.8,
-          "cover": "struttura-tensione/amore-tracce-di-memoria/canvas/01.webp"
+          "cover": "struttura-tensione/_covers/tracce-di-memoria.webp"
         },
         {
           "id": "serie-ombra-della-luce",
@@ -1370,7 +1370,7 @@
             }
           ],
           "position": -0.9,
-          "cover": "struttura-tensione/cubi/canvas/01.webp"
+          "cover": "struttura-tensione/_covers/geometria.webp"
         }
       ]
     },
