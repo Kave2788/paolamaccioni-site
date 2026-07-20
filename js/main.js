@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
     comelLink = a;
   }
   if (comelLink) {
-    comelLink.style.display = hasComelAccess ? 'block' : 'none';
+    // '' = display naturale (inline, come gli altri link del menu); evita
+    // il disallineamento che darebbe 'block' in un menu flex.
+    comelLink.style.display = hasComelAccess ? '' : 'none';
   }
 
   // Highlight active nav link
