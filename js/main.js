@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Show/hide Premio Comel link based on URL
+  const comelLink = document.getElementById('comel-nav-link');
+  const currentPath = location.pathname;
+  if (comelLink) {
+    if (currentPath.includes('/comel/')) {
+      comelLink.style.display = 'block';
+    } else {
+      comelLink.style.display = 'none';
+    }
+  }
+
   // Highlight active nav link
   const page = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a').forEach(link => {
