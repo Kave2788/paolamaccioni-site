@@ -1,13 +1,36 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Show/hide Premio Comel link based on URL
-  const comelLink = document.getElementById('comel-nav-link');
-  const currentPath = location.pathname;
-  if (comelLink) {
-    if (currentPath.includes('/comel/')) {
-      comelLink.style.display = 'block';
+  // Premio Comel: accesso persistente per i giudici.
+  // Chi entra da /comel/ riceve un flag nel browser: da quel momento il link
+  // "Premio Comel" resta nel menu su tutte le pagine, così può navigare
+  // liberamente il sito e tornare alla sezione quando vuole.
+  // I visitatori normali non hanno il flag e non vedono nulla.
+  if (location.pathname.includes('/comel/')) {
+    try { localStorage.setItem('comelAccess', '1'); } catch (e) {}
+  }
+  let hasComelAccess = false;
+  try { hasComelAccess = localStorage.getItem('comelAccess') === '1'; } catch (e) {}
+
+  let comelLink = document.getElementById('comel-nav-link');
+  const navMenu = document.querySelector('nav ul');
+  if (hasComelAccess && !comelLink && navMenu) {
+    // Il link non è nell'HTML di questa pagina: lo iniettiamo nel menu,
+    // prima dell'ultima voce (Contatti).
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.id = 'comel-nav-link';
+    a.href = '/comel/premio-2026/';
+    a.textContent = 'Premio Comel';
+    li.appendChild(a);
+    const items = navMenu.querySelectorAll('li');
+    if (items.length) {
+      navMenu.insertBefore(li, items[items.length - 1]);
     } else {
-      comelLink.style.display = 'none';
+      navMenu.appendChild(li);
     }
+    comelLink = a;
+  }
+  if (comelLink) {
+    comelLink.style.display = hasComelAccess ? 'block' : 'none';
   }
 
   // Highlight active nav link
