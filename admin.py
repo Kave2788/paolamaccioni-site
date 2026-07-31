@@ -1,19 +1,163 @@
 #!/usr/bin/env python3
-"""Admin server locale — Paola Maccioni."""
+"""Pannello admin locale — Paola Maccioni.
 
-import json, os, re, shutil, subprocess, unicodedata
-import http.server, socketserver, urllib.parse, cgi, webbrowser
+Gira sul PC Windows di Paola e sul Mac di Andrea.
+L'unica dipendenza esterna è Pillow: il parser multipart è interno, così il
+pannello funziona su qualunque Python 3.8+ (il modulo `cgi` della libreria
+standard, usato dalle versioni precedenti, è stato rimosso da Python 3.13).
+"""
+
+import json, os, re, shutil, subprocess, sys, tempfile, traceback, unicodedata
+import http.server, socketserver, urllib.parse, webbrowser
 from html import escape
-from PIL import Image, ImageOps
 
-PORT       = 8765
+try:
+    from PIL import Image, ImageOps
+except ImportError:
+    print("\n  ERRORE: manca la libreria Pillow (serve per elaborare le foto).\n"
+          "  Chiudi questa finestra, apri il Prompt dei comandi e scrivi:\n\n"
+          "      py -m pip install Pillow\n")
+    sys.exit(1)
+
+PORT       = int(os.environ.get("PANNELLO_PORT", 8765))
+HOST       = "127.0.0.1"   # solo questo PC: niente richieste del firewall Windows
 ROOT       = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH  = os.path.join(ROOT, "data/series.json")
+DATA_PATH  = os.path.join(ROOT, "data", "series.json")
+BACKUP_PATH = DATA_PATH + ".bak"
 SITE_URL   = "https://paolamaccioni.com"   # dominio live (per canonical/og/schema)
-GA_ID      = "G-FPHJKXEM94"
-VALID_SER  = {"struttura-tensione", "forma-organica"}
+# Nota: l'ID di Google Analytics NON sta qui — le pagine generate caricano
+# js/consent.js, che attiva il tracciamento solo dopo il consenso ai cookie.
 IMG_EXTS   = {".jpg", ".jpeg", ".png", ".webp"}
 CANVAS_BG  = (25, 21, 20)   # sfondo scuro identico al --bg del sito
+MAX_UPLOAD = 2 * 1024 * 1024 * 1024   # 2 GB per richiesta: limite di sicurezza
+
+# ── multipart/form-data ─────────────────────────────────────────────────────
+#
+# Parser minimale e in streaming, sostituisce `cgi.FieldStorage`. Le foto non
+# vengono tenute in memoria: ogni parte oltre 1 MB finisce su file temporaneo,
+# quindi si possono caricare decine di foto pesanti senza saturare la RAM.
+
+class _Part:
+    """Una parte del form: campo di testo o file caricato."""
+    __slots__ = ("name", "filename", "file")
+
+    def __init__(self, name, filename, file):
+        self.name, self.filename, self.file = name, filename, file
+
+    def value(self):
+        self.file.seek(0)
+        return self.file.read().decode("utf-8", "replace")
+
+
+class Form:
+    """Interfaccia compatibile con cgi.FieldStorage per ciò che serve qui."""
+
+    def __init__(self, parts):
+        self._parts = parts          # dict: nome → lista di _Part
+
+    def __contains__(self, name):
+        return name in self._parts
+
+    def __getitem__(self, name):
+        return self._parts[name]     # sempre una lista
+
+    def getfirst(self, name, default=""):
+        parts = self._parts.get(name)
+        return parts[0].value() if parts else default
+
+
+def _boundary_of(content_type):
+    """Estrae il boundary dall'header Content-Type."""
+    m = re.search(r'boundary=("([^"]+)"|([^;\s]+))', content_type or "", re.I)
+    if not m:
+        return None
+    return (m.group(2) or m.group(3)).encode("ascii", "replace")
+
+
+def _parse_multipart(rfile, boundary, length, chunk=256 * 1024):
+    """Legge `length` byte da rfile e ritorna un dict nome → [ _Part, ... ]."""
+    delim  = b"--" + boundary
+    sep    = b"\r\n" + delim
+    parts  = {}
+    buf    = b""
+    left   = length
+
+    def fill(target):
+        """Porta il buffer ad almeno `target` byte (o fino a fine stream)."""
+        nonlocal buf, left
+        while len(buf) < target and left > 0:
+            data = rfile.read(min(chunk, left))
+            if not data:
+                left = 0
+                break
+            left -= len(data)
+            buf += data
+
+    # salta il preambolo, fino al primo delimitatore
+    fill(len(delim) + 4)
+    start = buf.find(delim)
+    if start < 0:
+        raise ValueError("form multipart non valido")
+    buf = buf[start + len(delim):]
+
+    while True:
+        fill(2)
+        if buf[:2] == b"--":         # delimitatore di chiusura
+            break
+        if buf[:2] != b"\r\n":
+            raise ValueError("form multipart non valido")
+        buf = buf[2:]
+
+        # intestazioni della parte
+        while b"\r\n\r\n" not in buf:
+            before = len(buf)
+            fill(len(buf) + chunk)
+            if len(buf) == before:
+                raise ValueError("caricamento interrotto")
+        raw_head, _, buf = buf.partition(b"\r\n\r\n")
+
+        disposition = ""
+        for line in raw_head.split(b"\r\n"):
+            k, _, v = line.partition(b":")
+            if k.strip().lower() == b"content-disposition":
+                disposition = v.decode("utf-8", "replace")
+        name = _dispo_param(disposition, "name")
+        filename = _dispo_param(disposition, "filename")
+
+        # corpo della parte, fino al prossimo delimitatore
+        out = tempfile.SpooledTemporaryFile(max_size=1024 * 1024)
+        while True:
+            pos = buf.find(sep)
+            if pos >= 0:
+                out.write(buf[:pos])
+                buf = buf[pos + len(sep):]
+                break
+            keep = len(sep) - 1      # possibile separatore spezzato a metà
+            if len(buf) > keep:
+                out.write(buf[:-keep])
+                buf = buf[-keep:]
+            before = len(buf)
+            fill(len(buf) + chunk)
+            if len(buf) == before:
+                out.close()
+                raise ValueError("caricamento interrotto")
+        out.seek(0)
+
+        if name:
+            parts.setdefault(name, []).append(_Part(name, filename, out))
+        else:
+            out.close()
+
+    return parts
+
+
+def _dispo_param(disposition, key):
+    """Legge un parametro (name/filename) da un Content-Disposition."""
+    m = re.search(r'%s="([^"]*)"' % key, disposition, re.I)
+    if not m:
+        m = re.search(r"%s=([^;]+)" % key, disposition, re.I)
+        return m.group(1).strip() if m else None
+    return m.group(1)
 
 # ── image processing ────────────────────────────────────────────────────────
 
@@ -105,6 +249,7 @@ def _desc_paragraphs(text):
 
 _OPERA_JS = r"""
 <script src="/js/main.js"></script>
+<script src="/js/consent.js"></script>
 <script>
 (() => {
   const gallery = __GALLERY__;
@@ -243,8 +388,7 @@ def render_opera_page(serie, work, lang):
 
   <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
   <link rel="stylesheet" href="/css/main.css">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+  <!-- Analytics: caricata da js/consent.js solo dopo il consenso ai cookie (GDPR) -->
 </head>
 <body>
 
@@ -406,12 +550,46 @@ def slugify(text):
     return re.sub(r"[\s-]+", "-", text).strip("-") or "opera-senza-titolo"
 
 def load_data():
-    with open(DATA_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+    """Legge series.json; se fosse illeggibile ricade sull'ultimo backup."""
+    try:
+        with open(DATA_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict) or "series" not in data:
+            raise ValueError("struttura inattesa")
+        return data
+    except (OSError, ValueError) as e:
+        if os.path.isfile(BACKUP_PATH):
+            print(f"  ! series.json illeggibile ({e}): uso il backup")
+            with open(BACKUP_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        raise
 
 def save_data(d):
-    with open(DATA_PATH, "w", encoding="utf-8") as f:
-        json.dump(d, f, ensure_ascii=False, indent=2)
+    """Scrittura atomica + backup: un crash a metà non può corrompere i dati."""
+    if os.path.isfile(DATA_PATH):
+        try:
+            shutil.copy2(DATA_PATH, BACKUP_PATH)
+        except OSError:
+            pass
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(DATA_PATH), suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(d, f, ensure_ascii=False, indent=2)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, DATA_PATH)   # atomico anche su Windows
+    except BaseException:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+        raise
+
+def valid_series():
+    """ID delle serie esistenti, letti dal JSON: niente elenco hard-coded che
+    si disallinea quando si aggiunge una serie nuova."""
+    try:
+        return {s["id"] for s in load_data().get("series", []) if s.get("id")}
+    except Exception:
+        return set()
 
 # ── subseries-aware helpers ──────────────────────────────────────────────────
 #
@@ -445,58 +623,156 @@ def _work_exists(serie, work_id):
 
 # ── pubblicazione su GitHub → Netlify ────────────────────────────────────────
 
-def _git(*args):
-    """Esegue un comando git nella cartella del sito, catturando l'output."""
-    return subprocess.run(
-        ["git", *args], cwd=ROOT,
-        capture_output=True, text=True,
-    )
+SAFE_NOTE = "Le foto restano salvate sul computer: non si perde niente."
+
+class GitMissing(Exception):
+    pass
+
+def _git(*args, timeout=180):
+    """Esegue un comando git nella cartella del sito, catturando l'output.
+
+    GIT_TERMINAL_PROMPT=0: senza questa variabile git può restare in attesa di
+    una password sul terminale e il pannello sembrerebbe bloccato per sempre.
+    """
+    env = dict(os.environ,
+               GIT_TERMINAL_PROMPT="0",
+               GIT_OPTIONAL_LOCKS="0",
+               LC_ALL="C")
+    try:
+        return subprocess.run(["git", *args], cwd=ROOT, env=env,
+                              capture_output=True, text=True,
+                              errors="replace", timeout=timeout)
+    except FileNotFoundError:
+        raise GitMissing()
+    except subprocess.TimeoutExpired:
+        return subprocess.CompletedProcess(args, 124, "", "timeout")
+
+def _git_out(res):
+    return ((res.stderr or "") + (res.stdout or "")).strip()
+
+def _ensure_identity():
+    """Se git non sa chi è l'autore, lo imposta da solo per questo repo:
+    è la causa più comune di 'commit fallito' su un PC nuovo."""
+    if not _git("config", "user.email").stdout.strip():
+        _git("config", "user.email", "infopiemmeart@gmail.com")
+    if not _git("config", "user.name").stdout.strip():
+        _git("config", "user.name", "Paola Maccioni")
+
+def _repair_state():
+    """Se una pubblicazione precedente si è interrotta a metà (merge in corso),
+    riporta il repo in uno stato pulito invece di fallire per sempre."""
+    git_dir = os.path.join(ROOT, ".git")
+    if os.path.exists(os.path.join(git_dir, "MERGE_HEAD")):
+        _git("merge", "--abort")
+    if os.path.exists(os.path.join(git_dir, "index.lock")):
+        # residuo di un git ucciso a metà: rimuoverlo è sicuro se nessun git gira
+        try: os.remove(os.path.join(git_dir, "index.lock"))
+        except OSError: pass
+
+def _pull():
+    """Sincronizza col sito remoto. --no-rebase è necessario: dalle versioni
+    recenti git si rifiuta di fare pull se non gli si dice come riconciliare."""
+    res = _git("pull", "--no-rebase", "--no-edit", timeout=300)
+    if res.returncode != 0:
+        _git("merge", "--abort")     # niente stato a metà per il prossimo giro
+    return res
+
+def _push():
+    res = _git("push", timeout=600)
+    if res.returncode != 0 and "no upstream branch" in _git_out(res).lower():
+        res = _git("push", "-u", "origin", "HEAD", timeout=600)
+    return res
 
 def git_publish(msg="Aggiornamento dal pannello admin"):
     """
     Pubblica TUTTE le modifiche locali sul sito in un solo push:
-      1. controlla se c'è qualcosa da pubblicare
+      1. ripara eventuali stati sporchi lasciati da un tentativo precedente
       2. commit di tutto
       3. pull (sincronizza eventuali modifiche fatte da altri)
       4. push  → Netlify ricostruisce il sito
     Pensata per essere chiamata UNA volta a fine sessione (un push = una build).
     Ritorna un dict pronto per la UI.
     """
-    st = _git("status", "--porcelain")
-    if st.returncode != 0:
-        return {"ok": False,
-                "error": "Git non disponibile su questo PC. Contatta Andrea."}
-    if not st.stdout.strip():
-        return {"ok": True, "published": False,
-                "message": "Niente da pubblicare — il sito è già aggiornato."}
-
-    if _git("add", "-A").returncode != 0:
-        return {"ok": False, "error": "Errore nel preparare le modifiche."}
-
-    commit = _git("commit", "-m", msg)
-    if commit.returncode != 0:
-        err = (commit.stderr + commit.stdout).strip()
-        if any(k in err.lower() for k in
-               ("identity", "user.name", "user.email", "tell me who you are")):
+    try:
+        _repair_state()
+        st = _git("status", "--porcelain")
+        if st.returncode != 0:
             return {"ok": False,
-                    "error": "Git non sa chi sei: nome/email non configurati. "
-                             "Vanno impostati una volta sola. Contatta Andrea."}
-        return {"ok": False, "error": "Commit fallito: " + (err[:200] or "?")}
+                    "error": "Questa cartella non è collegata al sito. Contatta Andrea."}
 
-    pull = _git("pull", "--no-edit")
-    if pull.returncode != 0:
+        if st.stdout.strip():
+            _ensure_identity()
+            add = _git("add", "-A")
+            if add.returncode != 0:
+                return {"ok": False,
+                        "error": "Non riesco a preparare le modifiche. Chiudi eventuali "
+                                 "foto aperte in altri programmi e riprova. " + SAFE_NOTE}
+            commit = _git("commit", "-m", msg)
+            if commit.returncode != 0 and "nothing to commit" not in _git_out(commit).lower():
+                return {"ok": False,
+                        "error": "Salvataggio delle modifiche non riuscito. " + SAFE_NOTE}
+
+        # Ramo locale collegato a GitHub? Se non lo è, si salta il pull e il
+        # push lo collega da solo (`push -u`).
+        has_upstream = _git("rev-parse", "--abbrev-ref", "@{u}").returncode == 0
+
+        # C'è qualcosa da mandare online? (anche commit di sessioni precedenti)
+        if has_upstream:
+            ahead = _git("rev-list", "--count", "@{u}..HEAD")
+            if ahead.returncode == 0 and ahead.stdout.strip() == "0":
+                return {"ok": True, "published": False,
+                        "message": "Niente da pubblicare — il sito è già aggiornato."}
+
+        pull = _pull() if has_upstream else None
+        if pull is not None and pull.returncode != 0:
+            out = _git_out(pull).lower()
+            if "conflict" in out:
+                return {"ok": False,
+                        "error": "Qualcun altro ha modificato le stesse cose. "
+                                 "Serve una mano di Andrea. " + SAFE_NOTE}
+            if any(k in out for k in ("could not resolve host", "unable to access",
+                                      "timed out", "timeout", "network")):
+                return {"ok": False,
+                        "error": "Nessuna connessione a internet. Controlla la rete "
+                                 "e premi di nuovo «Pubblica». " + SAFE_NOTE}
+            return {"ok": False,
+                    "error": "Sincronizzazione non riuscita. Riprova tra poco; "
+                             "se continua, avvisa Andrea. " + SAFE_NOTE}
+
+        push = _push()
+        if push.returncode != 0:
+            out = _git_out(push).lower()
+            if any(k in out for k in ("authentication", "403", "permission denied",
+                                      "could not read username", "invalid username")):
+                return {"ok": False,
+                        "error": "Il permesso di pubblicare è scaduto e va rinnovato: "
+                                 "avvisa Andrea. " + SAFE_NOTE}
+            if any(k in out for k in ("could not resolve host", "unable to access",
+                                      "timed out", "timeout")):
+                return {"ok": False,
+                        "error": "Nessuna connessione a internet. Controlla la rete "
+                                 "e premi di nuovo «Pubblica». " + SAFE_NOTE}
+            # Le foto grandi passano da Git LFS, che ha un limite mensile:
+            # senza questo controllo l'errore sarebbe incomprensibile.
+            if "lfs" in out and any(k in out for k in ("quota", "exceeded", "bandwidth",
+                                                       "over the limit", "batch response")):
+                return {"ok": False,
+                        "error": "Lo spazio per le foto su GitHub è esaurito per questo "
+                                 "mese: serve Andrea per sbloccarlo. " + SAFE_NOTE}
+            if "fetch first" in out or "non-fast-forward" in out or "rejected" in out:
+                if _pull().returncode == 0 and _push().returncode == 0:
+                    return {"ok": True, "published": True,
+                            "message": "Sito aggiornato! Sarà online tra circa un minuto."}
+            return {"ok": False,
+                    "error": "Pubblicazione non riuscita. Riprova tra poco; "
+                             "se continua, avvisa Andrea. " + SAFE_NOTE}
+
+        return {"ok": True, "published": True,
+                "message": "Sito aggiornato! Sarà online tra circa un minuto."}
+    except GitMissing:
         return {"ok": False,
-                "error": "Sincronizzazione fallita (possibile conflitto). "
-                         "Le foto sono salvate sul PC. Contatta Andrea."}
-
-    push = _git("push")
-    if push.returncode != 0:
-        return {"ok": False,
-                "error": "Pubblicazione fallita: controlla la connessione a "
-                         "internet e riprova. Se persiste, contatta Andrea."}
-
-    return {"ok": True, "published": True,
-            "message": "Sito aggiornato! Sarà online tra circa un minuto."}
+                "error": "Git non è installato su questo PC: senza non si può "
+                         "pubblicare. Contatta Andrea. " + SAFE_NOTE}
 
 def list_main_images(serie_id, work_id):
     d = os.path.join(ROOT, serie_id, work_id)
@@ -561,15 +837,21 @@ def swap_primary(serie_id, work_id, filename):
 def save_uploaded_images(form, opera_dir, serie_id, work_id, primary_idx=0):
     """
     Salva e processa le immagini caricate.
-    Ritorna (gallery, thumb_gallery, canvas_gallery).
+    Ritorna (gallery, thumb_gallery, canvas_gallery, scartate) dove `scartate`
+    è la lista dei nomi di file non caricabili (formato non supportato o file
+    danneggiato): la UI li mostra invece di farli sparire in silenzio.
     """
     raw = form["images"] if "images" in form else None
     if raw is None:
-        return [], [], []
+        return [], [], [], []
     items = raw if isinstance(raw, list) else [raw]
-    valid = [it for it in items
-             if getattr(it, "filename", None)
-             and os.path.splitext(it.filename)[1].lower() in IMG_EXTS]
+    named = [it for it in items if getattr(it, "filename", None)]
+    valid, skipped = [], []
+    for it in named:
+        if os.path.splitext(it.filename)[1].lower() in IMG_EXTS:
+            valid.append(it)
+        else:
+            skipped.append(it.filename)
     if valid and 0 <= primary_idx < len(valid):
         valid = [valid[primary_idx]] + [f for j, f in enumerate(valid) if j != primary_idx]
     existing = sorted(
@@ -580,15 +862,53 @@ def save_uploaded_images(form, opera_dir, serie_id, work_id, primary_idx=0):
     # Riparti dal numero più alto + 1 (non dal conteggio): evita di sovrascrivere
     # file esistenti quando la numerazione ha dei buchi (dopo cancellazioni).
     nums = [int(os.path.splitext(f)[0]) for f in existing]
-    start = (max(nums) + 1) if nums else 1
+    n = (max(nums) + 1) if nums else 1
     gallery, thumb_gallery, canvas_gallery = [], [], []
-    for i, it in enumerate(valid, start=start):
-        base = f"{i:02d}"
-        mname, tname, cname = process_image(it.file, opera_dir, base)
+    for it in valid:
+        base = f"{n:02d}"
+        try:
+            mname, tname, cname = process_image(it.file, opera_dir, base)
+        except Exception as e:
+            # Una foto illeggibile non deve far fallire tutto il caricamento:
+            # si salta, si segnala, e le altre proseguono.
+            print(f"  ! foto scartata {it.filename}: {e}")
+            skipped.append(it.filename)
+            _cleanup_partial(opera_dir, base)
+            continue
         gallery.append(       f"{serie_id}/{work_id}/{mname}")
         thumb_gallery.append( f"{serie_id}/{work_id}/thumb/{tname}")
         canvas_gallery.append(f"{serie_id}/{work_id}/canvas/{cname}")
-    return gallery, thumb_gallery, canvas_gallery
+        n += 1
+    return gallery, thumb_gallery, canvas_gallery, skipped
+
+def _skipped_msg(skipped):
+    """Avviso leggibile sulle foto scartate (None se non ce ne sono)."""
+    if not skipped:
+        return None
+    names = ", ".join(skipped[:5]) + ("…" if len(skipped) > 5 else "")
+    heic = any(os.path.splitext(f)[1].lower() in (".heic", ".heif") for f in skipped)
+    msg = f"{len(skipped)} foto non caricate ({names})."
+    if heic:
+        msg += (" Sono in formato HEIC (foto da iPhone): sul telefono vai in "
+                "Impostazioni → Fotocamera → Formati e scegli «Massima compatibilità», "
+                "oppure convertile in JPG prima di caricarle.")
+    else:
+        msg += " Formati accettati: JPG, PNG, WEBP."
+    return msg
+
+def _no_images_msg(skipped):
+    """Messaggio quando non è stata caricata nessuna foto valida."""
+    return _skipped_msg(skipped) or "Nessuna foto selezionata: aggiungi almeno una foto."
+
+def _cleanup_partial(opera_dir, base):
+    """Rimuove i file lasciati a metà da una foto che non si è potuta elaborare."""
+    for folder, ext in ((opera_dir, ".jpg"),
+                        (os.path.join(opera_dir, "thumb"),  ".webp"),
+                        (os.path.join(opera_dir, "canvas"), ".webp")):
+        p = os.path.join(folder, base + ext)
+        if os.path.isfile(p):
+            try: os.remove(p)
+            except OSError: pass
 
 # ── HTTP handler ────────────────────────────────────────────────────────────
 
@@ -601,9 +921,40 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a):
         pass
 
+    # Rete: browser che annulla un caricamento, tab chiusa a metà... sono
+    # eventi normali, non devono riempire la finestra nera di errori rossi.
+    def handle_one_request(self):
+        try:
+            super().handle_one_request()
+        except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
+            self.close_connection = True
+
+    # Rete a parte, QUALSIASI errore imprevisto diventa un messaggio leggibile
+    # invece di una richiesta che resta appesa senza risposta.
+    def do_GET(self):
+        try:
+            self._get()
+        except Exception:
+            self._crash()
+
+    def do_POST(self):
+        try:
+            self._post()
+        except Exception:
+            self._crash()
+
+    def _crash(self):
+        traceback.print_exc()
+        try:
+            self._err("Si è verificato un errore imprevisto. Le foto e i dati "
+                      "sul computer non sono stati persi: riprova, e se succede "
+                      "di nuovo avvisa Andrea.", 500)
+        except Exception:
+            pass
+
     # GET
 
-    def do_GET(self):
+    def _get(self):
         path = self.path.split("?")[0]
         qs   = urllib.parse.parse_qs(self.path.split("?", 1)[1] if "?" in self.path else "")
 
@@ -617,7 +968,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if path == "/api/images":
             s = qs.get("serie", [""])[0]
             w = qs.get("work",  [""])[0]
-            if not s or not w or s not in VALID_SER:
+            if not s or not w or s not in valid_series():
                 return self._err("Parametri mancanti", 400)
             return self._json({"files": list_main_images(s, w)})
 
@@ -625,7 +976,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     # POST
 
-    def do_POST(self):
+    def _post(self):
         path = self.path.split("?")[0]
 
         if path in ("/upload", "/api/add-images"):
@@ -654,15 +1005,26 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     # ── multipart ──────────────────────────────────────────────────────────
 
     def _handle_multipart(self, path):
-        ctype, _ = cgi.parse_header(self.headers.get("Content-Type", ""))
-        if ctype != "multipart/form-data":
-            return self._err("Multipart richiesto", 400)
-        form = cgi.FieldStorage(
-            fp=self.rfile, headers=self.headers,
-            environ={"REQUEST_METHOD": "POST",
-                     "CONTENT_TYPE": self.headers["Content-Type"]},
-        )
-        if path == "/upload":        return self._upload(form)
+        ctype = self.headers.get("Content-Type", "")
+        if not ctype.lower().startswith("multipart/form-data"):
+            return self._err("Formato della richiesta non valido", 400)
+        boundary = _boundary_of(ctype)
+        if not boundary:
+            return self._err("Formato della richiesta non valido", 400)
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+        except ValueError:
+            length = 0
+        if length <= 0:
+            return self._err("Nessun dato ricevuto: riprova", 400)
+        if length > MAX_UPLOAD:
+            return self._err("Caricamento troppo grande: carica meno foto per volta", 413)
+        try:
+            form = Form(_parse_multipart(self.rfile, boundary, length))
+        except ValueError as e:
+            return self._err(f"Caricamento non riuscito ({e}): riprova", 400)
+
+        if path == "/upload":         return self._upload(form)
         if path == "/api/add-images": return self._add_images(form)
 
     def _upload(self, form):
@@ -670,22 +1032,32 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         desc     = form.getfirst("description", "").strip()
         serie_id = form.getfirst("serie",       "").strip()
         year     = form.getfirst("year",        "").strip()
-        try:    pix = int(form.getfirst("primary_index", "0"))
-        except: pix = 0
+        try:              pix = int(form.getfirst("primary_index", "0"))
+        except ValueError: pix = 0
 
-        if not title or serie_id not in VALID_SER:
-            return self._err("Titolo e serie obbligatori", 400)
+        if not title:
+            return self._err("Manca il titolo dell'opera", 400)
+        if serie_id not in valid_series():
+            return self._err("Scegli una serie valida", 400)
 
-        slug      = slugify(title)
-        opera_dir = os.path.join(ROOT, serie_id, slug)
-        os.makedirs(opera_dir, exist_ok=True)
-
+        slug  = slugify(title)
         data  = load_data()
         serie = next(s for s in data["series"] if s["id"] == serie_id)
         if _work_exists(serie, slug):
-            return self._err(f"Opera '{slug}' esiste già", 400)
+            return self._err(f"Esiste già un'opera con questo titolo ({slug}). "
+                             f"Cambia titolo, oppure aggiungi le foto a quella "
+                             f"esistente da «Opere → Modifica».", 400)
 
-        gallery, thumb_g, canvas_g = save_uploaded_images(form, opera_dir, serie_id, slug, pix)
+        opera_dir = os.path.join(ROOT, serie_id, slug)
+        os.makedirs(opera_dir, exist_ok=True)
+        gallery, thumb_g, canvas_g, skipped = save_uploaded_images(
+            form, opera_dir, serie_id, slug, pix)
+        if not gallery:
+            # Nessuna foto valida: non lasciare a metà né cartella né JSON.
+            try: os.rmdir(opera_dir)
+            except OSError: pass
+            return self._err(_no_images_msg(skipped), 400)
+
         serie["works"].append({
             "id": slug, "title": title, "year": year,
             "image":          gallery[0]   if gallery   else "",
@@ -700,17 +1072,20 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # Ricostruisce gallery dal disco + crea pagine opera IT/EN + aggiorna serie
         resync(serie_id, slug)
         return self._json({"ok": True, "slug": slug, "uploaded": len(gallery),
+                           "skipped": skipped, "warning": _skipped_msg(skipped),
                            "url": f"/opera/{slug}/"})
 
     def _add_images(self, form):
         s = form.getfirst("serie_id", "").strip()
         w = form.getfirst("work_id",  "").strip()
-        if not s or not w or s not in VALID_SER:
+        if not s or not w or s not in valid_series():
             return self._err("Parametri mancanti", 400)
         opera_dir = os.path.join(ROOT, s, w)
         if not os.path.isdir(opera_dir):
             return self._err("Opera non trovata", 404)
-        gallery, thumb_g, canvas_g = save_uploaded_images(form, opera_dir, s, w)
+        gallery, thumb_g, canvas_g, skipped = save_uploaded_images(form, opera_dir, s, w)
+        if not gallery:
+            return self._err(_no_images_msg(skipped), 400)
         data  = load_data()
         serie = next((x for x in data["series"] if x["id"] == s), None)
         if serie:
@@ -723,9 +1098,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 if not work.get("canvas")  and canvas_g:  work["canvas"]  = canvas_g[0]
             if instances:
                 save_data(data)
-        try: regenerate_opera_page(s, w)
-        except Exception: pass
-        return self._json({"ok": True, "uploaded": len(gallery)})
+        regenerate_opera_page(s, w)
+        return self._json({"ok": True, "uploaded": len(gallery),
+                           "skipped": skipped, "warning": _skipped_msg(skipped)})
 
     # ── JSON endpoints ─────────────────────────────────────────────────────
 
@@ -745,14 +1120,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                     work[k] = str(p[k])
         save_data(data)
         # Rigenera pagine opera + griglia serie col nuovo titolo/anno/descrizione
-        if s in VALID_SER:
+        if s in valid_series():
             resync(s, w)
         return self._json({"ok": True})
 
     def _delete_work(self, p):
         s = p.get("serie_id", "").strip()
         w = p.get("work_id",  "").strip()
-        if not s or not w or s not in VALID_SER:
+        if not s or not w or s not in valid_series():
             return self._err("Parametri mancanti", 400)
         data  = load_data()
         serie = next((x for x in data["series"] if x["id"] == s), None)
@@ -778,7 +1153,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         s  = p.get("serie_id", "").strip()
         w  = p.get("work_id",  "").strip()
         fn = p.get("filename", "").strip()
-        if not all([s, w, fn]) or s not in VALID_SER:
+        if not all([s, w, fn]) or s not in valid_series():
             return self._err("Parametri mancanti", 400)
         if not re.match(r'^\d+\.(jpg|jpeg|png|webp)$', fn, re.I):
             return self._err("File non valido", 400)
@@ -811,27 +1186,24 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                         work[key] = work[gk][0] if work.get(gk) else ""
             if instances:
                 save_data(data)
-        try: regenerate_opera_page(s, w)
-        except Exception: pass
+        regenerate_opera_page(s, w)
         return self._json({"ok": True})
 
     def _set_primary(self, p):
         s  = p.get("serie_id", "").strip()
         w  = p.get("work_id",  "").strip()
         fn = p.get("filename", "").strip()
-        if not all([s, w, fn]):
+        if not all([s, w, fn]) or s not in valid_series():
             return self._err("Parametri mancanti", 400)
-        try:
-            swap_primary(s, w, fn)
-            try: regenerate_opera_page(s, w)
-            except Exception: pass
-            return self._json({"ok": True})
-        except Exception as e:
-            return self._err(str(e), 500)
+        if not re.match(r'^\d+\.(jpg|jpeg|png|webp)$', fn, re.I):
+            return self._err("File non valido", 400)
+        swap_primary(s, w, fn)
+        regenerate_opera_page(s, w)
+        return self._json({"ok": True})
 
     def _reorder_works(self, p):
         s = p.get("serie_id", "").strip()
-        if not s or s not in VALID_SER:
+        if not s or s not in valid_series():
             return self._err("Serie non valida", 400)
         order = p.get("order", [])
         if not isinstance(order, list) or not order:
@@ -875,19 +1247,78 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 # ── entry point ─────────────────────────────────────────────────────────────
 
+class Server(socketserver.ThreadingTCPServer):
+    daemon_threads      = True    # la finestra si chiude senza restare appesa
+    allow_reuse_address = True    # riavvio immediato dopo uno stop
+
+
+def _startup_checks():
+    """Controlli prima di partire: meglio un messaggio chiaro adesso che un
+    errore incomprensibile a metà lavoro."""
+    if not os.path.isfile(DATA_PATH):
+        print("\n  ERRORE: non trovo i dati del sito (data/series.json).\n"
+              "  Il pannello va avviato dalla cartella del sito. Avvisa Andrea.\n")
+        return False
+    try:
+        load_data()
+    except Exception as e:
+        print(f"\n  ERRORE: i dati del sito non sono leggibili ({e}).\n"
+              "  Avvisa Andrea: non caricare altre foto per ora.\n")
+        return False
+    try:
+        if _git("rev-parse", "--is-inside-work-tree").returncode != 0:
+            print("  ! Attenzione: questa cartella non è collegata a GitHub.\n"
+                  "    Puoi caricare le foto, ma «Pubblica sul sito» non funzionerà.\n")
+        elif _needs_lfs() and _git("lfs", "version").returncode != 0:
+            # Le foto delle serie sono gestite da Git LFS: senza, verrebbero
+            # pubblicate in un formato che il sito non sa mostrare.
+            print("  ! ATTENZIONE: manca Git LFS su questo computer.\n"
+                  "    Carica pure le foto, ma NON premere «Pubblica sul sito»:\n"
+                  "    avvisa prima Andrea.\n")
+    except GitMissing:
+        print("  ! Attenzione: git non è installato.\n"
+              "    Puoi caricare le foto, ma «Pubblica sul sito» non funzionerà.\n")
+    return True
+
+
+def _needs_lfs():
+    """Il repo si aspetta Git LFS per le foto delle serie?"""
+    ga = os.path.join(ROOT, ".gitattributes")
+    try:
+        with open(ga, encoding="utf-8") as f:
+            return "filter=lfs" in f.read()
+    except OSError:
+        return False
+
+
 def main():
     os.chdir(ROOT)
-    httpd = socketserver.ThreadingTCPServer(("", PORT), Handler)
-    httpd.allow_reuse_address = True
+    if not _startup_checks():
+        sys.exit(1)
+
     url = f"http://localhost:{PORT}/"
-    print(f"\n  Admin — {url}  (Ctrl+C per fermare)\n")
+    try:
+        httpd = Server((HOST, PORT), Handler)
+    except OSError:
+        # Porta occupata: quasi sempre è il pannello già aperto in un'altra
+        # finestra. Si apre il browser su quello invece di dare errore.
+        print("\n  Il pannello risulta già aperto: apro il browser su quello.\n"
+              "  (Se non funziona, chiudi tutte le finestre nere e riprova.)\n")
+        try: webbrowser.open(url)
+        except Exception: pass
+        return
+
+    print(f"\n  Pannello attivo — {url}\n  Chiudi questa finestra quando hai finito.\n")
     try: webbrowser.open(url)
-    except: pass
+    except Exception: pass
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\n  Stop.")
+        pass
+    finally:
         httpd.shutdown()
+        httpd.server_close()
+        print("\n  Pannello chiuso.")
 
 if __name__ == "__main__":
     main()

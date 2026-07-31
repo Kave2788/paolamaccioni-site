@@ -37,13 +37,31 @@ Guida rapida per Paola. Tieni questo foglio vicino al computer.
   dopo ogni foto: fai tutto il lavoro e premi "Pubblica" alla fine.
 - Se compare **"Niente da pubblicare"** vuol dire che è già tutto a posto.
 - Per **modificare o eliminare** un'opera: menu **"Opere"** → **"Modifica"**.
+- **Formati accettati: JPG, PNG, WEBP.** Le foto fatte con l'iPhone possono
+  essere in formato HEIC: se il pannello ti avvisa che non le ha caricate,
+  sul telefono vai in *Impostazioni → Fotocamera → Formati* e scegli
+  **"Massima compatibilità"**, poi rifai le foto (oppure mandale ad Andrea).
+- Non serve rimpicciolire le foto prima: **caricale grandi come sono**, ci
+  pensa il pannello a ottimizzarle per il sito.
 
 ## Se qualcosa non va
 
-- Il browser non si apre da solo? Apri tu il browser e scrivi nella barra
+Prima regola: **le foto non si perdono mai.** Restano salvate sul computer
+anche se compare un errore, e si possono ripubblicare dopo.
+
+- **Il browser non si apre da solo?** Apri tu il browser e scrivi nella barra
   dell'indirizzo: **localhost:8765**
-- Compare un errore quando premi "Pubblica"? Le foto **non sono perse**, restano
-  salvate sul computer. Avvisa Andrea.
+- **Compare un messaggio rosso?** Leggilo con calma: quasi sempre dice già
+  cosa fare (per esempio "controlla la connessione a internet e riprova").
+  Il messaggio resta finché non ci clicchi sopra.
+- **Errore quando premi "Pubblica"?** Controlla che internet funzioni e
+  riprova a premere "Pubblica". Se continua, avvisa Andrea: il lavoro è
+  salvato e si pubblica dopo.
+- **La finestra nera dice che c'è stato un problema?** Fai una **foto alla
+  finestra** con il telefono e mandala ad Andrea: dentro c'è scritto cosa è
+  successo.
+- **Hai chiuso la finestra nera per sbaglio?** Non è grave: riapri
+  "Avvia Pannello" e riprendi da dove eri.
 
 ---
 

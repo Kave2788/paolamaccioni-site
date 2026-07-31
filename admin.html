@@ -148,7 +148,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-s);min-height
   position:fixed;bottom:2rem;right:2rem;
   background:var(--bg3);border:1px solid var(--border);
   padding:.9rem 1.5rem;font-size:.875rem;font-style:italic;
-  z-index:999;animation:toastIn .2s ease;max-width:320px;pointer-events:none;
+  z-index:999;animation:toastIn .2s ease;max-width:420px;cursor:pointer;
+  line-height:1.5;
 }
 .toast.ok{border-color:var(--green);color:var(--green)}
 .toast.err{border-color:var(--red);color:var(--red)}
@@ -225,8 +226,11 @@ function toast(msg, type='ok') {
   const t = document.createElement('div');
   t.className = `toast ${type}`;
   t.textContent = msg;
+  t.title = 'Clicca per chiudere';
+  t.addEventListener('click', () => t.remove());
   document.body.appendChild(t);
-  setTimeout(() => t.remove(), 3500);
+  // Gli avvisi e gli errori restano a lungo: vanno letti fino in fondo.
+  setTimeout(() => t.remove(), type === 'ok' ? 4000 : 20000);
 }
 
 function setStatus(id, msg, type='') {
@@ -241,7 +245,13 @@ async function api(path, body=null, isForm=false) {
         headers: isForm ? {} : {'Content-Type':'application/json'} }
     : {};
   const r = await fetch(path, opts);
-  return r.json();
+  try {
+    return await r.json();
+  } catch {
+    // Il server ha risposto qualcosa che non è JSON: non lasciare la UI muta.
+    return { ok: false, error: 'Il pannello non ha risposto correttamente. '
+             + 'Chiudi e riapri "Avvia Pannello", poi riprova.' };
+  }
 }
 
 function setupDrop(dzId, inputId, onFiles) {
@@ -255,7 +265,10 @@ function setupDrop(dzId, inputId, onFiles) {
     dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('over'); }));
   dz.addEventListener('drop', e => {
     e.preventDefault();
-    onFiles([...e.dataTransfer.files].filter(f => f.type.startsWith('image/')));
+    // Niente filtro sul tipo: le foto da iPhone (HEIC) spesso arrivano senza
+    // tipo e sparirebbero in silenzio. Le scarta il server, che sa spiegare
+    // il perché.
+    onFiles([...e.dataTransfer.files].filter(f => f.size > 0));
   });
 }
 
@@ -512,7 +525,7 @@ function renderNew(c) {
         <label class="dz" id="n-dz">
           <strong>Trascina le foto o clicca per selezionare</strong>
           JPG, PNG, WebP — la prima caricata sarà la principale
-          <input type="file" id="n-files" multiple accept="image/*">
+          <input type="file" id="n-files" multiple accept=".jpg,.jpeg,.png,.webp,image/*">
         </label>
         <div id="n-prev" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem"></div>
       </div>
@@ -560,7 +573,12 @@ function renderNew(c) {
     files.forEach(f => fd.append('images', f));
     try {
       const j = await api('/upload', fd, true);
-      if (j.ok) { toast(`"${title}" caricata con ${j.uploaded} foto.`); go('works'); }
+      if (j.ok) {
+        toast(j.warning ? `"${title}" caricata con ${j.uploaded} foto. ATTENZIONE: ${j.warning}`
+                        : `"${title}" caricata con ${j.uploaded} foto.`,
+              j.warning ? 'err' : 'ok');
+        go('works');
+      }
       else { setStatus('n-st', j.error||'Errore.', 'err'); btn.disabled = false; }
     } catch { setStatus('n-st', 'Errore di rete.', 'err'); btn.disabled = false; }
   });
@@ -630,7 +648,7 @@ async function renderEdit(c, serieId, workId) {
       <label class="dz" id="e-dz" style="margin-top:.5rem">
         <strong>Aggiungi nuove foto</strong>
         Trascina o clicca — verranno aggiunte in fondo alla galleria
-        <input type="file" id="e-files" multiple accept="image/*">
+        <input type="file" id="e-files" multiple accept=".jpg,.jpeg,.png,.webp,image/*">
       </label>
       <div id="e-prev" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem"></div>
       <div id="e-add-act" style="display:none" class="form-actions">
@@ -759,7 +777,9 @@ async function renderEdit(c, serieId, workId) {
         images = ir2.files || [];
         ver = Date.now();
         renderGrid();
-        toast(`${j.uploaded} foto aggiunte.`);
+        toast(j.warning ? `${j.uploaded} foto aggiunte. ATTENZIONE: ${j.warning}`
+                        : `${j.uploaded} foto aggiunte.`,
+              j.warning ? 'err' : 'ok');
         setStatus('e-add-st', '');
       } else {
         setStatus('e-add-st', j.error||'Errore.', 'err');
