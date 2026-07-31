@@ -14,6 +14,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://paolamaccioni.com/opera/libellule-in-amore/">
   <link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/libellule-in-amore/">
+  <link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/libellule-in-amore/">
 
   <meta property="og:type" content="article">
   <meta property="og:locale" content="it_IT">
@@ -37,8 +38,7 @@
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VisualArtwork", "name": "Libellule in amore", "description": "Libellule in amore raffigura due libellule unite nel momento dell’accoppiamento, una configurazione naturale che crea una forma circolare e continua.\n\nLe figure si sviluppano attraverso un gioco di linee sottili e superfici lavorate a sbalzo, dove le ali leggere contrastano con la struttura segmentata dei corpi. Il ramo introduce un punto di appoggio stabile, mentre la composizione rimane dinamica grazie al dialogo tra le due figure.\n\nL’opera unisce precisione naturalistica e ricerca formale, trasformando il gesto naturale delle libellule in una composizione equilibrata tra movimento, leggerezza e materia.", "creator": {"@type": "Person", "name": "Paola Maccioni"}, "url": "https://paolamaccioni.com/opera/libellule-in-amore/", "image": ["https://paolamaccioni.com/forma-organica/libellule-in-amore/01.jpg"], "artform": "Scultura", "artMedium": "Alluminio lavorato a sbalzo", "artworkSurface": "Lastra di alluminio", "inLanguage": "it-IT"}</script>
   <link rel="stylesheet" href="/css/main.css">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPHJKXEM94"></script>
+  <!-- Analytics: caricata da js/consent.js solo dopo il consenso ai cookie (GDPR) -->
 </head>
 <body>
 
@@ -81,7 +81,7 @@
       </div>
     </div>
 
-    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/libellule-in-amore/01.jpg"><img src="/forma-organica/libellule-in-amore/canvas/01.webp" alt="Libellule in amore 1" loading="lazy" decoding="async" loading="lazy"></button></div>
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/forma-organica/libellule-in-amore/01.jpg"><img src="/forma-organica/libellule-in-amore/canvas/01.webp" alt="Libellule in amore 1" loading="lazy" decoding="async"></button></div>
 
   </div>
 </section>
@@ -89,95 +89,36 @@
 <div class="legal-bar">© 2026 PIEMME di Paola Maccioni | C.F. MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
 
 <script src="/js/main.js"></script>
+<script src="/js/consent.js"></script>
 <script>
-// Gallery navigation client-side (arricchisce pre-rendered HTML)
 (() => {
   const gallery = ["forma-organica/libellule-in-amore/01.jpg"];
   const thumbs = document.querySelectorAll('.opera-thumb');
   const mainImg = document.getElementById('opera-img');
   const counter = document.getElementById('opera-counter');
   let current = 0;
-
-  function preload(i) {
-    [i-1, i+1].forEach(k => {
-      const idx = (k + gallery.length) % gallery.length;
-      const im = new Image();
-      im.src = '/' + gallery[idx];
-    });
-  }
-
-  function show(i) {
-    current = (i + gallery.length) % gallery.length;
-    mainImg.removeAttribute('srcset');
-    mainImg.src = '/' + gallery[current];
-    mainImg.alt = "Libellule in amore" + ' ' + (current+1);
-    counter.textContent = (current+1) + ' / ' + gallery.length;
-    thumbs.forEach((t, idx) => t.classList.toggle('active', idx === current));
-    preload(current);
-  }
-
-    const lb = document.createElement('div');
-  lb.className = 'opera-lightbox';
-  lb.innerHTML = `
-    <button class="opera-lightbox-close" aria-label="Chiudi">×</button>
-    <button class="opera-lightbox-prev" aria-label="Precedente">‹</button>
-    <button class="opera-lightbox-next" aria-label="Successiva">›</button>
-    <img alt="" decoding="async">
-    <div class="opera-lightbox-caption"></div>
-  `;
+  function preload(i){ [i-1,i+1].forEach(k=>{const idx=(k+gallery.length)%gallery.length;const im=new Image();im.src='/'+gallery[idx];}); }
+  function show(i){ current=(i+gallery.length)%gallery.length; mainImg.removeAttribute('srcset'); mainImg.src='/'+gallery[current]; mainImg.alt="Libellule in amore"+' '+(current+1); counter.textContent=(current+1)+' / '+gallery.length; thumbs.forEach((t,idx)=>t.classList.toggle('active',idx===current)); preload(current); }
+  const lb=document.createElement('div'); lb.className='opera-lightbox';
+  lb.innerHTML=`<button class="opera-lightbox-close" aria-label="Chiudi">×</button><button class="opera-lightbox-prev" aria-label="Precedente">‹</button><button class="opera-lightbox-next" aria-label="Successiva">›</button><img alt="" decoding="async"><div class="opera-lightbox-caption"></div>`;
   document.body.appendChild(lb);
-  const lbImg = lb.querySelector('img');
-  const lbCap = lb.querySelector('.opera-lightbox-caption');
-  const operaTitle = "Libellule in amore";
-
-  function openLb() {
-    lbImg.src = '/' + gallery[current];
-    lbImg.alt = operaTitle;
-    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLb() {
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function lbShow(i) {
-    show(i);
-    lbImg.src = '/' + gallery[current];
-    lbCap.textContent = operaTitle + ' — ' + (current+1) + ' / ' + gallery.length;
-  }
-
-  if (gallery.length > 1) {
-    thumbs.forEach(t => t.addEventListener('click', () => show(parseInt(t.dataset.i))));
-    document.getElementById('prev-img').addEventListener('click', () => show(current - 1));
-    document.getElementById('next-img').addEventListener('click', () => show(current + 1));
-    document.addEventListener('keydown', e => {
-      if (lb.classList.contains('open')) return; // gestito da lightbox
-      if (e.key === 'ArrowLeft') show(current - 1);
-      if (e.key === 'ArrowRight') show(current + 1);
-    });
-    thumbs[0]?.classList.add('active');
-    preload(0);
-  } else {
-    document.getElementById('prev-img').style.display = 'none';
-    document.getElementById('next-img').style.display = 'none';
-    counter.style.display = 'none';
-  }
-
-  // Lightbox: click immagine principale → zoom fullscreen
-
-
-  mainImg.addEventListener('click', openLb);
-  lb.querySelector('.opera-lightbox-close').addEventListener('click', closeLb);
-  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-  lb.querySelector('.opera-lightbox-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(current - 1); });
-  lb.querySelector('.opera-lightbox-next').addEventListener('click', e => { e.stopPropagation(); lbShow(current + 1); });
-  document.addEventListener('keydown', e => {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLb();
-    if (e.key === 'ArrowLeft' && gallery.length > 1) lbShow(current - 1);
-    if (e.key === 'ArrowRight' && gallery.length > 1) lbShow(current + 1);
-  });
+  const lbImg=lb.querySelector('img'); const lbCap=lb.querySelector('.opera-lightbox-caption'); const operaTitle="Libellule in amore";
+  function openLb(){ lbImg.src='/'+gallery[current]; lbImg.alt=operaTitle; lbCap.textContent=operaTitle+' — '+(current+1)+' / '+gallery.length; lb.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  function lbShow(i){ show(i); lbImg.src='/'+gallery[current]; lbCap.textContent=operaTitle+' — '+(current+1)+' / '+gallery.length; }
+  if(gallery.length>1){
+    thumbs.forEach(t=>t.addEventListener('click',()=>show(parseInt(t.dataset.i))));
+    document.getElementById('prev-img').addEventListener('click',()=>show(current-1));
+    document.getElementById('next-img').addEventListener('click',()=>show(current+1));
+    document.addEventListener('keydown',e=>{ if(lb.classList.contains('open'))return; if(e.key==='ArrowLeft')show(current-1); if(e.key==='ArrowRight')show(current+1); });
+    thumbs[0]?.classList.add('active'); preload(0);
+  } else { document.getElementById('prev-img').style.display='none'; document.getElementById('next-img').style.display='none'; counter.style.display='none'; }
+  mainImg.addEventListener('click',openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click',closeLb);
+  lb.addEventListener('click',e=>{ if(e.target===lb)closeLb(); });
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click',e=>{ e.stopPropagation(); lbShow(current-1); });
+  lb.querySelector('.opera-lightbox-next').addEventListener('click',e=>{ e.stopPropagation(); lbShow(current+1); });
+  document.addEventListener('keydown',e=>{ if(!lb.classList.contains('open'))return; if(e.key==='Escape')closeLb(); if(e.key==='ArrowLeft'&&gallery.length>1)lbShow(current-1); if(e.key==='ArrowRight'&&gallery.length>1)lbShow(current+1); });
 })();
 </script>
 </body>
