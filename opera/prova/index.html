@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0d0c">
+  <title>prova — Paola Maccioni</title>
+  <meta name="description" content="prova — scultura in alluminio di Paola Maccioni, serie Struttura e Tensione.">
+  <meta name="keywords" content="prova, paola maccioni, struttura e tensione, scultura alluminio sbalzo">
+  <meta name="author" content="Paola Maccioni">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://paolamaccioni.com/opera/prova/">
+  <link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/prova/">
+  <link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/prova/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Paola Maccioni — PIEMME">
+  <meta property="og:title" content="prova — Paola Maccioni">
+  <meta property="og:description" content="prova — scultura in alluminio di Paola Maccioni, serie Struttura e Tensione.">
+  <meta property="og:url" content="https://paolamaccioni.com/opera/prova/">
+  <meta property="og:image" content="https://paolamaccioni.com/struttura-tensione/prova/01.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="1400">
+  <meta property="article:author" content="Paola Maccioni">
+  <meta property="article:section" content="Struttura e Tensione">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="prova — Paola Maccioni">
+  <meta name="twitter:description" content="prova — scultura in alluminio di Paola Maccioni, serie Struttura e Tensione.">
+  <meta name="twitter:image" content="https://paolamaccioni.com/struttura-tensione/prova/01.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VisualArtwork", "name": "prova", "description": "", "creator": {"@type": "Person", "name": "Paola Maccioni"}, "url": "https://paolamaccioni.com/opera/prova/", "image": ["https://paolamaccioni.com/struttura-tensione/prova/01.jpg"], "artform": "Scultura", "artMedium": "Alluminio lavorato a sbalzo", "artworkSurface": "Lastra di alluminio", "inLanguage": "it-IT"}</script>
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- Analytics: caricata da js/consent.js solo dopo il consenso ai cookie (GDPR) -->
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/bio.html">Biografia</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/commissioni.html">Commissioni</a></li>
+      <li><a href="/contatti.html">Contatti</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <a href="/opera/prova/" class="active">IT</a>
+      <span>|</span>
+      <a href="/en/opera/prova/">EN</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-section opera-section">
+  <div class="opera-wrap container">
+
+    <a href="/serie/struttura-tensione/" class="back-link">← Struttura e Tensione</a>
+
+    <div class="opera-grid">
+      <div class="opera-img-wrap">
+        <img id="opera-img" src="/struttura-tensione/prova/01.jpg" alt="prova" srcset="/struttura-tensione/prova/01.jpg 1400w, /struttura-tensione/prova/01.jpg 800w" decoding="async" fetchpriority="high">
+        <button class="opera-nav prev" id="prev-img" aria-label="Precedente">‹</button>
+        <button class="opera-nav next" id="next-img" aria-label="Successiva">›</button>
+        <span class="opera-counter" id="opera-counter">1 / 1</span>
+      </div>
+      <div class="opera-info">
+        <p class="label"></p>
+        <h1>prova</h1>
+        <div class="rule"></div>
+        
+        <p class="label opera-serie-label">Dalla serie Struttura e Tensione</p>
+      </div>
+    </div>
+
+    <div class="opera-thumbs" id="opera-thumbs"><button class="opera-thumb" data-i="0" data-src="/struttura-tensione/prova/01.jpg"><img src="/struttura-tensione/prova/canvas/01.webp" alt="prova 1" loading="lazy" decoding="async"></button></div>
+
+  </div>
+</section>
+
+<div class="legal-bar">© 2026 PIEMME di Paola Maccioni | C.F. MCCPLA80R64B354E | <a href="mailto:infopiemmeart@gmail.com">infopiemmeart@gmail.com</a> | <a href="/privacy.html">Privacy</a> | <a href="/cookie-policy.html">Cookie</a> | <a href="#" data-cookie-settings>Gestisci cookie</a> | Tutti i diritti sono riservati</div>
+
+<script src="/js/main.js"></script>
+<script src="/js/consent.js"></script>
+<script>
+(() => {
+  const gallery = ["struttura-tensione/prova/01.jpg"];
+  const thumbs = document.querySelectorAll('.opera-thumb');
+  const mainImg = document.getElementById('opera-img');
+  const counter = document.getElementById('opera-counter');
+  let current = 0;
+  function preload(i){ [i-1,i+1].forEach(k=>{const idx=(k+gallery.length)%gallery.length;const im=new Image();im.src='/'+gallery[idx];}); }
+  function show(i){ current=(i+gallery.length)%gallery.length; mainImg.removeAttribute('srcset'); mainImg.src='/'+gallery[current]; mainImg.alt="prova"+' '+(current+1); counter.textContent=(current+1)+' / '+gallery.length; thumbs.forEach((t,idx)=>t.classList.toggle('active',idx===current)); preload(current); }
+  const lb=document.createElement('div'); lb.className='opera-lightbox';
+  lb.innerHTML=`<button class="opera-lightbox-close" aria-label="Chiudi">×</button><button class="opera-lightbox-prev" aria-label="Precedente">‹</button><button class="opera-lightbox-next" aria-label="Successiva">›</button><img alt="" decoding="async"><div class="opera-lightbox-caption"></div>`;
+  document.body.appendChild(lb);
+  const lbImg=lb.querySelector('img'); const lbCap=lb.querySelector('.opera-lightbox-caption'); const operaTitle="prova";
+  function openLb(){ lbImg.src='/'+gallery[current]; lbImg.alt=operaTitle; lbCap.textContent=operaTitle+' — '+(current+1)+' / '+gallery.length; lb.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  function lbShow(i){ show(i); lbImg.src='/'+gallery[current]; lbCap.textContent=operaTitle+' — '+(current+1)+' / '+gallery.length; }
+  if(gallery.length>1){
+    thumbs.forEach(t=>t.addEventListener('click',()=>show(parseInt(t.dataset.i))));
+    document.getElementById('prev-img').addEventListener('click',()=>show(current-1));
+    document.getElementById('next-img').addEventListener('click',()=>show(current+1));
+    document.addEventListener('keydown',e=>{ if(lb.classList.contains('open'))return; if(e.key==='ArrowLeft')show(current-1); if(e.key==='ArrowRight')show(current+1); });
+    thumbs[0]?.classList.add('active'); preload(0);
+  } else { document.getElementById('prev-img').style.display='none'; document.getElementById('next-img').style.display='none'; counter.style.display='none'; }
+  mainImg.addEventListener('click',openLb);
+  lb.querySelector('.opera-lightbox-close').addEventListener('click',closeLb);
+  lb.addEventListener('click',e=>{ if(e.target===lb)closeLb(); });
+  lb.querySelector('.opera-lightbox-prev').addEventListener('click',e=>{ e.stopPropagation(); lbShow(current-1); });
+  lb.querySelector('.opera-lightbox-next').addEventListener('click',e=>{ e.stopPropagation(); lbShow(current+1); });
+  document.addEventListener('keydown',e=>{ if(!lb.classList.contains('open'))return; if(e.key==='Escape')closeLb(); if(e.key==='ArrowLeft'&&gallery.length>1)lbShow(current-1); if(e.key==='ArrowRight'&&gallery.length>1)lbShow(current+1); });
+})();
+</script>
+</body>
+</html>
