@@ -1,11 +1,19 @@
-# Blocca i file di sviluppo dal sito pubblico (404 forzato — Netlify non supporta .netlifyignore)
+# ATTENZIONE ALL'ORDINE: Netlify applica la PRIMA regola che combacia.
+# Le regole specifiche vanno sempre sopra quelle con il jolly (*), altrimenti
+# il jolly le intercetta e non scattano mai.
+#
+# Il "!" forza la regola anche quando il file esiste davvero. Senza, Netlify
+# serve il file e il redirect viene ignorato (shadowing).
+
+# ── 1. File di sviluppo: fuori dal sito pubblico ────────────────────────────
+# (Netlify non supporta .netlifyignore: si bloccano con un 404 forzato)
 /admin.py  /404.html  404!
 /admin.html  /404.html  404!
 /scripts/*  /404.html  404!
 /translate_opera.py  /404.html  404!
 /reorder-front.js  /404.html  404!
 /change-ns.js  /404.html  404!
-/Avvia%20Pannello.bat  /404.html  404!
+/Avvia*  /404.html  404!
 /pannello-paola.ico  /404.html  404!
 /netlify/*  /404.html  404!
 /CLAUDE.md  /404.html  404!
@@ -15,25 +23,10 @@
 /STRUCTURE.md  /404.html  404!
 /README.md  /404.html  404!
 
-# Redirect legacy URLs to pretty SEO URLs
-/serie.html  /serie/:id/  302  id=:id
-/opera.html  /opera/:id/  302  id=:id
-
-# Trailing slash normalization
-/serie/*/   /serie/:splat/  200
-/opera/*/   /opera/:splat/  200
-
-# 301 redirect /it/ legacy → radice IT
-/it/  /  301
-/it/index.html  /  301
-/it/bio.html  /bio.html  301
-/it/commissioni.html  /commissioni.html  301
-/it/contatti.html  /contatti.html  301
-/it/cookie-policy.html  /cookie-policy.html  301
-/it/portfolio.html  /portfolio.html  301
-/it/privacy.html  /privacy.html  301
-
-# 301 redirect slug Wix legacy → SEO-friendly
+# ── 2. Vecchi slug Wix → pagine attuali ─────────────────────────────────────
+# DEVONO stare sopra la normalizzazione di /opera/*/ qui sotto, altrimenti
+# il jolly li intercetta e questi indirizzi (ancora indicizzati da Google)
+# rispondono 404 invece di reindirizzare.
 /opera/progetto-senza-titolo-6e3e20/  /opera/sfera/  301
 /opera/progetto-senza-titolo-77d42e/  /opera/fazzoletto/  301
 /opera/progetto-senza-titolo-a4bc4d/  /opera/sotto-la-superficie/  301
@@ -48,3 +41,24 @@
 /opera/progetto-senza-titolo-2ae9b3/  /opera/trota/  301
 /opera/progetto-senza-titolo-a6dbf4/  /opera/libellule-in-amore/  301
 /opera/farfalla-5ec760/  /opera/metamorfosi/  301
+
+# ── 3. Percorsi /it/ legacy → radice italiana ───────────────────────────────
+# I file dentro it/ esistono ancora e hanno canonical verso il vecchio dominio
+# netlify.app: senza il "!" verrebbero serviti al posto del redirect.
+/it/  /  301!
+/it/index.html  /  301!
+/it/bio.html  /bio.html  301!
+/it/commissioni.html  /commissioni.html  301!
+/it/contatti.html  /contatti.html  301!
+/it/cookie-policy.html  /cookie-policy.html  301!
+/it/portfolio.html  /portfolio.html  301!
+/it/privacy.html  /privacy.html  301!
+/it/*  /  301!
+
+# ── 4. Vecchi URL con parametri → indirizzi SEO ─────────────────────────────
+/serie.html  /serie/:id/  302  id=:id
+/opera.html  /opera/:id/  302  id=:id
+
+# ── 5. Normalizzazione (jolly: sempre per ultimi) ───────────────────────────
+/serie/*/   /serie/:splat/  200
+/opera/*/   /opera/:splat/  200

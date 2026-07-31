@@ -4,732 +4,1152 @@
     <loc>https://paolamaccioni.com/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/bio.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/bio.html" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/commissioni.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/commissioni.html" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/contatti.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/contatti.html" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/cookie-policy.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/en/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/en/bio/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.combio/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/commissioni/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comcommissioni/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/contatti/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comcontatti/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/cookie-policy/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comcookie-policy/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/aragosta/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/aragosta/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/armatura-primordiale/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/armatura-primordiale/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/boes/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/boes/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/bubbles/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/bubbles/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/carpa-koi/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/carpa-koi/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/checkmate/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/checkmate/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/cubi/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/cubi/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/dragone/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/dragone/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/elefante/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/elefante/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/equilibrio-fratturato/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/equilibrio-fratturato/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/fazzoletto/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/fazzoletto/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/fenicotteri/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/fenicotteri/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/fibonacci/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/fibonacci/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/giappone/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/giappone/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/globigerina/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/globigerina/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/granchio/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/granchio/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/iguana/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/iguana/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/il-peso-dell-ingiustizia/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/il-peso-dell-ingiustizia/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/il-rinoceronte/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/il-rinoceronte/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/l-unione/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/l-unione/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/lady/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/lady/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/libellule-in-amore/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/libellule-in-amore/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/lombra-della-luce/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/lombra-della-luce/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/lux-eterna/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/lux-eterna/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/mare-in-tempesta/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/mare-in-tempesta/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/metamorfosi/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/metamorfosi/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/nessu-dorma/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/nessu-dorma/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/oblo/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/oblo/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/onde-riflesse/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/onde-riflesse/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/pensiero/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/pensiero/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/pesce-palla/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/pesce-palla/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/polipo/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/polipo/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/rana/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/rana/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/riccio-di-mare/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/riccio-di-mare/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/rondinelle/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/rondinelle/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/rondini-in-gabbia/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/rondini-in-gabbia/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/senza-catene/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/senza-catene/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/sfera/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/sfera/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/sotto-la-superficie/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/sotto-la-superficie/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/specchio-nero/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/specchio-nero/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/tartaruga-c8e51f/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/tartaruga-c8e51f/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/titolomarionette-ex-voto/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/titolomarionette-ex-voto/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/trittico/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/trittico/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/trota/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/trota/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/tucano/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/tucano/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/vedova-nera/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/vedova-nera/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/veliero/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/veliero/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/volo-d-argento/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/volo-d-argento/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/opera/zebra/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comopera/zebra/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/en/portfolio/</loc>
+    <loc>https://paolamaccioni.com/portfolio.html</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comportfolio/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/portfolio.html" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/en/privacy/</loc>
+    <loc>https://paolamaccioni.com/en/portfolio.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/portfolio.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/bio.html</loc>
     <lastmod>2026-05-25</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comprivacy/" />
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/bio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/bio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/bio.html" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/en/serie/forma-organica/</loc>
+    <loc>https://paolamaccioni.com/en/bio.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/bio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/bio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/bio.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/contatti.html</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comserie/forma-organica/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/contatti.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/contatti.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/contatti.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/contatti.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/contatti.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/contatti.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/contatti.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/commissioni.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/commissioni.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/commissioni.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/commissioni.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/commissioni.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/commissioni.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/commissioni.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/commissioni.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/privacy.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/privacy.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/privacy.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/privacy.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/cookie-policy.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/cookie-policy.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/cookie-policy.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/cookie-policy.html" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/en/serie/struttura-tensione/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.comserie/struttura-tensione/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/en/serie/struttura-tensione/tracce-di-memoria/</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/serie-ombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/en/serie/struttura-tensione/serie-ombra-della-luce/</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/serie-ombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/serie/struttura-tensione/geometria/</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/geometria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/geometria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/geometria/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/en/serie/struttura-tensione/geometria/</loc>
     <lastmod>2026-06-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/struttura-tensione/geometria/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/aragosta/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/aragosta/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/armatura-primordiale/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/armatura-primordiale/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/boes/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/boes/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/bubbles/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/bubbles/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/carpa-koi/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/carpa-koi/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/checkmate/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/checkmate/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/cubi/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/cubi/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/dragone/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/dragone/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/elefante/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/elefante/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/equilibrio-fratturato/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/equilibrio-fratturato/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/fazzoletto/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fazzoletto/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/fenicotteri/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fenicotteri/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/fibonacci/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fibonacci/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/giappone/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/giappone/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/globigerina/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/globigerina/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/granchio/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/granchio/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/iguana/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/iguana/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/il-peso-dell-ingiustizia/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/il-peso-dell-ingiustizia/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/il-rinoceronte/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/il-rinoceronte/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/l-unione/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/l-unione/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/lady/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lady/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/libellule-in-amore/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/libellule-in-amore/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/geometria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/struttura-tensione/geometria/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/lombra-della-luce/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/lombra-della-luce/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/lux-eterna/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lux-eterna/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lux-eterna/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lux-eterna/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/mare-in-tempesta/</loc>
+    <loc>https://paolamaccioni.com/en/opera/lux-eterna/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/mare-in-tempesta/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lux-eterna/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lux-eterna/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lux-eterna/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/metamorfosi/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://paolamaccioni.com/opera/frattura/</loc>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/metamorfosi/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/frattura/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/frattura/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/frattura/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/nessu-dorma/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://paolamaccioni.com/en/opera/frattura/</loc>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/nessu-dorma/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/frattura/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/frattura/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/frattura/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/oblo/</loc>
+    <loc>https://paolamaccioni.com/opera/il-rinoceronte/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/oblo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/il-rinoceronte/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/il-rinoceronte/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/il-rinoceronte/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/onde-riflesse/</loc>
+    <loc>https://paolamaccioni.com/en/opera/il-rinoceronte/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/onde-riflesse/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/pensiero/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/pensiero/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/pesce-palla/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/pesce-palla/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/polipo/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/polipo/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/rana/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rana/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/riccio-di-mare/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/riccio-di-mare/" />
-  </url>
-  <url>
-    <loc>https://paolamaccioni.com/opera/rondinelle/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rondinelle/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/il-rinoceronte/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/il-rinoceronte/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/il-rinoceronte/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/rondini-in-gabbia/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/rondini-in-gabbia/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rondini-in-gabbia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/rondini-in-gabbia/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/senza-catene/</loc>
+    <loc>https://paolamaccioni.com/en/opera/rondini-in-gabbia/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/senza-catene/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/rondini-in-gabbia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rondini-in-gabbia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/rondini-in-gabbia/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/sfera/</loc>
+    <loc>https://paolamaccioni.com/opera/fibonacci/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/sfera/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/fibonacci/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fibonacci/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/fibonacci/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/sotto-la-superficie/</loc>
+    <loc>https://paolamaccioni.com/en/opera/fibonacci/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/sotto-la-superficie/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/fibonacci/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fibonacci/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/fibonacci/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/fazzoletto/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/fazzoletto/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fazzoletto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/fazzoletto/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/fazzoletto/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/fazzoletto/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fazzoletto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/fazzoletto/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/specchio-nero/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/specchio-nero/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/specchio-nero/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/specchio-nero/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/tartaruga-c8e51f/</loc>
+    <loc>https://paolamaccioni.com/en/opera/specchio-nero/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/tartaruga-c8e51f/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/specchio-nero/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/specchio-nero/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/specchio-nero/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/titolomarionette-ex-voto/</loc>
+    <loc>https://paolamaccioni.com/opera/bubbles/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/titolomarionette-ex-voto/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/bubbles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/bubbles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/bubbles/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/bubbles/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/bubbles/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/bubbles/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/bubbles/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/onde-riflesse/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/onde-riflesse/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/onde-riflesse/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/onde-riflesse/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/onde-riflesse/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/onde-riflesse/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/onde-riflesse/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/onde-riflesse/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/sotto-la-superficie/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/sotto-la-superficie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/sotto-la-superficie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/sotto-la-superficie/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/sotto-la-superficie/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/sotto-la-superficie/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/sotto-la-superficie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/sotto-la-superficie/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/il-peso-dell-ingiustizia/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/il-peso-dell-ingiustizia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/il-peso-dell-ingiustizia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/il-peso-dell-ingiustizia/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/il-peso-dell-ingiustizia/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/il-peso-dell-ingiustizia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/il-peso-dell-ingiustizia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/il-peso-dell-ingiustizia/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/checkmate/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/checkmate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/checkmate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/checkmate/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/checkmate/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/checkmate/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/checkmate/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/checkmate/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/senza-catene/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/senza-catene/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/senza-catene/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/senza-catene/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/senza-catene/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/senza-catene/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/senza-catene/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/senza-catene/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/trittico/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/trittico/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/trittico/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/trittico/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/trota/</loc>
+    <loc>https://paolamaccioni.com/en/opera/trittico/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/trota/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/trittico/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/trittico/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/trittico/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/tucano/</loc>
+    <loc>https://paolamaccioni.com/opera/lady/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/tucano/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lady/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lady/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lady/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/vedova-nera/</loc>
+    <loc>https://paolamaccioni.com/en/opera/lady/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/vedova-nera/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lady/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lady/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lady/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/pensiero/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/pensiero/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/pensiero/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/pensiero/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/pensiero/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/pensiero/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/pensiero/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/pensiero/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/boes/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/boes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/boes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/boes/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/boes/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/boes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/boes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/boes/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/titolomarionette-ex-voto/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/titolomarionette-ex-voto/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/titolomarionette-ex-voto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/titolomarionette-ex-voto/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/titolomarionette-ex-voto/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/titolomarionette-ex-voto/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/titolomarionette-ex-voto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/titolomarionette-ex-voto/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/veliero/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/veliero/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/veliero/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/veliero/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/veliero/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/veliero/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/veliero/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/veliero/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/mare-in-tempesta/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/mare-in-tempesta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/mare-in-tempesta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/mare-in-tempesta/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/mare-in-tempesta/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/mare-in-tempesta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/mare-in-tempesta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/mare-in-tempesta/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/oblo/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/oblo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/oblo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/oblo/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/oblo/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/oblo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/oblo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/oblo/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/giappone/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/giappone/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/giappone/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/giappone/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/giappone/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/giappone/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/giappone/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/giappone/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/opera/volo-d-argento/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/volo-d-argento/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/volo-d-argento/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/volo-d-argento/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/opera/zebra/</loc>
+    <loc>https://paolamaccioni.com/en/opera/volo-d-argento/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/zebra/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/volo-d-argento/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/volo-d-argento/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/volo-d-argento/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/portfolio.html</loc>
+    <loc>https://paolamaccioni.com/opera/nessu-dorma/</loc>
     <lastmod>2026-05-25</lastmod>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/portfolio.html" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/nessu-dorma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/nessu-dorma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/nessu-dorma/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/privacy.html</loc>
+    <loc>https://paolamaccioni.com/en/opera/nessu-dorma/</loc>
     <lastmod>2026-05-25</lastmod>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/privacy.html" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/nessu-dorma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/nessu-dorma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/nessu-dorma/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/l-unione/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/l-unione/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/l-unione/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/l-unione/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/l-unione/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/l-unione/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/l-unione/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/l-unione/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/amore-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/amore-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/amore-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/amore-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/amore-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/amore-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/amore-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/amore-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/ferita-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/ferita-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/ferita-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/ferita-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/ferita-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/ferita-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/ferita-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/ferita-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/status-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/status-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/status-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/status-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/status-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/status-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/status-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/status-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/lavoro-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lavoro-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lavoro-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lavoro-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/lavoro-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lavoro-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lavoro-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lavoro-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/kleenex-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/kleenex-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/kleenex-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/kleenex-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/kleenex-tracce-di-memoria/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/kleenex-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/kleenex-tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/kleenex-tracce-di-memoria/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/lombra-della-luce-variazione-i/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-i/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-i/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-i/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-i/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-i/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-i/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-i/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/lombra-della-luce-variazione-ii/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-ii/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-ii/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-ii/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-ii/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-ii/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-ii/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-ii/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/lombra-della-luce-variazione-iii/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iii/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-iii/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iii/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-iii/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iii/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-iii/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iii/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/lombra-della-luce-variazione-iv/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iv/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-iv/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iv/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-iv/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iv/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/lombra-della-luce-variazione-iv/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/lombra-della-luce-variazione-iv/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/cubi/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/cubi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/cubi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/cubi/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/cubi/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/cubi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/cubi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/cubi/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/equilibrio-fratturato/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/equilibrio-fratturato/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/equilibrio-fratturato/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/equilibrio-fratturato/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/equilibrio-fratturato/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/equilibrio-fratturato/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/equilibrio-fratturato/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/equilibrio-fratturato/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/sfera/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/sfera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/sfera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/sfera/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/sfera/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/sfera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/sfera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/sfera/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/soglia/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/soglia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/soglia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/soglia/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/soglia/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/soglia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/soglia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/soglia/" />
   </url>
   <url>
     <loc>https://paolamaccioni.com/serie/forma-organica/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/forma-organica/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/forma-organica/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/forma-organica/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/serie/struttura-tensione/</loc>
+    <loc>https://paolamaccioni.com/en/serie/forma-organica/</loc>
     <lastmod>2026-05-25</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/serie/forma-organica/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/forma-organica/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/serie/forma-organica/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/serie/struttura-tensione/tracce-di-memoria/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://paolamaccioni.com/opera/globigerina/</loc>
+    <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/tracce-di-memoria/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/globigerina/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/globigerina/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/globigerina/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/serie/struttura-tensione/serie-ombra-della-luce/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://paolamaccioni.com/en/opera/globigerina/</loc>
+    <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/serie-ombra-della-luce/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/globigerina/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/globigerina/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/globigerina/" />
   </url>
   <url>
-    <loc>https://paolamaccioni.com/serie/struttura-tensione/geometria/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://paolamaccioni.com/opera/riccio-di-mare/</loc>
+    <lastmod>2026-05-25</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/serie/struttura-tensione/geometria/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/riccio-di-mare/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/riccio-di-mare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/riccio-di-mare/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/riccio-di-mare/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/riccio-di-mare/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/riccio-di-mare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/riccio-di-mare/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/polipo/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/polipo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/polipo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/polipo/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/polipo/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/polipo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/polipo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/polipo/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/armatura-primordiale/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/armatura-primordiale/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/armatura-primordiale/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/armatura-primordiale/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/armatura-primordiale/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/armatura-primordiale/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/armatura-primordiale/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/armatura-primordiale/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/granchio/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/granchio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/granchio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/granchio/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/granchio/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/granchio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/granchio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/granchio/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/pesce-palla/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/pesce-palla/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/pesce-palla/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/pesce-palla/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/pesce-palla/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/pesce-palla/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/pesce-palla/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/pesce-palla/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/iguana/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/iguana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/iguana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/iguana/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/iguana/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/iguana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/iguana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/iguana/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/dragone/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/dragone/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/dragone/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/dragone/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/dragone/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/dragone/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/dragone/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/dragone/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/elefante/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/elefante/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/elefante/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/elefante/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/elefante/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/elefante/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/elefante/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/elefante/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/zebra/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/zebra/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/zebra/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/zebra/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/zebra/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/zebra/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/zebra/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/zebra/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/tartaruga-c8e51f/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/tartaruga-c8e51f/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/tartaruga-c8e51f/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/tartaruga-c8e51f/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/tartaruga-c8e51f/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/tartaruga-c8e51f/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/tartaruga-c8e51f/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/tartaruga-c8e51f/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/aragosta/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/aragosta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/aragosta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/aragosta/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/aragosta/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/aragosta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/aragosta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/aragosta/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/carpa-koi/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/carpa-koi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/carpa-koi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/carpa-koi/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/carpa-koi/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/carpa-koi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/carpa-koi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/carpa-koi/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/fenicotteri/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/fenicotteri/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fenicotteri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/fenicotteri/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/fenicotteri/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/fenicotteri/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/fenicotteri/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/fenicotteri/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/trota/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/trota/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/trota/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/trota/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/trota/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/trota/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/trota/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/trota/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/tucano/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/tucano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/tucano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/tucano/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/tucano/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/tucano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/tucano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/tucano/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/vedova-nera/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/vedova-nera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/vedova-nera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/vedova-nera/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/vedova-nera/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/vedova-nera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/vedova-nera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/vedova-nera/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/libellule-in-amore/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/libellule-in-amore/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/libellule-in-amore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/libellule-in-amore/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/libellule-in-amore/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/libellule-in-amore/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/libellule-in-amore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/libellule-in-amore/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/rondinelle/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/rondinelle/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rondinelle/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/rondinelle/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/rondinelle/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/rondinelle/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rondinelle/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/rondinelle/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/rana/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/rana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/rana/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/rana/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/rana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/rana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/rana/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/opera/metamorfosi/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/metamorfosi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/metamorfosi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/metamorfosi/" />
+  </url>
+  <url>
+    <loc>https://paolamaccioni.com/en/opera/metamorfosi/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://paolamaccioni.com/opera/metamorfosi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paolamaccioni.com/en/opera/metamorfosi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paolamaccioni.com/opera/metamorfosi/" />
   </url>
 </urlset>
