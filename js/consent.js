@@ -5,6 +5,43 @@ const GA_ID = 'G-FPHJKXEM94';
 const STORAGE_KEY = 'paola-cookie-consent';
 const STORAGE_VERSION = 1;
 
+// === Lingua ===
+// Le pagine inglesi hanno <html lang="en"> e stanno sotto /en/: si guardano
+// entrambi, così il banner resta corretto anche se una pagina perde l'attributo.
+const LANG = ((document.documentElement.lang || '').toLowerCase().startsWith('en')
+              || location.pathname.startsWith('/en/')) ? 'en' : 'it';
+
+const TESTI = {
+  it: {
+    titolo:      'Privacy e cookie',
+    descrizione: 'Usiamo cookie tecnici per il funzionamento del sito e cookie di analisi '
+               + '(Google Analytics) per capire come viene usato il sito. Puoi accettare, '
+               + 'rifiutare o personalizzare le tue scelte. Maggiori dettagli nella '
+               + '<a href="/privacy.html">Privacy Policy</a> e '
+               + '<a href="/cookie-policy.html">Cookie Policy</a>.',
+    necessari:   '<strong>Necessari</strong> — sempre attivi (sicurezza, sessione).',
+    analisi:     '<strong>Analisi</strong> — Google Analytics aggregato, IP anonimizzato.',
+    rifiuta:     'Rifiuta tutti',
+    personalizza:'Personalizza',
+    accetta:     'Accetta tutti',
+    salva:       'Salva preferenze',
+  },
+  en: {
+    titolo:      'Privacy and cookies',
+    descrizione: 'We use technical cookies to run the site and analytics cookies '
+               + '(Google Analytics) to understand how it is used. You can accept, '
+               + 'reject or customise your choices. More details in the '
+               + '<a href="/en/privacy.html">Privacy Policy</a> and '
+               + '<a href="/en/cookie-policy.html">Cookie Policy</a>.',
+    necessari:   '<strong>Necessary</strong> — always on (security, session).',
+    analisi:     '<strong>Analytics</strong> — aggregated Google Analytics, anonymised IP.',
+    rifiuta:     'Reject all',
+    personalizza:'Customise',
+    accetta:     'Accept all',
+    salva:       'Save preferences',
+  },
+}[LANG];
+
 // === Google Consent Mode v2: default deny ===
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
@@ -62,29 +99,30 @@ function loadGA() {
 function buildBanner(initialMode = 'simple') {
   const wrap = document.createElement('div');
   wrap.className = 'cookie-banner';
+  wrap.lang = LANG;
   wrap.innerHTML = `
     <div class="cookie-banner-inner">
       <div class="cookie-banner-text">
-        <h3>Privacy e cookie</h3>
-        <p>Usiamo cookie tecnici per il funzionamento del sito e cookie di analisi (Google Analytics) per capire come viene usato il sito. Puoi accettare, rifiutare o personalizzare le tue scelte. Maggiori dettagli nella <a href="/privacy.html">Privacy Policy</a> e <a href="/cookie-policy.html">Cookie Policy</a>.</p>
+        <h3>${TESTI.titolo}</h3>
+        <p>${TESTI.descrizione}</p>
       </div>
       <div class="cookie-banner-prefs" hidden>
         <label class="cookie-toggle">
           <input type="checkbox" checked disabled>
-          <span><strong>Necessari</strong> — sempre attivi (sicurezza, sessione).</span>
+          <span>${TESTI.necessari}</span>
         </label>
         <label class="cookie-toggle">
           <input type="checkbox" data-cookie="analytics">
-          <span><strong>Analisi</strong> — Google Analytics aggregato, IP anonimizzato.</span>
+          <span>${TESTI.analisi}</span>
         </label>
       </div>
       <div class="cookie-banner-actions">
-        <button class="cookie-btn cookie-btn-secondary" data-action="reject">Rifiuta tutti</button>
-        <button class="cookie-btn cookie-btn-secondary" data-action="customize">Personalizza</button>
-        <button class="cookie-btn cookie-btn-primary" data-action="accept">Accetta tutti</button>
+        <button class="cookie-btn cookie-btn-secondary" data-action="reject">${TESTI.rifiuta}</button>
+        <button class="cookie-btn cookie-btn-secondary" data-action="customize">${TESTI.personalizza}</button>
+        <button class="cookie-btn cookie-btn-primary" data-action="accept">${TESTI.accetta}</button>
       </div>
       <div class="cookie-banner-actions cookie-banner-save" hidden>
-        <button class="cookie-btn cookie-btn-primary" data-action="save">Salva preferenze</button>
+        <button class="cookie-btn cookie-btn-primary" data-action="save">${TESTI.salva}</button>
       </div>
     </div>
   `;
