@@ -669,13 +669,235 @@ def _repair_state():
         try: os.remove(os.path.join(git_dir, "index.lock"))
         except OSError: pass
 
+# Pagine costruite interamente da admin.py a partire da series.json. Se un
+# conflitto tocca solo queste, non c'è niente da salvare: si ributtano via e si
+# rigenerano. Le foto e series.json invece NON sono in questo elenco: un
+# conflitto lì è vero e deve passare da Andrea.
+_PAGINA_OPERA = re.compile(r"^(?:en/)?opera/([^/]+)/index\.html$")
+_PAGINA_SERIE = re.compile(r"^(?:en/)?serie/([^/]+)(?:/[^/]+)?/index\.html$")
+
+DATA_REL = "data/series.json"
+
+def _rigenerabile(path):
+    return bool(_PAGINA_OPERA.match(path) or _PAGINA_SERIE.match(path))
+
+# ── unione intelligente di series.json ──────────────────────────────────────
+#
+# Se Andrea dal Mac e Paola dal suo PC aggiungono due opere diverse, git vede
+# due righe cambiate nello stesso punto dell'elenco e si ferma, pur non essendo
+# un vero disaccordo. Qui si uniscono le due versioni ragionando per opera:
+# quelle nuove si tengono tutte, e ci si arrende solo se la STESSA opera è
+# stata modificata in due modi diversi.
+
+def _git_bytes(*args):
+    """Come _git ma senza decodifica: per leggere file con accenti."""
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_OPTIONAL_LOCKS="0", LC_ALL="C")
+    try:
+        return subprocess.run(["git", *args], cwd=ROOT, env=env,
+                              capture_output=True, timeout=120)
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        return None
+
+def _indice(works):
+    return {w["id"]: w for w in (works or []) if isinstance(w, dict) and w.get("id")}
+
+def _unisci_opere(base, nostro, loro):
+    """Unione a tre vie di un elenco di opere, per id. None se ambiguo."""
+    b, n, l = _indice(base), _indice(nostro), _indice(loro)
+    out = []
+    for i in list(dict.fromkeys(list(n) + list(l))):   # prima le nostre, poi le loro
+        vb, vn, vl = b.get(i), n.get(i), l.get(i)
+        if vn is not None and vl is not None:
+            if   vn == vl: out.append(vn)
+            elif vb == vn: out.append(vl)      # modificata solo dall'altra parte
+            elif vb == vl: out.append(vn)      # modificata solo da noi
+            else:          return None         # stessa opera, due modifiche diverse
+        elif vn is not None:
+            if vb is None:   out.append(vn)    # opera nuova nostra
+            elif vb == vn:   continue          # cancellata dall'altra parte
+            else:            return None       # noi modificata, loro cancellata
+        else:
+            if vb is None:   out.append(vl)    # opera nuova loro
+            elif vb == vl:   continue          # cancellata da noi
+            else:            return None
+    return out
+
+def _unisci_campi(base, nostro, loro, salta):
+    """Unisce i campi semplici di un oggetto. None se in disaccordo."""
+    out = {}
+    for k in list(dict.fromkeys(list(nostro) + list(loro))):
+        if k in salta:
+            continue
+        vb, vn, vl = base.get(k), nostro.get(k), loro.get(k)
+        if k not in nostro:   out[k] = vl
+        elif k not in loro:   out[k] = vn
+        elif vn == vl:        out[k] = vn
+        elif vb == vn:        out[k] = vl
+        elif vb == vl:        out[k] = vn
+        else:                 return None
+    return out
+
+def _per_id(elenco):
+    """Indicizza per id, ignorando quello che non ha la forma attesa."""
+    return {x["id"]: x for x in (elenco or [])
+            if isinstance(x, dict) and x.get("id")}
+
+def _unisci_series_json(base, nostro, loro):
+    """Unisce i tre series.json. None se serve l'intervento di Andrea."""
+    if not all(isinstance(d, dict) for d in (base, nostro, loro)):
+        return None
+    b_ser, n_ser, l_ser = (_per_id(d.get("series")) for d in (base, nostro, loro))
+    # Se qualche serie non ha la forma prevista, meglio non improvvisare.
+    for d in (nostro, loro):
+        if len(_per_id(d.get("series"))) != len(d.get("series") or []):
+            return None
+    fuse = []
+    for sid in list(dict.fromkeys(list(n_ser) + list(l_ser))):
+        sb, sn, sl = b_ser.get(sid, {}), n_ser.get(sid), l_ser.get(sid)
+        if sn is None or sl is None:            # serie aggiunta o tolta da un lato
+            fuse.append(sn or sl)
+            continue
+        unita = _unisci_campi(sb, sn, sl, salta={"works", "subseries"})
+        if unita is None:
+            return None
+        opere = _unisci_opere(sb.get("works"), sn.get("works"), sl.get("works"))
+        if opere is None:
+            return None
+        unita["works"] = opere
+        if "subseries" in sn or "subseries" in sl:
+            b_sub, n_sub, l_sub = (_per_id(x.get("subseries"))
+                                   for x in (sb, sn, sl))
+            sotto = []
+            for xid in list(dict.fromkeys(list(n_sub) + list(l_sub))):
+                xb, xn, xl = b_sub.get(xid, {}), n_sub.get(xid), l_sub.get(xid)
+                if xn is None or xl is None:
+                    sotto.append(xn or xl)
+                    continue
+                xu = _unisci_campi(xb, xn, xl, salta={"works"})
+                if xu is None:
+                    return None
+                xo = _unisci_opere(xb.get("works"), xn.get("works"), xl.get("works"))
+                if xo is None:
+                    return None
+                xu["works"] = xo
+                sotto.append(xu)
+            unita["subseries"] = sotto
+        fuse.append(unita)
+    testa = _unisci_campi(base, nostro, loro, salta={"series"})
+    if testa is None:
+        return None
+    testa["series"] = fuse
+    return testa
+
+def _risolvi_series_json():
+    """Prova a unire series.json dai tre stadi del merge. True se riuscito."""
+    versioni = {}
+    for stadio, nome in ((1, "base"), (2, "nostro"), (3, "loro")):
+        r = _git_bytes("show", f":{stadio}:{DATA_REL}")
+        if r is None or r.returncode != 0:
+            return False
+        try:
+            versioni[nome] = json.loads(r.stdout.decode("utf-8"))
+        except (ValueError, UnicodeDecodeError):
+            return False
+    unito = _unisci_series_json(versioni["base"], versioni["nostro"], versioni["loro"])
+    if not unito or not unito.get("series"):
+        return False
+    n = sum(len(s.get("works", [])) for s in unito["series"])
+    if n < max(sum(len(s.get("works", [])) for s in v["series"])
+               for v in (versioni["nostro"], versioni["loro"])):
+        return False                    # rete di sicurezza: mai perdere opere
+    save_data(unito)
+    print(f"  series.json unito da solo: {n} opere, nessuna persa.")
+    return True
+
+def _rigenera_pagine(paths):
+    """Riscrive le pagine indicate a partire dal series.json appena unito.
+
+    Attenzione: qui si RENDERIZZA soltanto. Non si chiama resync(), che
+    ricostruirebbe le gallery dal disco: dopo una sincronizzazione le foto
+    dell'altra persona potrebbero non essere ancora tutte materializzate
+    (Git LFS) e si svuoterebbero le sue opere.
+    """
+    data = load_data()
+    opere = {m.group(1) for p in paths if (m := _PAGINA_OPERA.match(p))}
+    serie_ids = {m.group(1) for p in paths if (m := _PAGINA_SERIE.match(p))}
+    for serie in data.get("series", []):
+        for w in _all_works(serie):
+            if w["id"] in opere:
+                write_opera_pages(serie, w)
+        if serie["id"] in serie_ids:
+            update_serie_grid(serie)
+
+def _risolvi_conflitti():
+    """Risolve da sola i conflitti che non sono veri disaccordi: le pagine
+    generate (ricostruibili da series.json) e l'elenco delle opere quando le
+    due parti ne hanno aggiunte di diverse. Ritorna True se ce l'ha fatta.
+
+    Qualunque imprevisto qui dentro vale come 'non ci sono riuscita': meglio
+    fermarsi e far chiamare Andrea che rischiare di rovinare i dati.
+    """
+    try:
+        return _prova_a_risolvere()
+    except Exception:
+        traceback.print_exc()
+        return False
+
+def _prova_a_risolvere():
+    res = _git("diff", "--name-only", "--diff-filter=U")
+    if res.returncode != 0:
+        return False
+    conflitti = [p.strip() for p in res.stdout.splitlines() if p.strip()]
+    if not conflitti:
+        return False
+    pagine = [p for p in conflitti if _rigenerabile(p)]
+    resto  = [p for p in conflitti if not _rigenerabile(p) and p != DATA_REL]
+    if resto:
+        return False                      # foto o file veri: decide Andrea
+
+    if DATA_REL in conflitti and not _risolvi_series_json():
+        return False
+
+    # Le pagine si ripartono dalla versione online (che porta anche le
+    # modifiche fatte a mano fuori dalla griglia), poi si rigenerano.
+    for p in pagine:
+        if _git("checkout", "--theirs", "--", p).returncode != 0:
+            return False
+    if _git("add", "--", *conflitti).returncode != 0:
+        return False
+    if _git("commit", "--no-edit").returncode != 0:
+        return False
+
+    try:
+        _rigenera_pagine(pagine or _tutte_le_pagine_serie())
+    except Exception:
+        traceback.print_exc()
+        return False                      # merge già chiuso: il push riallineerà
+    if _git("status", "--porcelain").stdout.strip():
+        _git("add", "-A")
+        _git("commit", "-m", "Riallinea le pagine generate dopo la sincronizzazione")
+    print(f"  Conflitti risolti da solo su {len(conflitti)} file.")
+    return True
+
+def _tutte_le_pagine_serie():
+    """Percorsi delle pagine serie, per riallinearle quando è cambiato solo
+    l'elenco delle opere."""
+    try:
+        return [f"serie/{s['id']}/index.html" for s in load_data().get("series", [])]
+    except Exception:
+        return []
+
 def _pull():
     """Sincronizza col sito remoto. --no-rebase è necessario: dalle versioni
-    recenti git si rifiuta di fare pull se non gli si dice come riconciliare."""
+    recenti git si rifiuta di fare pull se non gli si dice come riconciliare.
+    Ritorna (ok, esito_del_comando)."""
     res = _git("pull", "--no-rebase", "--no-edit", timeout=300)
-    if res.returncode != 0:
-        _git("merge", "--abort")     # niente stato a metà per il prossimo giro
-    return res
+    if res.returncode == 0:
+        return True, res
+    if _risolvi_conflitti():
+        return True, res
+    _git("merge", "--abort")     # niente stato a metà per il prossimo giro
+    return False, res
 
 def _push():
     res = _git("push", timeout=600)
@@ -723,13 +945,13 @@ def git_publish(msg="Aggiornamento dal pannello admin"):
                 return {"ok": True, "published": False,
                         "message": "Niente da pubblicare — il sito è già aggiornato."}
 
-        pull = _pull() if has_upstream else None
-        if pull is not None and pull.returncode != 0:
+        pull_ok, pull = (_pull() if has_upstream else (True, None))
+        if not pull_ok:
             out = _git_out(pull).lower()
             if "conflict" in out:
                 return {"ok": False,
-                        "error": "Qualcun altro ha modificato le stesse cose. "
-                                 "Serve una mano di Andrea. " + SAFE_NOTE}
+                        "error": "Qualcun altro ha modificato la stessa opera nello "
+                                 "stesso momento. Serve una mano di Andrea. " + SAFE_NOTE}
             if any(k in out for k in ("could not resolve host", "unable to access",
                                       "timed out", "timeout", "network")):
                 return {"ok": False,
@@ -760,7 +982,7 @@ def git_publish(msg="Aggiornamento dal pannello admin"):
                         "error": "Lo spazio per le foto su GitHub è esaurito per questo "
                                  "mese: serve Andrea per sbloccarlo. " + SAFE_NOTE}
             if "fetch first" in out or "non-fast-forward" in out or "rejected" in out:
-                if _pull().returncode == 0 and _push().returncode == 0:
+                if _pull()[0] and _push().returncode == 0:
                     return {"ok": True, "published": True,
                             "message": "Sito aggiornato! Sarà online tra circa un minuto."}
             return {"ok": False,
