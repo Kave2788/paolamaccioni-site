@@ -4,7 +4,7 @@
       "id": "struttura-tensione",
       "name": "Struttura e Tensione",
       "year": "2022–2024",
-      "description": "L'alluminio lavorato a sbalzo diventa struttura dinamica: superficie compressa e dilatata, tensioni visive tra equilibrio e resistenza della materia.",
+      "description": "L'alluminio lavorato a sbalzo diventa struttura dinamica: la superficie si tende tra equilibrio, resistenza e trasformazione della materia.",
       "works": [
         {
           "id": "lombra-della-luce",
@@ -1232,8 +1232,8 @@
           "id": "geometria",
           "name": "Geometria",
           "year": "2022–2026",
-          "description": "Forme geometriche e strutture modulari nell'alluminio: cubi, sfere, equilibri e fratture si compongono come esercizi di tensione e ordine, dove la materia diventa campo di costruzione e ritmo.",
-          "description_en": "Geometric forms and modular structures in aluminium: cubes, spheres, balances and fractures compose as exercises in tension and order, where the material becomes a field of construction and rhythm.",
+          "description": "La serie nasce dall'indagine della geometria come principio ordinatore dello spazio e come struttura capace di definire equilibrio, misura e controllo.",
+          "description_en": "The series comes from an inquiry into geometry as an ordering principle of space and as a structure able to define balance, measure and control.",
           "works": [
             {
               "id": "cubi",
@@ -1247,7 +1247,7 @@
                 "struttura-tensione/cubi/04.jpg",
                 "struttura-tensione/cubi/05.jpg"
               ],
-              "description": "Cubi nasce da una lavorazione a sbalzo su alluminio organizzata secondo una struttura modulare ripetuta.\n\nLa superficie è costruita attraverso pieghe e rilievi che generano un’alternanza di pieni e rientranze, creando un effetto di profondità variabile a seconda della luce. Gli inserti interrompono la continuità metallica e rafforzano la percezione del ritmo geometrico.\n\nL’opera si sviluppa come sistema ordinato, dove la ripetizione non è decorativa ma costruttiva, e la variazione luminosa diventa parte attiva della composizione.",
+              "description": "Il modulo geometrico diventa struttura e ritmo della superficie. Attraverso lo sbalzo dell'alluminio, la ripetizione della forma entra in relazione con variazioni di luce e profondità, trasformando un sistema ordinato in uno spazio percettivo.",
               "thumb_gallery": [
                 "struttura-tensione/cubi/thumb/01.webp",
                 "struttura-tensione/cubi/thumb/02.webp",
@@ -1265,7 +1265,7 @@
               ],
               "canvas": "struttura-tensione/cubi/canvas/01.webp",
               "position": 0,
-              "description_en": "Cubes originates from a cantilevered aluminium work organised according to a repeated modular structure.\nThe surface is constructed through folds and reliefs that generate an alternation of solids and recesses, creating an effect of varying depth depending on the light. The inserts interrupt the metallic continuity and reinforce the perception of geometric rhythm.\nThe work develops as an ordered system, where repetition is not decorative but constructive, and light variation becomes an active part of the composition."
+              "description_en": "The geometric module becomes the structure and rhythm of the surface. Through the chasing of aluminum, the repetition of the form enters into relation with variations of light and depth, turning an ordered system into a perceptual space."
             },
             {
               "id": "equilibrio-fratturato",
@@ -1281,7 +1281,7 @@
                 "struttura-tensione/equilibrio-fratturato/06.jpg",
                 "struttura-tensione/equilibrio-fratturato/07.jpg"
               ],
-              "description": "Equilibrio Fratturato esplora la tensione tra stabilità e rottura attraverso una struttura composta da forme geometriche che si intersecano e si spingono reciprocamente nello spazio della superficie metallica.\n\nLe forme triangolari, modellate a sbalzo sull’alluminio, emergono dal piano creando volumi netti e inclinati che suggeriscono un equilibrio dinamico e precario. Tra questi elementi strutturali, la superficie è attraversata da una trama fitta di incisioni realizzate a bulino, che costruiscono un tessuto di linee capace di catturare e frammentare la luce.\n\nIl contrasto tra le superfici lisce dei volumi e la densità segnica del fondo genera una tensione visiva continua, trasformando il metallo in un campo vibrante dove ordine e frattura convivono.",
+              "description": "Una struttura geometrica apparentemente stabile viene portata verso una condizione di equilibrio dinamico, dove ordine e variazione convivono nella superficie trasformata dell'alluminio.",
               "thumb_gallery": [
                 "struttura-tensione/equilibrio-fratturato/thumb/01.webp",
                 "struttura-tensione/equilibrio-fratturato/thumb/02.webp",
@@ -1303,7 +1303,7 @@
               ],
               "canvas": "struttura-tensione/equilibrio-fratturato/canvas/01.webp",
               "position": 1,
-              "description_en": "Fractured Balance explores the tension between stability and rupture through a structure composed of geometric shapes that intersect and push each other through the space of the metal surface.\nThe triangular shapes, modelled cantilevered on aluminium, emerge from the plane, creating sharp, sloping volumes that suggest a dynamic and precarious balance. Between these structural elements, the surface is criss-crossed by a dense pattern of engravings made by burin, which build a fabric of lines capable of capturing and fragmenting light.\nThe contrast between the smooth surfaces of the volumes and the sign density of the background generates a continuous visual tension, transforming the metal into a vibrant field where order and fracture coexist."
+              "description_en": "An apparently stable geometric structure is brought towards a condition of dynamic equilibrium, where order and variation coexist in the transformed surface of the aluminum."
             },
             {
               "id": "sfera",
@@ -1319,7 +1319,7 @@
                 "struttura-tensione/sfera/06.jpg",
                 "struttura-tensione/sfera/07.jpg"
               ],
-              "description": "Sfera è costruita attraverso una sequenza regolare di rilievi circolari ottenuti con la lavorazione a sbalzo su alluminio.\n\nLa ripetizione degli elementi genera una superficie modulare che, concentrandosi al centro, costruisce il volume della forma sferica. Il contrasto tra la sfera centrale e il fondo piatto rafforza la percezione della tridimensionalità.\n\nLa luce scorre sulle superfici metalliche mettendo in evidenza il ritmo della texture e la costruzione geometrica della forma.",
+              "description": "La forma geometrica pura emerge dal piano metallico attraverso il gesto dello sbalzo, creando un dialogo tra superficie e volume. La luce modifica la percezione della forma e ne rivela la tensione interna.",
               "thumb_gallery": [
                 "struttura-tensione/sfera/thumb/01.webp",
                 "struttura-tensione/sfera/thumb/02.webp",
@@ -1341,7 +1341,7 @@
               ],
               "canvas": "struttura-tensione/sfera/canvas/01.webp",
               "position": 2,
-              "description_en": "Sfera is constructed through a regular sequence of circular reliefs obtained by embossing on aluminium.\nThe repetition of the elements generates a modular surface that, concentrating in the centre, builds up the volume of the spherical form. The contrast between the central sphere and the flat bottom reinforces the perception of three-dimensionality.\nThe light flows over the metal surfaces, highlighting the rhythm of the texture and the geometric construction of the form."
+              "description_en": "The pure geometric form emerges from the metal plane through the gesture of chasing, creating a dialogue between surface and volume. Light alters the perception of the form and reveals its inner tension."
             },
             {
               "id": "soglia",
@@ -1365,8 +1365,9 @@
                 "struttura-tensione/soglia/canvas/02.webp",
                 "struttura-tensione/soglia/canvas/03.webp"
               ],
-              "description": "",
-              "position": 3
+              "description": "L'opera indaga il limite tra struttura e trasformazione: una forma ordinata si apre a una dimensione percettiva in cui luce e materia modificano la stabilità iniziale.",
+              "position": 3,
+              "description_en": "The work explores the boundary between structure and transformation: an ordered form opens onto a perceptual dimension in which light and matter alter its initial stability."
             }
           ],
           "position": -0.9,
@@ -1378,7 +1379,7 @@
       "id": "forma-organica",
       "name": "Forma Organica e Figura",
       "year": "2021–2023",
-      "description": "La materia metallica si trasforma in forme organiche e presenze naturali: la superficie lavorata rivela il passaggio dalla materia alla vita.",
+      "description": "La materia metallica si trasforma in forme organiche e presenze naturali: la superficie rivela il passaggio dalla materia alla vita.",
       "works": [
         {
           "id": "globigerina",
