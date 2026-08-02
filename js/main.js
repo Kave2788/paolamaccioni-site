@@ -12,14 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let comelLink = document.getElementById('comel-nav-link');
   const navMenu = document.querySelector('nav ul');
+  // La sezione Comel esiste in due lingue: un giurato che sta navigando le
+  // pagine inglesi deve restare in inglese anche cliccando questa voce.
+  const isEN = (document.documentElement.lang || '').toLowerCase().startsWith('en')
+               || location.pathname.startsWith('/en/');
   if (hasComelAccess && !comelLink && navMenu) {
     // Il link non è nell'HTML di questa pagina: lo iniettiamo nel menu,
     // prima dell'ultima voce (Contatti).
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.id = 'comel-nav-link';
-    a.href = '/comel/premio-2026/';
-    a.textContent = 'Premio Comel';
+    a.href = isEN ? '/en/comel/premio-2026/' : '/comel/premio-2026/';
+    a.textContent = isEN ? 'Comel Prize' : 'Premio Comel';
     li.appendChild(a);
     const items = navMenu.querySelectorAll('li');
     if (items.length) {
