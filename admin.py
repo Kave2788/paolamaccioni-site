@@ -1320,6 +1320,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "/api/delete-image":   self._delete_image,
             "/api/set-primary":    self._set_primary,
             "/api/reorder-works":  self._reorder_works,
+            "/api/reorder-subseries": self._reorder_subseries,
             "/api/move-work":      self._move_work,
             "/api/publish":        self._publish,
         }
@@ -1570,6 +1571,39 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                                 key=lambda w: w.get("position", 0))
         save_data(data)
         # Riordina la griglia nella pagina serie (IT+EN)
+        resync(s)
+        return self._json({"ok": True})
+
+    def _reorder_subseries(self, p):
+        """Riordina le opere DENTRO una sotto-serie.
+
+        Qui si riordina soltanto la lista `works` della sotto-serie, senza
+        toccare `position`: la pagina della sotto-serie la scorre nell'ordine
+        in cui sta nel JSON, e un'opera può comparire sia qui sia nella
+        griglia principale — scrivere `position` rischierebbe di spostarla
+        anche lì.
+        """
+        s      = p.get("serie_id", "").strip()
+        sub_id = p.get("sub_id", "").strip()
+        order  = p.get("order", [])
+        if not s or s not in valid_series():
+            return self._err("Serie non valida", 400)
+        if not isinstance(order, list) or not order:
+            return self._err("Ordine non valido", 400)
+        data  = load_data()
+        serie = next((x for x in data["series"] if x["id"] == s), None)
+        if not serie:
+            return self._err("Serie non trovata", 404)
+        sub = next((x for x in _subseries(serie) if x["id"] == sub_id), None)
+        if not sub:
+            return self._err("Sotto-serie non trovata", 404)
+
+        mappa = {w["id"]: w for w in sub.get("works", [])}
+        if len(order) != len(mappa) or set(order) != set(mappa):
+            return self._err("L'elenco non corrisponde al contenuto della sotto-serie", 400)
+
+        sub["works"] = [mappa[wid] for wid in order]
+        save_data(data)
         resync(s)
         return self._json({"ok": True})
 
