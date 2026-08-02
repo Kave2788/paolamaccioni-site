@@ -1538,16 +1538,36 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         serie = next((x for x in data["series"] if x["id"] == s), None)
         if not serie:
             return self._err("Serie non trovata", 404)
-        # Valida che tutti gli ID nell'ordine esistono
-        work_ids = set(w["id"] for w in serie["works"])
-        if set(order) != work_ids:
-            return self._err("IDs opera non corrispondenti", 400)
-        # Riordina le opere
-        work_map = {w["id"]: w for w in serie["works"]}
-        serie["works"] = [work_map[wid] for wid in order]
-        # Aggiorna position
-        for i, work in enumerate(serie["works"]):
-            work["position"] = i
+
+        # Nella griglia del sito opere e sotto-serie stanno mescolate e sono
+        # ordinate tutte insieme per `position`: per poter portare un quadro
+        # prima di una sotto-serie l'elenco deve poter contenere entrambe.
+        # Voci ammesse: {"kind": "work"|"sub", "id": ...}, oppure la vecchia
+        # stringa (= opera), così un pannello non ancora aggiornato continua
+        # a funzionare invece di ricevere un errore.
+        voci = []
+        for v in order:
+            if isinstance(v, str):
+                voci.append(("work", v))
+            elif isinstance(v, dict) and v.get("kind") in ("work", "sub") and v.get("id"):
+                voci.append((v["kind"], v["id"]))
+            else:
+                return self._err("Ordine non valido", 400)
+
+        opere = {w["id"]: w for w in serie.get("works", [])}
+        sotto = {x["id"]: x for x in _subseries(serie)}
+        atteso = {("work", i) for i in opere} | {("sub", i) for i in sotto}
+        # Formato vecchio: solo opere. Le sotto-serie restano dove sono.
+        if all(k == "work" for k, _ in voci) and len(voci) == len(opere):
+            atteso = {("work", i) for i in opere}
+        if len(voci) != len(atteso) or set(voci) != atteso:
+            return self._err("L'elenco non corrisponde al contenuto della serie", 400)
+
+        for i, (kind, vid) in enumerate(voci):
+            (opere if kind == "work" else sotto)[vid]["position"] = i
+        # L'elenco `works` segue le position, così il JSON resta leggibile.
+        serie["works"] = sorted(serie.get("works", []),
+                                key=lambda w: w.get("position", 0))
         save_data(data)
         # Riordina la griglia nella pagina serie (IT+EN)
         resync(s)
