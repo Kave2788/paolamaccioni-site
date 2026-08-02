@@ -889,25 +889,34 @@ def _rigenera_pagine(paths):
         if serie["id"] in serie_ids:
             update_serie_grid(serie)
 
-def _risolvi_conflitti():
+def _risolvi_conflitti(lato_online="--theirs", chiudi_merge=True):
     """Risolve da sola i conflitti che non sono veri disaccordi: le pagine
     generate (ricostruibili da series.json) e l'elenco delle opere quando le
     due parti ne hanno aggiunte di diverse. Ritorna True se ce l'ha fatta.
+
+    `lato_online` dice quale dei due lati del conflitto è la versione
+    pubblicata, e cambia a seconda di come il conflitto è nato: vedi
+    ripara_avvio(). `chiudi_merge=False` serve quando non c'è nessun merge
+    aperto da concludere con un commit.
 
     Qualunque imprevisto qui dentro vale come 'non ci sono riuscita': meglio
     fermarsi e far chiamare Andrea che rischiare di rovinare i dati.
     """
     try:
-        return _prova_a_risolvere()
+        return _prova_a_risolvere(lato_online, chiudi_merge)
     except Exception:
         traceback.print_exc()
         return False
 
-def _prova_a_risolvere():
+def _elenco_conflitti():
+    """File lasciati a metà da git. None se git non risponde."""
     res = _git("diff", "--name-only", "--diff-filter=U")
     if res.returncode != 0:
-        return False
-    conflitti = [p.strip() for p in res.stdout.splitlines() if p.strip()]
+        return None
+    return [p.strip() for p in res.stdout.splitlines() if p.strip()]
+
+def _prova_a_risolvere(lato_online="--theirs", chiudi_merge=True):
+    conflitti = _elenco_conflitti()
     if not conflitti:
         return False
     pagine = [p for p in conflitti if _rigenerabile(p)]
@@ -921,11 +930,11 @@ def _prova_a_risolvere():
     # Le pagine si ripartono dalla versione online (che porta anche le
     # modifiche fatte a mano fuori dalla griglia), poi si rigenerano.
     for p in pagine:
-        if _git("checkout", "--theirs", "--", p).returncode != 0:
+        if _git("checkout", lato_online, "--", p).returncode != 0:
             return False
     if _git("add", "--", *conflitti).returncode != 0:
         return False
-    if _git("commit", "--no-edit").returncode != 0:
+    if chiudi_merge and _git("commit", "--no-edit").returncode != 0:
         return False
 
     try:
@@ -933,11 +942,45 @@ def _prova_a_risolvere():
     except Exception:
         traceback.print_exc()
         return False                      # merge già chiuso: il push riallineerà
-    if _git("status", "--porcelain").stdout.strip():
+    if chiudi_merge and _git("status", "--porcelain").stdout.strip():
         _git("add", "-A")
         _git("commit", "-m", "Riallinea le pagine generate dopo la sincronizzazione")
     print(f"  Conflitti risolti da solo su {len(conflitti)} file.")
     return True
+
+# ── riparazione all'avvio ───────────────────────────────────────────────────
+#
+# Il launcher fa `git pull --autostash`: mette da parte il lavoro non ancora
+# pubblicato di Paola, scarica gli aggiornamenti e glielo rimette. Se il
+# ripristino va in conflitto git esce con SUCCESSO ma lascia i file a metà, e
+# il pannello non deve partire così. Prima di arrendersi però conviene
+# provarci: nel caso tipico (Andrea ritocca i testi delle serie, Paola
+# aggiunge opere) non c'è nessun vero disaccordo.
+#
+# ATTENZIONE ai due lati, è la parte che si sbaglia facilmente:
+#   • in un MERGE vero      --theirs = la versione online,  --ours = la locale
+#   • in un conflitto da    --ours   = la versione online (il pull è già
+#     AUTOSTASH                        andato a buon fine), --theirs = il
+#                                      lavoro di Paola che git stava
+#                                      rimettendo al suo posto
+# Prendere il lato sbagliato qui significa riportare in vita i testi vecchi.
+
+def _merge_in_corso():
+    return os.path.exists(os.path.join(ROOT, ".git", "MERGE_HEAD"))
+
+def ripara_avvio():
+    """Tenta di sbloccare un conflitto lasciato dal pull del launcher.
+    True = il pannello può partire."""
+    conflitti = _elenco_conflitti()
+    if conflitti is None:
+        return False                      # git non risponde: meglio fermarsi
+    if not conflitti:
+        return True                       # niente da riparare
+    if _merge_in_corso():
+        return _risolvi_conflitti("--theirs", chiudi_merge=True)
+    # Conflitto da autostash: nessun merge aperto da chiudere con un commit.
+    # Le modifiche restano lì, pronte per il tasto "Pubblica".
+    return _risolvi_conflitti("--ours", chiudi_merge=False)
 
 def _tutte_le_pagine_serie():
     """Percorsi delle pagine serie, per riallinearle quando è cambiato solo
@@ -1713,4 +1756,9 @@ def main():
         print("\n  Pannello chiuso.")
 
 if __name__ == "__main__":
+    # Modalità di servizio usata dal launcher prima di aprire il pannello:
+    # esce 0 se il repo è a posto (o è riuscita a sistemarlo), 1 se serve
+    # davvero Andrea. Non avvia nessun server.
+    if "--ripara-conflitto" in sys.argv:
+        sys.exit(0 if ripara_avvio() else 1)
     main()

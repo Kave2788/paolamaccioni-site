@@ -79,6 +79,19 @@ del "%TEMP%\pannello-conflitti.txt" >nul 2>nul
 if defined GIT_PRESENTE git ls-files -u > "%TEMP%\pannello-conflitti.txt" 2>nul
 if exist "%TEMP%\pannello-conflitti.txt" for %%A in ("%TEMP%\pannello-conflitti.txt") do if %%~zA GTR 0 set "PULL_CONFLITTO=1"
 
+REM  Prima di arrendersi, un tentativo: quasi sempre non c'e' nessun vero
+REM  disaccordo (Andrea ha ritoccato i testi delle serie, Paola ha aggiunto
+REM  opere) e il pannello sa unire le due versioni da solo. Se ci riesce si
+REM  prosegue normalmente; il blocco qui sotto resta per i casi veri.
+REM  Nessun "echo" qui: siamo prima del "cls" e verrebbe cancellato.
+if defined PULL_CONFLITTO (
+  %PY% admin.py --ripara-conflitto > "%TEMP%\pannello-riparazione.txt" 2>&1
+  if not errorlevel 1 (
+    set "PULL_CONFLITTO="
+    set "RIPARATO=1"
+  )
+)
+
 cls
 echo.
 echo   ====================================================
@@ -89,8 +102,22 @@ echo.
 REM  Gli avvisi vanno stampati QUI, dopo il "cls": scritti prima verrebbero
 REM  cancellati dallo schermo senza che Paola faccia in tempo a leggerli.
 
-REM  Conflitto: il pannello NON deve partire. Lavorare su un catalogo a meta'
-REM  rischia di rovinare i dati delle opere, ed e' un danno peggiore di
+REM  Conflitto rientrato da solo: si parte, ma Paola deve sapere cos'e'
+REM  successo, altrimenti non si spiega perche' il catalogo e' cambiato.
+if defined RIPARATO (
+  echo   ----------------------------------------------------
+  echo   Nota: c'era una modifica arrivata da Andrea che si
+  echo   sovrapponeva al tuo lavoro. Le ho unite da sola:
+  echo   non hai perso niente e puoi lavorare tranquilla.
+  echo.
+  echo   Ricordati di premere "Pubblica sul sito" quando hai
+  echo   finito, cosi' le modifiche vanno online.
+  echo   ----------------------------------------------------
+  echo.
+)
+
+REM  Conflitto vero: il pannello NON deve partire. Lavorare su un catalogo a
+REM  meta' rischia di rovinare i dati delle opere, ed e' un danno peggiore di
 REM  un'attesa.
 if defined PULL_CONFLITTO (
   echo   ----------------------------------------------------
@@ -100,8 +127,14 @@ if defined PULL_CONFLITTO (
   echo   del catalogo e' rimasto a meta' e il pannello non
   echo   deve partire in queste condizioni.
   echo.
+  echo   Ho gia' provato a sistemarlo da sola senza riuscirci,
+  echo   quindi serve una mano.
+  echo.
   echo   Chiama Andrea e fagli vedere questa finestra.
   echo   ----------------------------------------------------
+  echo.
+  echo   ^(per Andrea: dettaglio del tentativo in
+  echo    %TEMP%\pannello-riparazione.txt^)
   echo.
   pause
   exit /b 1
