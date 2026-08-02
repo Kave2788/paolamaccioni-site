@@ -110,7 +110,9 @@ python3 admin.py
 - Updates `data/series.json` with new gallery arrays and image paths
 - Stores images in correct directory structure
 
-**Never commit** `admin.py` or test uploads to production — it's development-only.
+**`admin.py` is tracked on purpose.** The launcher on Paola's PC updates itself with `git pull`, so the file has to live in git — do not "clean it up" out of the repo. It still never reaches the public site: `.netlifyignore` keeps it out of the deploy, and `_redirects` (`/admin.py` → 404) plus `robots.txt` block it. The `admin.py` line in `.gitignore` is inert, since the file was already tracked before it was added.
+
+**Never commit** test uploads — the images created while trying the panel out.
 
 ### Adding a New Artwork
 1. **Update `data/series.json`**:
