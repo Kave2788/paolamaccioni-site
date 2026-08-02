@@ -14,7 +14,7 @@ BASE = "https://www.paolamaccioni.com"
 
 # (titolo, slug, serie_id)
 OPERE = [
-    # ESSENZA -> Struttura e Tensione
+    # ESSENZA -> Materia e Trasformazione
     ("L'ombra della luce", "lombra-della-luce", "struttura-tensione"),
     ("Lux Eterna", "lux-eterna", "struttura-tensione"),
     ("Il Rinoceronte – omaggio a Dürer", "il-rinoceronte", "struttura-tensione"),
@@ -43,7 +43,7 @@ OPERE = [
     ("Volo d'Argento", "progetto-senza-titolo-0f5967", "struttura-tensione"),
     ("Nessun Dorma", "nessu-dorma", "struttura-tensione"),
     ("L'unione", "my-project-4d8295", "struttura-tensione"),
-    # VITA -> Forma Organica e Figura
+    # VITA -> Forme Organiche
     ("Globigerina", "my-project-528a5b", "forma-organica"),
     ("Riccio di mare", "progetto-senza-titolo-f37006", "forma-organica"),
     ("Creatura Abissale", "polipo", "forma-organica"),
@@ -248,16 +248,16 @@ def main():
     series = {
         "struttura-tensione": {
             "id": "struttura-tensione",
-            "name": "Struttura e Tensione",
+            "name": "Materia e Trasformazione",
             "year": "2022–2024",
-            "description": "L'alluminio lavorato a sbalzo diventa struttura dinamica: superficie compressa e dilatata, tensioni visive tra equilibrio e resistenza della materia.",
+            "description": "Attraverso lo sbalzo dell'alluminio, la superficie si trasforma in uno spazio tra segno, luce e volume, rivelando la tensione nascosta della materia.",
             "works": []
         },
         "forma-organica": {
             "id": "forma-organica",
-            "name": "Forma Organica e Figura",
+            "name": "Forme Organiche",
             "year": "2021–2023",
-            "description": "La materia metallica si trasforma in forme organiche e presenze naturali: la superficie lavorata rivela il passaggio dalla materia alla vita.",
+            "description": "Forme naturali e strutture viventi vengono reinterpretate nell'alluminio attraverso il rilievo, il segno e il movimento della superficie.",
             "works": []
         }
     }

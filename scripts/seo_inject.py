@@ -28,8 +28,8 @@ PAGES = {
     },
     "portfolio.html": {
         "title": "Portfolio — Paola Maccioni | Opere in alluminio",
-        "description": "Opere d'arte contemporanea in alluminio. Due serie di ricerca: Struttura e Tensione (2022–2024) e Forma Organica e Figura (2021–2023). 49 lavori unici a sbalzo.",
-        "keywords": "portfolio paola maccioni, opere alluminio, struttura tensione, forma organica, sculture sbalzo, arte italiana contemporanea",
+        "description": "Opere d'arte contemporanea in alluminio. Due serie di ricerca: Materia e Trasformazione (2022–2024) e Forme Organiche (2021–2023). 49 lavori unici a sbalzo.",
+        "keywords": "portfolio paola maccioni, opere alluminio, materia trasformazione, forme organiche, sculture sbalzo, arte italiana contemporanea",
         "og_image": "/struttura-tensione/lombra-della-luce/01.jpg",
         "path": "/portfolio.html",
         "schema_type": "ImageGallery",

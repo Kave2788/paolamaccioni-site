@@ -595,7 +595,7 @@ def valid_series():
 #
 # Una serie può contenere sotto-serie (`subseries`). Un'opera può comparire sia
 # nei `works` principali che dentro una sotto-serie (duplicato voluto, p.es.
-# "L'ombra della luce" presente sia nella griglia di Struttura e Tensione sia
+# "L'ombra della luce" presente sia nella griglia di Materia e Trasformazione sia
 # nella sotto-serie omonima). Tutte le operazioni che cercano un'opera per id
 # devono guardare ovunque; le modifiche di contenuto vanno propagate a tutte le
 # istanze.

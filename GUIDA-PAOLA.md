@@ -30,7 +30,7 @@ Vale anche per le opere caricate tempo fa.
 5. Ricordati poi di premere **"↑ Pubblica sul sito"**.
 
 Qualche opera compare **in due punti** del sito (per esempio sia nella griglia
-di Struttura e Tensione sia dentro la sua sotto-serie). In quel caso, sopra al
+di Materia e Trasformazione sia dentro la sua sotto-serie). In quel caso, sopra al
 riquadro "Serie", compare la domanda **"quale vuoi spostare?"**: scegli lì il
 punto da spostare. **L'altro resta dov'è** — non si perde niente.
 

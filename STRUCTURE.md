@@ -104,7 +104,7 @@ Central source of truth for all artwork data:
   "series": [
     {
       "id": "struttura-tensione",
-      "name": "Struttura e Tensione",
+      "name": "Materia e Trasformazione",
       "year": "2022–2024",
       "works": [
         {

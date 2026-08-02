@@ -21,7 +21,7 @@ All artwork metadata (49 works, 2 series) is centralized here. The structure:
   "series": [
     {
       "id": "struttura-tensione",
-      "name": "Struttura e Tensione",
+      "name": "Materia e Trasformazione",
       "year": "2022–2024",
       "works": [
         {
