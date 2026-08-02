@@ -474,7 +474,11 @@ function setupDragDrop() {
 }
 
 async function saveReorder(serieId) {
-  const rows = document.querySelectorAll(`.work-row[data-serie="${serieId}"]`);
+  // Solo le righe trascinabili. Le opere dentro le sotto-serie portano lo stesso
+  // data-serie ma non si riordinano da qui: includerle faceva arrivare al server
+  // 39 id invece di 26, che li rifiutava in blocco con "IDs opera non
+  // corrispondenti". Risultato: Struttura e Tensione non si riordinava mai.
+  const rows = document.querySelectorAll(`.work-row.draggable[data-serie="${serieId}"]`);
   const order = Array.from(rows).map(r => r.dataset.work);
   const j = await api('/api/reorder-works', {serie_id: serieId, order});
   if (j.ok) {

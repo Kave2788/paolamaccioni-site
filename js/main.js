@@ -45,39 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (link.getAttribute('href') === page) link.classList.add('active');
   });
 
-  // Language switcher: toggle between /it/ and /en/
-  const langLinks = document.querySelectorAll('.lang-switcher a');
-  langLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const currentPath = location.pathname;
-      let newPath;
-
-      // Determina lingua attuale e percorso relativo
-      let currentLang, relativePath;
-
-      if (currentPath.startsWith('/en/')) {
-        currentLang = 'en';
-        relativePath = currentPath.slice(4); // Rimuovi '/en/'
-      } else if (currentPath.startsWith('/it/')) {
-        currentLang = 'it';
-        relativePath = currentPath.slice(4); // Rimuovi '/it/'
-      } else {
-        // Root (/ o /index.html, /bio.html, etc) è considerato italiano
-        currentLang = 'it';
-        relativePath = currentPath.replace(/^\//, ''); // Rimuovi leading '/'
-      }
-
-      // Costruisci il nuovo percorso
-      if (currentLang === 'it') {
-        newPath = '/en/' + relativePath;
-      } else {
-        newPath = '/' + (relativePath || '');
-      }
-
-      location.href = newPath;
-    });
-  });
+  // Selettore di lingua: nessun JavaScript.
+  // Ogni pagina ha già nell'HTML i due indirizzi corretti (verificato su tutte
+  // e 148 le pagine che lo montano), quindi basta lasciar seguire il link.
+  // Il vecchio gestore intercettava il click e RIBALTAVA sempre la lingua,
+  // ignorando quale dei due link fosse stato premuto: chi cliccava «IT» stando
+  // già su una pagina italiana finiva sulla versione inglese.
 
   // Mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
