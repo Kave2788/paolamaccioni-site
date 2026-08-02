@@ -17,6 +17,23 @@ Guida rapida per Paola. Tieni questo foglio vicino al computer.
    - Premi **"Carica opera →"**
 5. Puoi caricare quante opere vuoi, una dopo l'altra.
 
+## Per spostare un'opera in un'altra serie
+
+Vale anche per le opere caricate tempo fa.
+
+1. Premi **"Opere"** (a sinistra) e poi **"Modifica"** sull'opera da spostare.
+2. Nel riquadro **"Serie"** scegli dal menù la serie di destinazione.
+   Le voci con la freccia (**↳**) sono le sotto-serie.
+3. Compare il pulsante **"Sposta opera"**: premilo e conferma.
+4. Le **fotografie si spostano da sole** insieme all'opera, e la pagina
+   dell'opera e le pagine delle serie si aggiornano da sole.
+5. Ricordati poi di premere **"↑ Pubblica sul sito"**.
+
+Qualche opera compare **in due punti** del sito (per esempio sia nella griglia
+di Struttura e Tensione sia dentro la sua sotto-serie). In quel caso, sopra al
+riquadro "Serie", compare la domanda **"quale vuoi spostare?"**: scegli lì il
+punto da spostare. **L'altro resta dov'è** — non si perde niente.
+
 ## Per far comparire le foto sul sito vero
 
 6. Quando hai **finito di caricare tutto**, premi il pulsante grande

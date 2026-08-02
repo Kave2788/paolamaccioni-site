@@ -607,6 +607,38 @@ async function renderEdit(c, serieId, workId) {
   let ver     = Date.now();
   let addFiles = [];
 
+  // Tutte le collocazioni dell'opera dentro questa serie. Qualche opera compare
+  // di proposito sia nella griglia della serie sia in una sotto-serie: in quel
+  // caso si sceglie quale delle due spostare, e l'altra resta dov'è.
+  const locs = [];
+  if ((serie.works||[]).some(x => x.id === workId)) locs.push({v:'', label: serie.name});
+  (serie.subseries||[]).forEach(sub => {
+    if ((sub.works||[]).some(x => x.id === workId)) locs.push({v: sub.id, label: sub.name});
+  });
+  if (!locs.length) locs.push({v:'', label: serie.name});
+  let fromSub = locs[0].v;
+  const destOf = f => f ? `${serie.id}/${f}` : serie.id;
+
+  // Destinazioni possibili: ogni serie e ogni sua sotto-serie.
+  const destOptions = d.series.map(s2 => {
+    const subs = (s2.subseries||[]).map(sub =>
+      `<option value="${h(s2.id + '/' + sub.id)}">&nbsp;&nbsp;&nbsp;↳ ${h(sub.name)}</option>`
+    ).join('');
+    return `<option value="${h(s2.id)}">${h(s2.name)}</option>` + subs;
+  }).join('');
+
+  // Selettore della collocazione di partenza: serve solo per le poche opere
+  // che compaiono in più di un punto.
+  const fromBlock = locs.length < 2 ? '' : `
+      <div class="fg">
+        <label>Questa opera compare in ${locs.length} punti — quale vuoi spostare?</label>
+        <select id="e-from">${locs.map(l =>
+          `<option value="${h(l.v)}">${h(l.v ? '↳ ' + l.label : l.label)}</option>`).join('')}</select>
+        <div style="font-size:11px;font-family:var(--font-ss);color:var(--text2);margin-top:.5rem;line-height:1.6">
+          Le altre collocazioni restano come sono.
+        </div>
+      </div>`;
+
   c.innerHTML = `
     <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:.5rem">
       <div>
@@ -625,9 +657,17 @@ async function renderEdit(c, serieId, workId) {
       <div class="fg"><label>Titolo</label>
         <input id="e-title" value="${h(work.title)}">
       </div>
+      ${fromBlock}
       <div class="grid2">
         <div class="fg"><label>Serie</label>
-          <input value="${h(serie.name)}" disabled>
+          <select id="e-serie">${destOptions}</select>
+          <div style="font-size:11px;font-family:var(--font-ss);color:var(--text2);margin-top:.5rem;line-height:1.6">
+            Scegli un'altra serie per spostare l'opera. Le fotografie la seguono.
+          </div>
+          <div id="e-move-act" style="display:none;align-items:center;gap:1rem;margin-top:.9rem">
+            <button class="btn btn-primary" id="e-move-btn">Sposta opera</button>
+            <span class="status" id="e-move-st"></span>
+          </div>
         </div>
         <div class="fg"><label>Anno</label>
           <input id="e-year" value="${h(work.year||'')}">
@@ -741,6 +781,51 @@ async function renderEdit(c, serieId, workId) {
       setTimeout(() => setStatus('e-st', ''), 3000);
     } else {
       setStatus('e-st', j.error||'Errore.', 'err');
+    }
+  });
+
+  // ── move to another series ─────────────────────────────────────────────────
+
+  const eSerie  = document.getElementById('e-serie');
+  const eFrom   = document.getElementById('e-from');   // solo se locs.length > 1
+  const moveAct = document.getElementById('e-move-act');
+  eSerie.value = destOf(fromSub);
+
+  function syncMove() {
+    moveAct.style.display = (eSerie.value === destOf(fromSub)) ? 'none' : 'flex';
+    setStatus('e-move-st', '');
+  }
+  eSerie.addEventListener('change', syncMove);
+  if (eFrom) eFrom.addEventListener('change', () => {
+    fromSub = eFrom.value;
+    eSerie.value = destOf(fromSub);   // si riparte da dov'è quella collocazione
+    syncMove();
+  });
+
+  document.getElementById('e-move-btn').addEventListener('click', async () => {
+    const target = eSerie.value;
+    if (target === destOf(fromSub)) return;
+    const label = eSerie.options[eSerie.selectedIndex].text
+                    .replace(/[\s ↳]+/g, ' ').trim();
+    // Se l'opera compare anche altrove, quelle collocazioni non si toccano:
+    // dirlo prima evita che sembri una dimenticanza del pannello.
+    const resta = locs.filter(l => l.v !== fromSub).map(l => `«${l.label}»`);
+    const nota = resta.length
+      ? `\n\nResta comunque anche in ${resta.join(', ')}.` : '';
+    if (!confirm(`Spostare "${work.title}" in «${label}»?\n\n`
+               + `Le fotografie vengono spostate insieme all'opera.${nota}`)) return;
+    const btn = document.getElementById('e-move-btn');
+    btn.disabled = true;
+    setStatus('e-move-st', 'Spostamento…');
+    const j = await api('/api/move-work',
+                        {serie_id: serieId, work_id: workId, from: fromSub, target});
+    if (j.ok) {
+      toast(j.message || 'Opera spostata.');
+      await loadData();
+      go('edit', {s: j.serie_id || target.split('/')[0], w: workId});
+    } else {
+      btn.disabled = false;
+      setStatus('e-move-st', j.error || 'Errore.', 'err');
     }
   });
 

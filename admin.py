@@ -621,6 +621,66 @@ def _find_all_instances(serie, work_id):
 def _work_exists(serie, work_id):
     return _find_work(serie, work_id) is not None
 
+def _next_position(works):
+    """Posizione da assegnare a un'opera che arriva in fondo a un elenco.
+    `position` può essere decimale (le sotto-serie usano -0.8, 0.1…), quindi
+    non si può assumere che sia un intero."""
+    nums = [w["position"] for w in (works or [])
+            if isinstance(w.get("position"), (int, float))
+            and not isinstance(w.get("position"), bool)]
+    return (max(nums) + 1) if nums else len(works or [])
+
+def _media_serie_of(data, work_id, work=None):
+    """In quale cartella-serie stanno DAVVERO le foto dell'opera.
+
+    Non si può dedurlo dalla serie in cui l'opera è elencata: la stessa opera
+    può comparire sotto due serie diverse, ma le foto sul disco stanno in un
+    posto solo. Si parte dal percorso salvato e, se non torna, si cercano.
+    """
+    prefix = ((work or {}).get("image") or "").split("/")[0]
+    if prefix and os.path.isdir(os.path.join(ROOT, prefix, work_id)):
+        return prefix
+    for s in data.get("series", []):
+        if os.path.isdir(os.path.join(ROOT, s["id"], work_id)):
+            return s["id"]
+    return None
+
+def _propagate_media(data, work_id, primary):
+    """Allinea i percorsi delle foto su OGNI istanza dell'opera, in tutte le
+    serie e sotto-serie: se le foto si spostano, nessuna copia resta a puntare
+    a una cartella che non esiste più."""
+    for s in data.get("series", []):
+        for w in _all_works(s):
+            if w["id"] == work_id and w is not primary:
+                for k in ("image", "thumb", "canvas"):
+                    w[k] = primary.get(k, "")
+                for k in ("gallery", "thumb_gallery", "canvas_gallery"):
+                    w[k] = list(primary.get(k, []))
+
+def _fix_covers(data, work_id, primary):
+    """Aggiorna le copertine delle sotto-serie che mostravano questa opera:
+    se l'opera è ancora lì si aggiorna solo il percorso, se se n'è andata si
+    ripiega sulla prima opera rimasta."""
+    for s in data.get("series", []):
+        for sub in _subseries(s):
+            if f"/{work_id}/" not in (sub.get("cover") or ""):
+                continue
+            works = sub.get("works", [])
+            if any(w["id"] == work_id for w in works):
+                sub["cover"] = primary.get("canvas") or primary.get("thumb") or ""
+            else:
+                sub["cover"] = works[0].get("canvas", "") if works else ""
+
+def _locations_of(serie, work_id):
+    """Dove sta l'opera dentro una serie: ('main' | id-sotto-serie, …)."""
+    where = []
+    if any(w["id"] == work_id for w in serie.get("works", [])):
+        where.append("main")
+    for sub in _subseries(serie):
+        if any(w["id"] == work_id for w in sub.get("works", [])):
+            where.append(sub["id"])
+    return where
+
 # ── pubblicazione su GitHub → Netlify ────────────────────────────────────────
 
 SAFE_NOTE = "Le foto restano salvate sul computer: non si perde niente."
@@ -1217,6 +1277,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "/api/delete-image":   self._delete_image,
             "/api/set-primary":    self._set_primary,
             "/api/reorder-works":  self._reorder_works,
+            "/api/move-work":      self._move_work,
             "/api/publish":        self._publish,
         }
         fn = dispatch.get(path)
@@ -1448,6 +1509,115 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # Riordina la griglia nella pagina serie (IT+EN)
         resync(s)
         return self._json({"ok": True})
+
+    def _move_work(self, p):
+        """Sposta un'opera già esistente in un'altra serie o sotto-serie.
+
+        Si sposta UNA collocazione per volta: `from` dice da dove ("" = griglia
+        principale della serie, altrimenti l'id di una sotto-serie) e `target`
+        dice dove ("serie" oppure "serie/sotto-serie"). Le eventuali altre
+        collocazioni della stessa opera restano dove sono — qualche opera
+        compare di proposito sia nella griglia della serie sia in una
+        sotto-serie, e uno spostamento non deve cancellare quella scelta.
+
+        Le foto stanno sul disco in un posto solo: se serve si spostano, e i
+        percorsi vengono riallineati su tutte le istanze.
+        """
+        s          = p.get("serie_id", "").strip()
+        w          = p.get("work_id",  "").strip()
+        src_sub_id = p.get("from",     "").strip()
+        dst        = p.get("target",   "").strip()
+        if not s or not w or s not in valid_series():
+            return self._err("Parametri mancanti", 400)
+
+        dst_sid, _, dst_sub_id = dst.partition("/")
+        data = load_data()
+        src  = next((x for x in data["series"] if x["id"] == s),       None)
+        tgt  = next((x for x in data["series"] if x["id"] == dst_sid), None)
+        if not src:
+            return self._err("Serie di partenza non trovata", 404)
+        if not tgt:
+            return self._err("Scegli una serie di destinazione valida", 400)
+
+        # elenco di partenza
+        if src_sub_id:
+            src_sub = next((x for x in _subseries(src) if x["id"] == src_sub_id), None)
+            if not src_sub:
+                return self._err("Sotto-serie di partenza non trovata", 400)
+            src_list = src_sub.setdefault("works", [])
+        else:
+            src_list = src.setdefault("works", [])
+
+        # elenco di arrivo
+        if dst_sub_id:
+            dst_sub = next((x for x in _subseries(tgt) if x["id"] == dst_sub_id), None)
+            if not dst_sub:
+                return self._err("Sotto-serie di destinazione non trovata", 400)
+            dest_list = dst_sub.setdefault("works", [])
+        else:
+            dst_sub   = None
+            dest_list = tgt.setdefault("works", [])
+
+        work = next((x for x in src_list if x["id"] == w), None)
+        if not work:
+            return self._err("Opera non trovata", 404)
+        if src_list is dest_list:
+            return self._json({"ok": True, "moved": False,
+                               "message": "L'opera è già in questa serie."})
+
+        # Dove stanno le foto adesso, e dove devono finire.
+        cur_media = _media_serie_of(data, w, work)
+        if not cur_media:
+            return self._err("Non trovo la cartella delle fotografie di questa "
+                             "opera, quindi non la sposto. Avvisa Andrea.", 500)
+        src_dir = os.path.join(ROOT, cur_media, w)
+        dst_dir = os.path.join(ROOT, dst_sid,   w)
+        if cur_media != dst_sid and os.path.exists(dst_dir):
+            return self._err(
+                f"Nella serie «{tgt['name']}» c'è già un'opera con questo nome. "
+                f"Cambia prima il titolo di una delle due.", 400)
+
+        src_list[:] = [x for x in src_list if x["id"] != w]
+
+        if cur_media != dst_sid:
+            # Le foto seguono l'opera. Si spostano PRIMA di salvare il JSON: se
+            # lo spostamento fallisce, sul disco resta tutto com'era.
+            try:
+                os.makedirs(os.path.join(ROOT, dst_sid), exist_ok=True)
+                shutil.move(src_dir, dst_dir)
+            except OSError as e:
+                print(f"  ! spostamento cartella non riuscito: {e}")
+                return self._err(
+                    "Non riesco a spostare le foto dell'opera. Chiudi eventuali "
+                    "foto aperte in altri programmi e riprova. " + SAFE_NOTE, 500)
+
+        # Se l'opera era GIÀ nell'elenco di arrivo, non se ne aggiunge una copia:
+        # si è solo tolta dall'altra collocazione.
+        if not any(x["id"] == w for x in dest_list):
+            work["position"] = _next_position(dest_list)
+            dest_list.append(work)
+
+        rebuild_galleries(dst_sid, work)
+        _propagate_media(data, w, work)
+        _fix_covers(data, w, work)
+        save_data(data)
+
+        # Pagine opera (IT+EN) e griglia della serie di arrivo…
+        resync(dst_sid, w)
+        # …e griglia della serie di partenza, da cui l'opera è sparita.
+        if s != dst_sid:
+            resync(s)
+
+        # Le altre collocazioni dell'opera restano: lo si dice, così non sembra
+        # che il pannello abbia fatto le cose a metà.
+        altrove = [loc for x in data["series"] for loc in _locations_of(x, w)
+                   if not (x["id"] == dst_sid and loc == (dst_sub_id or "main"))]
+        dest_name = f"{tgt['name']} → {dst_sub['name']}" if dst_sub else tgt["name"]
+        msg = f"«{work['title']}» spostata in {dest_name}."
+        if altrove:
+            msg += " Resta anche dove compariva già altrove."
+        return self._json({"ok": True, "moved": True, "serie_id": dst_sid,
+                           "message": msg})
 
     def _publish(self, p):
         res = git_publish()
