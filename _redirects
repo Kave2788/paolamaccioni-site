@@ -56,8 +56,17 @@
 /it/*  /  301!
 
 # ── 4. Vecchi URL con parametri → indirizzi SEO ─────────────────────────────
-/serie.html  /serie/:id/  302  id=:id
-/opera.html  /opera/:id/  302  id=:id
+# Due dettagli, entrambi indispensabili (senza, queste regole non scattano):
+#  - il parametro di query va SUBITO DOPO l'origine, non in fondo alla riga;
+#  - il "!" forza il redirect: serie.html e opera.html esistono ancora come
+#    file, quindi senza "!" Netlify serve il file e ignora la regola.
+# serie.html per giunta è una pagina vuota: non ha lo script che legge ?id=,
+# mostra solo "—". Le due righe senza parametro stanno sotto quelle con ?id=,
+# altrimenti le intercetterebbero (vince sempre la prima regola che combacia).
+/serie.html  id=:id  /serie/:id/  301!
+/opera.html  id=:id  /opera/:id/  301!
+/serie.html  /portfolio.html  301!
+/opera.html  /portfolio.html  301!
 
 # ── 5. Normalizzazione (jolly: sempre per ultimi) ───────────────────────────
 /serie/*/   /serie/:splat/  200
