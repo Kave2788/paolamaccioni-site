@@ -7,6 +7,87 @@
       "description": "Attraverso lo sbalzo dell'alluminio, la superficie si trasforma in uno spazio tra segno, luce e volume, rivelando la tensione nascosta della materia.",
       "works": [
         {
+          "id": "frattura",
+          "title": "FRATTURA",
+          "year": "2026",
+          "image": "struttura-tensione/frattura/01.jpg",
+          "gallery": [
+            "struttura-tensione/frattura/01.jpg",
+            "struttura-tensione/frattura/02.jpg",
+            "struttura-tensione/frattura/03.jpg",
+            "struttura-tensione/frattura/04.jpg",
+            "struttura-tensione/frattura/05.jpg"
+          ],
+          "thumb": "struttura-tensione/frattura/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/frattura/thumb/01.webp",
+            "struttura-tensione/frattura/thumb/02.webp",
+            "struttura-tensione/frattura/thumb/03.webp",
+            "struttura-tensione/frattura/thumb/04.webp",
+            "struttura-tensione/frattura/thumb/05.webp"
+          ],
+          "canvas": "struttura-tensione/frattura/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/frattura/canvas/01.webp",
+            "struttura-tensione/frattura/canvas/02.webp",
+            "struttura-tensione/frattura/canvas/03.webp",
+            "struttura-tensione/frattura/canvas/04.webp",
+            "struttura-tensione/frattura/canvas/05.webp"
+          ],
+          "description": "L’opera rappresenta il momento in cui una struttura apparentemente stabile raggiunge il proprio limite interno.\nLa frattura non è un evento esterno, ma un punto critico della materia in cui la continuità si interrompe e l’equilibrio viene messo in discussione. L’inserimento della superficie specchiante altera la percezione dello spazio e coinvolge lo sguardo, che entra in una condizione instabile e priva di un punto di riferimento definito.\nAttraverso la trasformazione dell’alluminio, la superficie diventa luogo di passaggio tra ordine e cambiamento, tra ciò che appare stabile e ciò che rivela la propria fragilità.\n\nSbalzo e cesello a mano su alluminio, carta specchiante su supporto; 55 x 75 x 3,5 cm",
+          "position": 2
+        },
+        {
+          "id": "lux-eterna",
+          "title": "LUX AETERNA",
+          "year": "2024",
+          "image": "struttura-tensione/lux-eterna/01.jpg",
+          "gallery": [
+            "struttura-tensione/lux-eterna/01.jpg",
+            "struttura-tensione/lux-eterna/02.jpg",
+            "struttura-tensione/lux-eterna/03.jpg",
+            "struttura-tensione/lux-eterna/04.jpg",
+            "struttura-tensione/lux-eterna/05.jpg",
+            "struttura-tensione/lux-eterna/06.jpg",
+            "struttura-tensione/lux-eterna/07.jpg",
+            "struttura-tensione/lux-eterna/08.jpg",
+            "struttura-tensione/lux-eterna/09.jpg",
+            "struttura-tensione/lux-eterna/10.jpg",
+            "struttura-tensione/lux-eterna/11.jpg"
+          ],
+          "description": "Dalla frattura emerge una nuova possibilità di percezione.\nLa lacerazione non viene ricomposta, ma diventa apertura: un punto attraverso cui la materia rivela ciò che era già contenuto al suo interno. La struttura non viene distrutta, ma svela la propria capacità di trasformarsi e generare nuove possibilità di lettura.\nIn quest’opera la luce non è un elemento aggiunto alla superficie, ma nasce dal cambiamento dello sguardo e dalla relazione tra materia, spazio e percezione.\nLa frattura perde così il significato di perdita e diventa rivelazione: il momento in cui ciò che era nascosto può finalmente manifestarsi.\n\nSbalzo e cesello a mano su alluminio, acrilico, carta specchiante su supporto; 80 x 120 x 4 cm",
+          "thumb_gallery": [
+            "struttura-tensione/lux-eterna/thumb/01.webp",
+            "struttura-tensione/lux-eterna/thumb/02.webp",
+            "struttura-tensione/lux-eterna/thumb/03.webp",
+            "struttura-tensione/lux-eterna/thumb/04.webp",
+            "struttura-tensione/lux-eterna/thumb/05.webp",
+            "struttura-tensione/lux-eterna/thumb/06.webp",
+            "struttura-tensione/lux-eterna/thumb/07.webp",
+            "struttura-tensione/lux-eterna/thumb/08.webp",
+            "struttura-tensione/lux-eterna/thumb/09.webp",
+            "struttura-tensione/lux-eterna/thumb/10.webp",
+            "struttura-tensione/lux-eterna/thumb/11.webp"
+          ],
+          "thumb": "struttura-tensione/lux-eterna/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lux-eterna/canvas/01.webp",
+            "struttura-tensione/lux-eterna/canvas/02.webp",
+            "struttura-tensione/lux-eterna/canvas/03.webp",
+            "struttura-tensione/lux-eterna/canvas/04.webp",
+            "struttura-tensione/lux-eterna/canvas/05.webp",
+            "struttura-tensione/lux-eterna/canvas/06.webp",
+            "struttura-tensione/lux-eterna/canvas/07.webp",
+            "struttura-tensione/lux-eterna/canvas/08.webp",
+            "struttura-tensione/lux-eterna/canvas/09.webp",
+            "struttura-tensione/lux-eterna/canvas/10.webp",
+            "struttura-tensione/lux-eterna/canvas/11.webp"
+          ],
+          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp",
+          "position": 4,
+          "description_en": "In Lux Eterna, aluminium is worked as an open, modular weave, generating a specular structure based on the balance between solids and voids. The surface is not simply etched, but crossed, transforming the plane into a reticular organism.\nThe red field acts as an underlying force, amplifying the tension of the metal structure and intensifying the dialogue with the blue core. The light does not merely reflect the material, but passes through it and activates it, making visible the relationship between rhythm, depth and formal construction."
+        },
+        {
           "id": "lombra-della-luce",
           "title": "L’OMBRA DELLA LUCE",
           "year": "2025",
@@ -62,89 +143,8 @@
             "struttura-tensione/lombra-della-luce/canvas/14.webp"
           ],
           "canvas": "struttura-tensione/lombra-della-luce/canvas/01.webp",
-          "position": 0,
+          "position": 5,
           "description_en": "The Shadow of Light stems from the idea that a fracture can become a passage. The surface of the aluminium is incised by a central fault that runs through the work and from which real steam emerges, produced by a nebuliser hidden inside the hollow structure.\nThe composition develops between two landscapes: a dry, cracked earth, embossed on a thin slab, and a soft sky made of acrylic glazes and resin. The fracture does not divide these two spaces, but relates them, transforming the wound into a threshold.\nThe work integrates matter, light and the ephemeral presence of steam, creating an inner landscape in which what appears as a rupture becomes a possibility for transformation.\nThe title is a tribute to Franco Battiato and his spiritual vision of the passage from shadow to light."
-        },
-        {
-          "id": "lux-eterna",
-          "title": "LUX AETERNA",
-          "year": "2024",
-          "image": "struttura-tensione/lux-eterna/01.jpg",
-          "gallery": [
-            "struttura-tensione/lux-eterna/01.jpg",
-            "struttura-tensione/lux-eterna/02.jpg",
-            "struttura-tensione/lux-eterna/03.jpg",
-            "struttura-tensione/lux-eterna/04.jpg",
-            "struttura-tensione/lux-eterna/05.jpg",
-            "struttura-tensione/lux-eterna/06.jpg",
-            "struttura-tensione/lux-eterna/07.jpg",
-            "struttura-tensione/lux-eterna/08.jpg",
-            "struttura-tensione/lux-eterna/09.jpg",
-            "struttura-tensione/lux-eterna/10.jpg",
-            "struttura-tensione/lux-eterna/11.jpg"
-          ],
-          "description": "Dalla frattura emerge una nuova possibilità di percezione.\nLa lacerazione non viene ricomposta, ma diventa apertura: un punto attraverso cui la materia rivela ciò che era già contenuto al suo interno. La struttura non viene distrutta, ma svela la propria capacità di trasformarsi e generare nuove possibilità di lettura.\nIn quest’opera la luce non è un elemento aggiunto alla superficie, ma nasce dal cambiamento dello sguardo e dalla relazione tra materia, spazio e percezione.\nLa frattura perde così il significato di perdita e diventa rivelazione: il momento in cui ciò che era nascosto può finalmente manifestarsi.\n\nSbalzo e cesello a mano su alluminio, acrilico, carta specchiante su supporto; 80 x 120 x 4 cm",
-          "thumb_gallery": [
-            "struttura-tensione/lux-eterna/thumb/01.webp",
-            "struttura-tensione/lux-eterna/thumb/02.webp",
-            "struttura-tensione/lux-eterna/thumb/03.webp",
-            "struttura-tensione/lux-eterna/thumb/04.webp",
-            "struttura-tensione/lux-eterna/thumb/05.webp",
-            "struttura-tensione/lux-eterna/thumb/06.webp",
-            "struttura-tensione/lux-eterna/thumb/07.webp",
-            "struttura-tensione/lux-eterna/thumb/08.webp",
-            "struttura-tensione/lux-eterna/thumb/09.webp",
-            "struttura-tensione/lux-eterna/thumb/10.webp",
-            "struttura-tensione/lux-eterna/thumb/11.webp"
-          ],
-          "thumb": "struttura-tensione/lux-eterna/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lux-eterna/canvas/01.webp",
-            "struttura-tensione/lux-eterna/canvas/02.webp",
-            "struttura-tensione/lux-eterna/canvas/03.webp",
-            "struttura-tensione/lux-eterna/canvas/04.webp",
-            "struttura-tensione/lux-eterna/canvas/05.webp",
-            "struttura-tensione/lux-eterna/canvas/06.webp",
-            "struttura-tensione/lux-eterna/canvas/07.webp",
-            "struttura-tensione/lux-eterna/canvas/08.webp",
-            "struttura-tensione/lux-eterna/canvas/09.webp",
-            "struttura-tensione/lux-eterna/canvas/10.webp",
-            "struttura-tensione/lux-eterna/canvas/11.webp"
-          ],
-          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp",
-          "position": 1,
-          "description_en": "In Lux Eterna, aluminium is worked as an open, modular weave, generating a specular structure based on the balance between solids and voids. The surface is not simply etched, but crossed, transforming the plane into a reticular organism.\nThe red field acts as an underlying force, amplifying the tension of the metal structure and intensifying the dialogue with the blue core. The light does not merely reflect the material, but passes through it and activates it, making visible the relationship between rhythm, depth and formal construction."
-        },
-        {
-          "id": "frattura",
-          "title": "FRATTURA",
-          "year": "2026",
-          "image": "struttura-tensione/frattura/01.jpg",
-          "gallery": [
-            "struttura-tensione/frattura/01.jpg",
-            "struttura-tensione/frattura/02.jpg",
-            "struttura-tensione/frattura/03.jpg",
-            "struttura-tensione/frattura/04.jpg",
-            "struttura-tensione/frattura/05.jpg"
-          ],
-          "thumb": "struttura-tensione/frattura/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/frattura/thumb/01.webp",
-            "struttura-tensione/frattura/thumb/02.webp",
-            "struttura-tensione/frattura/thumb/03.webp",
-            "struttura-tensione/frattura/thumb/04.webp",
-            "struttura-tensione/frattura/thumb/05.webp"
-          ],
-          "canvas": "struttura-tensione/frattura/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/frattura/canvas/01.webp",
-            "struttura-tensione/frattura/canvas/02.webp",
-            "struttura-tensione/frattura/canvas/03.webp",
-            "struttura-tensione/frattura/canvas/04.webp",
-            "struttura-tensione/frattura/canvas/05.webp"
-          ],
-          "description": "L’opera rappresenta il momento in cui una struttura apparentemente stabile raggiunge il proprio limite interno.\nLa frattura non è un evento esterno, ma un punto critico della materia in cui la continuità si interrompe e l’equilibrio viene messo in discussione. L’inserimento della superficie specchiante altera la percezione dello spazio e coinvolge lo sguardo, che entra in una condizione instabile e priva di un punto di riferimento definito.\nAttraverso la trasformazione dell’alluminio, la superficie diventa luogo di passaggio tra ordine e cambiamento, tra ciò che appare stabile e ciò che rivela la propria fragilità.\n\nSbalzo e cesello a mano su alluminio, carta specchiante su supporto; 55 x 75 x 3,5 cm",
-          "position": 2
         },
         {
           "id": "il-rinoceronte",
@@ -169,7 +169,7 @@
             "struttura-tensione/il-rinoceronte/canvas/03.webp"
           ],
           "canvas": "struttura-tensione/il-rinoceronte/canvas/01.webp",
-          "position": 3,
+          "position": 6,
           "description_en": "This work stems from a reinterpretation of Albrecht Dürer's famous Rhinoceros (1515), one of the most famous images in the history of Western art. The figure of the animal is taken up and translated into a three-dimensional surface through the embossing of aluminium.\nAs in the original engraving, the body of the rhinoceros appears almost as an armour composed of elements and textures that define its structure.\nA personal intervention is added to this historical image: three buffalos, African birds that live in symbiosis with large mammals, perch on the animal's back, introducing a natural element that was not present in Dürer's work."
         },
         {
@@ -204,7 +204,7 @@
             "struttura-tensione/rondini-in-gabbia/canvas/06.webp"
           ],
           "canvas": "struttura-tensione/rondini-in-gabbia/canvas/01.webp",
-          "position": 4,
+          "position": 7,
           "description_en": "Inside the cage a swallow is perched on the perch, while another is in the nest with two young. The door is open, but an ivy branch weaves between the bars and slowly seems to close the doorway.\nMade of embossed and chiselled aluminium, the work constructs an essential scene where each element takes on a symbolic value. The swallows, traditionally associated with travel and return, are here in a space suspended between protection and limit.\nThe ivy growing on the door introduces time into the scene: freedom exists, but can vanish if it is not grasped."
         },
         {
@@ -230,37 +230,8 @@
             "struttura-tensione/fibonacci/canvas/03.webp"
           ],
           "canvas": "struttura-tensione/fibonacci/canvas/01.webp",
-          "position": 5,
+          "position": 8,
           "description_en": "This work develops from the structure of Leonardo Fibonacci's spiral, one of the most recurrent mathematical models in the forms of nature. Through the embossing of the aluminium, the surface is constructed by means of a rhythmic sequence of punctiform reliefs that expand in a spiral-like pattern.\nThe progressive arrangement of the elements generates a visual growth that recalls the natural structures governed by the Fibonacci sequence: shells, whirlpools, sunflower seeds and many other organic forms in which mathematical order and natural development coincide.\nThe golden surface amplifies the movement of the composition. The light glides along the reliefs and accentuates the dynamics of the spiral, transforming the geometric structure into an almost living, continuously expanding form.\nThe work thus investigates the relationship between mathematics, nature and matter, translating into metal one of the fundamental geometries that regulate the growth and balance of forms in the natural world."
-        },
-        {
-          "id": "fazzoletto",
-          "title": "Fazzoletto",
-          "year": "",
-          "image": "struttura-tensione/fazzoletto/01.jpg",
-          "gallery": [
-            "struttura-tensione/fazzoletto/01.jpg",
-            "struttura-tensione/fazzoletto/02.jpg",
-            "struttura-tensione/fazzoletto/03.jpg",
-            "struttura-tensione/fazzoletto/04.jpg"
-          ],
-          "description": "Fazzoletto riproduce un tessuto leggero attraverso la lavorazione a sbalzo su una sottile lastra di alluminio.\n\nLa superficie metallica conserva la trama del tessuto e il movimento morbido delle pieghe, trasformando un materiale rigido in una forma che richiama la leggerezza e la flessibilità del tessuto. Al centro compare il monogramma inciso, che introduce un segno personale all’interno della composizione.\n\nL’opera gioca sul contrasto tra la durezza del metallo e l’apparente delicatezza del fazzoletto.",
-          "thumb_gallery": [
-            "struttura-tensione/fazzoletto/thumb/01.webp",
-            "struttura-tensione/fazzoletto/thumb/02.webp",
-            "struttura-tensione/fazzoletto/thumb/03.webp",
-            "struttura-tensione/fazzoletto/thumb/04.webp"
-          ],
-          "thumb": "struttura-tensione/fazzoletto/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/fazzoletto/canvas/01.webp",
-            "struttura-tensione/fazzoletto/canvas/02.webp",
-            "struttura-tensione/fazzoletto/canvas/03.webp",
-            "struttura-tensione/fazzoletto/canvas/04.webp"
-          ],
-          "canvas": "struttura-tensione/fazzoletto/canvas/01.webp",
-          "position": 6,
-          "description_en": "Fazzoletto reproduces a light fabric by means of embossing on a thin aluminium sheet.\nThe metal surface preserves the weave of the fabric and the soft movement of the folds, transforming a rigid material into a form that recalls the lightness and flexibility of fabric. An engraved monogram appears in the centre, introducing a personal mark within the composition.\nThe work plays on the contrast between the hardness of the metal and the apparent delicacy of the handkerchief."
         },
         {
           "id": "specchio-nero",
@@ -282,7 +253,7 @@
             "struttura-tensione/specchio-nero/canvas/02.webp"
           ],
           "canvas": "struttura-tensione/specchio-nero/canvas/01.webp",
-          "position": 7,
+          "position": 9,
           "description_en": "Specchio Nero (Black Mirror) is born from the encounter between the luminous surface of aluminium and a dark depth that absorbs the gaze. The metal relief, embossed on a thin slab, builds a structure that emerges from the surface and dialogues with the deep black of the background.\nThe latter, obtained through acrylic and resin, does not function as a simple colour but as a visual space that captures light and modifies its perception. The contrast between reflection and absorption creates a tension between surface and depth.\nThe work thus investigates the relationship between light and darkness, transforming metal into a field of perception where what appears and what disappears coexist in the same image."
         },
         {
@@ -305,34 +276,8 @@
             "struttura-tensione/bubbles/canvas/02.webp"
           ],
           "canvas": "struttura-tensione/bubbles/canvas/01.webp",
-          "position": 8,
+          "position": 10,
           "description_en": "This work stems from an exploration of the relationship between matter and void.\nA golden aluminium sheet is pierced through a constellation of circular apertures of different sizes, creating a structure reminiscent of cellular shapes and natural organisms.\nThe metal surface, stretched between the different holes, generates a fragile balance between solid and open space. The irregular edges of the openings reveal the manual gesture of workmanship and transform the sheet into an organic texture that seems to expand in space.\nBehind the perforated surface emerges a second metal depth that amplifies the dialogue between light, shadow and reflection. The work is thus constructed on several perceptual levels: structure, light and void become compositional elements as much as the material itself.\nThe result is a form that oscillates between geometric abstraction and biological structure, where the aluminium loses its surface rigidity and becomes a dynamic system of spatial relationships.\nTechnique: embossing, cutting and handwork on aluminium."
-        },
-        {
-          "id": "onde-riflesse",
-          "title": "Onde Riflesse",
-          "year": "2023",
-          "image": "struttura-tensione/onde-riflesse/01.jpg",
-          "gallery": [
-            "struttura-tensione/onde-riflesse/01.jpg",
-            "struttura-tensione/onde-riflesse/02.jpg",
-            "struttura-tensione/onde-riflesse/03.jpg"
-          ],
-          "description": "L’opera nasce dall’indagine del movimento come trasformazione della superficie dell’alluminio.\nUn andamento circolare attraversa la lastra creando un ritmo progressivo che conduce lo sguardo verso il centro della composizione. Le linee incise e lavorate a sbalzo modificano il piano metallico, generando variazioni di profondità e di luce.\nIl gesto manuale trasforma una superficie rigida in una forma dinamica, dove il segno non descrive un movimento, ma lo costruisce direttamente nella materia.\n\nSbalzo e cesello a mano su alluminio; 40 x 40 cm",
-          "thumb_gallery": [
-            "struttura-tensione/onde-riflesse/thumb/01.webp",
-            "struttura-tensione/onde-riflesse/thumb/02.webp",
-            "struttura-tensione/onde-riflesse/thumb/03.webp"
-          ],
-          "thumb": "struttura-tensione/onde-riflesse/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/onde-riflesse/canvas/01.webp",
-            "struttura-tensione/onde-riflesse/canvas/02.webp",
-            "struttura-tensione/onde-riflesse/canvas/03.webp"
-          ],
-          "canvas": "struttura-tensione/onde-riflesse/canvas/01.webp",
-          "position": 9,
-          "description_en": "A circular movement crosses the surface of the aluminium and leads the eye towards the centre, like a vortex capturing energy and light. Engraved and embossed lines create depth and rhythm, transforming the material into a continuous flow."
         },
         {
           "id": "sotto-la-superficie",
@@ -363,31 +308,8 @@
             "struttura-tensione/sotto-la-superficie/canvas/05.webp"
           ],
           "canvas": "struttura-tensione/sotto-la-superficie/canvas/01.webp",
-          "position": 10,
-          "description_en": "Beneath the surface relates the external appearance of the figure to a visible internal structure, where components, connections and circuits emerge as an integral part of the composition.\nThe face, smooth and silent, contrasts with the mechanical complexity that develops in the open part of the head and neck. Cables, elements and connections build an internal network that suggests a hidden level beyond appearance.\nThe work reflects on the relationship between identity and technology, showing what normally remains invisible: the internal structure that supports and feeds the surface."
-        },
-        {
-          "id": "il-peso-dell-ingiustizia",
-          "title": "Il peso dell'ingiustizia",
-          "year": "2024",
-          "image": "struttura-tensione/il-peso-dell-ingiustizia/01.jpg",
-          "gallery": [
-            "struttura-tensione/il-peso-dell-ingiustizia/01.jpg",
-            "struttura-tensione/il-peso-dell-ingiustizia/02.jpg"
-          ],
-          "description": "L’opera mette in scena una riflessione sul peso delle responsabilità umane attraverso una composizione simbolica.\nUno scarabeo stercorario, figura associata alla fatica e alla trasformazione, trascina una sfera che rappresenta un mondo segnato dalle contraddizioni dell’uomo. Un piccolo aquilone, fragile elemento di colore e leggerezza, introduce una possibilità di resistenza e memoria.\nLa lavorazione a sbalzo dell’alluminio amplifica il contrasto tra la durezza della materia e la delicatezza del simbolo, trasformando la superficie in uno spazio dove immagini e significati convivono.\n\nSbalzo e cesello a mano su alluminio, resina; 50 x 50 cm",
-          "thumb_gallery": [
-            "struttura-tensione/il-peso-dell-ingiustizia/thumb/01.webp",
-            "struttura-tensione/il-peso-dell-ingiustizia/thumb/02.webp"
-          ],
-          "thumb": "struttura-tensione/il-peso-dell-ingiustizia/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp",
-            "struttura-tensione/il-peso-dell-ingiustizia/canvas/02.webp"
-          ],
-          "canvas": "struttura-tensione/il-peso-dell-ingiustizia/canvas/01.webp",
           "position": 11,
-          "description_en": "This work depicts a world rolling towards ruin, propelled by a small dung beetle: a symbol of toil, transformation and resilience.\nThe sphere it carries is a corrupt globe, scarred by humanity's faults and indifference to the pain of others.\nYet, high above, a small kite, fragile but stubborn, with the colours of Palestine, is released.\nA subtle detail that becomes voice, resistance, memory.\nThe aluminium sheet, completely handmade using the embossing technique, was finished with pigmented resins to enhance the contrasts, give chromatic depth and intensify the expressive charge of the work.\nEvery groove is carved with awareness, every relief is a choice of truth and denunciation.\nIn this contrast between the hardness of the metal and the lightness of the message lies the meaning of the work: transforming matter into voice, and art into a civilised act."
+          "description_en": "Beneath the surface relates the external appearance of the figure to a visible internal structure, where components, connections and circuits emerge as an integral part of the composition.\nThe face, smooth and silent, contrasts with the mechanical complexity that develops in the open part of the head and neck. Cables, elements and connections build an internal network that suggests a hidden level beyond appearance.\nThe work reflects on the relationship between identity and technology, showing what normally remains invisible: the internal structure that supports and feeds the surface."
         },
         {
           "id": "checkmate",
@@ -416,87 +338,9 @@
           "description_en": "In Scacco Matto, the scene is constructed as a silent narrative suspended in time. On an aluminium game board, decorated with ornamental motifs, a few chess pieces emerge as traces of a game that has just begun or perhaps already ended.\nOn either side of the table two animals, a cat and a mouse, observe the scene from opposite positions. Their confrontation introduces a symbolic tension that recalls universal dynamics of challenge, strategy and survival. The game of chess thus becomes a metaphor for the relationship between strength and cunning, predator and prey, impulse and calculation.\nThe composition maintains a subtle balance between irony and reflection. The animal figures, made of copper anodised aluminium, dialogue with the silver surface of the table, creating a luminous contrast that amplifies the theatricality of the scene.\nThrough the language of embossed sculpture, the work transforms a moment of play into a symbolic representation of the dynamics that run through nature and human experience.\nTechnique: embossing and chiselling executed by hand on aluminium."
         },
         {
-          "id": "senza-catene",
-          "title": "Senza catene",
-          "year": "2023",
-          "image": "struttura-tensione/senza-catene/01.jpg",
-          "gallery": [
-            "struttura-tensione/senza-catene/01.jpg"
-          ],
-          "description": "L’opera indaga il passaggio da una condizione di costrizione a una possibilità di trasformazione.\nUna catena metallica, elemento associato al vincolo e alla rigidità, interrompe la propria continuità e lascia emergere progressivamente forme che si aprono nello spazio fino a trasformarsi in uccelli in volo.\nAttraverso la lavorazione dell’alluminio, la materia modifica la propria identità: ciò che appare pesante e strutturato perde rigidità e si apre al movimento.\nLa composizione mette in relazione limite e cambiamento, mostrando come una stessa forma possa contenere al proprio interno la possibilità della trasformazione.\n\nSbalzo e cesello a mano su alluminio; 25 x 25 cm",
-          "thumb_gallery": [
-            "struttura-tensione/senza-catene/thumb/01.webp"
-          ],
-          "thumb": "struttura-tensione/senza-catene/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/senza-catene/canvas/01.webp"
-          ],
-          "canvas": "struttura-tensione/senza-catene/canvas/01.webp",
-          "position": 13,
-          "description_en": "In Catene Spezzate the composition develops as a progressive transformation. A metal chain, a symbol of constraint and constriction, breaks off and allows a sequence of shapes to emerge that gradually transform into birds in flight.\nThe material of aluminium accompanies this transition: from a rigid and heavy element it gradually becomes a light and dynamic form. The movement of the birds suggests an openness towards space, as if the material itself were freeing itself from its initial condition.\nThe scene is built on an essential balance between solids and voids. The dark background amplifies the contrast with the metal forms and makes the gesture of liberation even more evident.\nThe work thus represents the moment when a limit is broken and transformed into possibility: a visual metamorphosis in which constraint gives way to movement, freedom and change."
-        },
-        {
-          "id": "trittico",
-          "title": "Trittico",
-          "year": "",
-          "image": "struttura-tensione/trittico/01.jpg",
-          "gallery": [
-            "struttura-tensione/trittico/01.jpg",
-            "struttura-tensione/trittico/02.jpg",
-            "struttura-tensione/trittico/03.jpg",
-            "struttura-tensione/trittico/04.jpg"
-          ],
-          "description": "Il Trittico si sviluppa come una sequenza di tre frammenti che rivelano un paesaggio vegetale denso e stratificato. Foglie, fiori e forme organiche emergono dall’alluminio attraverso la lavorazione a sbalzo, creando un intreccio di volumi che sembra affiorare dal metallo.\n\nLa superficie riflettente amplifica la luce e moltiplica i dettagli, trasformando ogni pannello in uno spazio vivo dove la materia metallica assume una qualità quasi naturale. Le tre parti, pur autonome, dialogano tra loro costruendo una visione continua e immersiva.\n\nL’opera indaga ciò che si cela oltre lo sguardo immediato, suggerendo la presenza di un mondo nascosto che prende forma lentamente dalla materia.",
-          "thumb_gallery": [
-            "struttura-tensione/trittico/thumb/01.webp",
-            "struttura-tensione/trittico/thumb/02.webp",
-            "struttura-tensione/trittico/thumb/03.webp",
-            "struttura-tensione/trittico/thumb/04.webp"
-          ],
-          "thumb": "struttura-tensione/trittico/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/trittico/canvas/01.webp",
-            "struttura-tensione/trittico/canvas/02.webp",
-            "struttura-tensione/trittico/canvas/03.webp",
-            "struttura-tensione/trittico/canvas/04.webp"
-          ],
-          "canvas": "struttura-tensione/trittico/canvas/01.webp",
-          "position": 14,
-          "description_en": "The Triptych unfolds as a sequence of three fragments that reveal a dense and layered plant landscape. Leaves, flowers and organic forms emerge from the aluminium through embossing, creating an interweaving of volumes that seem to emerge from the metal.\nThe reflective surface amplifies light and multiplies details, transforming each panel into a living space where the metal material takes on an almost natural quality. The three parts, though autonomous, dialogue with each other, constructing a continuous and immersive vision.\nThe work investigates what lies beyond the immediate gaze, suggesting the presence of a hidden world that slowly takes shape from matter."
-        },
-        {
-          "id": "lady",
-          "title": "Iconica",
-          "year": "",
-          "image": "struttura-tensione/lady/01.jpg",
-          "gallery": [
-            "struttura-tensione/lady/01.jpg",
-            "struttura-tensione/lady/02.jpg",
-            "struttura-tensione/lady/03.jpg",
-            "struttura-tensione/lady/04.jpg"
-          ],
-          "description": "Un volto femminile emerge con delicatezza dalla superficie dell’alluminio, gli occhi chiusi e l’espressione sospesa in una dimensione di quiete e contemplazione. La figura è incorniciata da un’arcata decorata che richiama la struttura delle icone sacre, creando un dialogo tra tradizione iconografica e sensibilità contemporanea.\n\nLa corona di fiori che avvolge il capo introduce un elemento naturale e simbolico, mentre la lavorazione a sbalzo modella i volumi con leggerezza, lasciando che la luce scorra sulla superficie metallica.\n\nL’opera richiama l’idea di immagine sacra e senza tempo, dove la figura femminile diventa presenza silenziosa e contemplativa.",
-          "thumb_gallery": [
-            "struttura-tensione/lady/thumb/01.webp",
-            "struttura-tensione/lady/thumb/02.webp",
-            "struttura-tensione/lady/thumb/03.webp",
-            "struttura-tensione/lady/thumb/04.webp"
-          ],
-          "thumb": "struttura-tensione/lady/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lady/canvas/01.webp",
-            "struttura-tensione/lady/canvas/02.webp",
-            "struttura-tensione/lady/canvas/03.webp",
-            "struttura-tensione/lady/canvas/04.webp"
-          ],
-          "canvas": "struttura-tensione/lady/canvas/01.webp",
-          "position": 15,
-          "description_en": "A female face emerges delicately from the surface of the aluminium, her eyes closed and her expression suspended in a dimension of stillness and contemplation. The figure is framed by a decorated archway that recalls the structure of sacred icons, creating a dialogue between iconographic tradition and contemporary sensibility.\nThe wreath of flowers enveloping the head introduces a natural and symbolic element, while the embossed work moulds the volumes lightly, allowing light to flow over the metal surface.\nThe work recalls the idea of a sacred and timeless image, where the female figure becomes a silent and contemplative presence."
-        },
-        {
           "id": "pensiero",
           "title": "Pensiero",
-          "year": "",
+          "year": "2022",
           "image": "struttura-tensione/pensiero/01.jpg",
           "gallery": [
             "struttura-tensione/pensiero/01.jpg",
@@ -506,7 +350,7 @@
             "struttura-tensione/pensiero/05.jpeg",
             "struttura-tensione/pensiero/06.jpg"
           ],
-          "description": "Quest’opera rappresenta un cuore anatomico reinterpretato attraverso il linguaggio della scultura a sbalzo su alluminio. La forma, riconoscibile e universale, viene tradotta in una superficie metallica che unisce precisione anatomica e sensibilità materica.\n\nLa lavorazione manuale genera leggere variazioni sulla superficie, facendo emergere volumi morbidi e pulsanti. Le arterie e i rami vascolari incidono il metallo come una rete vitale che attraversa la struttura, suggerendo il movimento invisibile della vita che scorre.\n\nIl trattamento dorato amplifica il valore simbolico dell’organo: il cuore non è solo elemento biologico, ma luogo delle emozioni, della memoria e dell’identità umana. La materia metallica, rigida e resistente, si trasforma così in una forma che allude alla fragilità e alla forza della vita.\n\nAttraverso la luce che scivola sulla superficie, l’opera restituisce l’immagine di un cuore sospeso tra dimensione scientifica e dimensione emotiva, dove anatomia e simbolo si incontrano in un’unica forma.",
+          "description": "Pensiero\n\nL'opera rappresenta un cuore anatomico reinterpretato attraverso la lavorazione a sbalzo e incisione dell'alluminio. La forma, riconoscibile e universale, viene tradotta in una superficie metallica che unisce precisione anatomica e trasformazione materica.\nLa lavorazione manuale genera rilievi, tensioni e variazioni luminose che modellano il volume senza aggiungere materia. Arterie e ramificazioni attraversano la superficie come una trama vitale, rendendo percepibile il dialogo tra struttura anatomica e gesto dell'artista.\n\nIl trattamento dorato amplifica il valore simbolico dell'opera: il cuore non è soltanto un organo, ma il luogo in cui si intrecciano memoria, emozione e identità. La rigidità dell'alluminio si trasforma così in una presenza capace di evocare, nello stesso tempo, forza e vulnerabilità.\nAttraverso il continuo mutare della luce sulla superficie, l'opera oscilla tra osservazione anatomica e interpretazione simbolica, mostrando come la materia possa superare la semplice rappresentazione e diventare esperienza percettiva.\n\nSbalzo e cesello a mano su alluminio;  30 x 40 cm",
           "thumb_gallery": [
             "struttura-tensione/pensiero/thumb/01.webp",
             "struttura-tensione/pensiero/thumb/02.webp",
@@ -525,13 +369,13 @@
             "struttura-tensione/pensiero/canvas/06.webp"
           ],
           "canvas": "struttura-tensione/pensiero/canvas/01.webp",
-          "position": 16,
+          "position": 13,
           "description_en": "This work represents an anatomical heart reinterpreted through the language of embossed sculpture on aluminium. The recognisable and universal form is translated into a metal surface that combines anatomical precision and material sensitivity.\nThe handwork generates slight variations on the surface, bringing out soft, pulsating volumes. Arteries and vascular branches cut through the metal like a vital network running through the structure, suggesting the invisible movement of flowing life.\nThe golden treatment amplifies the symbolic value of the organ: the heart is not only a biological element, but a place of emotions, memory and human identity. The metal material, rigid and resistant, is thus transformed into a shape that alludes to the fragility and strength of life.\nThrough the light gliding over the surface, the work renders the image of a heart suspended between scientific and emotional dimensions, where anatomy and symbol meet in a single form."
         },
         {
           "id": "boes",
           "title": "Boes",
-          "year": "",
+          "year": "2023",
           "image": "struttura-tensione/boes/01.jpg",
           "gallery": [
             "struttura-tensione/boes/01.jpg",
@@ -541,7 +385,7 @@
             "struttura-tensione/boes/05.jpg",
             "struttura-tensione/boes/06.jpg"
           ],
-          "description": "L’opera riprende la maschera tradizionale dei Boes, figura simbolica del carnevale sardo dei Boes e Merdules. Il volto taurino, con le lunghe corna ricurve, richiama la forza primordiale dell’animale e il legame profondo con il mondo pastorale.\n\nRealizzata in alluminio lavorato a sbalzo e cesello, la superficie metallica costruisce la forma della maschera attraverso linee incise, rilievi e aperture che definiscono lo sguardo e i tratti essenziali del volto.\n\nAttraverso il metallo, la tradizione popolare viene reinterpretata in chiave contemporanea, mantenendo intatta la potenza simbolica di questa antica figura rituale.",
+          "description": "L’opera riprende la figura dei Boes, maschera rituale del carnevale sardo legata al rapporto tra uomo, animale e mondo pastorale. Il volto taurino, con le grandi corna ricurve e la sua forza arcaica, viene reinterpretato attraverso la lavorazione dell’alluminio.\n\nAttraverso lo sbalzo e l’incisione, la lastra metallica viene trasformata nella struttura della maschera: i rilievi definiscono i volumi, mentre i segni incisi costruiscono la superficie e ne evidenziano i caratteri essenziali.\n\nLa materia contemporanea dell’alluminio entra così in dialogo con una figura appartenente alla memoria collettiva, trasformando un simbolo della tradizione in una presenza scultorea in cui il gesto dell’artista conserva e rinnova il valore originario dell’immagine.\n\nSbalzo e cesello a mano su alluminio, resina; 60 x 22 cm",
           "thumb_gallery": [
             "struttura-tensione/boes/thumb/01.webp",
             "struttura-tensione/boes/thumb/02.webp",
@@ -560,13 +404,13 @@
             "struttura-tensione/boes/canvas/06.webp"
           ],
           "canvas": "struttura-tensione/boes/canvas/01.webp",
-          "position": 17,
+          "position": 14,
           "description_en": "The work takes up the traditional mask of the Boes, a symbolic figure of the Sardinian carnival of Boes and Merdules. The taurine face, with its long curved horns, recalls the primordial strength of the animal and the deep connection with the pastoral world.\nMade of embossed and chiselled aluminium, the metal surface constructs the shape of the mask through incised lines, reliefs and openings that define the gaze and the essential features of the face.\nThrough metal, the popular tradition is reinterpreted in a contemporary key, keeping the symbolic power of this ancient ritual figure intact."
         },
         {
           "id": "titolomarionette-ex-voto",
           "title": "Ex voto",
-          "year": "",
+          "year": "2023",
           "image": "struttura-tensione/titolomarionette-ex-voto/01.jpg",
           "gallery": [
             "struttura-tensione/titolomarionette-ex-voto/01.jpg",
@@ -575,7 +419,7 @@
             "struttura-tensione/titolomarionette-ex-voto/04.jpeg",
             "struttura-tensione/titolomarionette-ex-voto/05.jpg"
           ],
-          "description": "Due figure sospese, mosse da fili sottili, evocano l’immagine delle marionette e il delicato equilibrio tra controllo e libertà. I corpi, realizzati in alluminio lavorato a sbalzo e cesello, assumono una presenza quasi teatrale, come protagonisti di una scena silenziosa.\n\nL’opera richiama il linguaggio delle offerte votive, dove la figura umana diventa simbolo di desideri, paure e speranze affidate a qualcosa di più grande.\n\nTra ironia e riflessione, queste marionette suggeriscono la fragilità della condizione umana, sospesa tra volontà personale e forze invisibili che guidano il nostro movimento.",
+          "description": "Ex voto\n\nDue figure sospese, mosse da fili sottili, richiamano l’immagine delle marionette e il delicato equilibrio tra movimento e immobilità. I corpi, realizzati in alluminio lavorato a sbalzo e cesello, vengono costruiti attraverso una trasformazione della lastra che restituisce leggerezza e tensione alla forma.\n\nLa presenza dei fili introduce un elemento di ambiguità: le figure sembrano controllate da una forza esterna, ma allo stesso tempo suggeriscono una condizione di sospensione e possibilità.\n\nIl titolo richiama il linguaggio degli ex voto, dove la rappresentazione diventa testimonianza di un’esperienza affidata alla memoria. Attraverso il metallo, la figura umana viene trasformata in una forma simbolica che riflette sul rapporto tra autonomia, dipendenza e ricerca di equilibrio.\n\nSbalzo e cesello a mano su alluminio; 35 x 35 cm",
           "thumb_gallery": [
             "struttura-tensione/titolomarionette-ex-voto/thumb/01.webp",
             "struttura-tensione/titolomarionette-ex-voto/thumb/02.webp",
@@ -592,42 +436,13 @@
             "struttura-tensione/titolomarionette-ex-voto/canvas/05.webp"
           ],
           "canvas": "struttura-tensione/titolomarionette-ex-voto/canvas/01.webp",
-          "position": 18,
+          "position": 15,
           "description_en": "Two suspended figures, moved by thin wires, evoke the image of puppets and the delicate balance between control and freedom. The bodies, made of embossed and chiselled aluminium, take on an almost theatrical presence, as the protagonists of a silent scene.\nThe work recalls the language of votive offerings, where the human figure becomes a symbol of desires, fears and hopes entrusted to something greater.\nBetween irony and reflection, these puppets suggest the fragility of the human condition, suspended between personal will and invisible forces that guide our movement."
-        },
-        {
-          "id": "veliero",
-          "title": "Verso l'Orizzonte",
-          "year": "",
-          "image": "struttura-tensione/veliero/01.jpg",
-          "gallery": [
-            "struttura-tensione/veliero/01.jpg",
-            "struttura-tensione/veliero/02.jpg",
-            "struttura-tensione/veliero/03.jpg",
-            "struttura-tensione/veliero/04.jpg"
-          ],
-          "description": "Un veliero avanza tra le onde con le vele spiegate, sospinto da una forza invisibile.\nLa lavorazione a sbalzo dell’alluminio modella le superfici delle vele e della prua, trasformando la materia metallica in movimento e tensione.\nL’imbarcazione diventa simbolo di viaggio e ricerca, un passaggio tra equilibrio e sfida, tra la quiete del mare e l’ignoto dell’orizzonte.",
-          "thumb_gallery": [
-            "struttura-tensione/veliero/thumb/01.webp",
-            "struttura-tensione/veliero/thumb/02.webp",
-            "struttura-tensione/veliero/thumb/03.webp",
-            "struttura-tensione/veliero/thumb/04.webp"
-          ],
-          "thumb": "struttura-tensione/veliero/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/veliero/canvas/01.webp",
-            "struttura-tensione/veliero/canvas/02.webp",
-            "struttura-tensione/veliero/canvas/03.webp",
-            "struttura-tensione/veliero/canvas/04.webp"
-          ],
-          "canvas": "struttura-tensione/veliero/canvas/01.webp",
-          "position": 19,
-          "description_en": "A sailing ship advances through the waves with its sails unfurled, propelled by an invisible force.\nThe embossing of the aluminium shapes the surfaces of the sails and the bow, transforming the metal material into movement and tension.\nThe boat becomes a symbol of journey and quest, a passage between balance and challenge, between the stillness of the sea and the unknown of the horizon."
         },
         {
           "id": "mare-in-tempesta",
           "title": "Mare in tempesta",
-          "year": "",
+          "year": "2024",
           "image": "struttura-tensione/mare-in-tempesta/01.jpg",
           "gallery": [
             "struttura-tensione/mare-in-tempesta/01.jpg",
@@ -635,7 +450,7 @@
             "struttura-tensione/mare-in-tempesta/03.jpg",
             "struttura-tensione/mare-in-tempesta/04.jpg"
           ],
-          "description": "In Mare in Tempesta il movimento dell’acqua è tradotto in un sistema di curvature e compressioni che organizzano la superficie in un campo dinamico di tensioni.\n\nLe ondulazioni non descrivono un paesaggio, ma costruiscono una struttura ritmica basata su stratificazione e variazione del rilievo. La traiettoria verticale del fulmine introduce una linea di frattura che attraversa il flusso orizzontale, interrompendone la continuità e ridefinendo l’equilibrio compositivo.\n\nL’integrazione di resina e acrilico intensifica la percezione della profondità, trasformando la superficie in spazio attivo dove luce e materia operano come elementi costruttivi.",
+          "description": "In Mare in Tempesta il movimento dell’acqua viene tradotto attraverso un sistema di curvature, incisioni e compressioni che trasformano la superficie dell’alluminio in una struttura attraversata da ritmo e variazioni di profondità.\n\nLe ondulazioni non intendono rappresentare semplicemente un paesaggio marino, ma costruiscono un andamento formale in cui stratificazione e rilievo modificano continuamente la percezione della superficie. La traiettoria verticale del fulmine introduce una rottura improvvisa nella composizione: un segno che attraversa il movimento orizzontale delle onde e ne modifica l’equilibrio.\n\nL’inserimento della resina e dell’acrilico amplifica il contrasto tra trasparenza e materia, creando una relazione tra profondità, luce e superficie. L’opera diventa così una riflessione sulla trasformazione della materia e sulla capacità del gesto di imprimere nell’alluminio un movimento trattenuto nel tempo.\n\nSbalzo e cesello a mano su alluminio; 40 x 55 cm \nSbalzo e cesello a mano su alluminio;",
           "thumb_gallery": [
             "struttura-tensione/mare-in-tempesta/thumb/01.webp",
             "struttura-tensione/mare-in-tempesta/thumb/02.webp",
@@ -650,39 +465,13 @@
             "struttura-tensione/mare-in-tempesta/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/mare-in-tempesta/canvas/01.webp",
-          "position": 20,
+          "position": 16,
           "description_en": "In Mare in Tempesta, the movement of water is translated into a system of curvatures and compressions that organise the surface into a dynamic field of tension.\nThe undulations do not describe a landscape, but build a rhythmic structure based on layering and variation of relief. The vertical trajectory of the lightning bolt introduces a fracture line through the horizontal flow, interrupting its continuity and redefining the compositional balance.\nThe integration of resin and acrylic intensifies the perception of depth, transforming the surface into an active space where light and matter operate as building blocks."
-        },
-        {
-          "id": "oblo",
-          "title": "Oblò",
-          "year": "",
-          "image": "struttura-tensione/oblo/01.jpg",
-          "gallery": [
-            "struttura-tensione/oblo/01.jpg",
-            "struttura-tensione/oblo/02.jpg",
-            "struttura-tensione/oblo/03.jpg"
-          ],
-          "description": "Oblò costruisce una visione marina racchiusa all’interno di una cornice circolare che richiama l’oblò di una nave. La struttura dorata diventa una soglia visiva attraverso cui lo sguardo si apre su un paesaggio notturno fatto di mare, cielo e luce lunare.\n\nAll’interno della scena, realizzata in alluminio lavorato a sbalzo, emergono una barca a vela, una scogliera con faro e alcune nuvole sospese. La superficie del mare riflette la luce creando una trama di rilievi che amplifica il movimento dell’acqua.\n\nL’opera trasforma il metallo in un piccolo paesaggio sospeso, dove la materia riflettente costruisce un dialogo continuo tra luce, spazio e immaginazione.",
-          "thumb_gallery": [
-            "struttura-tensione/oblo/thumb/01.webp",
-            "struttura-tensione/oblo/thumb/02.webp",
-            "struttura-tensione/oblo/thumb/03.webp"
-          ],
-          "thumb": "struttura-tensione/oblo/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/oblo/canvas/01.webp",
-            "struttura-tensione/oblo/canvas/02.webp",
-            "struttura-tensione/oblo/canvas/03.webp"
-          ],
-          "canvas": "struttura-tensione/oblo/canvas/01.webp",
-          "position": 21,
-          "description_en": "Oblò constructs a marine vision enclosed within a circular frame reminiscent of a ship's porthole. The golden structure becomes a visual threshold through which the gaze opens onto a nocturnal landscape of sea, sky and moonlight.\nWithin the scene, made of cantilevered aluminium, a sailboat, a reef with a lighthouse and some suspended clouds emerge. The surface of the sea reflects the light, creating a pattern of reliefs that amplifies the movement of the water.\nThe work transforms metal into a small suspended landscape, where the reflective material builds a continuous dialogue between light, space and imagination."
         },
         {
           "id": "giappone",
           "title": "Paesaggio d'Oriente",
-          "year": "",
+          "year": "2022",
           "image": "struttura-tensione/giappone/01.jpg",
           "gallery": [
             "struttura-tensione/giappone/01.jpg",
@@ -690,7 +479,7 @@
             "struttura-tensione/giappone/03.jpg",
             "struttura-tensione/giappone/04.jpg"
           ],
-          "description": "Un paesaggio essenziale ispirato all’estetica orientale prende forma attraverso la lavorazione a sbalzo dell’alluminio.\nIl Monte Fuji emerge sotto un sole dorato, mentre nuvole e uccelli attraversano uno spazio sospeso e silenzioso.\nLa composizione circolare racchiude l’immagine come una visione contemplativa, in equilibrio tra natura, simbolo e materia.",
+          "description": "Un paesaggio essenziale ispirato all’estetica orientale prende forma attraverso la lavorazione a sbalzo dell’alluminio. Il Monte Fuji emerge sotto un sole dorato, mentre nuvole e uccelli attraversano una composizione costruita su equilibrio e silenzio.\n\nLa superficie metallica viene trasformata attraverso rilievi e incisioni che definiscono profondità e variazioni luminose, portando l’immagine oltre la semplice rappresentazione del paesaggio. La forma circolare racchiude la scena come una visione sospesa, in cui natura, simbolo e materia entrano in dialogo.\n\nAttraverso il gesto manuale, l’alluminio assume una dimensione più morbida e contemplativa, conservando nella superficie il passaggio dalla lastra piana alla forma scolpita.\n\nSbalzo e cesello a mano su alluminio; 25 x 25 cm",
           "thumb_gallery": [
             "struttura-tensione/giappone/thumb/01.webp",
             "struttura-tensione/giappone/thumb/02.webp",
@@ -705,45 +494,68 @@
             "struttura-tensione/giappone/canvas/04.webp"
           ],
           "canvas": "struttura-tensione/giappone/canvas/01.webp",
-          "position": 22,
+          "position": 17,
           "description_en": "An essential landscape inspired by oriental aesthetics takes shape through the embossing of aluminium.\nMount Fuji emerges under a golden sun, while clouds and birds traverse a suspended, silent space.\nThe circular composition encloses the image as a contemplative vision, balancing nature, symbol and matter."
         },
         {
-          "id": "volo-d-argento",
-          "title": "Volo d'Argento",
-          "year": "",
-          "image": "struttura-tensione/volo-d-argento/01.jpg",
+          "id": "oblo",
+          "title": "Oblò",
+          "year": "2022",
+          "image": "struttura-tensione/oblo/01.jpg",
           "gallery": [
-            "struttura-tensione/volo-d-argento/01.jpg",
-            "struttura-tensione/volo-d-argento/02.jpg",
-            "struttura-tensione/volo-d-argento/03.jpg",
-            "struttura-tensione/volo-d-argento/04.jpg",
-            "struttura-tensione/volo-d-argento/05.jpg"
+            "struttura-tensione/oblo/01.jpg",
+            "struttura-tensione/oblo/02.jpg",
+            "struttura-tensione/oblo/03.jpg"
           ],
-          "description": "Volo d'Argento è una scultura a sbalzo su alluminio che raffigura un cavallo alato, figura mitica che in questa opera assume un tratto essenziale e contemporaneo, ma allo stesso tempo è un richiamo alla figura mitologica, reinterpretata con un tratto pulito, moderno, privo di orpelli.\nI contorni netti e le linee stilizzate danno forma a una creatura sospesa tra forza e leggerezza, tra materia e spirito.\nL’alluminio, trattato completamente a mano, riflette la luce trasformandosi a seconda dell’angolo d’osservazione.\nCon un linguaggio minimalista e senza tempo, questa creazione evoca il superamento dei limiti e la potenza silenziosa dell’immaginazione.\nIl metallo, solitamente freddo e rigido, diventa qui superficie viva, attraversata da forme che parlano di slancio, libertà e desiderio di oltrepassare i limiti.",
+          "description": "Oblò\n\nOblò costruisce una visione marina racchiusa all’interno di una cornice circolare che richiama l’apertura di una nave. La struttura dorata incornicia lo sguardo su un paesaggio notturno composto da mare, cielo e luce lunare.\n\nRealizzata in alluminio lavorato a sbalzo, l’opera trasforma la superficie metallica in un’immagine tridimensionale: la barca a vela, la scogliera con il faro e le nuvole emergono attraverso rilievi e incisioni che modellano la profondità della scena. La superficie del mare trattiene la luce e restituisce il movimento dell’acqua attraverso variazioni di ritmo e intensità.\n\nL’opera porta la lastra oltre la sua dimensione originaria, trasformando il metallo in un paesaggio sospeso in cui memoria, immaginazione e materia si incontrano.\n\nSbalzo e cesello a mano su alluminio; 50 x 50 cm",
           "thumb_gallery": [
-            "struttura-tensione/volo-d-argento/thumb/01.webp",
-            "struttura-tensione/volo-d-argento/thumb/02.webp",
-            "struttura-tensione/volo-d-argento/thumb/03.webp",
-            "struttura-tensione/volo-d-argento/thumb/04.webp",
-            "struttura-tensione/volo-d-argento/thumb/05.webp"
+            "struttura-tensione/oblo/thumb/01.webp",
+            "struttura-tensione/oblo/thumb/02.webp",
+            "struttura-tensione/oblo/thumb/03.webp"
           ],
-          "thumb": "struttura-tensione/volo-d-argento/thumb/01.webp",
+          "thumb": "struttura-tensione/oblo/thumb/01.webp",
           "canvas_gallery": [
-            "struttura-tensione/volo-d-argento/canvas/01.webp",
-            "struttura-tensione/volo-d-argento/canvas/02.webp",
-            "struttura-tensione/volo-d-argento/canvas/03.webp",
-            "struttura-tensione/volo-d-argento/canvas/04.webp",
-            "struttura-tensione/volo-d-argento/canvas/05.webp"
+            "struttura-tensione/oblo/canvas/01.webp",
+            "struttura-tensione/oblo/canvas/02.webp",
+            "struttura-tensione/oblo/canvas/03.webp"
           ],
-          "canvas": "struttura-tensione/volo-d-argento/canvas/01.webp",
-          "position": 23,
-          "description_en": "Volo d'Argento (Silver Flight) is an embossed sculpture on aluminium depicting a winged horse, a mythical figure that in this work takes on an essential and contemporary trait, but at the same time is a reminder of the mythological figure, reinterpreted with a clean, modern, unadorned stroke.\nThe sharp contours and stylised lines give shape to a creature suspended between strength and lightness, between matter and spirit.\nThe completely hand-treated aluminium reflects light, transforming itself depending on the viewing angle.\nWith a minimalist and timeless language, this creation evokes the overcoming of limits and the silent power of imagination.\nMetal, usually cold and rigid, here becomes a living surface, traversed by shapes that speak of momentum, freedom and the desire to go beyond limits."
+          "canvas": "struttura-tensione/oblo/canvas/01.webp",
+          "position": 18,
+          "description_en": "Oblò constructs a marine vision enclosed within a circular frame reminiscent of a ship's porthole. The golden structure becomes a visual threshold through which the gaze opens onto a nocturnal landscape of sea, sky and moonlight.\nWithin the scene, made of cantilevered aluminium, a sailboat, a reef with a lighthouse and some suspended clouds emerge. The surface of the sea reflects the light, creating a pattern of reliefs that amplifies the movement of the water.\nThe work transforms metal into a small suspended landscape, where the reflective material builds a continuous dialogue between light, space and imagination."
+        },
+        {
+          "id": "lady",
+          "title": "Iconica",
+          "year": "2023",
+          "image": "struttura-tensione/lady/01.jpg",
+          "gallery": [
+            "struttura-tensione/lady/01.jpg",
+            "struttura-tensione/lady/02.jpg",
+            "struttura-tensione/lady/03.jpg",
+            "struttura-tensione/lady/04.jpg"
+          ],
+          "description": "Un volto femminile emerge dalla superficie dell’alluminio, con gli occhi chiusi e un’espressione sospesa tra quiete e contemplazione. La figura è racchiusa da una cornice lavorata che richiama la struttura delle icone sacre, reinterpretandone il linguaggio attraverso una sensibilità contemporanea.\n\nLa corona di fiori che circonda il capo introduce un elemento naturale e simbolico, mentre la lavorazione a sbalzo modella i volumi del volto e della cornice attraverso rilievi e variazioni luminose. La superficie metallica acquista così profondità e presenza, trasformando la rigidità dell’alluminio in una forma delicata e armonica.\n\nL’opera si confronta con il valore dell’immagine simbolica e con la sua capacità di attraversare il tempo: la figura femminile diventa una presenza sospesa tra memoria, bellezza e trasformazione della materia.\n\nSbalzo e cesello a mano su alluminio; 30 x 40 cm",
+          "thumb_gallery": [
+            "struttura-tensione/lady/thumb/01.webp",
+            "struttura-tensione/lady/thumb/02.webp",
+            "struttura-tensione/lady/thumb/03.webp",
+            "struttura-tensione/lady/thumb/04.webp"
+          ],
+          "thumb": "struttura-tensione/lady/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lady/canvas/01.webp",
+            "struttura-tensione/lady/canvas/02.webp",
+            "struttura-tensione/lady/canvas/03.webp",
+            "struttura-tensione/lady/canvas/04.webp"
+          ],
+          "canvas": "struttura-tensione/lady/canvas/01.webp",
+          "position": 19,
+          "description_en": "A female face emerges delicately from the surface of the aluminium, her eyes closed and her expression suspended in a dimension of stillness and contemplation. The figure is framed by a decorated archway that recalls the structure of sacred icons, creating a dialogue between iconographic tradition and contemporary sensibility.\nThe wreath of flowers enveloping the head introduces a natural and symbolic element, while the embossed work moulds the volumes lightly, allowing light to flow over the metal surface.\nThe work recalls the idea of a sacred and timeless image, where the female figure becomes a silent and contemplative presence."
         },
         {
           "id": "nessu-dorma",
           "title": "Nessun Dorma",
-          "year": "",
+          "year": "2023",
           "image": "struttura-tensione/nessu-dorma/01.jpg",
           "gallery": [
             "struttura-tensione/nessu-dorma/01.jpg",
@@ -754,7 +566,7 @@
             "struttura-tensione/nessu-dorma/06.jpg",
             "struttura-tensione/nessu-dorma/07.jpg"
           ],
-          "description": "L’opera si ispira alla celebre aria “Nessun Dorma” dall’opera Turandot di Giacomo Puccini. La sagoma del violino emerge dalla superficie metallica accanto al foglio musicale, creando un dialogo visivo tra forma, materia e suono.\n\nRealizzata in alluminio lavorato a sbalzo e cesello, la composizione restituisce gli elementi dello strumento con precisione e leggerezza, mentre il frammento di spartito richiama direttamente la musica che dà titolo all’opera.\n\nL’immagine diventa così un omaggio alla forza evocativa della musica, capace di attraversare il tempo e trasformarsi in forma visiva.",
+          "description": "Nessun Dorma\n\nL’opera nasce dal dialogo con la celebre aria Nessun Dorma dall’opera Turandot di Giacomo Puccini, traducendo il linguaggio della musica in una forma visiva. La sagoma del violino emerge dalla superficie metallica accanto al frammento di spartito, creando un incontro tra immagine, materia e memoria sonora.\n\nAttraverso la lavorazione a sbalzo e cesello dell’alluminio, lo strumento viene restituito attraverso rilievi, incisioni e variazioni della superficie che trasformano la lastra in una presenza tridimensionale. Il foglio musicale, integrato nella composizione, conserva il legame con la partitura originale e con il gesto creativo che la genera.\n\nL’opera riflette sulla capacità della musica di oltrepassare il tempo e il suo linguaggio originario, trovando nella materia una nuova forma di esistenza.\n\nSbalzo e cesello a mano su alluminio; 30 x 40 cm",
           "thumb_gallery": [
             "struttura-tensione/nessu-dorma/thumb/01.webp",
             "struttura-tensione/nessu-dorma/thumb/02.webp",
@@ -775,31 +587,8 @@
             "struttura-tensione/nessu-dorma/canvas/07.webp"
           ],
           "canvas": "struttura-tensione/nessu-dorma/canvas/01.webp",
-          "position": 24,
+          "position": 20,
           "description_en": "The work is inspired by the famous aria 'Nessun Dorma' from Giacomo Puccini's opera Turandot. The silhouette of the violin emerges from the metal surface next to the music sheet, creating a visual dialogue between form, material and sound.\nMade of embossed and chiselled aluminium, the composition renders the elements of the instrument with precision and lightness, while the score fragment directly recalls the music that gives the work its title.\nThe image thus becomes a tribute to the evocative power of music, capable of crossing time and transforming itself into visual form."
-        },
-        {
-          "id": "l-unione",
-          "title": "L'unione",
-          "year": "",
-          "image": "struttura-tensione/l-unione/01.jpg",
-          "gallery": [
-            "struttura-tensione/l-unione/01.jpg",
-            "struttura-tensione/l-unione/02.jpg"
-          ],
-          "description": "Un banco di pesci si muove come un unico organismo, creando una composizione circolare che suggerisce movimento, equilibrio e cooperazione. Ogni elemento mantiene la propria individualità, ma è nella relazione con gli altri che prende forma l’insieme.\n\nRealizzati in alluminio lavorato a sbalzo e cesello, i pesci costruiscono un ritmo visivo che attraversa la superficie metallica, trasformando la scena in una struttura dinamica.\n\nL’opera riflette sul valore della collettività: quando le singole presenze si muovono insieme, la forza del gruppo diventa più grande della somma delle sue parti.",
-          "thumb_gallery": [
-            "struttura-tensione/l-unione/thumb/01.webp",
-            "struttura-tensione/l-unione/thumb/02.webp"
-          ],
-          "thumb": "struttura-tensione/l-unione/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/l-unione/canvas/01.webp",
-            "struttura-tensione/l-unione/canvas/02.webp"
-          ],
-          "canvas": "struttura-tensione/l-unione/canvas/01.webp",
-          "position": 25,
-          "description_en": "A school of fish moves as a single organism, creating a circular composition that suggests movement, balance and cooperation. Each element retains its individuality, but it is in the relationship with the others that the whole takes shape.\nMade of embossed and chiselled aluminium, the fish build a visual rhythm across the metal surface, transforming the scene into a dynamic structure.\nThe work reflects on the value of collectivity: when individual presences move together, the strength of the group becomes greater than the sum of its parts."
         }
       ],
       "subseries": [
@@ -1040,7 +829,7 @@
               "position": 4
             }
           ],
-          "position": -0.8,
+          "position": 1,
           "cover": "struttura-tensione/_covers/tracce-di-memoria.webp"
         },
         {
@@ -1225,7 +1014,7 @@
               "description_en": "The Shadow of Light stems from the idea that a fracture can become a passage. The surface of the aluminium is incised by a central fault that runs through the work and from which real steam emerges, produced by a nebuliser hidden inside the hollow structure.\nThe composition develops between two landscapes: a dry, cracked earth, embossed on a thin slab, and a soft sky made of acrylic glazes and resin. The fracture does not divide these two spaces, but relates them, transforming the wound into a threshold.\nThe work integrates matter, light and the ephemeral presence of steam, creating an inner landscape in which what appears as a rupture becomes a possibility for transformation.\nThe title is a tribute to Franco Battiato and his spiritual vision of the passage from shadow to light."
             }
           ],
-          "position": 0.1,
+          "position": 3,
           "cover": "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp"
         },
         {
@@ -1370,7 +1159,7 @@
               "description_en": "The work explores the boundary between structure and transformation: an ordered form opens onto a perceptual dimension in which light and matter alter its initial stability."
             }
           ],
-          "position": -0.9,
+          "position": 0,
           "cover": "struttura-tensione/_covers/geometria.webp"
         }
       ]
@@ -1384,13 +1173,13 @@
         {
           "id": "globigerina",
           "title": "Globigerina",
-          "year": "",
+          "year": "2023",
           "image": "forma-organica/globigerina/01.jpg",
           "gallery": [
             "forma-organica/globigerina/01.jpg",
             "forma-organica/globigerina/02.jpg"
           ],
-          "description": "L’opera si ispira alle forme microscopiche della Globigerina, un organismo marino planctonico che abita gli oceani. La struttura radiale e organica richiama l’architettura naturale di questi minuscoli esseri viventi, trasformandola in una composizione ampia e dinamica.\n\nRealizzata in alluminio lavorato a sbalzo e cesello, la superficie costruisce una trama di nervature e cavità che si sviluppano dal centro verso l’esterno, generando un movimento continuo e quasi spiraliforme.\n\nAttraverso l’ingrandimento di una forma invisibile a occhio nudo, l’opera mette in dialogo il mondo microscopico con la materia metallica, rivelando la sorprendente complessità delle strutture naturali.",
+          "description": "L’opera nasce dall’osservazione delle forme microscopiche della globigerina, un organismo marino planctonico la cui struttura richiama la complessità delle architetture naturali. La configurazione radiale e organica viene ampliata e reinterpretata attraverso il linguaggio della scultura in alluminio.\n\nAttraverso lo sbalzo e il cesello, la superficie metallica viene trasformata in una trama di nervature, cavità e rilievi che si sviluppano dal centro verso l’esterno, restituendo la tensione interna della forma biologica.\n\nL’ingrandimento di un elemento invisibile allo sguardo quotidiano permette alla materia di rivelare una struttura nascosta, creando un rapporto tra osservazione scientifica e trasformazione artistica. L’alluminio diventa così il mezzo attraverso cui una forma naturale viene sottratta alla sua dimensione originaria e ricondotta a una nuova presenza scultorea.\n\nSbalzo e cesello a mano su alluminio; 30 x 40 cm",
           "thumb_gallery": [
             "forma-organica/globigerina/thumb/01.webp",
             "forma-organica/globigerina/thumb/02.webp"
@@ -1407,7 +1196,7 @@
         {
           "id": "riccio-di-mare",
           "title": "Riccio di mare",
-          "year": "",
+          "year": "2024",
           "image": "forma-organica/riccio-di-mare/01.jpg",
           "gallery": [
             "forma-organica/riccio-di-mare/01.jpg",
@@ -1417,7 +1206,7 @@
             "forma-organica/riccio-di-mare/05.jpg",
             "forma-organica/riccio-di-mare/06.jpg"
           ],
-          "description": "Riccio di mare rappresenta il guscio dell’animale, realizzato attraverso una lavorazione a sbalzo su alluminio.\n\nLa composizione segue una struttura radiale che si sviluppa dal centro verso il bordo del disco, riprendendo l’organizzazione naturale del guscio. La superficie è animata da una fitta trama di rilievi che ne definiscono la texture.\n\nLa luce scorre sul metallo mettendo in evidenza le variazioni della lavorazione e rafforzando il ritmo circolare della forma.",
+          "description": "L’opera nasce dall’osservazione del guscio del riccio di mare, una struttura naturale caratterizzata da un equilibrio tra geometria e organicità. La forma viene reinterpretata attraverso la lavorazione a sbalzo dell’alluminio, trasformando il riferimento naturale in una superficie scultorea.\n\nLa composizione segue un’organizzazione radiale che si sviluppa dal centro verso il bordo del disco, mentre una fitta trama di rilievi e incisioni costruisce la complessità della superficie. Il gesto manuale restituisce la regolarità della struttura naturale senza riprodurla fedelmente, ma traducendone il ritmo interno nella materia metallica.\n\nLa luce attraversa i rilievi dell’alluminio e ne modifica continuamente la percezione, rivelando il rapporto tra ordine naturale, trasformazione della materia e gesto dell’artista.\n\nSbalzo e cesello a mano su alluminio; 30 x 30 cm",
           "thumb_gallery": [
             "forma-organica/riccio-di-mare/thumb/01.webp",
             "forma-organica/riccio-di-mare/thumb/02.webp",
@@ -1442,14 +1231,14 @@
         {
           "id": "polipo",
           "title": "Creatura Abissale",
-          "year": "",
+          "year": "2022",
           "image": "forma-organica/polipo/01.jpg",
           "gallery": [
             "forma-organica/polipo/01.jpg",
             "forma-organica/polipo/02.jpg",
             "forma-organica/polipo/03.jpg"
           ],
-          "description": "Un polpo emerge nello spazio con i tentacoli distesi in un movimento fluido e continuo.\nLa lavorazione a sbalzo dell’alluminio segue le linee organiche del corpo, restituendo la vitalità e l’adattabilità di una delle creature più enigmatiche del mare.\nL’opera trasforma la figura animale in una forma dinamica, sospesa tra materia e movimento.",
+          "description": "Un polpo emerge dalla superficie metallica con i tentacoli distesi in una forma che suggerisce movimento e continuità. La struttura organica del corpo viene reinterpretata attraverso la lavorazione a sbalzo dell’alluminio, trasformando la lastra in una presenza tridimensionale.\n\nIl gesto manuale segue l’andamento fluido dei tentacoli, modellando rilievi e variazioni della superficie che restituiscono la complessità della forma naturale. Il metallo, per sua natura rigido e resistente, assume così una qualità più morbida e dinamica, conservando nella materia il percorso della trasformazione.\n\nL’opera non si limita a rappresentare una creatura marina, ma indaga il passaggio dalla superficie piana alla forma scultorea, dove il movimento viene trattenuto e reso visibile attraverso l’alluminio.\n\nSbalzo e cesello a mano su alluminio;  40 x 30 cm",
           "thumb_gallery": [
             "forma-organica/polipo/thumb/01.webp",
             "forma-organica/polipo/thumb/02.webp",
@@ -1468,7 +1257,7 @@
         {
           "id": "armatura-primordiale",
           "title": "Armatura primordiale",
-          "year": "",
+          "year": "2025",
           "image": "forma-organica/armatura-primordiale/01.jpg",
           "gallery": [
             "forma-organica/armatura-primordiale/01.jpg",
@@ -1481,7 +1270,7 @@
             "forma-organica/armatura-primordiale/08.jpg",
             "forma-organica/armatura-primordiale/09.jpg"
           ],
-          "description": "In Armatura Primordiale la superficie dell’alluminio viene lavorata come sistema di tensioni interne, generando una struttura che si costruisce per pressione e resistenza.\n\nIl rilievo non aggiunge volume, ma lo fa emergere dall’interno della lastra, trasformando il piano in elemento tridimensionale. La luce scorre sulle nervature e ne evidenzia l’equilibrio, rendendo visibile il rapporto tra protezione e fragilità della materia.",
+          "description": "In Armatura Primordiale la superficie dell’alluminio viene trasformata in una struttura organica costruita attraverso pressione e resistenza. La forma richiama una protezione arcaica, una sorta di involucro naturale in cui rigore e adattamento convivono.\n\nIl rilievo non viene aggiunto alla materia, ma emerge dall’interno della lastra attraverso il gesto controllato dello sbalzo, trasformando il piano metallico in una presenza tridimensionale. Le nervature che attraversano la superficie definiscono un equilibrio tra forza e tensione, mentre la luce ne rivela progressivamente la complessità.\n\nL’opera indaga il rapporto tra struttura e trasformazione, mostrando come l’alluminio possa assumere caratteristiche organiche senza perdere la propria identità materica.\n\nSbalzo e cesello a mano su alluminio; 81 x 40 cm",
           "thumb_gallery": [
             "forma-organica/armatura-primordiale/thumb/01.webp",
             "forma-organica/armatura-primordiale/thumb/02.webp",
@@ -1510,40 +1299,14 @@
           "description_en": "In Primordial Armour the surface of the aluminium is worked as a system of internal tensions, generating a structure that is built up by pressure and resistance.\nThe relief does not add volume, but makes it emerge from within the slab, transforming the plane into a three-dimensional element. The light flows over the ribs and highlights their balance, making visible the relationship between the protection and fragility of the material."
         },
         {
-          "id": "granchio",
-          "title": "Carapace",
-          "year": "",
-          "image": "forma-organica/granchio/01.jpg",
-          "gallery": [
-            "forma-organica/granchio/01.jpg",
-            "forma-organica/granchio/02.jpg",
-            "forma-organica/granchio/03.jpg"
-          ],
-          "description": "Attraverso la lavorazione a sbalzo dell’alluminio, la figura del granchio emerge dalla superficie metallica con una struttura essenziale e dinamica.\nLe chele aperte e la simmetria del corpo evocano la tensione difensiva tipica di questa creatura marina.\nL’opera trasforma un organismo costiero in una forma simbolica, sospesa tra fragilità biologica e resistenza della materia.",
-          "thumb_gallery": [
-            "forma-organica/granchio/thumb/01.webp",
-            "forma-organica/granchio/thumb/02.webp",
-            "forma-organica/granchio/thumb/03.webp"
-          ],
-          "thumb": "forma-organica/granchio/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/granchio/canvas/01.webp",
-            "forma-organica/granchio/canvas/02.webp",
-            "forma-organica/granchio/canvas/03.webp"
-          ],
-          "canvas": "forma-organica/granchio/canvas/01.webp",
-          "position": 4,
-          "description_en": "Through the embossing of the aluminium, the figure of the crab emerges from the metal surface with an essential and dynamic structure.\nThe open claws and symmetry of the body evoke the defensive tension typical of this sea creature.\nThe work transforms a coastal organism into a symbolic form, suspended between biological fragility and the resistance of matter."
-        },
-        {
           "id": "pesce-palla",
           "title": "Autodifesa",
-          "year": "",
+          "year": "2023",
           "image": "forma-organica/pesce-palla/01.jpg",
           "gallery": [
             "forma-organica/pesce-palla/01.jpg"
           ],
-          "description": "Questa creatura marina, resa attraverso la lavorazione a sbalzo dell’alluminio, mostra il proprio sistema naturale di difesa. Le spine che ricoprono il corpo emergono dalla superficie metallica creando una struttura dinamica e vibrante.\nL’opera riflette sulla capacità degli esseri viventi di proteggersi e adattarsi, trasformando un meccanismo biologico in una metafora della resilienza.",
+          "description": "L’opera nasce dall’osservazione dei sistemi naturali di protezione presenti nelle forme viventi. La struttura del riccio marino viene reinterpretata attraverso la lavorazione a sbalzo dell’alluminio, trasformando il meccanismo difensivo dell’organismo in una forma scultorea.\n\nLe spine che ricoprono la superficie emergono dalla lastra attraverso rilievi e variazioni della materia, creando una struttura ritmica in cui ogni elemento contribuisce all’equilibrio complessivo della forma.\n\nAttraverso il gesto manuale, l’alluminio assume una qualità organica: la rigidità del metallo incontra una struttura nata dall’adattamento e dalla necessità di protezione, rivelando il rapporto tra natura, trasformazione e costruzione della forma.\n\nSbalzo e cesello a mano su alluminio; 25 x 25 cm",
           "thumb_gallery": [
             "forma-organica/pesce-palla/thumb/01.webp"
           ],
@@ -1558,7 +1321,7 @@
         {
           "id": "iguana",
           "title": "Sguardo primordiale",
-          "year": "",
+          "year": "2022",
           "image": "forma-organica/iguana/01.jpg",
           "gallery": [
             "forma-organica/iguana/01.jpg",
@@ -1567,7 +1330,7 @@
             "forma-organica/iguana/04.jpg",
             "forma-organica/iguana/05.jpg"
           ],
-          "description": "La testa di un rettile emerge dalla superficie metallica attraverso una fitta trama di squame e micro-strutture modellate a sbalzo.\nLa lavorazione della materia amplifica la dimensione primordiale della creatura, mettendo in evidenza la complessità della pelle e l’intensità dello sguardo.\nL’opera trasforma un dettaglio della natura in una presenza quasi archetipica, sospesa tra realtà biologica e forma simbolica.",
+          "description": "La testa di un rettile emerge dalla superficie dell’alluminio attraverso una fitta trama di squame e micro-strutture modellate con lo sbalzo e l’incisione. La pelle dell’animale diventa il punto di partenza per un’indagine sulla superficie, in cui il dettaglio naturale viene trasformato in rilievo e profondità.\n\nIl gesto manuale modifica la lastra dall’interno, facendo emergere progressivamente la forma attraverso variazioni di pressione e tensione. La complessità della texture e l’intensità dello sguardo costruiscono una presenza che supera la semplice rappresentazione dell’animale.\n\nL’opera mette in relazione la struttura biologica e la materia metallica, trasformando un frammento della natura in una forma scultorea in cui segno, luce e volume si incontrano.\n\nSbalzo e cesello a mano su alluminio; 40 x 30 cm",
           "thumb_gallery": [
             "forma-organica/iguana/thumb/01.webp",
             "forma-organica/iguana/thumb/02.webp",
@@ -1590,7 +1353,7 @@
         {
           "id": "dragone",
           "title": "Dragone",
-          "year": "",
+          "year": "2025",
           "image": "forma-organica/dragone/01.jpg",
           "gallery": [
             "forma-organica/dragone/01.jpg",
@@ -1598,7 +1361,7 @@
             "forma-organica/dragone/03.jpg",
             "forma-organica/dragone/04.jpg"
           ],
-          "description": "Realizzato attraverso sbalzo manuale su lastra sottile di alluminio, Dragone sviluppa una struttura dinamica costruita per tensione interna e controllo del rilievo.\n\nLa figura non è trattata in chiave narrativa, ma come superficie in trasformazione: la luce definisce ritmo e profondità, mentre il volume emerge dalla pressione calibrata esercitata sulla materia.\n\nL’opera indaga il rapporto tra linea organica e costruzione formale, trasformando l’immagine in una configurazione strutturale dove il movimento nasce dall’equilibrio tra spinta e resistenza della materia.",
+          "description": "Realizzato attraverso lo sbalzo manuale su una sottile lastra di alluminio, Dragone sviluppa una struttura dinamica costruita attraverso tensione interna e controllo del rilievo.\n\nLa figura non viene interpretata come semplice rappresentazione fantastica, ma come una forma in trasformazione: la superficie metallica accoglie il gesto dell’artista e restituisce un equilibrio tra linee organiche, variazioni luminose e profondità.\n\nIl volume emerge dalla pressione calibrata esercitata sulla materia, trasformando il piano della lastra in una presenza tridimensionale. L’opera indaga il rapporto tra movimento e resistenza, mostrando come dall’incontro tra gesto e metallo possa nascere una forma sospesa tra natura immaginata e costruzione scultorea.\n\nSbalzo e cesello a mano su alluminio; 50 x 50 cm",
           "thumb_gallery": [
             "forma-organica/dragone/thumb/01.webp",
             "forma-organica/dragone/thumb/02.webp",
@@ -1617,36 +1380,16 @@
           "description_en": "Made by hand embossing on a thin aluminium sheet, Dragone develops a dynamic structure built for internal tension and relief control.\nThe figure is not treated as narrative, but as a surface in transformation: light defines rhythm and depth, while volume emerges from the calibrated pressure exerted on the material.\nThe work investigates the relationship between organic line and formal construction, transforming the image into a structural configuration where movement arises from the balance between thrust and resistance of the material."
         },
         {
-          "id": "elefante",
-          "title": "Memoria",
-          "year": "",
-          "image": "forma-organica/elefante/01.jpg",
-          "gallery": [
-            "forma-organica/elefante/01.jpg"
-          ],
-          "description": "La testa di un elefante emerge dalla superficie metallica attraverso la lavorazione a sbalzo dell’alluminio. Le pieghe della pelle e la monumentalità della forma evocano la presenza di una creatura antica e potente.\nL’opera riflette sul rapporto tra memoria, forza e continuità della vita, trasformando l’immagine dell’animale in simbolo di stabilità e saggezza.",
-          "thumb_gallery": [
-            "forma-organica/elefante/thumb/01.webp"
-          ],
-          "thumb": "forma-organica/elefante/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/elefante/canvas/01.webp"
-          ],
-          "canvas": "forma-organica/elefante/canvas/01.webp",
-          "position": 8,
-          "description_en": "The head of an elephant emerges from the metal surface through the embossed aluminium work. The folds of the skin and the monumentality of the form evoke the presence of an ancient and powerful creature.\nThe work reflects on the relationship between memory, strength and continuity of life, transforming the image of the animal into a symbol of stability and wisdom."
-        },
-        {
           "id": "zebra",
           "title": "Zebra",
-          "year": "",
+          "year": "2024",
           "image": "forma-organica/zebra/01.jpg",
           "gallery": [
             "forma-organica/zebra/01.jpg",
             "forma-organica/zebra/02.jpg",
             "forma-organica/zebra/03.jpg"
           ],
-          "description": "La figura della zebra emerge attraverso la lavorazione a sbalzo dell’alluminio, che ne costruisce il volume e definisce con precisione la struttura del corpo.\n\nLe strisce, realizzate in rame e alluminio, introducono un ritmo grafico che attraversa la superficie e rafforza la presenza dell’animale. Il contrasto tra i metalli evidenzia il disegno naturale del manto, trasformandolo in elemento visivo e compositivo.\n\nL’opera mette in dialogo osservazione naturalistica e ricerca materica, dove il metallo diventa strumento per restituire forma, ritmo e luce.",
+          "description": "La figura della zebra emerge dalla superficie dell’alluminio attraverso la lavorazione a sbalzo, che costruisce il volume del corpo e trasforma il manto animale in un elemento compositivo.\n\nLe strisce, realizzate attraverso l’alternanza di rame e alluminio, attraversano la superficie creando un ritmo visivo in cui il contrasto tra i due metalli modifica la percezione della forma. Il disegno naturale del manto viene così reinterpretato come struttura, segno e variazione luminosa.\n\nL’opera mette in relazione osservazione della natura e ricerca materica, mostrando come materiali differenti possano convivere nella costruzione di una superficie scultorea.\n\nSbalzo e cesello a mano su alluminio; 38 x 38 cm",
           "thumb_gallery": [
             "forma-organica/zebra/thumb/01.webp",
             "forma-organica/zebra/thumb/02.webp",
@@ -1663,35 +1406,9 @@
           "description_en": "The figure of the zebra emerges through the cantilevering of the aluminium, which builds its volume and precisely defines its body structure.\nThe stripes, made of copper and aluminium, introduce a graphic rhythm that runs through the surface and reinforces the presence of the animal. The contrast between the metals emphasises the natural pattern of the coat, transforming it into a visual and compositional element.\nThe work establishes a dialogue between naturalistic observation and material research, where metal becomes a tool for restoring form, rhythm and light."
         },
         {
-          "id": "tartaruga-c8e51f",
-          "title": "Tartaruga",
-          "year": "",
-          "image": "forma-organica/tartaruga-c8e51f/01.jpg",
-          "gallery": [
-            "forma-organica/tartaruga-c8e51f/01.jpg",
-            "forma-organica/tartaruga-c8e51f/02.jpeg",
-            "forma-organica/tartaruga-c8e51f/03.jpg"
-          ],
-          "description": "Realizzata attraverso sbalzo manuale su lastra sottile di alluminio, Tartaruga è costruita come struttura compatta definita da tensioni progressive del rilievo.\n\nIl guscio diventa campo di pressione controllata, dove la luce evidenzia la geometria interna e la distribuzione delle forze. La figura si sviluppa come equilibrio tra massa e superficie, trasformando l’immagine in configurazione formale.",
-          "thumb_gallery": [
-            "forma-organica/tartaruga-c8e51f/thumb/01.webp",
-            "forma-organica/tartaruga-c8e51f/thumb/02.webp",
-            "forma-organica/tartaruga-c8e51f/thumb/03.webp"
-          ],
-          "thumb": "forma-organica/tartaruga-c8e51f/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/tartaruga-c8e51f/canvas/01.webp",
-            "forma-organica/tartaruga-c8e51f/canvas/02.webp",
-            "forma-organica/tartaruga-c8e51f/canvas/03.webp"
-          ],
-          "canvas": "forma-organica/tartaruga-c8e51f/canvas/01.webp",
-          "position": 10,
-          "description_en": "Made by hand embossing on a thin aluminium sheet, Tartaruga is constructed as a compact structure defined by progressive relief tensions.\nThe shell becomes a controlled pressure field, where light highlights the internal geometry and distribution of forces. The figure develops as a balance between mass and surface, transforming the image into a formal configuration."
-        },
-        {
           "id": "aragosta",
           "title": "Aragosta",
-          "year": "",
+          "year": "2024",
           "image": "forma-organica/aragosta/01.jpg",
           "gallery": [
             "forma-organica/aragosta/01.jpg",
@@ -1700,7 +1417,7 @@
             "forma-organica/aragosta/04.jpg",
             "forma-organica/aragosta/05.jpg"
           ],
-          "description": "Questa scultura raffigura un’aragosta realizzata interamente in alluminio lavorato a mano con la tecnica dello sbalzo e del cesello. Il metallo, modellato con precisione, costruisce la struttura dell’animale attraverso segmenti, articolazioni e superfici puntinate che richiamano la complessità del suo carapace.\n\nLa leggerezza dell’alluminio contrasta con l’idea di solidità dell’animale, mentre le lunghe antenne e le zampe sottili introducono un senso di movimento e tensione nello spazio.\n\nL’opera esplora il rapporto tra osservazione della natura e trasformazione della materia, dove il metallo diventa organismo, struttura e forma vivente.",
+          "description": "Questa scultura raffigura un’aragosta realizzata interamente in alluminio lavorato a mano attraverso lo sbalzo e il cesello. La struttura dell’animale viene ricostruita attraverso segmenti, articolazioni e variazioni della superficie che richiamano la complessità del carapace.\n\nIl gesto manuale trasforma la lastra metallica in una forma organica articolata, dove rilievi, incisioni e texture restituiscono la stratificazione della struttura naturale. La leggerezza dell’alluminio entra in contrasto con la solidità apparente dell’animale, creando una presenza sospesa tra precisione anatomica e interpretazione materica.\n\nL’opera indaga il passaggio dalla forma biologica alla forma scultorea, mostrando come la materia metallica possa assumere caratteristiche organiche attraverso il lavoro della superficie.\n\nSbalzo e cesello a mano su alluminio; \n36 x 16 x 26 cm",
           "thumb_gallery": [
             "forma-organica/aragosta/thumb/01.webp",
             "forma-organica/aragosta/thumb/02.webp",
@@ -1721,64 +1438,9 @@
           "description_en": "This sculpture depicts a lobster made entirely of aluminium worked by hand using the technique of embossing and chiselling. The metal, modelled with precision, builds the structure of the animal through segments, joints and punched surfaces that recall the complexity of its carapace.\nThe lightness of the aluminium contrasts with the animal's idea of solidity, while the long antennae and slender legs introduce a sense of movement and tension into the space.\nThe work explores the relationship between observation of nature and transformation of matter, where metal becomes organism, structure and living form."
         },
         {
-          "id": "carpa-koi",
-          "title": "Dualità",
-          "year": "",
-          "image": "forma-organica/carpa-koi/01.jpg",
-          "gallery": [
-            "forma-organica/carpa-koi/01.jpg",
-            "forma-organica/carpa-koi/02.jpg",
-            "forma-organica/carpa-koi/03.jpg",
-            "forma-organica/carpa-koi/04.jpg"
-          ],
-          "description": "Due figure acquatiche si muovono in direzioni opposte creando una composizione circolare e dinamica.\nIl contrasto tra la superficie dorata e quella argentata accentua il dialogo tra le due presenze, suggerendo un equilibrio fragile tra forze complementari.\nL’opera riflette sulla dualità che attraversa la natura e l’esistenza: luce e ombra, quiete e movimento, opposizione e armonia.",
-          "thumb_gallery": [
-            "forma-organica/carpa-koi/thumb/01.webp",
-            "forma-organica/carpa-koi/thumb/02.webp",
-            "forma-organica/carpa-koi/thumb/03.webp",
-            "forma-organica/carpa-koi/thumb/04.webp"
-          ],
-          "thumb": "forma-organica/carpa-koi/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/carpa-koi/canvas/01.webp",
-            "forma-organica/carpa-koi/canvas/02.webp",
-            "forma-organica/carpa-koi/canvas/03.webp",
-            "forma-organica/carpa-koi/canvas/04.webp"
-          ],
-          "canvas": "forma-organica/carpa-koi/canvas/01.webp",
-          "position": 12,
-          "description_en": "Two aquatic figures move in opposite directions, creating a circular and dynamic composition.\nThe contrast between the gold and silver surfaces accentuates the dialogue between the two presences, suggesting a fragile balance between complementary forces.\nThe work reflects on the duality that runs through nature and existence: light and shadow, stillness and movement, opposition and harmony."
-        },
-        {
-          "id": "fenicotteri",
-          "title": "Armonia",
-          "year": "",
-          "image": "forma-organica/fenicotteri/01.jpg",
-          "gallery": [
-            "forma-organica/fenicotteri/01.jpg",
-            "forma-organica/fenicotteri/02.jpg",
-            "forma-organica/fenicotteri/03.jpg"
-          ],
-          "description": "Due fenicotteri si fronteggiano in una composizione equilibrata, dove le linee sottili delle gambe e le curve eleganti del collo costruiscono un dialogo visivo silenzioso.\nLa lavorazione a sbalzo dell’alluminio restituisce il movimento delle piume e trasforma la figura animale in una presenza essenziale, sospesa tra natura e forma.",
-          "thumb_gallery": [
-            "forma-organica/fenicotteri/thumb/01.webp",
-            "forma-organica/fenicotteri/thumb/02.webp",
-            "forma-organica/fenicotteri/thumb/03.webp"
-          ],
-          "thumb": "forma-organica/fenicotteri/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/fenicotteri/canvas/01.webp",
-            "forma-organica/fenicotteri/canvas/02.webp",
-            "forma-organica/fenicotteri/canvas/03.webp"
-          ],
-          "canvas": "forma-organica/fenicotteri/canvas/01.webp",
-          "position": 13,
-          "description_en": "Two flamingos face each other in a balanced composition, where the slender lines of the legs and the elegant curves of the neck build a silent visual dialogue.\nThe embossing of the aluminium restores the movement of the feathers and transforms the animal figure into an essential presence, suspended between nature and form."
-        },
-        {
           "id": "trota",
           "title": "Trota",
-          "year": "",
+          "year": "2025",
           "image": "forma-organica/trota/01.jpg",
           "gallery": [
             "forma-organica/trota/01.jpg",
@@ -1789,7 +1451,7 @@
             "forma-organica/trota/06.jpg",
             "forma-organica/trota/07.jpg"
           ],
-          "description": "Trota mette in relazione la figura del pesce con una struttura reticolare che occupa la superficie dell’opera.\n\nLa rete, costruita attraverso aperture irregolari nell’alluminio, diventa il vero campo visivo: un sistema di vuoti e bordi che genera profondità e tensione. La figura della trota emerge in contrasto con questa trama, mantenendo una presenza più naturale e riconoscibile.\n\nIl dialogo tra struttura e figura crea un equilibrio instabile tra libertà e costrizione, trasformando l’immagine in una composizione costruita su ritmo, vuoto e materia.",
+          "description": "Trota mette in relazione la figura del pesce con una struttura reticolare che attraversa la superficie dell’alluminio, creando un rapporto tra presenza e assenza.\n\nLe aperture irregolari ricavate nella lastra costruiscono una trama di vuoti e bordi che modifica la percezione della superficie e genera profondità. La figura della trota emerge in contrasto con questa struttura, mantenendo una presenza organica all’interno di un sistema più astratto.\n\nL’opera indaga il rapporto tra forma e trasformazione della materia, dove il vuoto diventa parte della costruzione scultorea e il metallo viene ridefinito attraverso equilibrio, ritmo e sottrazione.\n\nSbalzo e cesello a mano su alluminio, resina; 30 x 40 cm",
           "thumb_gallery": [
             "forma-organica/trota/thumb/01.webp",
             "forma-organica/trota/thumb/02.webp",
@@ -1814,41 +1476,15 @@
           "description_en": "Trout relates the figure of the fish to a reticular structure that occupies the surface of the work.\nThe net, constructed through irregular openings in the aluminium, becomes the true field of vision: a system of voids and edges that generates depth and tension. The figure of the trout emerges in contrast to this texture, maintaining a more natural and recognisable presence.\nThe dialogue between structure and figure creates an unstable balance between freedom and constraint, transforming the image into a composition built on rhythm, emptiness and matter."
         },
         {
-          "id": "tucano",
-          "title": "Sentinella tropicale",
-          "year": "",
-          "image": "forma-organica/tucano/01.jpg",
-          "gallery": [
-            "forma-organica/tucano/01.jpg",
-            "forma-organica/tucano/02.jpg",
-            "forma-organica/tucano/03.jpg"
-          ],
-          "description": "Un uccello tropicale si posa su un ramo, modellato attraverso la lavorazione a sbalzo dell’alluminio.\nLa grande curva del becco e la struttura del corpo creano una composizione equilibrata tra stabilità e movimento.\nL’opera trasforma la presenza dell’animale in una figura simbolica, sospesa tra osservazione silenziosa e vitalità della natura.",
-          "thumb_gallery": [
-            "forma-organica/tucano/thumb/01.webp",
-            "forma-organica/tucano/thumb/02.webp",
-            "forma-organica/tucano/thumb/03.webp"
-          ],
-          "thumb": "forma-organica/tucano/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/tucano/canvas/01.webp",
-            "forma-organica/tucano/canvas/02.webp",
-            "forma-organica/tucano/canvas/03.webp"
-          ],
-          "canvas": "forma-organica/tucano/canvas/01.webp",
-          "position": 15,
-          "description_en": "A tropical bird perches on a branch, modelled by embossing aluminium.\nThe large curve of the beak and the structure of the body create a balanced composition between stability and movement.\nThe work transforms the presence of the animal into a symbolic figure, suspended between silent observation and the vitality of nature."
-        },
-        {
           "id": "vedova-nera",
           "title": "Vedova nera",
-          "year": "",
+          "year": "2023",
           "image": "forma-organica/vedova-nera/01.jpg",
           "gallery": [
             "forma-organica/vedova-nera/01.jpg",
             "forma-organica/vedova-nera/04.jpg"
           ],
-          "description": "Vedova nera si sviluppa come una struttura sospesa nello spazio, dove la ragnatela si espande dal centro verso l’esterno creando una trama fragile e tesa. I fili metallici disegnano un reticolo irregolare che suggerisce movimento, instabilità e tensione.\n\nAl centro della composizione emerge il corpo del ragno, modellato in alluminio e lavorato a sbalzo, che diventa il punto di equilibrio dell’intera struttura. La superficie scura del fondo amplifica il contrasto con il metallo, rendendo la ragnatela una presenza quasi luminosa nello spazio.\n\nL’opera trasforma una forma naturale in una costruzione essenziale fatta di linee, vuoti e tensioni, dove la materia metallica diventa segno e struttura.",
+          "description": "Vedova Nera si sviluppa come una struttura sospesa nello spazio, dove la ragnatela si espande dal centro verso l’esterno costruendo un sistema di linee, vuoti e tensioni.\n\nI fili metallici disegnano un reticolo irregolare che trasforma la superficie in una forma aperta e dinamica. Al centro della composizione emerge il corpo del ragno, modellato in alluminio attraverso la lavorazione a sbalzo, come punto di equilibrio all’interno della struttura.\n\nIl contrasto tra il fondo scuro e il metallo amplifica la presenza della trama, facendo emergere la ragnatela come elemento spaziale e luminoso. L’opera traduce una struttura naturale in una costruzione scultorea in cui il segno diventa materia e il vuoto parte integrante della forma.\n\nSbalzo e cesello a mano su alluminio; 40 x 40 cm",
           "thumb_gallery": [
             "forma-organica/vedova-nera/thumb/01.webp",
             "forma-organica/vedova-nera/thumb/04.webp"
@@ -1865,12 +1501,12 @@
         {
           "id": "libellule-in-amore",
           "title": "Libellule in amore",
-          "year": "",
+          "year": "2024",
           "image": "forma-organica/libellule-in-amore/01.jpg",
           "gallery": [
             "forma-organica/libellule-in-amore/01.jpg"
           ],
-          "description": "Libellule in amore raffigura due libellule unite nel momento dell’accoppiamento, una configurazione naturale che crea una forma circolare e continua.\n\nLe figure si sviluppano attraverso un gioco di linee sottili e superfici lavorate a sbalzo, dove le ali leggere contrastano con la struttura segmentata dei corpi. Il ramo introduce un punto di appoggio stabile, mentre la composizione rimane dinamica grazie al dialogo tra le due figure.\n\nL’opera unisce precisione naturalistica e ricerca formale, trasformando il gesto naturale delle libellule in una composizione equilibrata tra movimento, leggerezza e materia.",
+          "description": "Libellule in amore nasce dall’osservazione di una configurazione naturale in cui due figure unite generano una forma circolare e continua.\n\nLe sagome delle libellule si sviluppano attraverso linee sottili e superfici lavorate a sbalzo, creando un equilibrio tra leggerezza delle ali e articolazione dei corpi. Il ramo diventa elemento di sostegno e di radicamento, mentre la composizione mantiene una tensione dinamica costruita sul rapporto tra le due presenze.\n\nL’opera trasforma un gesto naturale in una costruzione formale in cui movimento, equilibrio e materia metallica si fondono in un’unica struttura visiva.\n\nSbalzo e cesello a mano su alluminio, resina; 25 x 25 cm",
           "thumb_gallery": [
             "forma-organica/libellule-in-amore/thumb/01.webp"
           ],
@@ -1883,79 +1519,120 @@
           "description_en": "Dragonflies in Love depicts two dragonflies joined at the moment of mating, a natural configuration that creates a continuous circular shape.\nThe figures develop through an interplay of thin lines and embossed surfaces, where the light wings contrast with the segmented structure of the bodies. The branch introduces a stable point of support, while the composition remains dynamic thanks to the dialogue between the two figures.\nThe work combines naturalistic precision and formal research, transforming the natural gesture of dragonflies into a balanced composition of movement, lightness and matter."
         },
         {
-          "id": "rondinelle",
-          "title": "Linee di passaggio",
-          "year": "",
-          "image": "forma-organica/rondinelle/01.jpg",
-          "gallery": [
-            "forma-organica/rondinelle/01.jpg"
-          ],
-          "description": "Piccole rondini si posano su sottili linee metalliche, trasformate in un paesaggio essenziale.\nAlcune restano ferme, altre si preparano al volo: la composizione cattura un momento sospeso tra quiete e movimento.\nLa lavorazione a sbalzo dell’alluminio restituisce la leggerezza delle forme, trasformando un gesto quotidiano in una struttura visiva ritmica e silenziosa.",
-          "thumb_gallery": [
-            "forma-organica/rondinelle/thumb/01.webp"
-          ],
-          "thumb": "forma-organica/rondinelle/thumb/01.webp",
-          "canvas_gallery": [
-            "forma-organica/rondinelle/canvas/01.webp"
-          ],
-          "canvas": "forma-organica/rondinelle/canvas/01.webp",
-          "position": 18,
-          "description_en": "Small swallows perch on thin metal lines, transformed into an essential landscape.\nSome remain still, others prepare for flight: the composition captures a moment suspended between stillness and movement.\nThe embossing of aluminium restores the lightness of forms, transforming an everyday gesture into a rhythmic and silent visual structure."
-        },
-        {
           "id": "rana",
           "title": "Sospensione",
-          "year": "",
+          "year": "2023",
           "image": "forma-organica/rana/01.jpg",
           "gallery": [
             "forma-organica/rana/01.jpg",
             "forma-organica/rana/02.jpg",
             "forma-organica/rana/03.jpg",
-            "forma-organica/rana/04.jpg"
+            "forma-organica/rana/04.jpg",
+            "forma-organica/rana/05.jpg"
           ],
-          "description": "La figura di un anfibio emerge dalla superficie metallica attraverso la lavorazione a sbalzo dell’alluminio. Il corpo, modellato con pochi segni essenziali, appare sospeso nello spazio in un momento di tensione prima del movimento.\nL’opera cattura l’equilibrio fragile tra quiete e azione, trasformando un gesto naturale in una riflessione sulla potenzialità del movimento. \n\n L’opera è stata realizzata come omaggio all’artista Mr. Savethewall ed è collocata nella sua stanza presso il Muraless Art Hotel di Verona.",
+          "description": "La figura di un anfibio emerge dalla superficie dell’alluminio attraverso la lavorazione a sbalzo, costruita attraverso pochi segni essenziali che definiscono il corpo e la tensione della forma.\n\nLa creatura appare sospesa nello spazio, colta in un momento precedente al movimento, dove immobilità e potenzialità dell’azione convivono. La superficie metallica restituisce così una presenza organica ridotta all’essenziale, trasformando il gesto naturale in una riflessione sull’equilibrio e sulla trasformazione della materia.\n\nRealizzata come omaggio all’artista Mr. Savethewall, l’opera è collocata nella sua stanza presso il Muraless Art Hotel di Verona.\n\nSbalzo e cesello a mano su alluminio;",
           "thumb_gallery": [
             "forma-organica/rana/thumb/01.webp",
             "forma-organica/rana/thumb/02.webp",
             "forma-organica/rana/thumb/03.webp",
-            "forma-organica/rana/thumb/04.webp"
+            "forma-organica/rana/thumb/04.webp",
+            "forma-organica/rana/thumb/05.webp"
           ],
           "thumb": "forma-organica/rana/thumb/01.webp",
           "canvas_gallery": [
             "forma-organica/rana/canvas/01.webp",
             "forma-organica/rana/canvas/02.webp",
             "forma-organica/rana/canvas/03.webp",
-            "forma-organica/rana/canvas/04.webp"
+            "forma-organica/rana/canvas/04.webp",
+            "forma-organica/rana/canvas/05.webp"
           ],
           "canvas": "forma-organica/rana/canvas/01.webp",
           "position": 19,
           "description_en": "The figure of an amphibian emerges from the metal surface through the embossed aluminium work. The body, modelled with a few essential signs, appears suspended in space in a moment of tension before movement.\nThe work captures the fragile balance between stillness and action, transforming a natural gesture into a reflection on the potential of movement.\nThe work was created as a tribute to the artist Mr. Savethewall and is located in his room at the Muraless Art Hotel in Verona."
         },
         {
-          "id": "metamorfosi",
-          "title": "Metamorfosi",
-          "year": "",
-          "image": "forma-organica/metamorfosi/01.jpg",
+          "id": "trittico",
+          "title": "Trittico",
+          "year": "2024",
+          "image": "forma-organica/trittico/01.jpg",
           "gallery": [
-            "forma-organica/metamorfosi/01.jpg",
-            "forma-organica/metamorfosi/02.jpg",
-            "forma-organica/metamorfosi/03.jpg"
+            "forma-organica/trittico/01.jpg",
+            "forma-organica/trittico/02.jpg",
+            "forma-organica/trittico/03.jpg",
+            "forma-organica/trittico/04.jpg"
           ],
-          "description": "Attraverso la lavorazione a sbalzo dell’alluminio, la superficie metallica si trasforma in una forma alata.\nLa farfalla emerge dalla materia come un organismo costruito da trame, segni e micro-strutture che evocano tanto pattern naturali quanto gesti rituali.\n\nLa leggerezza dell’insetto si confronta con la permanenza del metallo, generando una tensione tra fragilità e durata.\nL’opera diventa così una riflessione sulla metamorfosi: il passaggio continuo tra materia e vita, tra forma e trasformazione.",
+          "description": "Trittico si sviluppa come una sequenza di tre frammenti che costruiscono una visione vegetale stratificata. Foglie, fiori e forme organiche emergono dall’alluminio attraverso la lavorazione a sbalzo, trasformando la superficie metallica in una struttura complessa di rilievi e profondità.\n\nLa luce attraversa i tre pannelli e ne modifica continuamente la percezione, evidenziando variazioni di volume e dettagli della lavorazione. Le tre parti, autonome ma in relazione tra loro, costruiscono una composizione continua in cui la materia metallica assume una qualità organica.\n\nL’opera indaga il rapporto tra natura e trasformazione della superficie, mostrando come il gesto manuale possa far emergere dalla lastra una forma che appartiene contemporaneamente al mondo vegetale e alla materia.\n\nSbalzo e cesello a mano su alluminio; 55 x 28 cm",
           "thumb_gallery": [
-            "forma-organica/metamorfosi/thumb/01.webp",
-            "forma-organica/metamorfosi/thumb/02.webp",
-            "forma-organica/metamorfosi/thumb/03.webp"
+            "forma-organica/trittico/thumb/01.webp",
+            "forma-organica/trittico/thumb/02.webp",
+            "forma-organica/trittico/thumb/03.webp",
+            "forma-organica/trittico/thumb/04.webp"
           ],
-          "thumb": "forma-organica/metamorfosi/thumb/01.webp",
+          "thumb": "forma-organica/trittico/thumb/01.webp",
           "canvas_gallery": [
-            "forma-organica/metamorfosi/canvas/01.webp",
-            "forma-organica/metamorfosi/canvas/02.webp",
-            "forma-organica/metamorfosi/canvas/03.webp"
+            "forma-organica/trittico/canvas/01.webp",
+            "forma-organica/trittico/canvas/02.webp",
+            "forma-organica/trittico/canvas/03.webp",
+            "forma-organica/trittico/canvas/04.webp"
           ],
-          "canvas": "forma-organica/metamorfosi/canvas/01.webp",
-          "position": 20,
-          "description_en": "Through the embossing of aluminium, the metal surface is transformed into a winged form.\nThe butterfly emerges from the material as an organism built of textures, signs and micro-structures that evoke both natural patterns and ritual gestures.\nThe lightness of the insect is confronted with the permanence of the metal, generating a tension between fragility and durability.\nThe work thus becomes a reflection on metamorphosis: the continuous passage between matter and life, between form and transformation."
+          "canvas": "forma-organica/trittico/canvas/01.webp",
+          "position": 27,
+          "description_en": "The Triptych unfolds as a sequence of three fragments that reveal a dense and layered plant landscape. Leaves, flowers and organic forms emerge from the aluminium through embossing, creating an interweaving of volumes that seem to emerge from the metal.\nThe reflective surface amplifies light and multiplies details, transforming each panel into a living space where the metal material takes on an almost natural quality. The three parts, though autonomous, dialogue with each other, constructing a continuous and immersive vision.\nThe work investigates what lies beyond the immediate gaze, suggesting the presence of a hidden world that slowly takes shape from matter."
+        },
+        {
+          "id": "volo-d-argento",
+          "title": "Volo d'Argento",
+          "year": "2024",
+          "image": "forma-organica/volo-d-argento/01.jpg",
+          "gallery": [
+            "forma-organica/volo-d-argento/01.jpg",
+            "forma-organica/volo-d-argento/02.jpg",
+            "forma-organica/volo-d-argento/03.jpg",
+            "forma-organica/volo-d-argento/04.jpg",
+            "forma-organica/volo-d-argento/05.jpg"
+          ],
+          "description": "Volo d’Argento è una scultura realizzata attraverso la lavorazione a sbalzo dell’alluminio che raffigura un cavallo alato, figura mitica reinterpretata attraverso una forma essenziale e contemporanea.\n\nLa linea definisce il corpo della creatura con un ritmo pulito e controllato, creando un equilibrio tra leggerezza e tensione. La forma sembra sospesa tra presenza fisica e dimensione simbolica, mentre la superficie metallica riflette la luce modificando continuamente la percezione dell’opera.\n\nAttraverso il lavoro manuale sulla lastra, l’alluminio perde la sua rigidità originaria e diventa una superficie sensibile, capace di evocare movimento, slancio e trasformazione.\n\nSbalzo e cesello a mano su alluminio, resina, acrilico; 40 x 50 cm",
+          "thumb_gallery": [
+            "forma-organica/volo-d-argento/thumb/01.webp",
+            "forma-organica/volo-d-argento/thumb/02.webp",
+            "forma-organica/volo-d-argento/thumb/03.webp",
+            "forma-organica/volo-d-argento/thumb/04.webp",
+            "forma-organica/volo-d-argento/thumb/05.webp"
+          ],
+          "thumb": "forma-organica/volo-d-argento/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/volo-d-argento/canvas/01.webp",
+            "forma-organica/volo-d-argento/canvas/02.webp",
+            "forma-organica/volo-d-argento/canvas/03.webp",
+            "forma-organica/volo-d-argento/canvas/04.webp",
+            "forma-organica/volo-d-argento/canvas/05.webp"
+          ],
+          "canvas": "forma-organica/volo-d-argento/canvas/01.webp",
+          "position": 29,
+          "description_en": "Volo d'Argento (Silver Flight) is an embossed sculpture on aluminium depicting a winged horse, a mythical figure that in this work takes on an essential and contemporary trait, but at the same time is a reminder of the mythological figure, reinterpreted with a clean, modern, unadorned stroke.\nThe sharp contours and stylised lines give shape to a creature suspended between strength and lightness, between matter and spirit.\nThe completely hand-treated aluminium reflects light, transforming itself depending on the viewing angle.\nWith a minimalist and timeless language, this creation evokes the overcoming of limits and the silent power of imagination.\nMetal, usually cold and rigid, here becomes a living surface, traversed by shapes that speak of momentum, freedom and the desire to go beyond limits."
+        },
+        {
+          "id": "l-unione",
+          "title": "L'unione",
+          "year": "2023",
+          "image": "forma-organica/l-unione/01.jpg",
+          "gallery": [
+            "forma-organica/l-unione/01.jpg",
+            "forma-organica/l-unione/02.jpg"
+          ],
+          "description": "Un banco di pesci si muove come un unico organismo, creando una composizione circolare in cui movimento, ritmo ed equilibrio nascono dalla relazione tra le singole forme.\n\nOgni elemento conserva la propria identità, ma è nella disposizione collettiva che la superficie acquista una nuova struttura dinamica. I pesci, realizzati in alluminio lavorato a sbalzo e cesello, costruiscono un andamento continuo che attraversa la materia metallica.\n\nL’opera indaga il rapporto tra individuo e insieme, mostrando come una pluralità di elementi possa trasformarsi in una forma unica attraverso equilibrio, movimento e connessione.\n\nSbalzo e cesello a mano su alluminio, acrilico, resina; 50 x 40 cm",
+          "thumb_gallery": [
+            "forma-organica/l-unione/thumb/01.webp",
+            "forma-organica/l-unione/thumb/02.webp"
+          ],
+          "thumb": "forma-organica/l-unione/thumb/01.webp",
+          "canvas_gallery": [
+            "forma-organica/l-unione/canvas/01.webp",
+            "forma-organica/l-unione/canvas/02.webp"
+          ],
+          "canvas": "forma-organica/l-unione/canvas/01.webp",
+          "position": 31,
+          "description_en": "A school of fish moves as a single organism, creating a circular composition that suggests movement, balance and cooperation. Each element retains its individuality, but it is in the relationship with the others that the whole takes shape.\nMade of embossed and chiselled aluminium, the fish build a visual rhythm across the metal surface, transforming the scene into a dynamic structure.\nThe work reflects on the value of collectivity: when individual presences move together, the strength of the group becomes greater than the sum of its parts."
         }
       ]
     }
