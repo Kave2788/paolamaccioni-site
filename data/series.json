@@ -7,88 +7,6 @@
       "description": "Attraverso lo sbalzo dell'alluminio, la superficie si trasforma in uno spazio tra segno, luce e volume, rivelando la tensione nascosta della materia.",
       "works": [
         {
-          "id": "frattura",
-          "title": "FRATTURA",
-          "year": "2026",
-          "image": "struttura-tensione/frattura/01.jpg",
-          "gallery": [
-            "struttura-tensione/frattura/01.jpg",
-            "struttura-tensione/frattura/02.jpg",
-            "struttura-tensione/frattura/03.jpg",
-            "struttura-tensione/frattura/04.jpg",
-            "struttura-tensione/frattura/05.jpg"
-          ],
-          "thumb": "struttura-tensione/frattura/thumb/01.webp",
-          "thumb_gallery": [
-            "struttura-tensione/frattura/thumb/01.webp",
-            "struttura-tensione/frattura/thumb/02.webp",
-            "struttura-tensione/frattura/thumb/03.webp",
-            "struttura-tensione/frattura/thumb/04.webp",
-            "struttura-tensione/frattura/thumb/05.webp"
-          ],
-          "canvas": "struttura-tensione/frattura/canvas/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/frattura/canvas/01.webp",
-            "struttura-tensione/frattura/canvas/02.webp",
-            "struttura-tensione/frattura/canvas/03.webp",
-            "struttura-tensione/frattura/canvas/04.webp",
-            "struttura-tensione/frattura/canvas/05.webp"
-          ],
-          "description": "L’opera rappresenta il momento in cui una struttura apparentemente stabile raggiunge il proprio limite interno.\nLa frattura non è un evento esterno, ma un punto critico della materia in cui la continuità si interrompe e l’equilibrio viene messo in discussione. L’inserimento della superficie specchiante altera la percezione dello spazio e coinvolge lo sguardo, che entra in una condizione instabile e priva di un punto di riferimento definito.\nAttraverso la trasformazione dell’alluminio, la superficie diventa luogo di passaggio tra ordine e cambiamento, tra ciò che appare stabile e ciò che rivela la propria fragilità.\n\nSbalzo e cesello a mano su alluminio, carta specchiante su supporto; 55 x 75 x 3,5 cm",
-          "position": 2,
-          "description_en": "The work portrays the moment in which an apparently stable structure reaches its own inner limit.\nThe fracture is not an external event but a critical point within the material, where continuity breaks and balance is called into question. The insertion of the mirroring surface alters the perception of space and draws in the gaze, which enters an unstable condition with no defined point of reference.\nThrough the transformation of the aluminium, the surface becomes a place of passage between order and change, between what appears stable and what reveals its own fragility.\n\nHand repoussé and chasing on aluminium, mirrored paper on backing; 55 x 75 x 3,5 cm"
-        },
-        {
-          "id": "lux-eterna",
-          "title": "LUX AETERNA",
-          "year": "2024",
-          "image": "struttura-tensione/lux-eterna/01.jpg",
-          "gallery": [
-            "struttura-tensione/lux-eterna/01.jpg",
-            "struttura-tensione/lux-eterna/02.jpg",
-            "struttura-tensione/lux-eterna/03.jpg",
-            "struttura-tensione/lux-eterna/04.jpg",
-            "struttura-tensione/lux-eterna/05.jpg",
-            "struttura-tensione/lux-eterna/06.jpg",
-            "struttura-tensione/lux-eterna/07.jpg",
-            "struttura-tensione/lux-eterna/08.jpg",
-            "struttura-tensione/lux-eterna/09.jpg",
-            "struttura-tensione/lux-eterna/10.jpg",
-            "struttura-tensione/lux-eterna/11.jpg"
-          ],
-          "description": "Dalla frattura emerge una nuova possibilità di percezione.\nLa lacerazione non viene ricomposta, ma diventa apertura: un punto attraverso cui la materia rivela ciò che era già contenuto al suo interno. La struttura non viene distrutta, ma svela la propria capacità di trasformarsi e generare nuove possibilità di lettura.\nIn quest’opera la luce non è un elemento aggiunto alla superficie, ma nasce dal cambiamento dello sguardo e dalla relazione tra materia, spazio e percezione.\nLa frattura perde così il significato di perdita e diventa rivelazione: il momento in cui ciò che era nascosto può finalmente manifestarsi.\n\nSbalzo e cesello a mano su alluminio, acrilico, carta specchiante su supporto; 80 x 120 x 4 cm",
-          "thumb_gallery": [
-            "struttura-tensione/lux-eterna/thumb/01.webp",
-            "struttura-tensione/lux-eterna/thumb/02.webp",
-            "struttura-tensione/lux-eterna/thumb/03.webp",
-            "struttura-tensione/lux-eterna/thumb/04.webp",
-            "struttura-tensione/lux-eterna/thumb/05.webp",
-            "struttura-tensione/lux-eterna/thumb/06.webp",
-            "struttura-tensione/lux-eterna/thumb/07.webp",
-            "struttura-tensione/lux-eterna/thumb/08.webp",
-            "struttura-tensione/lux-eterna/thumb/09.webp",
-            "struttura-tensione/lux-eterna/thumb/10.webp",
-            "struttura-tensione/lux-eterna/thumb/11.webp"
-          ],
-          "thumb": "struttura-tensione/lux-eterna/thumb/01.webp",
-          "canvas_gallery": [
-            "struttura-tensione/lux-eterna/canvas/01.webp",
-            "struttura-tensione/lux-eterna/canvas/02.webp",
-            "struttura-tensione/lux-eterna/canvas/03.webp",
-            "struttura-tensione/lux-eterna/canvas/04.webp",
-            "struttura-tensione/lux-eterna/canvas/05.webp",
-            "struttura-tensione/lux-eterna/canvas/06.webp",
-            "struttura-tensione/lux-eterna/canvas/07.webp",
-            "struttura-tensione/lux-eterna/canvas/08.webp",
-            "struttura-tensione/lux-eterna/canvas/09.webp",
-            "struttura-tensione/lux-eterna/canvas/10.webp",
-            "struttura-tensione/lux-eterna/canvas/11.webp"
-          ],
-          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp",
-          "position": 4,
-          "description_en": "In Lux Eterna, aluminium is worked as an open, modular weave, generating a specular structure based on the balance between solids and voids. The surface is not simply etched, but crossed, transforming the plane into a reticular organism.\nThe red field acts as an underlying force, amplifying the tension of the metal structure and intensifying the dialogue with the blue core. The light does not merely reflect the material, but passes through it and activates it, making visible the relationship between rhythm, depth and formal construction.\n\nHand repoussé and chasing on aluminium, acrylic, mirrored paper on backing; 80 x 120 x 4 cm"
-        },
-        {
           "id": "lombra-della-luce",
           "title": "L’OMBRA DELLA LUCE",
           "year": "2025",
@@ -144,8 +62,90 @@
             "struttura-tensione/lombra-della-luce/canvas/14.webp"
           ],
           "canvas": "struttura-tensione/lombra-della-luce/canvas/01.webp",
-          "position": 5,
+          "position": 1,
           "description_en": "The Shadow of Light stems from the idea that a fracture can become a passage. The surface of the aluminium is incised by a central fault that runs through the work and from which real steam emerges, produced by a nebuliser hidden inside the hollow structure.\nThe composition develops between two landscapes: a dry, cracked earth, embossed on a thin slab, and a soft sky made of acrylic glazes and resin. The fracture does not divide these two spaces, but relates them, transforming the wound into a threshold.\nThe work integrates matter, light and the ephemeral presence of steam, creating an inner landscape in which what appears as a rupture becomes a possibility for transformation.\nThe title is a tribute to Franco Battiato and his spiritual vision of the passage from shadow to light.\n\nHand repoussé and chasing on aluminium, acrylic, resin, mist diffuser with LED lights; 50 x 70 cm"
+        },
+        {
+          "id": "lux-eterna",
+          "title": "LUX AETERNA",
+          "year": "2024",
+          "image": "struttura-tensione/lux-eterna/01.jpg",
+          "gallery": [
+            "struttura-tensione/lux-eterna/01.jpg",
+            "struttura-tensione/lux-eterna/02.jpg",
+            "struttura-tensione/lux-eterna/03.jpg",
+            "struttura-tensione/lux-eterna/04.jpg",
+            "struttura-tensione/lux-eterna/05.jpg",
+            "struttura-tensione/lux-eterna/06.jpg",
+            "struttura-tensione/lux-eterna/07.jpg",
+            "struttura-tensione/lux-eterna/08.jpg",
+            "struttura-tensione/lux-eterna/09.jpg",
+            "struttura-tensione/lux-eterna/10.jpg",
+            "struttura-tensione/lux-eterna/11.jpg"
+          ],
+          "description": "Dalla frattura emerge una nuova possibilità di percezione.\nLa lacerazione non viene ricomposta, ma diventa apertura: un punto attraverso cui la materia rivela ciò che era già contenuto al suo interno. La struttura non viene distrutta, ma svela la propria capacità di trasformarsi e generare nuove possibilità di lettura.\nIn quest’opera la luce non è un elemento aggiunto alla superficie, ma nasce dal cambiamento dello sguardo e dalla relazione tra materia, spazio e percezione.\nLa frattura perde così il significato di perdita e diventa rivelazione: il momento in cui ciò che era nascosto può finalmente manifestarsi.\n\nSbalzo e cesello a mano su alluminio, acrilico, carta specchiante su supporto; 80 x 120 x 4 cm",
+          "thumb_gallery": [
+            "struttura-tensione/lux-eterna/thumb/01.webp",
+            "struttura-tensione/lux-eterna/thumb/02.webp",
+            "struttura-tensione/lux-eterna/thumb/03.webp",
+            "struttura-tensione/lux-eterna/thumb/04.webp",
+            "struttura-tensione/lux-eterna/thumb/05.webp",
+            "struttura-tensione/lux-eterna/thumb/06.webp",
+            "struttura-tensione/lux-eterna/thumb/07.webp",
+            "struttura-tensione/lux-eterna/thumb/08.webp",
+            "struttura-tensione/lux-eterna/thumb/09.webp",
+            "struttura-tensione/lux-eterna/thumb/10.webp",
+            "struttura-tensione/lux-eterna/thumb/11.webp"
+          ],
+          "thumb": "struttura-tensione/lux-eterna/thumb/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/lux-eterna/canvas/01.webp",
+            "struttura-tensione/lux-eterna/canvas/02.webp",
+            "struttura-tensione/lux-eterna/canvas/03.webp",
+            "struttura-tensione/lux-eterna/canvas/04.webp",
+            "struttura-tensione/lux-eterna/canvas/05.webp",
+            "struttura-tensione/lux-eterna/canvas/06.webp",
+            "struttura-tensione/lux-eterna/canvas/07.webp",
+            "struttura-tensione/lux-eterna/canvas/08.webp",
+            "struttura-tensione/lux-eterna/canvas/09.webp",
+            "struttura-tensione/lux-eterna/canvas/10.webp",
+            "struttura-tensione/lux-eterna/canvas/11.webp"
+          ],
+          "canvas": "struttura-tensione/lux-eterna/canvas/01.webp",
+          "position": 3,
+          "description_en": "In Lux Eterna, aluminium is worked as an open, modular weave, generating a specular structure based on the balance between solids and voids. The surface is not simply etched, but crossed, transforming the plane into a reticular organism.\nThe red field acts as an underlying force, amplifying the tension of the metal structure and intensifying the dialogue with the blue core. The light does not merely reflect the material, but passes through it and activates it, making visible the relationship between rhythm, depth and formal construction.\n\nHand repoussé and chasing on aluminium, acrylic, mirrored paper on backing; 80 x 120 x 4 cm"
+        },
+        {
+          "id": "frattura",
+          "title": "FRATTURA",
+          "year": "2026",
+          "image": "struttura-tensione/frattura/01.jpg",
+          "gallery": [
+            "struttura-tensione/frattura/01.jpg",
+            "struttura-tensione/frattura/02.jpg",
+            "struttura-tensione/frattura/03.jpg",
+            "struttura-tensione/frattura/04.jpg",
+            "struttura-tensione/frattura/05.jpg"
+          ],
+          "thumb": "struttura-tensione/frattura/thumb/01.webp",
+          "thumb_gallery": [
+            "struttura-tensione/frattura/thumb/01.webp",
+            "struttura-tensione/frattura/thumb/02.webp",
+            "struttura-tensione/frattura/thumb/03.webp",
+            "struttura-tensione/frattura/thumb/04.webp",
+            "struttura-tensione/frattura/thumb/05.webp"
+          ],
+          "canvas": "struttura-tensione/frattura/canvas/01.webp",
+          "canvas_gallery": [
+            "struttura-tensione/frattura/canvas/01.webp",
+            "struttura-tensione/frattura/canvas/02.webp",
+            "struttura-tensione/frattura/canvas/03.webp",
+            "struttura-tensione/frattura/canvas/04.webp",
+            "struttura-tensione/frattura/canvas/05.webp"
+          ],
+          "description": "L’opera rappresenta il momento in cui una struttura apparentemente stabile raggiunge il proprio limite interno.\nLa frattura non è un evento esterno, ma un punto critico della materia in cui la continuità si interrompe e l’equilibrio viene messo in discussione. L’inserimento della superficie specchiante altera la percezione dello spazio e coinvolge lo sguardo, che entra in una condizione instabile e priva di un punto di riferimento definito.\nAttraverso la trasformazione dell’alluminio, la superficie diventa luogo di passaggio tra ordine e cambiamento, tra ciò che appare stabile e ciò che rivela la propria fragilità.\n\nSbalzo e cesello a mano su alluminio, carta specchiante su supporto; 55 x 75 x 3,5 cm",
+          "position": 4,
+          "description_en": "The work portrays the moment in which an apparently stable structure reaches its own inner limit.\nThe fracture is not an external event but a critical point within the material, where continuity breaks and balance is called into question. The insertion of the mirroring surface alters the perception of space and draws in the gaze, which enters an unstable condition with no defined point of reference.\nThrough the transformation of the aluminium, the surface becomes a place of passage between order and change, between what appears stable and what reveals its own fragility.\n\nHand repoussé and chasing on aluminium, mirrored paper on backing; 55 x 75 x 3,5 cm"
         },
         {
           "id": "il-rinoceronte",
@@ -830,7 +830,7 @@
               "position": 4
             }
           ],
-          "position": 1,
+          "position": 2,
           "cover": "struttura-tensione/_covers/tracce-di-memoria.webp"
         },
         {
@@ -1019,7 +1019,7 @@
               "description_en": "The Shadow of Light stems from the idea that a fracture can become a passage. The surface of the aluminium is incised by a central fault that runs through the work and from which real steam emerges, produced by a nebuliser hidden inside the hollow structure.\nThe composition develops between two landscapes: a dry, cracked earth, embossed on a thin slab, and a soft sky made of acrylic glazes and resin. The fracture does not divide these two spaces, but relates them, transforming the wound into a threshold.\nThe work integrates matter, light and the ephemeral presence of steam, creating an inner landscape in which what appears as a rupture becomes a possibility for transformation.\nThe title is a tribute to Franco Battiato and his spiritual vision of the passage from shadow to light.\n\nHand repoussé and chasing on aluminium, acrylic, resin, mist diffuser with LED lights; 50 x 70 cm"
             }
           ],
-          "position": 3,
+          "position": 0,
           "cover": "struttura-tensione/lombra-della-luce-variazione-iii/canvas/01.webp"
         },
         {
@@ -1164,7 +1164,7 @@
               "description_en": "The work explores the boundary between structure and transformation: an ordered form opens onto a perceptual dimension in which light and matter alter its initial stability.\n\nHand repoussé and chasing on aluminium; 43.5 x 31 cm"
             }
           ],
-          "position": 0,
+          "position": 5,
           "cover": "struttura-tensione/_covers/geometria.webp"
         }
       ],
