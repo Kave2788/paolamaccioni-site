@@ -483,9 +483,63 @@ def _subseries_page_tiles(sub, prefix):
 def _serie_tiles(serie, prefix):
     return _main_serie_tiles(serie, prefix)
 
+def _serie_jsonld_images(serie, prefix):
+    """Lista `image` dei dati strutturati della pagina serie.
+
+    Segue lo stesso ordine della griglia: le voci ordinate per `position`, e
+    ogni sotto-serie sostituita dalle opere che contiene. Un'opera presente
+    sia nella griglia sia in una sotto-serie compare una volta sola.
+    """
+    voci = []
+    for i, w in enumerate(serie.get("works", [])):
+        voci.append((w.get("position", i), [w]))
+    for j, sub in enumerate(_subseries(serie)):
+        voci.append((sub.get("position", 9000 + j), list(sub.get("works", []))))
+    voci.sort(key=lambda t: t[0])
+
+    immagini, visti = [], set()
+    for _, opere in voci:
+        for w in opere:
+            if w["id"] in visti:
+                continue
+            visti.add(w["id"])
+            immagini.append({
+                "@type": "ImageObject",
+                "name": w.get("title", ""),
+                "contentUrl": f'{SITE_URL}/{w.get("image", "")}',
+                "url": f'{SITE_URL}{prefix}/opera/{w["id"]}/',
+            })
+    return immagini
+
+def _update_serie_jsonld(path, serie, prefix):
+    """Riallinea al catalogo la lista `image` dei dati strutturati.
+
+    Si riscrive SOLO `image`: `name`, `description` e il resto sono scritti a
+    mano e sono diversi tra italiano e inglese, quindi vanno lasciati stare.
+    Senza questo, il blocco restava quello generato una volta sola e finiva per
+    citare opere eliminate o spostate in un'altra serie, con contentUrl di
+    immagini inesistenti.
+    """
+    if not os.path.isfile(path):
+        return
+    html = open(path, encoding="utf-8").read()
+    m = re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)', html, re.S)
+    if not m:
+        return
+    try:
+        dati = json.loads(m.group(2))
+    except ValueError:
+        return          # blocco malformato: meglio non peggiorarlo
+    if dati.get("@type") != "ImageGallery":
+        return          # non e' la galleria della serie
+    dati["image"] = _serie_jsonld_images(serie, prefix)
+    nuovo = m.group(1) + json.dumps(dati, ensure_ascii=False) + m.group(3)
+    open(path, "w", encoding="utf-8").write(html[:m.start()] + nuovo + html[m.end():])
+
 def update_serie_grid(serie):
     """Riscrive in-place la griglia <div class="serie-works"> nelle pagine serie
-    principale IT+EN e in ogni pagina sotto-serie IT+EN."""
+    principale IT+EN e in ogni pagina sotto-serie IT+EN, e riallinea i dati
+    strutturati della pagina serie principale."""
     def _rewrite(path, tiles_html):
         if not os.path.isfile(path):
             return
@@ -502,6 +556,7 @@ def update_serie_grid(serie):
     for path, prefix in [(os.path.join(ROOT, "serie", sid, "index.html"), ""),
                          (os.path.join(ROOT, "en", "serie", sid, "index.html"), "/en")]:
         _rewrite(path, _main_serie_tiles(serie, prefix))
+        _update_serie_jsonld(path, serie, prefix)
     for sub in _subseries(serie):
         for path, prefix in [(os.path.join(ROOT, "serie", sid, sub["id"], "index.html"), ""),
                              (os.path.join(ROOT, "en", "serie", sid, sub["id"], "index.html"), "/en")]:
