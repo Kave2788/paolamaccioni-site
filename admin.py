@@ -288,6 +288,24 @@ def _opera_js(work, title, is_en):
     pairs = (("Close", "Previous", "Next") if is_en else ("Chiudi", "Precedente", "Successiva"))
     return js.replace("__CLOSE__", pairs[0]).replace("__PREV__", pairs[1]).replace("__NEXT__", pairs[2])
 
+def _back_target(serie, work_id):
+    """Dove riporta il link «indietro» di una pagina opera: (percorso, etichetta).
+
+    Un'opera aperta da una sotto-serie deve tornare alla sotto-serie, non alla
+    serie principale: prima tornavano tutte alla serie e chi arrivava da una
+    sotto-serie si ritrovava due passi indietro, in un elenco dove l'opera
+    appena vista non c'era nemmeno.
+
+    Se l'opera sta ANCHE nella griglia principale (qualcuna e' di proposito in
+    entrambe) vince la serie: e' il posto da cui la si raggiunge piu' spesso.
+    """
+    if any(w["id"] == work_id for w in serie.get("works", [])):
+        return f'/serie/{serie["id"]}/', serie["name"]
+    for sub in _subseries(serie):
+        if any(w["id"] == work_id for w in sub.get("works", [])):
+            return f'/serie/{serie["id"]}/{sub["id"]}/', sub.get("name") or serie["name"]
+    return f'/serie/{serie["id"]}/', serie["name"]
+
 def render_opera_page(serie, work, lang):
     """Genera l'HTML completo di una pagina opera (lang = 'it' | 'en')."""
     sid, wid, title = serie["id"], work["id"], work["title"]
@@ -295,6 +313,7 @@ def render_opera_page(serie, work, lang):
     desc = (work.get("description_en") or work.get("description") or "") if is_en \
            else (work.get("description") or "")
     serie_name = serie["name"]
+    back_href, back_label = _back_target(serie, wid)
     canon = f"{SITE_URL}/{'en/' if is_en else ''}opera/{wid}/"
     other = f"{SITE_URL}/{'' if is_en else 'en/'}opera/{wid}/"
     og_image = f"{SITE_URL}/{work.get('image','')}"
@@ -397,7 +416,7 @@ def render_opera_page(serie, work, lang):
 <section class="page-section opera-section">
   <div class="opera-wrap container">
 
-    <a href="{base}/serie/{sid}/" class="back-link">← {escape(serie_name)}</a>
+    <a href="{base}{back_href}" class="back-link">← {escape(back_label)}</a>
 
     <div class="opera-grid">
       <div class="opera-img-wrap">
