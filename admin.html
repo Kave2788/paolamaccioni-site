@@ -120,6 +120,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-s);min-height
 }
 .ph:hover img{opacity:1}
 .ph.primary img{border-color:var(--gold);opacity:1}
+.ph .cov{
+  position:absolute;top:4px;left:4px;width:20px;height:20px;line-height:18px;
+  border:1px solid var(--border);background:rgba(0,0,0,.65);color:var(--muted);
+  font-size:11px;text-align:center;cursor:pointer;padding:0;opacity:0;
+  transition:opacity .2s,color .2s;
+}
+.ph:hover .cov{opacity:1}
+.ph .cov:hover{color:var(--gold);border-color:var(--gold)}
+.ph .cov.on{opacity:1;color:var(--gold);border-color:var(--gold);cursor:default}
 .ph .badge{
   position:absolute;bottom:4px;left:4px;background:var(--gold);color:#000;
   font-size:5px;letter-spacing:1.5px;text-transform:uppercase;font-family:var(--font-ss);
@@ -820,16 +829,44 @@ async function renderEdit(c, serieId, workId) {
       return;
     }
 
+    // Sotto-serie di cui quest'opera è (o può diventare) la copertina.
+    const subs = ((appData.series||[]).find(x => x.id === serieId)||{}).subseries||[];
+    const coverSubs = subs.filter(sub => (sub.works||[]).some(x => x.id === workId));
+    const stem = f => f.replace(/\.[^.]+$/, '');
+    const curCover = coverSubs.length
+      ? stem((coverSubs[0].cover||'').split('/').pop()) : null;
+
     grid.innerHTML = images.map((f, i) => `
       <div class="ph${i===0?' primary':''}" data-f="${h(f)}">
         <img src="/${h(serieId)}/${h(workId)}/${h(f)}?v=${ver}" loading="lazy" decoding="async" loading="lazy">
         ${i===0?'<span class="badge">principale</span>':''}
+        ${coverSubs.length ? `<button class="cov${stem(f)===curCover?' on':''}" data-f="${h(f)}"
+           title="${stem(f)===curCover ? 'È la copertina della sotto-serie' : 'Usa come copertina della sotto-serie'}">★</button>` : ''}
         <button class="del" data-f="${h(f)}" title="Elimina foto">✕</button>
       </div>`).join('');
+
+    grid.querySelectorAll('.cov').forEach(btn => {
+      btn.addEventListener('click', async e => {
+        e.stopPropagation();
+        const f = btn.dataset.f;
+        if (stem(f) === curCover) return;
+        btn.style.opacity = '.35';
+        const j = await api('/api/set-cover', {serie_id:serieId, work_id:workId, filename:f});
+        if (j.ok) {
+          coverSubs.forEach(sub => sub.cover = j.cover);
+          renderGrid();
+          toast(`Copertina di «${j.subseries.join('», «')}» aggiornata.`);
+        } else {
+          btn.style.opacity = '';
+          toast('Errore: '+(j.error||'?'), 'err');
+        }
+      });
+    });
 
     grid.querySelectorAll('.ph').forEach(item => {
       item.addEventListener('click', async e => {
         if (e.target.classList.contains('del')) return;
+        if (e.target.classList.contains('cov')) return;
         const f = item.dataset.f;
         if (f === images[0]) return;
         item.style.opacity = '.35';

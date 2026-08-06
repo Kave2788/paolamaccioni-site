@@ -1400,6 +1400,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             "/api/delete-work":    self._delete_work,
             "/api/delete-image":   self._delete_image,
             "/api/set-primary":    self._set_primary,
+            "/api/set-cover":      self._set_cover,
             "/api/reorder-works":  self._reorder_works,
             "/api/reorder-subseries": self._reorder_subseries,
             "/api/move-work":      self._move_work,
@@ -1608,6 +1609,36 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         swap_primary(s, w, fn)
         regenerate_opera_page(s, w)
         return self._json({"ok": True})
+
+    def _set_cover(self, p):
+        """Sceglie quale scatto dell'opera fa da copertina alla sotto-serie."""
+        s  = p.get("serie_id", "").strip()
+        w  = p.get("work_id",  "").strip()
+        fn = p.get("filename", "").strip()
+        if not all([s, w, fn]) or s not in valid_series():
+            return self._err("Parametri mancanti", 400)
+        if not re.match(r'^\d+\.(jpg|jpeg|png|webp)$', fn, re.I):
+            return self._err("File non valido", 400)
+
+        cover = f"{s}/{w}/canvas/{os.path.splitext(fn)[0]}.webp"
+        if not os.path.isfile(os.path.join(ROOT, cover)):
+            return self._err("Questo scatto non ha una versione copertina: "
+                             "ricarica la foto e riprova", 400)
+
+        data  = load_data()
+        serie = next((x for x in data["series"] if x["id"] == s), None)
+        subs  = [sub for sub in _subseries(serie or {})
+                 if any(x["id"] == w for x in sub.get("works", []))]
+        if not subs:
+            return self._err("Quest'opera non sta dentro una sotto-serie, "
+                             "quindi non fa da copertina a niente", 400)
+
+        for sub in subs:
+            sub["cover"] = cover
+        save_data(data)
+        update_serie_grid(serie)
+        return self._json({"ok": True, "cover": cover,
+                           "subseries": [sub.get("name") or sub["id"] for sub in subs]})
 
     def _reorder_works(self, p):
         s = p.get("serie_id", "").strip()
