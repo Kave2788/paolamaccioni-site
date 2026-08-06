@@ -165,6 +165,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-s);min-height
 .work-row.draggable.dragging{opacity:.5}
 .drag-handle{flex-shrink:0;padding:.7rem .5rem;color:var(--text2);font-size:.7rem;margin-right:.5rem;display:none}
 .work-row.draggable .drag-handle{display:block}
+.move-btns{flex-shrink:0;display:flex;flex-direction:column;gap:.15rem;margin-right:.5rem}
+.move-btn{padding:.15rem .5rem;font-size:12px;line-height:1.1;min-width:2rem}
 .reorder-mode .work-actions{gap:1rem}
 /* La riga di una sotto-serie intera: si deve distinguere a colpo d'occhio da
    una singola opera, altrimenti non si capisce cosa si sta trascinando. */
@@ -370,7 +372,16 @@ async function renderWorks(c) {
     </div>
     <div class="rule"></div>`;
 
-  // Renderizza una riga opera (con o senza drag-handle a seconda della modalità riordino)
+  // Frecce di spostamento: il trascinamento resta, ma da solo era troppo
+  // fragile (in alcuni browser non parte, e non permetteva di portare una voce
+  // in ultima posizione). Le frecce funzionano sempre e salvano da sole.
+  const moveButtons = () => `
+          <div class="move-btns">
+            <button class="btn btn-ghost move-btn" title="Sposta su" onclick="moveRow(this,-1)">↑</button>
+            <button class="btn btn-ghost move-btn" title="Sposta giù" onclick="moveRow(this,1)">↓</button>
+          </div>`;
+
+  // Renderizza una riga opera (con o senza frecce/drag a seconda della modalità riordino)
   // `scope` = quale lista sta riordinando questa riga: l'id della serie per la
   // griglia principale, "serie/sotto-serie" per le opere di una sotto-serie.
   // Serve a tenere separate le due liste: senza, il salvataggio della griglia
@@ -380,7 +391,7 @@ async function renderWorks(c) {
     const safeTitle = h(w.title).replace(/'/g, "\\'");
     return `
         <div class="work-row ${reorderable ? 'draggable' : ''}" data-serie="${h(s.id)}" data-work="${h(w.id)}" data-kind="work" data-id="${h(w.id)}" data-scope="${h(scope || s.id)}" draggable="${reorderable ? 'true' : 'false'}">
-          ${reorderable ? '<div class="drag-handle">⋮⋮</div>' : ''}
+          ${reorderable ? moveButtons() : ''}
           ${img
             ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'" decoding="async" loading="lazy">`
             : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
@@ -400,7 +411,7 @@ async function renderWorks(c) {
     const img = sub.cover || (sub.works||[])[0]?.thumb || '';
     return `
         <div class="work-row draggable sub-row" data-serie="${h(s.id)}" data-kind="sub" data-id="${h(sub.id)}" data-scope="${h(s.id)}" draggable="true">
-          <div class="drag-handle">⋮⋮</div>
+          ${moveButtons()}
           ${img
             ? `<img class="work-thumb" src="${h(img)}" onerror="this.style.display='none'" decoding="async" loading="lazy">`
             : '<div class="work-thumb" style="background:var(--bg2)"></div>'}
@@ -415,9 +426,8 @@ async function renderWorks(c) {
     const total = allSerieWorks(s).length;
     html += `
       <div class="reorder-controls ${reorderMode[s.id] ? '' : 'hidden'}" id="rc-${h(s.id)}">
-        <button class="btn btn-ghost" onclick="saveReorder('${h(s.id)}')">✓ Salva ordine</button>
-        <button class="btn btn-ghost" onclick="cancelReorder('${h(s.id)}')">✕ Annulla</button>
-        <span style="color:var(--text2);font-size:.85rem;font-style:italic">Trascina per riordinare: puoi spostare sia le singole opere sia un'intera sotto-serie, anche una prima dell'altra</span>
+        <button class="btn btn-ghost" onclick="cancelReorder('${h(s.id)}')">✓ Fine</button>
+        <span style="color:var(--text2);font-size:.85rem;font-style:italic">Usa le frecce ↑ ↓ (oppure trascina) per spostare sia le singole opere sia un'intera sotto-serie: ogni spostamento si salva da solo</span>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:baseline">
         <div class="serie-lbl">${h(s.name)} — ${total} opere</div>
@@ -460,11 +470,10 @@ async function renderWorks(c) {
             <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;font-family:var(--font-ss);color:var(--gold)">
               ↳ Sotto-serie · ${h(sub.name)} <span style="color:var(--text2);font-weight:normal">— ${sub.works.length} opere</span>
             </div>
-            <button class="btn btn-ghost" style="padding:.3rem .7rem;font-size:9px" onclick="toggleReorderMode('${h(scope)}')">${rio ? '✕ Annulla' : '✏ Riordina'}</button>
+            <button class="btn btn-ghost" style="padding:.3rem .7rem;font-size:9px" onclick="toggleReorderMode('${h(scope)}')">${rio ? '✓ Fine' : '✏ Riordina'}</button>
           </div>
           ${rio ? `<div class="reorder-controls" style="margin-bottom:1rem">
-              <button class="btn btn-ghost" onclick="saveReorder('${h(scope)}')">✓ Salva ordine</button>
-              <span style="color:var(--text2);font-size:.85rem;font-style:italic">Trascina per riordinare le opere dentro questa sotto-serie</span>
+              <span style="color:var(--text2);font-size:.85rem;font-style:italic">Usa le frecce ↑ ↓ (oppure trascina) per riordinare le opere dentro questa sotto-serie: ogni spostamento si salva da solo</span>
             </div>` : ''}
           ${subWorks.map(w => renderRow(s, w, rio, scope)).join('')}
         </div>`;
@@ -485,6 +494,9 @@ function setupDragDrop() {
   draggables.forEach(el => {
     el.addEventListener('dragstart', e => {
       dragData = {scope: el.dataset.scope, kind: el.dataset.kind, id: el.dataset.id};
+      // Senza `setData` Firefox non fa nemmeno partire il trascinamento.
+      try { e.dataTransfer.setData('text/plain', el.dataset.id); } catch (_) {}
+      e.dataTransfer.effectAllowed = 'move';
       el.classList.add('dragging');
     });
     el.addEventListener('dragend', e => {
@@ -493,6 +505,7 @@ function setupDragDrop() {
     });
     el.addEventListener('dragover', e => {
       e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
       const other = e.currentTarget;
       if (other.dataset.scope === dragData?.scope && other !== e.target.closest('.work-row')) {
         other.classList.add('drag-over');
@@ -505,19 +518,52 @@ function setupDragDrop() {
     });
     el.addEventListener('drop', e => {
       e.preventDefault();
+      if (!dragData) return;
       const source = document.querySelector(
         `.work-row.draggable[data-scope="${dragData.scope}"][data-kind="${dragData.kind}"][data-id="${dragData.id}"]`
       );
       const target = e.currentTarget;
-      if (source && target && source !== target && source.dataset.scope === target.dataset.scope) {
-        target.parentNode.insertBefore(source, target);
-      }
       el.classList.remove('drag-over');
+      if (!source || !target || source === target ||
+          source.dataset.scope !== target.dataset.scope) return;
+      // Trascinando verso il basso si inserisce DOPO la riga di arrivo: solo
+      // così si può portare una voce in fondo all'elenco.
+      const giu = !!(source.compareDocumentPosition(target) &
+                     Node.DOCUMENT_POSITION_FOLLOWING);
+      target.parentNode.insertBefore(source, giu ? target.nextSibling : target);
+      saveReorder(source.dataset.scope);
     });
   });
 }
 
+// Sposta una riga di un posto con le frecce e salva subito.
+function moveRow(btn, dir) {
+  const row  = btn.closest('.work-row');
+  const rows = Array.from(document.querySelectorAll(
+    `.work-row.draggable[data-scope="${row.dataset.scope}"]`));
+  const i = rows.indexOf(row);
+  const j = i + dir;
+  if (j < 0 || j >= rows.length) return;
+  const altra = rows[j];
+  altra.parentNode.insertBefore(row, dir < 0 ? altra : altra.nextSibling);
+  saveReorder(row.dataset.scope);
+}
+
+// Un salvataggio per volta: senza, due frecce premute in fretta partivano
+// insieme e la seconda mandava al server un elenco già superato.
+let salvataggioOrdine = false;
+
 async function saveReorder(scope) {
+  if (salvataggioOrdine) return;
+  salvataggioOrdine = true;
+  try {
+    await _saveReorder(scope);
+  } finally {
+    salvataggioOrdine = false;
+  }
+}
+
+async function _saveReorder(scope) {
   // Si raccolgono solo le righe dello stesso ambito: `data-scope` tiene
   // separata la griglia principale dalle liste interne alle sotto-serie.
   // Prima si filtrava per data-serie, e al server arrivavano 39 id invece di
@@ -535,15 +581,22 @@ async function saveReorder(scope) {
                    order: Array.from(rows).map(r => ({kind: r.dataset.kind, id: r.dataset.id}))});
   }
   if (j.ok) {
-    reorderMode[scope] = false;
+    // Si resta in riordino: ogni spostamento è già salvato, così non serve
+    // ricordarsi di premere un pulsante e l'ordine non si perde mai.
     await loadData();
     toast('Ordine salvato.');
     renderWorks(document.getElementById('content'));
   } else {
+    // Se il server rifiuta, si rilegge il vero ordine invece di lasciare a
+    // schermo uno spostamento che non è stato salvato.
+    await loadData();
+    renderWorks(document.getElementById('content'));
     toast('Errore: ' + (j.error || '?'), 'err');
   }
 }
 
+// «Fine»: esce dalla modalità riordino. Non annulla niente, perché ogni
+// spostamento è già stato salvato.
 function cancelReorder(serieId) {
   reorderMode[serieId] = false;
   renderWorks(document.getElementById('content'));
