@@ -733,14 +733,21 @@ def _propagate_media(data, work_id, primary):
 
 def _fix_covers(data, work_id, primary):
     """Aggiorna le copertine delle sotto-serie che mostravano questa opera:
-    se l'opera è ancora lì si aggiorna solo il percorso, se se n'è andata si
-    ripiega sulla prima opera rimasta."""
+    se l'opera è ancora lì si conserva lo scatto scelto (si ripiega sul primo
+    solo quando quel file non esiste più), se se n'è andata si ripiega sulla
+    prima opera rimasta."""
     for s in data.get("series", []):
         for sub in _subseries(s):
-            if f"/{work_id}/" not in (sub.get("cover") or ""):
+            cover = sub.get("cover") or ""
+            if f"/{work_id}/" not in cover:
                 continue
             works = sub.get("works", [])
             if any(w["id"] == work_id for w in works):
+                # Una copertina scelta a mano (p.es. .../canvas/03.webp) va
+                # rispettata: sovrascriverla col primo scatto rendeva quella
+                # scelta impossibile da fissare.
+                if cover in primary.get("canvas_gallery", []):
+                    continue
                 sub["cover"] = primary.get("canvas") or primary.get("thumb") or ""
             else:
                 sub["cover"] = works[0].get("canvas", "") if works else ""

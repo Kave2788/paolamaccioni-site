@@ -212,6 +212,23 @@ Currently uses **Formspree** (recent switch from Netlify Forms):
 - HTML cached for 1 hour
 - All pages served from root `./` directory
 
+### Two machines push to this repo — always pull first
+
+Paola publishes from the admin panel on her own PC (it commits and pushes on
+its own), so this clone goes stale without anyone touching it. **Run `git pull`
+before starting any work here**, not just before pushing — otherwise you edit
+files that already moved on, and the rebase lands on top of a stale base.
+
+```bash
+git pull
+```
+
+`pull.rebase` is set to `true` on this clone, so pulls replay local work on top
+of hers instead of producing merge commits.
+
+Symptom of having skipped it: `git status -sb` shows `[behind N]`, and the live
+site looks nothing like the local copy.
+
 ## Language Toggle Implementation
 
 The language switcher in `nav` converts current path:
